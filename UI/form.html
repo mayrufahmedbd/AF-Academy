@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assailant Fighters Academy</title>
-    <link rel="icon" href="/img/Club logo.jpg">
+    <title>Assailant Fighters Academy - Multilingual Form</title>
+    <link rel="icon" href="/img/Club logo.jpg" type="image/x-icon">
     <style>
         * {
             margin: 0;
@@ -17,13 +17,49 @@
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             color: #333;
             line-height: 1.6;
-            padding-bottom: 50px;
+            padding: 20px 0;
+            transition: all 0.3s ease;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+
+        .language-switcher {
+            /* position: fixed;
+            top: 10px;
+            right: 10px; */
+            display: flex;
+            justify-content: flex-end;
+            padding: 15px 0;
+            z-index: 100;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            margin: 0 5px;
+            background: #1a2a6c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+
+        }
+
+        .lang-btn:hover {
+            background: #fdbb2d;
+            color: #1a2a6c;
+            transform: translateY(-2px);
+        }
+
+        .lang-btn.active {
+            background: #fdbb2d;
+            color: #1a2a6c;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
         .main-header {
@@ -224,11 +260,11 @@
             margin-bottom: 10px;
         }
 
-        .checkbox{
+        .aggree {
             display: inline-block;
-            align-items: center;
-            justify-content: center;
-            margin: auto auto;
+            margin-top: 10px;
+            text-align: center;
+            margin-left: 37%;
         }
 
         .submit-btn {
@@ -295,193 +331,418 @@
                 margin-top: 15px;
             }
             
+
+            .aggree {
+                margin-left: 0%;
+            }   
+
             .form-grid {
                 grid-template-columns: 1fr;
             }
+        }
+
+        body[dir="rtl"] {
+            text-align: right;
+        }
+
+        body[dir="rtl"] .input-group {
+            text-align: right;
+        }
+
+        body[dir="rtl"] .terms-section ol {
+            padding-right: 20px;
+            padding-left: 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="language-switcher">
+            <button class="lang-btn active" onclick="setLanguage('en')">English</button>
+            <button class="lang-btn" onclick="setLanguage('bn')">বাংলা</button>
+        </div>
+
         <div class="main-header">
             <div class="header-img">
                 <img src="/img/Club logo.jpg" alt="Assailant Fighters Football Academy logo">
             </div>
 
             <div class="header-text">
-                <h1>এসাইলেন্ট ফাইটার্স ফুটবল একাডেমি</h1>
-                <h1>Assailant Fighters Football Academy</h1>
+                <h1 id="header-english">Assailant Fighters Football Academy</h1>
             </div>
 
             <div class="header-input">
-                <input type="file" name="profile-upload">
-                <label for="profile-upload">Upload Photo</label>
+                <input type="file" id="profile-upload">
+                <label for="profile-upload" id="upload-text">Upload Photo</label>
             </div>
         </div>
 
         <div class="line"></div>
 
-        <form id="registration-form">
+<form name="registration-form" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="88e95964-1808-473e-bf1f-262ded6f8d8e">
             <div class="form-section">
-                <h2 class="section-title">Personal Information</h2>
+                <h2 class="section-title" name="personal-info">Personal Information</h2>
                 <div class="form-grid">
                     <div class="input-group">
-                        <label for="name-bangla">Name in Bangla</label>
+                        <label for="name-bangla" name="label-name-bangla">Name in Bangla</label>
                         <input type="text" name="name-bangla" required placeholder="Enter Your Name In Bangla">
                     </div>
                     
                     <div class="input-group">
-                        <label for="name-english">Name in English</label>
+                        <label for="name-english" name="label-name-english">Name in English</label>
                         <input type="text" name="name-english" required placeholder="Enter Your Name In English">
                     </div>
                     
                     <div class="input-group">
-                        <label for="dob">Date of Birth</label>
+                        <label for="date" name="label-dob">Date of Birth</label>
                         <input type="date" name="birthday" required>
                     </div>
                     
                     <div class="input-group">
-                        <label for="father-name">Father's Name</label>
+                        <label for="father-name" name="label-father">Father's Name</label>
                         <input type="text" name="father-name" required placeholder="Enter Your Father's Name">
                     </div>
                     
                     <div class="input-group">
-                        <label for="mother-name">Mother's Name</label>
+                        <label for="mother-name" name="label-mother">Mother's Name</label>
                         <input type="text" name="mother-name" required placeholder="Enter Your Mother's Name">
                     </div>
                 </div>
             </div>
 
             <div class="form-section">
-                <p class="address">Current Address</p>
+                <p class="address" name="current-address">Current Address</p>
                 <div class="form-grid">
                     <div class="input-group">
-                        <label for="current-village">Village Name</label>
+                        <label for="current-village" name="label-village">Village Name</label>
                         <input type="text" name="current-village" required placeholder="Village name">
                     </div>
                     
                     <div class="input-group">
-                        <label for="current-post">Post Office</label>
+                        <label for="current-post" name="label-post">Post Office</label>
                         <input type="text" name="current-post" required placeholder="Post Office">
                     </div>
                     
                     <div class="input-group">
-                        <label for="current-thana">Thana</label>
+                        <label for="current-thana" name="label-thana">Thana</label>
                         <input type="text" name="current-thana" required placeholder="Thana">
                     </div>
                     
                     <div class="input-group">
-                        <label for="current-district">District</label>
+                        <label for="current-district" name="label-district">District</label>
                         <input type="text" name="current-district" required placeholder="District">
                     </div>
                 </div>
             </div>
 
             <div class="form-section">
-                <p class="address">Permanent Address</p>
+                <p class="address" name="permanent-address">Permanent Address</p>
                 <div class="form-grid">
                     <div class="input-group">
-                        <label for="permanent-village">Village Name</label>
+                        <label for="permanent-village" name="label-village-perm">Village Name</label>
                         <input type="text" name="permanent-village" required placeholder="Village name">
                     </div>
                     
                     <div class="input-group">
-                        <label for="permanent-post">Post Office</label>
+                        <label for="permanent-post" name="label-post-perm">Post Office</label>
                         <input type="text" name="permanent-post" required placeholder="Post Office">
                     </div>
                     
                     <div class="input-group">
-                        <label for="permanent-thana">Thana</label>
+                        <label for="permanent-thana" name="label-thana-perm">Thana</label>
                         <input type="text" name="permanent-thana" required placeholder="Thana">
                     </div>
                     
                     <div class="input-group">
-                        <label for="permanent-district">District</label>
+                        <label for="permanent-district" name="label-district-perm">District</label>
                         <input type="text" name="permanent-district" required placeholder="District">
                     </div>
                 </div>
             </div>
 
             <div class="form-section">
-                <h2 class="section-title">Additional Information</h2>
+                <h2 class="section-title" name="additional-info">Additional Information</h2>
                 <div class="form-grid">
                     <div class="input-group">
-                        <label for="nationality">Nationality</label>
+                        <label for="nationality" name="label-nationality">Nationality</label>
                         <input type="text" name="nationality" required placeholder="Enter Your Nationality">
                     </div>
                     
                     <div class="input-group">
-                        <label for="religion">Religion</label>
+                        <label for="religion" name="label-religion">Religion</label>
                         <input type="text" name="religion" required placeholder="Enter Your Religion">
                     </div>
                     
                     <div class="input-group">
-                        <label for="college">College Name</label>
+                        <label for="college" name="label-college">College Name</label>
                         <input type="text" name="college" required placeholder="Enter Your College Name">
                     </div>
                     
                     <div class="input-group">
-                        <label for="class">Class</label>
+                        <label for="class" name="label-class">Class</label>
                         <input type="text" name="class" required placeholder="Enter Your Class">
                     </div>
                     
                     <div class="input-group">
-                        <label for="profession">Profession</label>
+                        <label for="profession" name="label-profession">Profession</label>
                         <input type="text" name="profession" required placeholder="Enter Your Profession">
                     </div>
                     
                     <div class="input-group">
-                        <label for="mobile">Mobile Number</label>
+                        <label for="mobile" name="label-mobile">Mobile Number</label>
                         <input type="tel" name="mobile" required placeholder="Enter Your Mobile Number">
                     </div>
                     
                     <div class="input-group">
-                        <label for="email">Email</label>
+                        <label for="email" name="label-email">Email</label>
                         <input type="email" name="email" required placeholder="Enter Your Email">
                     </div>
                     
                     <div class="input-group">
-                        <label for="nid">NID Number</label>
+                        <label for="nid" name="label-nid">NID Number</label>
                         <input type="text" name="nid" required placeholder="Enter Your NID">
                     </div>
                     
                     <div class="input-group">
-                        <label for="blood">Blood Group</label>
+                        <label for="blood" name="label-blood">Blood Group</label>
                         <input type="text" name="blood" required placeholder="Enter Your Blood Group">
                     </div>
                 </div>
             </div>
 
             <div class="terms-section">
-                <h2 class="section-title">Terms & Conditions</h2>
-                <p class="address">Condition</p>
-                <ol type="A">
+                <h2 class="section-title" name="terms-title">Terms & Conditions</h2>
+                <p class="address" name="conditions-title">Conditions</p>
+                <ol type="A" name="conditions-list">
                     <li>Must Strictly follow the discipline of the academy.</li>
                     <li>Must abstain from all kinds of drugs.</li>
                     <li>Must Refrain from any antisocial activities.</li>
-                    <li>Must Refrain from rude.</li>
+                    <li>Must Refrain from rude behavior.</li>
                     <li>You can't play anywhere without the academy's permission.</li>
                     <li>Must be attentive towards performing prayers.</li>
                 </ol>
 
-                <p>আমি এই মর্মে অঙ্গীকার করিতেছি যে, আমি এই একাডেমির ফাইটার্স ফুটবল একাডেমি একাডেমির সদস্য হিসেবে দায়িত্বশীল আচরণ করিবো। আমি একাডেমির সমস্ত নিয়মকানুন মানিয়া চলিব এবং যেকোনো প্রকার অনৈতিক কর্মকান্ড হইতে বিরত থাকিবো। আমি একাডেমির প্রতি বিশ্বস্ত থাকিবো এবং একাডেমির ভাবমূর্তি অক্ষুণ্ণ রাখিবার জন্য সর্বদা চেষ্টা করিবো। আমি যদি অনৈতিক কর্মকান্ড করি তবে আমি একাডেমি এবং আইনগত শাস্তি স্বরূপ কোনো প্রকার কমপ্লেইন করিতে পারিব না।</p>
 
-                <p>I hereby declare that, as a member of Assailant Fighters Football Academy, I will behave responsibly. I will abide by all the rules and regulations of the academy and refrain from any kind of unethical activities. I will remain loyal to the academy and always strive to uphold its reputation. If I engage in any unethical activities, I will not have the right to make any complaint against the academy or its legal actions.</p>
+                <p name="terms-english">I hereby declare that, as a member of Assailant Fighters Football Academy, I will behave responsibly. I will abide by all the rules and regulations of the academy and refrain from any kind of unethical activities. I will remain loyal to the academy and always strive to uphold its reputation. If I engage in any unethical activities, I will not have the right to make any complaint against the academy or its legal actions.</p>
                 
-                <div class="input-group checkbox">
-                    <label for="agree">
+                <div class="input-group aggree" style="margin-top: 20px;">
+                    <label for="agree" name="agree-label">
                         <input type="checkbox" name="agree" required> 
-                        <p>I agree to the terms and conditions</p>
+                        <span name="agree-text">I agree to the terms and conditions</span>
                     </label>
                 </div>
             </div>
-
-            <button type="submit" class="submit-btn">Submit Registration</button>
+                <input type="hidden" name="redirect" value="/UI/thanks.html">
+            <button type="submit" class="submit-btn" name="submit-btn">Submit Registration</button>
         </form>
     </div>
 
     <script>
+        // Text translations
+        const translations = {
+            en: {
+                // Header
+                "header-english": "Assailant Fighters Football Academy",
+                "upload-text": "Upload Photo",
+                
+                // Form sections
+                "personal-info": "Personal Information",
+                "current-address": "Current Address",
+                "permanent-address": "Permanent Address",
+                "additional-info": "Additional Information",
+                "terms-title": "Terms & Conditions",
+                "conditions-title": "Conditions",
+                
+                // Labels
+                "label-name-bangla": "Name in Bangla",
+                "label-name-english": "Name in English",
+                "label-dob": "Date of Birth",
+                "label-father": "Father's Name",
+                "label-mother": "Mother's Name",
+                "label-village": "Village Name",
+                "label-village-perm": "Village Name",
+                "label-post": "Post Office",
+                "label-post-perm": "Post Office",
+                "label-thana": "Thana",
+                "label-thana-perm": "Thana",
+                "label-district": "District",
+                "label-district-perm": "District",
+                "label-nationality": "Nationality",
+                "label-religion": "Religion",
+                "label-college": "College Name",
+                "label-class": "Class",
+                "label-profession": "Profession",
+                "label-mobile": "Mobile Number",
+                "label-email": "Email",
+                "label-nid": "NID Number",
+                "label-blood": "Blood Group",
+                
+                // Placeholders
+                "name-bangla-placeholder": "Enter Your Name In Bangla",
+                "name-english-placeholder": "Enter Your Name In English",
+                "father-placeholder": "Enter Your Father's Name",
+                "mother-placeholder": "Enter Your Mother's Name",
+                "village-placeholder": "Village name",
+                "post-placeholder": "Post Office",
+                "thana-placeholder": "Thana",
+                "district-placeholder": "District",
+                "nationality-placeholder": "Enter Your Nationality",
+                "religion-placeholder": "Enter Your Religion",
+                "college-placeholder": "Enter Your College Name",
+                "class-placeholder": "Enter Your Class",
+                "profession-placeholder": "Enter Your Profession",
+                "mobile-placeholder": "Enter Your Mobile Number",
+                "email-placeholder": "Enter Your Email",
+                "nid-placeholder": "Enter Your NID",
+                "blood-placeholder": "Enter Your Blood Group",
+                
+                // Conditions list
+                "conditions-list": `
+                    <li>Must Strictly follow the discipline of the academy.</li>
+                    <li>Must abstain from all kinds of drugs.</li>
+                    <li>Must Refrain from any antisocial activities.</li>
+                    <li>Must Refrain from rude behavior.</li>
+                    <li>You can't play anywhere without the academy's permission.</li>
+                    <li>Must be attentive towards performing prayers.</li>
+                `,
+                
+                // Terms
+                "terms-english": "I hereby declare that, as a member of Assailant Fighters Football Academy, I will behave responsibly. I will abide by all the rules and regulations of the academy and refrain from any kind of unethical activities. I will remain loyal to the academy and always strive to uphold its reputation. If I engage in any unethical activities, I will not have the right to make any complaint against the academy or its legal actions.",               
+             
+                // Agreement
+                "agree-text": "I agree to the terms and conditions",
+                
+                // Submit button
+                "submit-btn": "Submit Registration"
+            },
+            bn: {
+                // Header
+                "header-bangla": "এসাইলেন্ট ফাইটার্স ফুটবল একাডেমি",
+                "header-english": "এসাইলেন্ট ফাইটার্স ফুটবল একাডেমি",
+                "upload-text": "ছবি আপলোড",
+                
+                // Form sections
+                "personal-info": "ব্যক্তিগত তথ্য",
+                "current-address": "বর্তমান ঠিকানা",
+                "permanent-address": "স্থায়ী ঠিকানা",
+                "additional-info": "অতিরিক্ত তথ্য",
+                "terms-title": "শর্তাবলী",
+                "conditions-title": "শর্তসমূহ",
+                
+                // Labels
+                "label-name-bangla": "বাংলায় নাম",
+                "label-name-english": "ইংরেজিতে নাম",
+                "label-dob": "জন্ম তারিখ",
+                "label-father": "পিতার নাম",
+                "label-mother": "মাতার নাম",
+                "label-village": "গ্রামের নাম",
+                "label-village-perm": "গ্রামের নাম",
+                "label-post": "ডাকঘর",
+                "label-post-perm": "ডাকঘর",
+                "label-thana": "থানা",
+                "label-thana-perm": "থানা",
+                "label-district": "জেলা",
+                "label-district-perm": "জেলা",
+                "label-nationality": "জাতীয়তা",
+                "label-religion": "ধর্ম",
+                "label-college": "কলেজের নাম",
+                "label-class": "শ্রেণী",
+                "label-profession": "পেশা",
+                "label-mobile": "মোবাইল নম্বর",
+                "label-email": "ইমেইল",
+                "label-nid": "এনআইডি নম্বর",
+                "label-blood": "রক্তের গ্রুপ",
+                
+                // Placeholders
+                "name-bangla-placeholder": "বাংলায় আপনার নাম লিখুন",
+                "name-english-placeholder": "ইংরেজিতে আপনার নাম লিখুন",
+                "father-placeholder": "আপনার পিতার নাম লিখুন",
+                "mother-placeholder": "আপনার মাতার নাম লিখুন",
+                "village-placeholder": "গ্রামের নাম",
+                "post-placeholder": "ডাকঘর",
+                "thana-placeholder": "থানা",
+                "district-placeholder": "জেলা",
+                "nationality-placeholder": "আপনার জাতীয়তা লিখুন",
+                "religion-placeholder": "আপনার ধর্ম লিখুন",
+                "college-placeholder": "আপনার কলেজের নাম লিখুন",
+                "class-placeholder": "আপনার শ্রেণী লিখুন",
+                "profession-placeholder": "আপনার পেশা লিখুন",
+                "mobile-placeholder": "আপনার মোবাইল নম্বর লিখুন",
+                "email-placeholder": "আপনার ইমেইল লিখুন",
+                "nid-placeholder": "আপনার এনআইডি লিখুন",
+                "blood-placeholder": "আপনার রক্তের গ্রুপ লিখুন",
+                
+                // Conditions list
+                "conditions-list": `
+                    <li>অবশ্যই একাডেমির শৃঙ্খলা কঠোরভাবে অনুসরণ করতে হবে।</li>
+                    <li>সব ধরনের মাদকদ্রব্য থেকে বিরত থাকতে হবে।</li>
+                    <li>যেকোনো অসামাজিক কার্যকলাপ থেকে বিরত থাকতে হবে।</li>
+                    <li>অভদ্র আচরণ থেকে বিরত থাকতে হবে।</li>
+                    <li>একাডেমির অনুমতি ছাড়া অন্য কোথাও খেলতে পারবেন না।</li>
+                    <li>নামাজ পড়ার দিকে মনোযোগী হতে হবে।</li>
+                `,
+                
+                // Terms
+                "terms-english": "আমি এই মর্মে অঙ্গীকার করিতেছি যে, আমি এই একাডেমির ফাইটার্স ফুটবল একাডেমি একাডেমির সদস্য হিসেবে দায়িত্বশীল আচরণ করিবো। আমি একাডেমির সমস্ত নিয়মকানুন মানিয়া চলিব এবং যেকোনো প্রকার অনৈতিক কর্মকান্ড হইতে বিরত থাকিবো। আমি একাডেমির প্রতি বিশ্বস্ত থাকিবো এবং একাডেমির ভাবমূর্তি অক্ষুণ্ণ রাখিবার জন্য সর্বদা চেষ্টা করিবো। আমি যদি অনৈতিক কর্মকান্ড করি তবে আমি একাডেমি এবং আইনগত শাস্তি স্বরূপ কোনো প্রকার কমপ্লেইন করিতে পারিব না।",
+                // Agreement
+                "agree-text": "আমি শর্তাবলীতে সম্মত হই",
+                
+                // Submit button
+                "submit-btn": "নিবন্ধন জমা দিন"
+            }
+        };
+
+        // Function to set language
+        function setLanguage(lang) {
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`.lang-btn[onclick="setLanguage('${lang}')"]`).classList.add('active');
+            
+            // Update all text elements
+            for (const [id, text] of Object.entries(translations[lang])) {
+                const element = document.getElementById(id);
+                if (element) {
+                    if (id === 'conditions-list') {
+                        element.innerHTML = text;
+                    } else {
+                        element.textContent = text;
+                    }
+                }
+            }
+            
+            // Update placeholders
+            document.getElementById('name-bangla').placeholder = translations[lang]['name-bangla-placeholder'];
+            document.getElementById('name-english').placeholder = translations[lang]['name-english-placeholder'];
+            document.getElementById('father-name').placeholder = translations[lang]['father-placeholder'];
+            document.getElementById('mother-name').placeholder = translations[lang]['mother-placeholder'];
+            document.getElementById('current-village').placeholder = translations[lang]['village-placeholder'];
+            document.getElementById('current-post').placeholder = translations[lang]['post-placeholder'];
+            document.getElementById('current-thana').placeholder = translations[lang]['thana-placeholder'];
+            document.getElementById('current-district').placeholder = translations[lang]['district-placeholder'];
+            document.getElementById('permanent-village').placeholder = translations[lang]['village-placeholder'];
+            document.getElementById('permanent-post').placeholder = translations[lang]['post-placeholder'];
+            document.getElementById('permanent-thana').placeholder = translations[lang]['thana-placeholder'];
+            document.getElementById('permanent-district').placeholder = translations[lang]['district-placeholder'];
+            document.getElementById('nationality').placeholder = translations[lang]['nationality-placeholder'];
+            document.getElementById('religion').placeholder = translations[lang]['religion-placeholder'];
+            document.getElementById('college').placeholder = translations[lang]['college-placeholder'];
+            document.getElementById('class').placeholder = translations[lang]['class-placeholder'];
+            document.getElementById('profession').placeholder = translations[lang]['profession-placeholder'];
+            document.getElementById('mobile').placeholder = translations[lang]['mobile-placeholder'];
+            document.getElementById('email').placeholder = translations[lang]['email-placeholder'];
+            document.getElementById('nid').placeholder = translations[lang]['nid-placeholder'];
+            document.getElementById('blood').placeholder = translations[lang]['blood-placeholder'];
+        
+
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
+            // Set initial language to English
+            setLanguage('en');
+            
             const form = document.getElementById('registration-form');
             
             form.addEventListener('submit', function(e) {
@@ -509,6 +770,7 @@
                 if (isValid) {
                     // Animation for successful submission
                     const submitBtn = document.querySelector('.submit-btn');
+                    const originalText = submitBtn.textContent;
                     submitBtn.textContent = 'Submitting...';
                     submitBtn.style.opacity = '0.8';
                     
@@ -520,7 +782,7 @@
                         // Reset form after success
                         setTimeout(() => {
                             form.reset();
-                            submitBtn.textContent = 'Submit Registration';
+                            submitBtn.textContent = originalText;
                             submitBtn.style.background = 'linear-gradient(to right, #1a2a6c, #b21f1f)';
                             submitBtn.style.opacity = '1';
                             alert('Registration submitted successfully!');
