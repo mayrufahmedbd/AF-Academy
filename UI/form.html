@@ -4,77 +4,552 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assailant Fighters Academy</title>
-    <link rel="icon" href="../img/logo.jpg">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/img/Club logo.jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            border-bottom: 5px solid #fdbb2d;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 0 0 10px 10px;
+            margin-bottom: 30px;
+            animation: headerSlide 1s ease-out;
+        }
+
+        @keyframes headerSlide {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .header-img {
+            flex: 0 0 100px;
+        }
+
+        .header-img img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .header-img img:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .header-text {
+            flex: 1;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .header-text h1 {
+            margin: 5px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-text h1:first-child {
+            font-size: 1.8rem;
+        }
+
+        .header-text h1:last-child {
+            font-size: 1.5rem;
+            color: #fdbb2d;
+        }
+
+        .header-input {
+            flex: 0 0 150px;
+            position: relative;
+        }
+
+        .header-input input[type="file"] {
+            display: none;
+        }
+
+        .header-input label {
+            display: block;
+            padding: 10px 15px;
+            background: #fdbb2d;
+            color: #1a2a6c;
+            border-radius: 50px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-input label:hover {
+            background: #1a2a6c;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .line {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #1a2a6c, transparent);
+            margin: 30px 0;
+            animation: lineExtend 1.5s ease-out;
+        }
+
+        @keyframes lineExtend {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        .form-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            color: #1a2a6c;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #fdbb2d;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #1a2a6c;
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            border-color: #1a2a6c;
+            box-shadow: 0 0 0 3px rgba(26, 42, 108, 0.2);
+            outline: none;
+        }
+
+        .address {
+            font-weight: bold;
+            color: #1a2a6c;
+            margin: 20px 0 15px;
+            font-size: 1.2rem;
+        }
+
+        .terms-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .terms-section p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .terms-section ol {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .terms-section li {
+            margin-bottom: 10px;
+        }
+
+        .checkbox{
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+            margin: auto auto;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 250px;
+            margin: 40px auto;
+            padding: 15px;
+            background: linear-gradient(to right, #1a2a6c, #b21f1f);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: 0.5s;
+        }
+
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .main-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .header-img {
+                margin-bottom: 15px;
+            }
+            
+            .header-text h1:first-child {
+                font-size: 1.5rem;
+            }
+            
+            .header-text h1:last-child {
+                font-size: 1.2rem;
+            }
+            
+            .header-input {
+                margin-top: 15px;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="main-header">
+    <div class="container">
+        <div class="main-header">
+            <div class="header-img">
+                <img src="/img/Club logo.jpg" alt="Assailant Fighters Football Academy logo">
+            </div>
 
-    <div class="header-img">
-        <img src="../img/logo.jpg" alt="Assailant Fighters Football Academy logo">
+            <div class="header-text">
+                <h1>এসাইলেন্ট ফাইটার্স ফুটবল একাডেমি</h1>
+                <h1>Assailant Fighters Football Academy</h1>
+            </div>
+
+            <div class="header-input">
+                <input type="file" name="profile-upload">
+                <label for="profile-upload">Upload Photo</label>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <form id="registration-form">
+            <div class="form-section">
+                <h2 class="section-title">Personal Information</h2>
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="name-bangla">Name in Bangla</label>
+                        <input type="text" name="name-bangla" required placeholder="Enter Your Name In Bangla">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="name-english">Name in English</label>
+                        <input type="text" name="name-english" required placeholder="Enter Your Name In English">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" name="birthday" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="father-name">Father's Name</label>
+                        <input type="text" name="father-name" required placeholder="Enter Your Father's Name">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="mother-name">Mother's Name</label>
+                        <input type="text" name="mother-name" required placeholder="Enter Your Mother's Name">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <p class="address">Current Address</p>
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="current-village">Village Name</label>
+                        <input type="text" name="current-village" required placeholder="Village name">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="current-post">Post Office</label>
+                        <input type="text" name="current-post" required placeholder="Post Office">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="current-thana">Thana</label>
+                        <input type="text" name="current-thana" required placeholder="Thana">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="current-district">District</label>
+                        <input type="text" name="current-district" required placeholder="District">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <p class="address">Permanent Address</p>
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="permanent-village">Village Name</label>
+                        <input type="text" name="permanent-village" required placeholder="Village name">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="permanent-post">Post Office</label>
+                        <input type="text" name="permanent-post" required placeholder="Post Office">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="permanent-thana">Thana</label>
+                        <input type="text" name="permanent-thana" required placeholder="Thana">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="permanent-district">District</label>
+                        <input type="text" name="permanent-district" required placeholder="District">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2 class="section-title">Additional Information</h2>
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="nationality">Nationality</label>
+                        <input type="text" name="nationality" required placeholder="Enter Your Nationality">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="religion">Religion</label>
+                        <input type="text" name="religion" required placeholder="Enter Your Religion">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="college">College Name</label>
+                        <input type="text" name="college" required placeholder="Enter Your College Name">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="class">Class</label>
+                        <input type="text" name="class" required placeholder="Enter Your Class">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="profession">Profession</label>
+                        <input type="text" name="profession" required placeholder="Enter Your Profession">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="tel" name="mobile" required placeholder="Enter Your Mobile Number">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" required placeholder="Enter Your Email">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="nid">NID Number</label>
+                        <input type="text" name="nid" required placeholder="Enter Your NID">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="blood">Blood Group</label>
+                        <input type="text" name="blood" required placeholder="Enter Your Blood Group">
+                    </div>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2 class="section-title">Terms & Conditions</h2>
+                <p class="address">Condition</p>
+                <ol type="A">
+                    <li>Must Strictly follow the discipline of the academy.</li>
+                    <li>Must abstain from all kinds of drugs.</li>
+                    <li>Must Refrain from any antisocial activities.</li>
+                    <li>Must Refrain from rude.</li>
+                    <li>You can't play anywhere without the academy's permission.</li>
+                    <li>Must be attentive towards performing prayers.</li>
+                </ol>
+
+                <p>আমি এই মর্মে অঙ্গীকার করিতেছি যে, আমি এই একাডেমির ফাইটার্স ফুটবল একাডেমি একাডেমির সদস্য হিসেবে দায়িত্বশীল আচরণ করিবো। আমি একাডেমির সমস্ত নিয়মকানুন মানিয়া চলিব এবং যেকোনো প্রকার অনৈতিক কর্মকান্ড হইতে বিরত থাকিবো। আমি একাডেমির প্রতি বিশ্বস্ত থাকিবো এবং একাডেমির ভাবমূর্তি অক্ষুণ্ণ রাখিবার জন্য সর্বদা চেষ্টা করিবো। আমি যদি অনৈতিক কর্মকান্ড করি তবে আমি একাডেমি এবং আইনগত শাস্তি স্বরূপ কোনো প্রকার কমপ্লেইন করিতে পারিব না।</p>
+
+                <p>I hereby declare that, as a member of Assailant Fighters Football Academy, I will behave responsibly. I will abide by all the rules and regulations of the academy and refrain from any kind of unethical activities. I will remain loyal to the academy and always strive to uphold its reputation. If I engage in any unethical activities, I will not have the right to make any complaint against the academy or its legal actions.</p>
+                
+                <div class="input-group checkbox">
+                    <label for="agree">
+                        <input type="checkbox" name="agree" required> 
+                        <p>I agree to the terms and conditions</p>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Registration</button>
+        </form>
     </div>
 
-    <div class="header-text">
-    <h1>এসাইলেন্ট ফাইটার্স ফুটবল একাডেমি</h1>
-    <h1>Assailant Fighters Football Academy</h1>
-    </div>
-
-    <div class="header-input">
-        <input type="file">
-    </div>
-</div>
-
-<div class="line"></div>
-
-<div class="input-form">
-    <input type="text" required placeholder="Enter Your Name In Bangla">
-    <input type="text" required placeholder="Enter Your Name In English">
-
-
-    <input type="date" required placeholder="Enter Your Date Of Birth">
-    <input type="text" required placeholder="Enter Your Father Name">
-    <input type="text" required placeholder="Enter Your Father Name">
-    <input type="text" required placeholder="Enter Your Mother Name">
-</div>
-
-<div class="current-address">
-    <p class="address">Enter Your Current Address</p>
-    <input type="text" required placeholder="Village name">
-    <input type="text" required placeholder="Post Office">
-    <input type="text" required placeholder="Thana">
-    <input type="text" required placeholder="District">
-</div>
-
-<div class="permanent-address">
-    <p class="address">Enter Your Permanent Address</p>
-    <input type="text" required placeholder="Village name">
-    <input type="text" required placeholder="Post Office">
-    <input type="text" required placeholder="Thana">
-    <input type="text" name="district" required placeholder="District">
-</div>
-<div class="form-info">
-    <input type="text" name="Nationality" required placeholder="Enter Your Nationality">
-    <input type="text" name="Religion" required placeholder="Enter Your Religion">
-    <input type="text" name="study" required placeholder="Enter Your College Name">
-    <input type="text" name="study" required placeholder="Enter Your Class">
-    <input type="text" name="profession" required placeholder="Enter Your Profession">
-    <input type="number" name="number" required placeholder="Enter Your Mobile Number">
-    <input type="email" name="gmail" required placeholder="Enter Your gmail">
-    <input type="number" name="nid" required placeholder="Enter Your NID">
-    <input type="text" name="Blood" required placeholder="Enter Your Blood Group">
-</div>
-<p class="address">Condition</p>
-<ol type="I">
-    <li>Must Strictly follow the discipline of the academy.</li>
-    <li>Must abstain from all kinds of drugs.</li>
-    <li>Must Refrain from any antisocial activities.</li>
-    <li>Must Refrain from rude.</li>
-    <li>You can't play anywhere without the academy's permission.</li>
-    <li>Must be attentive towards performing prayers.</li>
-</ol>
-
-<p>আমি এই মর্মে অঙ্গীকার করিতেছি যে, আমি এই একাডেমির ফাইটার্স ফুটবল একাডেমি একাডেমির সদস্য হিসেবে দায়িত্বশীল আচরণ করিবো। আমি একাডেমির সমস্ত নিয়মকানুন মানিয়া চলিব এবং যেকোনো প্রকার অনৈতিক কর্মকান্ড হইতে বিরত থাকিবো। আমি একাডেমির প্রতি বিশ্বস্ত থাকিবো এবং একাডেমির ভাবমূর্তি অক্ষুণ্ণ রাখিবার জন্য সর্বদা চেষ্টা করিবো। আমি যদি অনৈতিক কর্মকান্ড করি তবে আমি একাডেমি এবং আইনগত শাস্তি স্বরূপ কোনো প্রকার কমপ্লেইন করিতে পারিব না।</p>
-
-<p>I hereby declare that, as a member of Assailant Fighters Football Academy, I will behave responsibly. I will abide by all the rules and regulations of the academy and refrain from any kind of unethical activities. I will remain loyal to the academy and always strive to uphold its reputation. If I engage in any unethical activities, I will not have the right to make any complaint against the academy or its legal actions.</p>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('registration-form');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Basic validation
+                let isValid = true;
+                const requiredFields = form.querySelectorAll('input[required]');
+                
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        isValid = false;
+                        field.style.borderColor = 'red';
+                    } else {
+                        field.style.borderColor = '#ddd';
+                    }
+                });
+                
+                const agreeCheckbox = document.getElementById('agree');
+                if (!agreeCheckbox.checked) {
+                    isValid = false;
+                    alert('You must agree to the terms and conditions');
+                }
+                
+                if (isValid) {
+                    // Animation for successful submission
+                    const submitBtn = document.querySelector('.submit-btn');
+                    submitBtn.textContent = 'Submitting...';
+                    submitBtn.style.opacity = '0.8';
+                    
+                    // Simulate form submission
+                    setTimeout(() => {
+                        submitBtn.textContent = 'Registration Successful!';
+                        submitBtn.style.background = 'linear-gradient(to right, #00b09b, #96c93d)';
+                        
+                        // Reset form after success
+                        setTimeout(() => {
+                            form.reset();
+                            submitBtn.textContent = 'Submit Registration';
+                            submitBtn.style.background = 'linear-gradient(to right, #1a2a6c, #b21f1f)';
+                            submitBtn.style.opacity = '1';
+                            alert('Registration submitted successfully!');
+                        }, 1500);
+                    }, 2000);
+                }
+            });
+            
+            // Add animation to form elements on scroll
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeIn 1s ease-out forwards';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.form-section, .terms-section').forEach(section => {
+                section.style.opacity = '0';
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
