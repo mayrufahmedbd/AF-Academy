@@ -208,6 +208,28 @@
             margin-bottom: 15px;
         }
 
+                .header-input a {
+            display: block;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 15px;
+            background: #fdbb2d;
+            color: #1a2a6c;
+            border-radius: 50px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-input a:hover {
+            background: #1a2a6c;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
         .input-group label {
             display: block;
             margin-bottom: 8px;
@@ -372,8 +394,7 @@
             </div>
 
             <div class="header-input">
-                <input type="file" id="profile-upload">
-                <label for="profile-upload" id="upload-text">Upload Photo</label>
+                <a href="https://wa.me/8801634973374" target="_blank" title="Click Here to contact us on WhatsApp">Contact Us</a>
             </div>
         </div>
 
@@ -382,139 +403,139 @@
 <form name="registration-form" action="https://api.web3forms.com/submit" method="POST">
     <input type="hidden" name="access_key" value="88e95964-1808-473e-bf1f-262ded6f8d8e">
             <div class="form-section">
-                <h2 class="section-title" name="personal-info">Personal Information</h2>
+                <h2 class="section-title" id="personal-info" name="personal-info">Personal Information</h2>
                 <div class="form-grid">
                     <div class="input-group">
-                        <label for="name-bangla" name="label-name-bangla">Name in Bangla</label>
-                        <input type="text" name="name-bangla" required placeholder="Enter Your Name In Bangla">
+                        <label for="name-bangla" id="label-name-bangla" name="label-name-bangla">Name in Bangla</label>
+                        <input type="text" id="name-bangla" name="name-bangla" required placeholder="Enter Your Name In Bangla">
                     </div>
                     
                     <div class="input-group">
-                        <label for="name-english" name="label-name-english">Name in English</label>
-                        <input type="text" name="name-english" required placeholder="Enter Your Name In English">
+                        <label for="name-english" id="label-name-english" name="label-name-english">Name in English</label>
+                        <input type="text" id="name-english" name="name-english" required placeholder="Enter Your Name In English">
                     </div>
                     
                     <div class="input-group">
-                        <label for="date" name="label-dob">Date of Birth</label>
-                        <input type="date" name="birthday" required>
+                        <label for="date" id="label-dob" name="label-dob">Date of Birth</label>
+                        <input type="date" id="date" name="birthday" required>
                     </div>
                     
                     <div class="input-group">
-                        <label for="father-name" name="label-father">Father's Name</label>
-                        <input type="text" name="father-name" required placeholder="Enter Your Father's Name">
+                        <label for="father-name" id="label-father" name="label-father">Father's Name</label>
+                        <input type="text" id="father-name" name="father-name" required placeholder="Enter Your Father's Name">
                     </div>
                     
                     <div class="input-group">
-                        <label for="mother-name" name="label-mother">Mother's Name</label>
-                        <input type="text" name="mother-name" required placeholder="Enter Your Mother's Name">
+                        <label for="mother-name" id="label-mother" name="label-mother">Mother's Name</label>
+                        <input type="text" id="mother-name" name="mother-name" required placeholder="Enter Your Mother's Name">
                     </div>
                 </div>
             </div>
 
             <div class="form-section">
-                <p class="address" name="current-address">Current Address</p>
+                <p class="address" id="" name="current-address">Current Address</p>
                 <div class="form-grid">
                     <div class="input-group">
-                        <label for="current-village" name="label-village">Village Name</label>
-                        <input type="text" name="current-village" required placeholder="Village name">
+                        <label for="current-village" id="label-village" name="label-village">Village Name</label>
+                        <input type="text"  id="current-village" name="current-village" required placeholder="Village name">
                     </div>
                     
                     <div class="input-group">
-                        <label for="current-post" name="label-post">Post Office</label>
-                        <input type="text" name="current-post" required placeholder="Post Office">
+                        <label for="current-post" id="label-post" name="label-post">Post Office</label>
+                        <input type="text"  id="current-post"name="current-post" required placeholder="Post Office">
                     </div>
                     
                     <div class="input-group">
-                        <label for="current-thana" name="label-thana">Thana</label>
-                        <input type="text" name="current-thana" required placeholder="Thana">
+                        <label for="current-thana"  id="label-thana" name="label-thana">Thana</label>
+                        <input type="text" id="current-thana" name="current-thana" required placeholder="Thana">
                     </div>
                     
                     <div class="input-group">
-                        <label for="current-district" name="label-district">District</label>
-                        <input type="text" name="current-district" required placeholder="District">
+                        <label for="current-district" id="label-district" name="label-district">District</label>
+                        <input type="text" id="current-district" name="current-district" required placeholder="District">
                     </div>
                 </div>
             </div>
 
             <div class="form-section">
-                <p class="address" name="permanent-address">Permanent Address</p>
+                <p class="address" id="permanent-address" name="permanent-address">Permanent Address</p>
                 <div class="form-grid">
                     <div class="input-group">
-                        <label for="permanent-village" name="label-village-perm">Village Name</label>
-                        <input type="text" name="permanent-village" required placeholder="Village name">
+                        <label for="permanent-village" id="label-village-perm" name="label-village-perm">Village Name</label>
+                        <input type="text" id="permanent-village" name="permanent-village" required placeholder="Village name">
                     </div>
                     
                     <div class="input-group">
-                        <label for="permanent-post" name="label-post-perm">Post Office</label>
-                        <input type="text" name="permanent-post" required placeholder="Post Office">
+                        <label for="permanent-post" id="label-post-perm" name="label-post-perm">Post Office</label>
+                        <input type="text" id="permanent-post" name="permanent-post" required placeholder="Post Office">
                     </div>
                     
                     <div class="input-group">
-                        <label for="permanent-thana" name="label-thana-perm">Thana</label>
-                        <input type="text" name="permanent-thana" required placeholder="Thana">
+                        <label for="permanent-thana" id="label-thana-perm" name="label-thana-perm">Thana</label>
+                        <input type="text" id="permanent-thana" name="permanent-thana" required placeholder="Thana">
                     </div>
                     
                     <div class="input-group">
-                        <label for="permanent-district" name="label-district-perm">District</label>
-                        <input type="text" name="permanent-district" required placeholder="District">
+                        <label for="permanent-district" id="label-district-perm" name="label-district-perm">District</label>
+                        <input type="text" id="permanent-district" name="permanent-district" required placeholder="District">
                     </div>
                 </div>
             </div>
 
             <div class="form-section">
-                <h2 class="section-title" name="additional-info">Additional Information</h2>
+                <h2 class="section-title" id="additional-info" name="additional-info">Additional Information</h2>
                 <div class="form-grid">
                     <div class="input-group">
-                        <label for="nationality" name="label-nationality">Nationality</label>
-                        <input type="text" name="nationality" required placeholder="Enter Your Nationality">
+                        <label for="nationality" id="label-nationality" name="label-nationality">Nationality</label>
+                        <input type="text" id="nationality" name="nationality" required placeholder="Enter Your Nationality">
                     </div>
                     
                     <div class="input-group">
-                        <label for="religion" name="label-religion">Religion</label>
-                        <input type="text" name="religion" required placeholder="Enter Your Religion">
+                        <label for="religion" id="label-religion" name="label-religion">Religion</label>
+                        <input type="text" id="religion" name="religion" required placeholder="Enter Your Religion">
                     </div>
                     
                     <div class="input-group">
-                        <label for="college" name="label-college">College Name</label>
-                        <input type="text" name="college" required placeholder="Enter Your College Name">
+                        <label for="college" id="label-college" name="label-college">College Name</label>
+                        <input type="text" id="college" name="college" required placeholder="Enter Your College Name">
                     </div>
                     
                     <div class="input-group">
-                        <label for="class" name="label-class">Class</label>
-                        <input type="text" name="class" required placeholder="Enter Your Class">
+                        <label for="class" id="label-class" name="label-class">Class</label>
+                        <input type="text" id="class" name="class" required placeholder="Enter Your Class">
                     </div>
                     
                     <div class="input-group">
-                        <label for="profession" name="label-profession">Profession</label>
-                        <input type="text" name="profession" required placeholder="Enter Your Profession">
+                        <label for="profession" id="label-profession" name="label-profession">Profession</label>
+                        <input type="text" id="profession" name="profession" required placeholder="Enter Your Profession">
                     </div>
                     
                     <div class="input-group">
-                        <label for="mobile" name="label-mobile">Mobile Number</label>
-                        <input type="tel" name="mobile" required placeholder="Enter Your Mobile Number">
+                        <label for="mobile" id="label-mobile" name="label-mobile">Mobile Number</label>
+                        <input type="tel" id="mobile" name="mobile" required placeholder="Enter Your Mobile Number">
                     </div>
                     
                     <div class="input-group">
-                        <label for="email" name="label-email">Email</label>
-                        <input type="email" name="email" required placeholder="Enter Your Email">
+                        <label for="email" id="label-email" name="label-email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter Your Email">
                     </div>
                     
                     <div class="input-group">
-                        <label for="nid" name="label-nid">NID Number</label>
-                        <input type="text" name="nid" required placeholder="Enter Your NID">
+                        <label for="nid" id="label-nid" name="label-nid">NID Number</label>
+                        <input type="text" id="nid" name="nid" required placeholder="Enter Your NID">
                     </div>
                     
                     <div class="input-group">
-                        <label for="blood" name="label-blood">Blood Group</label>
-                        <input type="text" name="blood" required placeholder="Enter Your Blood Group">
+                        <label for="blood" id="label-blood" name="label-blood">Blood Group</label>
+                        <input type="text" id="blood" name="blood" required placeholder="Enter Your Blood Group">
                     </div>
                 </div>
             </div>
 
             <div class="terms-section">
-                <h2 class="section-title" name="terms-title">Terms & Conditions</h2>
-                <p class="address" name="conditions-title">Conditions</p>
-                <ol type="A" name="conditions-list">
+                <h2 class="section-title" id="terms-title" name="terms-title">Terms & Conditions</h2>
+                <p class="address" id="conditions-title" name="conditions-title">Conditions</p>
+                <ol type="A" id="conditions-list" name="conditions-list">
                     <li>Must Strictly follow the discipline of the academy.</li>
                     <li>Must abstain from all kinds of drugs.</li>
                     <li>Must Refrain from any antisocial activities.</li>
@@ -524,12 +545,12 @@
                 </ol>
 
 
-                <p name="terms-english">I hereby declare that, as a member of Assailant Fighters Football Academy, I will behave responsibly. I will abide by all the rules and regulations of the academy and refrain from any kind of unethical activities. I will remain loyal to the academy and always strive to uphold its reputation. If I engage in any unethical activities, I will not have the right to make any complaint against the academy or its legal actions.</p>
-                
+                <p id="terms-english">I hereby declare that, as a member of Assailant Fighters Football Academy, I will behave responsibly. I will abide by all the rules and regulations of the academy and refrain from any kind of unethical activities. I will remain loyal to the academy and always strive to uphold its reputation. If I engage in any unethical activities, I will not have the right to make any complaint against the academy or its legal actions.</p>
+
                 <div class="input-group aggree" style="margin-top: 20px;">
-                    <label for="agree" name="agree-label">
-                        <input type="checkbox" name="agree" required> 
-                        <span name="agree-text">I agree to the terms and conditions</span>
+                    <label for="agree" id="agree-label">
+                        <input type="checkbox" name="agree" required>
+                        <span id ="agree-text">I agree to the terms and conditions</span>
                     </label>
                 </div>
             </div>
