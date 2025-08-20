@@ -409,6 +409,11 @@ header {
     margin-bottom: 10px;
 }
 
+
+
+
+
+
 /* Testimonials */
 .testimonials {
     background: linear-gradient(to right, var(--primary), #2c3e50);
@@ -710,5 +715,14 @@ footer {
 
     section {
         padding: 60px 0;
+    }
+
+    .map iframe {
+        width: 100%;
+    }
+
+    .coach-image {
+        /* width: 100%; */
+        height: 450px;
     }
 }
