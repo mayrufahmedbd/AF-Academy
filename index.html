@@ -3,31 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assailant Fighters Academy</title>
-    <link rel="icon" href="/img/Club logo.jpg">
+    <title>Assailant Fighters Academy - Home</title>
+    <link rel="icon" href="img/Club logo.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
-                <!-- <img class="logo-img" src="/img/logo.jpg" alt=""> -->
-                Assailant Fighters Academy
+                <a class="main-logo" href="index.html">Assailant Fighters Academy</a>
             </div>
             <div class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#coaches">Management</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="management.html">Management</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -35,137 +31,60 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1>Develop Your Football Skills With Professional Coaching</h1>
+            <h1>Welcome to Assailant Fighters Football Academy In Sylhet</h1>
             <p>Join our academy to receive top-tier training from experienced coaches and take your game to the next level.</p>
-            <a href="#contact" class="btn btn-pulse">Enroll Now</a>
+            <a href="UI/form.html" class="btn btn-pulse">Enroll Now</a>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Featured Sections (Preview) -->
+    <section class="featured-sections">
         <div class="container">
-            <h2 class="section-title">About Our Academy</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Assailant Fighters Academy was established in 2019 with a mission to develop young talented footballers and help them reach their full potential. Our state-of-the-art facilities and professional coaching staff create the perfect environment for player development.</p>
-                    <p>We offer programs for all age groups and skill levels, from beginners to advanced players looking to pursue professional careers. Our holistic approach focuses on technical skills, tactical understanding, physical conditioning, and mental strength.</p>
-                    <p>Over the years, we've helped hundreds of players secure positions in professional clubs and college teams across the country.</p>
-                    <a href="#programs" class="btn" style="margin-top: 20px;">Our Programs</a>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="featured-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>About Our Academy</h3>
+                    <p>Learn about our mission, facilities, and approach to player development.</p>
+                    <a href="about.html" class="btn">Learn More</a>
                 </div>
-                <div class="about-image">
-                    <img src="img/alamin vai.jpeg" alt="Football training session">
+                
+                <div class="featured-card">
+                    <div class="featured-icon">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <h3>Our Programs</h3>
+                    <p>Discover our training programs for all age groups and skill levels.</p>
+                    <a href="programs.html" class="btn">View Programs</a>
+                </div>
+                
+                <div class="featured-card">
+                    <div class="featured-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Our Management</h3>
+                    <p>Meet our experienced coaching staff and management team.</p>
+                    <a href="management.html" class="btn">Meet The Team</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Programs Section -->
-    <section id="programs" class="programs">
-        <div class="container">
-            <h2 class="section-title">Our Programs</h2>
-            <div class="programs-grid">
-                <div class="program-card">
-                    <div class="program-image">
-                        <img src="https://images.unsplash.com/photo-1599669454699-248893623464?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Youth Program">
-                    </div>
-                    <div class="program-content">
-                        <h3>Youth Development (Ages 6-12)</h3>
-                        <p>Focus on fundamental skills, coordination, and love for the game. Sessions include fun drills and small-sided games.</p>
-                        <a href="#contact" class="btn" style="margin-top: 15px;">Learn More</a>
-                    </div>
-                </div>
-                
-                <div class="program-card">
-                    <div class="program-image">
-                        <img src="https://images.unsplash.com/photo-1575361204480-aadea25e6e68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Advanced Program">
-                    </div>
-                    <div class="program-content">
-                        <h3>Advanced Training (Ages 13-18)</h3>
-                        <p>Intensive training for competitive players focusing on technical mastery, tactical awareness, and physical conditioning.</p>
-                        <a href="#contact" class="btn" style="margin-top: 15px;">Learn More</a>
-                    </div>
-                </div>
-                
-                <div class="program-card">
-                    <div class="program-image">
-                        <img src="https://images.unsplash.com/photo-1624526267942-ab0c6b3b4d76?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Goalkeeper Program">
-                    </div>
-                    <div class="program-content">
-                        <h3>Goalkeeper Specialization</h3>
-                        <p>Specialized training for goalkeepers focusing on shot-stopping, positioning, distribution, and communication.</p>
-                        <a href="#contact" class="btn" style="margin-top: 15px;">Learn More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Coaches Section -->
-    <section id="coaches" class="coaches">
-        <div class="container">
-            <h2 class="section-title">Our Team Management</h2>
-            <div class="coaches-grid">
-                <div class="coach-card">
-                    <div class="coach-image">
-                        <img src="/img/alamin vai.jpeg" alt="Managing Director al amin">
-                    </div>
-                    <div class="coach-info">
-                        <h3>Al Amin</h3>
-                        <p class="coach-role">Managing Director</p>
-                        <p>15 years of managing director experience. Former professional player with Assailant Fighters academy.</p>
-                    </div>
-                </div>
-                
-                <div class="coach-card">
-                    <div class="coach-image">
-                        <img src="/img/Shakirul Goush.png" alt="Coach Sarah Johnson">
-                    </div>
-                    <div class="coach-info">
-                        <h3>Shakirul Goush</h3>
-                        <p class="coach-role">chairman</p>
-                        <p>Specializes as a chairman fo the club.</p>
-                    </div>
-                </div>
-                
-                <div class="coach-card">
-                    <div class="coach-image">
-                        <img src="/img/imran.png" alt="imran ">
-                    </div>
-                    <div class="coach-info">
-                        <h3>Imran Bin Ahad</h3>
-                        <p class="coach-role">General Secretary</p>
-                        <p>Strength and conditioning specialist with a degree in Sports Science. Focuses on athletic development.</p>
-                    </div>
-                </div>
-                
-                <div class="coach-card">
-                    <div class="coach-image">
-                        <img src="/img/said.png" alt="Coach David Wilson">
-                    </div>
-                    <div class="coach-info">
-                        <h3>Said </h3>
-                        <p class="coach-role">Deputy General Secretary</p>
-                        <p>12 years of experience.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
+    <!-- Testimonials Preview -->
+    <section class="testimonials-preview">
         <div class="container">
             <h2 class="section-title">What Our Players Say</h2>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"The coaching at Elite Football Academy transformed my game. I've improved technically and tactically more in 6 months than I did in 3 years at my previous club."</p>
+                    <p class="testimonial-text">"The coaching at Assailant Fighters Academy transformed my game. I've improved technically and tactically more in 6 months than I did in 3 years at my previous club."</p>
                     <div class="testimonial-author">
                         <div class="author-image">
-                            <img src="/img/my photo.jpg" alt="James Rodriguez">
+                            <img src="img/my photo.jpg" alt="Mayruf Ahmed">
                         </div>
                         <div>
                             <h4>Mayruf Ahmed</h4>
-                            <p>defensive player</p>
+                            <p>Defensive Player</p>
                         </div>
                     </div>
                 </div>
@@ -182,86 +101,19 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"The goalkeeper training program is the best in the region. Coach Wilson's attention to detail has dramatically improved my shot-stopping and distribution."</p>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="https://images.unsplash.com/photo-1508341591423-4347099e1f19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Tom Wilson">
-                        </div>
-                        <div>
-                            <h4>Tom Wilson</h4>
-                            <p>Goalkeeper, U19 Team</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Call to Action -->
+    <section class="cta">
         <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <ul class="contact-details">
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>MC College Field </span>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span>01601-209708</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <span>assailantsfighersaf@gmail.com</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-clock"></i>
-                            <span>Saturday-Thursday</span>
-                        </li>
-                    </ul>
-                    <div class="social-links" style="margin-top: 30px;">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="academyForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="program">Program Interested In</label>
-                            <select id="program" name="program" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
-                                <option value="">Select a program</option>
-                                <option value="youth">Youth Development (Ages 6-12)</option>
-                                <option value="advanced">Advanced Training (Ages 13-18)</option>
-                                <option value="goalkeeper">Goalkeeper Specialization</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Submit</button>
-                    </form>
+            <div class="cta-content">
+                <h2>Ready to Start Your Football Journey?</h2>
+                <p>Join Assailant Fighters Academy today and take the first step toward reaching your full potential as a football player.</p>
+                <div class="cta-buttons">
+                    <a href="programs.html" class="btn btn-sss">Explore Programs</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -272,29 +124,29 @@
         <div class="container">
             <div class="footer-container">
                 <div class="footer-section">
-                    <h3>Assailant Fighters Academy</h3>
+                    <h3><a href="/">Assailant Fighters Academy</a></h3>
                     <p>Developing the next generation of football talent through professional coaching and state-of-the-art facilities.</p>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#programs">Programs</a></li>
-                        <li><a href="#coaches">Management</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="management.html">Management</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Programs</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Youth Development</a></li>
-                        <li><a href="#">Advanced Training</a></li>
-                        <li><a href="#">Goalkeeper Training</a></li>
-                        <li><a href="#">Summer Camps</a></li>
-                        <li><a href="#">Tournament Teams</a></li>
+                        <li><a href="programs.html#youth">Youth Development</a></li>
+                        <li><a href="programs.html#advanced">Advanced Training</a></li>
+                        <li><a href="programs.html#goalkeeper">Goalkeeper Training</a></li>
+                        <li><a href="programs.html">Summer Camps</a></li>
+                        <li><a href="programs.html">Tournament Teams</a></li>
                     </ul>
                 </div>
                 
@@ -313,6 +165,6 @@
         </div>
     </footer>
 
-<script src="/js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
