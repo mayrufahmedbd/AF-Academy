@@ -370,13 +370,19 @@ header {
 }
 
 /* Coaches Section */
-.coaches-grid {
+.menagers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
 
-.coach-card {
+.players-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.menagers-card {
     text-align: center;
     background: white;
     border-radius: 8px;
@@ -384,18 +390,50 @@ header {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-.coach-image {
+.players-card{
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.menagers-image {
     height: 350px;
     overflow: hidden;
 }
 
-.coach-image img {
+.players-image{
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.menagers-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.coach-image img:hover{
+.players-image img{
+        width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menagers-image img:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+.players-image img:hover{
     transform: scale(1.1);
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
@@ -404,7 +442,9 @@ header {
     -o-transition: all 0.5s ease;
 }
 
-.coach-info {
+
+
+.menagers-info {
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -413,12 +453,59 @@ header {
     
 }
 
-.coach-info h3 {
-    color: var(--primary);
-    margin-bottom: 5px;
+.players-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
 }
 
-.coach-role {
+.menagers-info h3 {
+    color: var(--primary);
+    margin-bottom: 5px;
+    transition: all .3s ease;
+    overflow: hidden
+}
+
+.menagers-info h3:hover {
+        color: black;
+        margin-bottom: 5px;
+        transform: scale(2.0);
+        -webkit-transform: scale(2.0);
+        -moz-transform: scale(2.0);
+        -ms-transform: scale(2.0);
+        -o-transform: scale(2.0);
+}
+
+.menagers-role {
+    color: var(--secondary);
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.players-info h3 {
+    color: var(--primary);
+    margin-bottom: 5px;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+
+.players-info h3:hover {
+    color: black;
+    transform: scale(2.0);
+    margin-bottom: 5px;
+    -webkit-transform: scale(2.0);
+    -moz-transform: scale(2.0);
+    -ms-transform: scale(2.0);
+    -o-transform: scale(2.0);
+}
+
+.players-role {
     color: var(--secondary);
     font-style: italic;
     margin-bottom: 10px;
@@ -699,6 +786,16 @@ footer {
         height: calc(100vh - 70px);
         transition: all 0.3s ease;
         padding: 40px 0;
+    }
+
+    .players-image {
+    height: 170px;
+    }
+
+    
+    .players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     }
 
     .nav-menu.active {
