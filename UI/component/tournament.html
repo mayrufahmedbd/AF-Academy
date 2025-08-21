@@ -2,308 +2,408 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Assailant Fighters Academy</title>
-    <link rel="icon" href="img/club logo.png">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            height: 100vh;
-            background-color: #004d00;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tournament team - Assailant Fighters Academy</title>
+  <link rel="icon" href="../../img/club logo.png">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      background-color: #004d00;
+    }
 
-        /* Sidebar */
-        .sidebar {
-            width: 250px;
-            background-color: #003300;
-            padding: 20px;
-            overflow-y: auto;
-            box-sizing: border-box;
-        }
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #003300;
+      padding: 50px 20px;
+      overflow-y: auto;
+      box-sizing: border-box;
+      transition: transform 0.3s ease-in-out;
+    }
 
-        .sidebar h2 {
-            color: #fff;
-            text-align: center;
-            margin-bottom: 15px;
-        }
+    /* Sidebar hidden only on mobile */
+    @media (max-width: 768px) {
+      .sidebar.hidden {
+        transform: translateX(-100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 999;
+      }
+    }
 
-        .substitute {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-            color: #fff;
-        }
+    .sidebar h2 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 15px;
+    }
 
-        .substitute img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 10px;
-            border: 2px solid #fff;
-            object-fit: cover;
-        }
+    .substitute {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      color: #fff;
+    }
 
-        .substitute-name {
-            font-size: 12px;
-        }
+    .substitute img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+      border: 2px solid #fff;
+      object-fit: cover;
+    }
 
-        .substitute-position {
-            font-size: 10px;
-            color: #ccc;
-        }
+    .substitute-name {
+      font-size: 12px;
+    }
 
-        /* Field */
-        .field {
-            flex: 1;
-            position: relative;
-            background: green;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
+    .substitute-position {
+      font-size: 10px;
+      color: #ccc;
+    }
 
-        .pitch {
-            width: 80%;
-            height: 95%;
-            background: linear-gradient(#228B22, #006400);
-            border: 3px solid #fff;
-            border-radius: 15px;
-            position: relative;
-        }
+    /* Field */
+    .field {
+      flex: 1;
+      position: relative;
+      background: green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
 
-        /* Goalposts */
-        .goal {
-            position: absolute;
-            width: 15%;
-            height: 5%;
-            border: 3px solid #fff;
-            background: transparent;
-        }
+    .pitch {
+    width: 80%;
+    height: 95%;
+    background: url(/img/pitch.jpg) no-repeat top center;
+    background-size: cover; /* Ensure the pitch image fills the div */
+    border: 3px solid #fff;
+    border-radius: 15px;
+    position: relative;
+    }
 
-        .goal.top {
-            top: 0;
-            left: 42.5%;
-        }
+    /* Goalposts */
+    /* .goal {
+      position: absolute;
+      width: 15%;
+      height: 5%;
+      border: 3px solid #fff;
+      background: transparent;
+    } */
 
-        .goal.bottom {
-            bottom: 0;
-            left: 42.5%;
-        }
+    /* .goal.top {
+      top: 0;
+      left: 42.5%;
+    } */
 
-        /* Player styles */
-        .player {
-            position: absolute;
-            text-align: center;
-            color: #fff;
-        }
+    /* .goal.bottom {
+      bottom: 0;
+      left: 42.5%;
+    } */
 
-        .player img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            border: 2px solid #fff;
-            object-fit: cover;
-        }
+    /* Player styles */
+    .player {
+      position: absolute;
+      text-align: center;
+      color: #fff;
+    }
 
-        .player-name {
-            font-size: 12px;
-            margin-top: 3px;
-        }
+    .player img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      object-fit: cover;
+    }
 
-        .player-position {
-            font-size: 10px;
-            color: #ccc;
-        }
+    .player-name {
+      font-size: 12px;
+      margin-top: 3px;
+    }
 
-        /* Example positions (4-4-2) */
-        #gk {
-            top: 85%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+    .player-position {
+      font-size: 10px;
+      color: #ccc;
+    }
+    /* Remove column stacking on mobile */
+@media (max-width: 768px) {
+  body {
+    flex-direction: row; /* Keep side by side */
+  }
 
-        #lb {
-            top: 70%;
-            left: 15%;
-            transform: translate(-50%, -50%);
-        }
+  .sidebar {
+    position: absolute; /* Overlay sidebar */
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 999;
+  }
 
-        #cb1 {
-            top: 70%;
-            left: 40%;
-            transform: translate(-50%, -50%);
-        }
+  .sidebar.hidden {
+    transform: translateX(-100%); /* Slide out */
+  }
 
-        #cb2 {
-            top: 70%;
-            left: 60%;
-            transform: translate(-50%, -50%);
-        }
+  .field {
+    flex: 1;
+    width: 100%;
+    height: 100vh;
+  }
 
-        #rb {
-            top: 70%;
-            left: 85%;
-            transform: translate(-50%, -50%);
-        }
+  .pitch {
+    width: 95%;
+    height: 90%;
+  }
+}
 
-        #lmf {
-            top: 55%;
-            left: 35%;
-            transform: translate(-50%, -50%);
-        }
 
-        #cmf1 {
-            top: 55%;
-            left: 65%;
-            transform: translate(-50%, -50%);
-        }
+    /* Example positions (4-4-2) */
+    #gk {
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-        #cmf2 {
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+    #lb {
+      top: 70%;
+      left: 15%;
+      transform: translate(-50%, -50%);
+    }
 
-        #rmf {
-            top: 20%;
-            left: 25%;
-            transform: translate(-50%, -50%);
-        }
+    #cb1 {
+      top: 70%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+    }
 
-        #cf1 {
-            top: 15%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+    #cb2 {
+      top: 70%;
+      left: 60%;
+      transform: translate(-50%, -50%);
+    }
 
-        #cf2 {
-            top: 20%;
-            left: 75%;
-            transform: translate(-50%, -50%);
-        }
-    </style>
+    #rb {
+      top: 70%;
+      left: 85%;
+      transform: translate(-50%, -50%);
+    }
+
+    #lmf {
+      top: 55%;
+      left: 35%;
+      transform: translate(-50%, -50%);
+    }
+
+    #cmf1 {
+      top: 55%;
+      left: 65%;
+      transform: translate(-50%, -50%);
+    }
+
+    #cmf2 {
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #rmf {
+      top: 20%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+    }
+
+    #cf1 {
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #cf2 {
+      top: 20%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Toggle Button - visible only on mobile */
+    .toggle-btn {
+      display: none;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #fff;
+      color: #003300;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 5px;
+      z-index: 1000;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .toggle-btn {
+        display: block;
+      }
+
+      body {
+        flex-direction: column;
+      }
+
+      .field {
+        width: 100%;
+        height: 100dvh;
+      }
+
+      .pitch {
+        width: 95%;
+        height: 90%;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Toggle Button -->
+  <button class="toggle-btn" onclick="toggleSidebar()">Show Subs</button>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <h2>Substitutes</h2>
-        <div class="substitute"><img src="img/fahim.jpg" alt="Fahim">
-            <div><span class="substitute-name">Fahim</span><br><span class="substitute-position">LB</span></div>
-        </div>
-        <div class="substitute"><img src="img/lalon.jpg" alt="Lalon">
-            <div><span class="substitute-name">Lalon</span><br><span class="substitute-position">CMF</span></div>
-        </div>
-        <div class="substitute"><img src="img/saikat.jpg" alt="Saikat">
-            <div><span class="substitute-name">Saikat</span><br><span class="substitute-position">RB</span></div>
-        </div>
-        <div class="substitute"><img src="img/zakaria.jpg" alt="Zakaria">
-            <div><span class="substitute-name">Zakaria</span><br><span class="substitute-position">CB</span></div>
-        </div>
-        <div class="substitute"><img src="img/shamim.jpg" alt="Shamim">
-            <div><span class="substitute-name">Shamim</span><br><span class="substitute-position">CB</span></div>
-        </div>
-        <div class="substitute"><img src="img/mohammad.jpg" alt="Mohammad Shahzad">
-            <div><span class="substitute-name">Mohammad Shahzad</span><br><span class="substitute-position">RB</span>
-            </div>
-        </div>
-        <div class="substitute"><img src="img/jubayer.jpg" alt="Jubayer">
-            <div><span class="substitute-name">Jubayer</span><br><span class="substitute-position">RMF</span></div>
-        </div>
-        <div class="substitute"><img src="img/sanar.jpg" alt="Sanar">
-            <div><span class="substitute-name">Sanar</span><br><span class="substitute-position">DMF</span></div>
-        </div>
-        <div class="substitute"><img src="img/tanvir.jpg" alt="Tanvir">
-            <div><span class="substitute-name">Tanvir</span><br><span class="substitute-position">LB</span></div>
-        </div>
-        <div class="substitute"><img src="img/fahad.jpg" alt="Fahad">
-            <div><span class="substitute-name">Fahad</span></div>
-        </div>
-        <div class="substitute"><img src="img/tasrif.jpg" alt="Tasrif">
-            <div><span class="substitute-name">Tasrif</span></div>
-        </div>
-        <div class="substitute"><img src="img/redwan.jpg" alt="Redwan">
-            <div><span class="substitute-name">Redwan</span></div>
-        </div>
+  <!-- Sidebar -->
+  <div class="sidebar hidden" id="sidebar">
+    <h2>Substitutes</h2>
+    <div class="substitute"><img src="img/fahim.jpg" alt="Fahim">
+      <div><span class="substitute-name">Fahim</span><br><span class="substitute-position">LB</span></div>
     </div>
-
-    <!-- Field -->
-    <div class="field">
-        <div class="pitch">
-            <!-- Goals -->
-            <div class="goal top"></div>
-            <div class="goal bottom"></div>
-
-            <!-- Goalkeeper -->
-            <div class="player" id="gk">
-                <img src="" alt="gk photo">
-                <div class="player-name">.</div>
-                <div class="player-position">GK</div>
-            </div>
-
-            <!-- Defenders -->
-            <div class="player" id="lb">
-                <img src="../../img/Mayruf.jpg" alt="Nahid">
-                <div class="player-name">Mayruf</div>
-                <div class="player-position">LB</div>
-            </div>
-            <div class="player" id="cb1">
-                <img src="../../img/al amin.jpg" alt="Al amin">
-                <div class="player-name">Al Amin</div>
-                <div class="player-position">CB</div>
-            </div>
-            <div class="player" id="cb2">
-                <img src="../../img/nurul.jpg" alt="Nurol Amin">
-                <div class="player-name">Nurol Amin</div>
-                <div class="player-position">CB</div>
-            </div>
-            <div class="player" id="rb">
-                <img src="../../img/ahsan.jpg" alt="Ashan">
-                <div class="player-name">Ashan</div>
-                <div class="player-position">RB</div>
-            </div>
-
-            <!-- Midfielders -->
-            <div class="player" id="lmf">
-                <img src="../../img/mahid.jpg" alt="Mahid">
-                <div class="player-name">Mahid</div>
-                <div class="player-position">LMF</div>
-            </div>
-            <div class="player" id="cmf1">
-                <img src="../../img/naisr.jpg" alt="Nasir">
-                <div class="player-name">Nasir</div>
-                <div class="player-position">CMF</div>
-            </div>
-            <div class="player" id="cmf2">
-                <img src="../../img/limon.jpg" alt="Shuvo">
-                <div class="player-name">Limon</div>
-                <div class="player-position">DMF</div>
-            </div>
-            <div class="player" id="rmf">
-                <img src="../../img/shahjan.jpg" alt="Shahjan">
-                <div class="player-name">Shahjan</div>
-                <div class="player-position">RWF</div>
-            </div>
-
-            <!-- Forwards -->
-            <div class="player" id="cf1">
-                <img src="../../img/limon.jpg" alt="Limon">
-                <div class="player-name">Saud</div>
-                <div class="player-position">CF</div>
-            </div>
-            <div class="player" id="cf2">
-                <img src="../../img/raahul das.png" alt="Rahul">
-                <div class="player-name">Rahul</div>
-                <div class="player-position">AMF</div>
-            </div>
-        </div>
+    <div class="substitute"><img src="img/lalon.jpg" alt="Lalon">
+      <div><span class="substitute-name">Lalon</span><br><span class="substitute-position">CMF</span></div>
     </div>
+    <div class="substitute"><img src="img/saikat.jpg" alt="Saikat">
+      <div><span class="substitute-name">Saikat</span><br><span class="substitute-position">RB</span></div>
+    </div>
+    <div class="substitute"><img src="img/zakaria.jpg" alt="Zakaria">
+      <div><span class="substitute-name">Zakaria</span><br><span class="substitute-position">CB</span></div>
+    </div>
+    <div class="substitute"><img src="img/shamim.jpg" alt="Shamim">
+      <div><span class="substitute-name">Shamim</span><br><span class="substitute-position">CB</span></div>
+    </div>
+    <div class="substitute"><img src="img/mohammad.jpg" alt="Mohammad Shahzad">
+      <div><span class="substitute-name">Mohammad Shahzad</span><br><span class="substitute-position">RB</span>
+      </div>
+    </div>
+    <div class="substitute"><img src="img/jubayer.jpg" alt="Jubayer">
+      <div><span class="substitute-name">Jubayer</span><br><span class="substitute-position">RMF</span></div>
+    </div>
+    <div class="substitute"><img src="img/sanar.jpg" alt="Sanar">
+      <div><span class="substitute-name">Sanar</span><br><span class="substitute-position">DMF</span></div>
+    </div>
+    <div class="substitute"><img src="img/tanvir.jpg" alt="Tanvir">
+      <div><span class="substitute-name">Tanvir</span><br><span class="substitute-position">LB</span></div>
+    </div>
+    <div class="substitute"><img src="img/fahad.jpg" alt="Fahad">
+      <div><span class="substitute-name">Fahad</span></div>
+    </div>
+    <div class="substitute"><img src="img/tasrif.jpg" alt="Tasrif">
+      <div><span class="substitute-name">Tasrif</span></div>
+    </div>
+    <div class="substitute"><img src="img/redwan.jpg" alt="Redwan">
+      <div><span class="substitute-name">Redwan</span></div>
+    </div>
+  </div>
 
+  <!-- Field -->
+  <div class="field">
+    <div class="pitch">
+      <!-- Goals -->
+      <div class="goal top"></div>
+      <div class="goal bottom"></div>
+
+      <!-- Players (sample only) -->
+      <div class="player" id="gk">
+        <img src="" alt="gk photo">
+        <div class="player-name">.</div>
+        <div class="player-position">GK</div>
+      </div>
+
+      <div class="player" id="lb">
+        <img src="../../img/Mayruf.jpg" alt="Nahid">
+        <div class="player-name">Mayruf</div>
+        <div class="player-position">LB</div>
+      </div>
+      <div class="player" id="cb1">
+        <img src="../../img/al amin.jpg" alt="Al amin">
+        <div class="player-name">Al Amin</div>
+        <div class="player-position">CB</div>
+      </div>
+      <div class="player" id="cb2">
+        <img src="../../img/nurul.jpg" alt="Nurol Amin">
+        <div class="player-name">Nurol Amin</div>
+        <div class="player-position">CB</div>
+      </div>
+      <div class="player" id="rb">
+        <img src="../../img/ahsan.jpg" alt="Ashan">
+        <div class="player-name">Ashan</div>
+        <div class="player-position">RB</div>
+      </div>
+
+      <div class="player" id="lmf">
+        <img src="../../img/mahid.jpg" alt="Mahid">
+        <div class="player-name">Mahid</div>
+        <div class="player-position">LMF</div>
+      </div>
+      <div class="player" id="cmf1">
+        <img src="../../img/naisr.jpg" alt="Nasir">
+        <div class="player-name">Nasir</div>
+        <div class="player-position">CMF</div>
+      </div>
+      <div class="player" id="cmf2">
+        <img src="../../img/limon.jpg" alt="Shuvo">
+        <div class="player-name">Limon</div>
+        <div class="player-position">AMF</div>
+      </div>
+      <div class="player" id="rmf">
+        <img src="../../img/shahjan.jpg" alt="Shahjan">
+        <div class="player-name">Shahjan</div>
+        <div class="player-position">RWF</div>
+      </div>
+
+      <div class="player" id="cf1">
+        <img src="../../img/limon.jpg" alt="Limon">
+        <div class="player-name">Saud</div>
+        <div class="player-position">CF</div>
+      </div>
+      <div class="player" id="cf2">
+        <img src="../../img/raahul das.png" alt="Rahul">
+        <div class="player-name">Rahul</div>
+        <div class="player-position">LWF</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer  -->
+
+  <script>
+function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      const btn = document.querySelector(".toggle-btn");
+      sidebar.classList.toggle("hidden");
+
+      if (sidebar.classList.contains("hidden")) {
+        btn.textContent = "Show Subs";
+      } else {
+        btn.textContent = "Hide Subs";
+      }
+    }
+
+    // Make sidebar hidden by default on mobile
+    if (window.innerWidth <= 768) {
+      document.getElementById("sidebar").classList.add("hidden");
+    }
+  </script>
 </body>
 
 </html>
