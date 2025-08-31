@@ -1,17 +1,33 @@
 {
-      "match": {
-          "home": "Barcelona",
-              "away": "Real Madrid",
-                  "score": "2 - 1"
-                    },
-                      "lineups": {
-                          "home": ["Ter Stegen", "Araujo", "Pedri"],
-                              "away": ["Courtois", "Modric", "Benzema"]
-                                },
-                                  "timeline": [
-                                      {"minute": "15'", "event": "⚽ Goal by Benzema"},
-                                          {"minute": "42'", "event": "⚽ Goal by Pedri"},
-                                              {"minute": "78'", "event": "⚽ Goal by Lewandowski"}
-                                                ]
-                                                }
+  "match": {
+    "home": "Assailant Fighters",
+    "away": "Real Madrid",
+    "score": "0 - 0"
+  },
+  "lineups": {
+    "home": [
+      "Ter Stegen",
+      "Araujo",
+      "Pedri"
+    ],
+    "away": [
+      "Courtois",
+      "Modric",
+      "Benzema"
+    ]
+  },
+  "timeline": [
+    {
+      "minute": "15'",
+      "event": "⚽ Goal by Benzema"
+    },
+    {
+      "minute": "42'",
+      "event": "⚽ Goal by Pedri"
+    },
+    {
+      "minute": "78'",
+      "event": "⚽ Goal by Lewandowski"
+    }
+  ]
 }
