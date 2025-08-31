@@ -1,0 +1,78 @@
+/* General page style */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0a0f24, #1b2a49);
+      color: #fff;
+        margin: 0;
+          padding: 20px;
+            text-align: center;
+            }
+
+            /* Title */
+            h1 {
+              font-size: 2.5rem;
+                margin-bottom: 20px;
+                  color: #ffd700;
+                    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+                    }
+
+                    /* Section boxes */
+                    #match-info, #lineups, #timeline {
+                      background: rgba(255, 255, 255, 0.08);
+                        border-radius: 15px;
+                          padding: 20px;
+                            margin: 20px auto;
+                              max-width: 700px;
+                                box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+                                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                                  }
+
+                                  #match-info:hover, #lineups:hover, #timeline:hover {
+                                    transform: translateY(-5px);
+                                      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+                                      }
+
+                                      /* Headings */
+                                      h2, h3 {
+                                        margin-top: 0;
+                                          color: #00e6ff;
+                                          }
+
+                                          /* Score style */
+                                          #match-info p {
+                                            font-size: 1.2rem;
+                                              font-weight: bold;
+                                                margin: 5px 0;
+                                                  color: #ff4757;
+                                                  }
+
+                                                  /* Lineups */
+                                                  #lineups p {
+                                                    text-align: left;
+                                                      margin: 8px 0;
+                                                        padding: 8px;
+                                                          background: rgba(255, 255, 255, 0.05);
+                                                            border-left: 4px solid #00ff99;
+                                                              border-radius: 8px;
+                                                              }
+
+                                                              /* Timeline list */
+                                                              #timeline ul {
+                                                                list-style: none;
+                                                                  padding: 0;
+                                                                  }
+
+                                                                  #timeline li {
+                                                                    text-align: left;
+                                                                      padding: 10px;
+                                                                        margin: 6px 0;
+                                                                          background: rgba(0, 0, 0, 0.3);
+                                                                            border-left: 4px solid #ffd700;
+                                                                              border-radius: 8px;
+                                                                                font-size: 1rem;
+                                                                                  transition: background 0.3s ease;
+                                                                                  }
+
+                                                                                  #timeline li:hover {
+                                                                                    background: rgba(255, 255, 255, 0.1);
+                                                                                    }
