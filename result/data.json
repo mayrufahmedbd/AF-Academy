@@ -1,33 +1,61 @@
 {
-  "match": {
-    "home": "Assailant Fighters",
-    "away": "Real Madrid",
-    "score": "0 - 0"
-  },
-  "lineups": {
-    "home": [
-      "Ter Stegen",
-      "Araujo",
-      "Pedri"
+    "match": {
+        "homeTeam": "Rayo Vallecano",
+        "awayTeam": "Barcelona",
+        "homeScore": 1,
+        "awayScore": 1,
+        "status": "FT",
+        "homeLogo": "rayo-vallecano-logo.png",
+        "awayLogo": "barcelona-logo.png"
+    },
+    "timeline": [
+        {
+            "minute": 90,
+            "type": "commentary",
+            "text": "FULL-TIME: Rayo Vallecano 1-1 Barcelona"
+        },
+        {
+            "minute": "90+4",
+            "type": "yellow-card",
+            "player": "P. Chavarria",
+            "team": "home",
+            "position": "Defender #3",
+            "comment": "Chavarria feels hard done by as he is booked for what seems like a fair challenge on Yamal just over the halfway line. Rayo would have been through there."
+        },
+        {
+            "minute": "90+3",
+            "type": "substitution",
+            "in": {"name": "Gerard Gumbau", "position": "Midfielder #15", "team": "home"},
+            "out": {"name": "A. Garcia", "position": "Midfielder #18", "team": "home"}
+        }
     ],
-    "away": [
-      "Courtois",
-      "Modric",
-      "Benzema"
-    ]
-  },
-  "timeline": [
-    {
-      "minute": "15'",
-      "event": "⚽ Goal by Benzema"
-    },
-    {
-      "minute": "42'",
-      "event": "⚽ Goal by Pedri"
-    },
-    {
-      "minute": "78'",
-      "event": "⚽ Goal by Lewandowski"
+    "lineup": {
+        "home": [
+            {"name": "A. Ratiu", "rating": 3.5, "position": "DF"},
+            {"name": "L. Felipe", "rating": 3.2, "position": "DF"},
+            {"name": "F. Lejeune", "rating": 3.3, "position": "DF"},
+            {"name": "P. Chavarria", "rating": 3.2, "position": "DF"},
+            {"name": "J. de Frutos", "rating": 3.4, "position": "MF"},
+            {"name": "U. López", "rating": 3.2, "position": "MF"},
+            {"name": "P. Ciss", "rating": 3.3, "position": "MF"},
+            {"name": "A. Garcia", "rating": 3.3, "position": "MF"},
+            {"name": "I. Palazón", "rating": 3.7, "position": "FW"},
+            {"name": "P. Díaz", "rating": 3.3, "position": "FW"},
+            {"name": "F. Torres", "rating": 3.3, "position": "FW"},
+            {"name": "Gerard Gumbau", "rating": 3.0, "position": "Midfielder #15"}
+        ],
+        "away": [
+            {"name": "I. Pena", "rating": 4.5, "position": "GK"},
+            {"name": "A. Balde", "rating": 3.8, "position": "DF"},
+            {"name": "A. Christensen", "rating": 3.7, "position": "DF"},
+            {"name": "E. Garcia", "rating": 3.7, "position": "DF"},
+            {"name": "J. Koundé", "rating": 3.7, "position": "DF"},
+            {"name": "Pedri", "rating": 4.3, "position": "MF"},
+            {"name": "D. Olmo", "rating": 3.2, "position": "MF"},
+            {"name": "F. de Jong", "rating": 3.7, "position": "MF"},
+            {"name": "Raphinha", "rating": 4.0, "position": "FW"},
+            {"name": "L. Yamal", "rating": 3.9, "position": "FW"},
+            {"name": "P. López", "rating": 3.2, "position": "FW"}
+        ]
     }
-  ]
 }

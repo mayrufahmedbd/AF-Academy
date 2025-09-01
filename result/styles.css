@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #1a1a1a;
+    padding: 10px;
+}
+
+.match-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.team img {
+    width: 40px;
+    height: 40px;
+}
+
+.score {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#match-status {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #333;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.tab.active {
+    border-bottom: 2px solid #007bff;
+    color: #007bff;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.timeline-event {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #2a2a2a;
+    border-radius: 5px;
+}
+
+.timeline-event.commentary {
+    background: #333;
+}
+
+.timeline-event.yellow-card .event-icon {
+    color: #ffeb3b;
+}
+
+.timeline-event.substitution .event-icon {
+    color: #4caf50;
+}
+
+.event-time {
+    font-size: 14px;
+    margin-right: 10px;
+    min-width: 40px;
+}
+
+.event-icon {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.event-details {
+    flex: 1;
+}
+
+.event-details span {
+    display: block;
+    font-size: 14px;
+}
+
+.event-details p {
+    font-size: 12px;
+    color: #999;
+    margin: 5px 0 0;
+}
+
+.sub-in, .sub-out {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pitch {
+    background: #2ecc71;
+    position: relative;
+    height: 600px;
+    width: 100%;
+    border: 2px solid #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.pitch::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.team-lineup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+        "gk gk gk"
+        "df1 df2 df3"
+        "df4 df5 df6"
+        "mf1 mf2 mf3"
+        "fw1 fw2 fw3";
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.home-lineup {
+    top: 0;
+}
+
+.away-lineup {
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
+.player {
+    text-align: center;
+    color: white;
+    padding: 5px;
+}
+
+.player img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.player span {
+    display: block;
+    font-size: 12px;
+}
+
+.rating {
+    font-weight: bold;
+}
