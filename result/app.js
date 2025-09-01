@@ -1,97 +1,109 @@
-document.addEventListener('DOMContentLoaded', () => {
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            // Populate match header
-            document.getElementById('home-team').textContent = data.match.homeTeam;
-            document.getElementById('away-team').textContent = data.match.awayTeam;
-            document.getElementById('home-score').textContent = data.match.homeScore;
-            document.getElementById('away-score').textContent = data.match.awayScore;
-            document.getElementById('match-status').textContent = data.match.status;
-            document.getElementById('home-logo').src = data.match.homeLogo || 'placeholder-home-logo.png';
-            document.getElementById('away-logo').src = data.match.awayLogo || 'placeholder-away-logo.png';
+let matchData = {};
 
-            // Populate timeline
-            const timelineEvents = document.getElementById('timeline-events');
-            data.timeline.forEach(event => {
-                const eventDiv = document.createElement('div');
-                eventDiv.className = `timeline-event ${event.type}`;
+async function loadData() {
+    const res = await fetch('data.json');
+    matchData = await res.json();
+    initApp();
+}
 
-                if (event.type === 'commentary') {
-                    eventDiv.innerHTML = `
-                        <div class="event-time">${event.minute}'</div>
-                        <div class="event-text">${event.text}</div>
-                    `;
-                } else if (event.type === 'yellow-card') {
-                    eventDiv.innerHTML = `
-                        <div class="event-time">${event.minute}'</div>
-                        <div class="event-icon">📑</div>
-                        <div class="event-details">
-                            <span>${event.player}</span>
-                            <span>${event.team === 'home' ? data.match.homeTeam : data.match.awayTeam} - ${event.position}</span>
-                            <p>${event.comment}</p>
-                        </div>
-                    `;
-                } else if (event.type === 'substitution') {
-                    eventDiv.innerHTML = `
-                        <div class="event-time">${event.minute}'</div>
-                        <div class="event-icon">↕️</div>
-                        <div class="event-details">
-                            <div class="sub-in">
-                                <span>IN: ${event.in.name}</span>
-                                <span>${event.in.team === 'home' ? data.match.homeTeam : data.match.awayTeam} - ${event.in.position}</span>
-                            </div>
-                            <div class="sub-out">
-                                <span>OUT: ${event.out.name}</span>
-                                <span>${event.out.team === 'home' ? data.match.homeTeam : data.match.awayTeam} - ${event.out.position}</span>
-                            </div>
-                        </div>
-                    `;
-                }
-                timelineEvents.appendChild(eventDiv);
-            });
+function initApp() {
+    updateScore();
+    renderTimeline();
+    renderLineup();
+    renderStats();
+    setInterval(() => { updateLiveIndicator(); }, 1000);
 
-            // Populate lineup
-            const homeLineup = document.getElementById('home-lineup');
-            data.lineup.home.forEach(player => {
-                const playerDiv = document.createElement('div');
-                playerDiv.className = 'player';
-                playerDiv.innerHTML = `
-                    <img src="player-placeholder.png" alt="${player.name}">
-                    <span>${player.name}</span>
-                    <span class="rating">${player.rating}★</span>
-                `;
-                homeLineup.appendChild(playerDiv);
-            });
-
-            const awayLineup = document.getElementById('away-lineup');
-            data.lineup.away.forEach(player => {
-                const playerDiv = document.createElement('div');
-                playerDiv.className = 'player';
-                playerDiv.innerHTML = `
-                    <img src="player-placeholder.png" alt="${player.name}">
-                    <span>${player.name}</span>
-                    <span class="rating">${player.rating}★</span>
-                `;
-                awayLineup.appendChild(playerDiv);
-            });
-
-            // Tab switching
-            const tabs = document.querySelectorAll('.tab');
-            const tabContents = document.querySelectorAll('.tab-content');
-
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    tabs.forEach(t => t.classList.remove('active'));
-                    tab.classList.add('active');
-
-                    tabContents.forEach(content => {
-                        content.classList.remove('active');
-                        if (content.id === tab.dataset.tab) {
-                            content.classList.add('active');
-                        }
-                    });
-                });
-            });
+    // Tabs
+    document.querySelectorAll('.nav-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+            tab.classList.add('active');
+            document.getElementById(tab.dataset.tab).classList.add('active');
         });
-});
+    });
+}
+
+function updateScore() {
+    document.getElementById('homeScore').textContent = matchData.homeTeam.score;
+    document.getElementById('awayScore').textContent = matchData.awayTeam.score;
+    document.getElementById('homeName').textContent = matchData.homeTeam.name;
+    document.getElementById('awayName').textContent = matchData.awayTeam.name;
+    document.getElementById('homeLogo').textContent = matchData.homeTeam.logo;
+    document.getElementById('awayLogo').textContent = matchData.awayTeam.logo;
+}
+
+function renderTimeline() {
+    const timeline = document.getElementById('timeline');
+    timeline.innerHTML = '';
+    matchData.timeline.forEach(ev => {
+        let icon = '';
+        let colorClass = '';
+        if(ev.type==='goal'){icon='⚽'; colorClass='goal';}
+        if(ev.type==='yellow'){icon='⚠'; colorClass='yellow-card';}
+        if(ev.type==='red'){icon='❌'; colorClass='red-card';}
+        if(ev.type==='substitution'){icon='↕'; colorClass='substitution';}
+        if(ev.type==='fulltime'){ 
+            timeline.innerHTML += `<div class="commentary-item"><div class="commentary-time">${ev.time}</div>${ev.description}</div>`;
+            return;
+        }
+        timeline.innerHTML += `
+        <div class="timeline-event">
+            <div class="timeline-time">${ev.time}</div>
+            <div class="timeline-icon ${colorClass}">${icon}</div>
+            <div>
+                ${ev.type==='substitution' ? 
+                    `<strong>Substitution</strong><br><span style="color:#4ade80">IN:</span> ${ev.playerIn}<br><span style="color:#ef4444">OUT:</span> ${ev.playerOut}` 
+                    : `<strong>${ev.player}</strong> (${ev.team})<br><small>${ev.description}</small>`}
+            </div>
+        </div>`;
+    });
+}
+
+function renderLineup() {
+    const lineup = document.getElementById('lineup');
+    lineup.innerHTML = '';
+    ['homeTeam','awayTeam'].forEach(teamKey => {
+        const team = matchData[teamKey];
+        let html = `<h3>${team.name} (${team.formation})</h3><div class="team-lineup">`;
+        team.players.forEach(p => {
+            html += `<div class="player"><div class="player-avatar">${p.name.split(' ').map(n=>n[0]).join('')}<div class="player-rating">${p.rating}</div></div><div class="player-name">${p.name}</div></div>`;
+        });
+        html += `</div>`;
+        lineup.innerHTML += html;
+    });
+}
+
+function renderStats() {
+    const stats = document.getElementById('stats');
+    const s = matchData.stats;
+    stats.innerHTML = `
+    <div class="stats-grid">
+        <div class="stat-card"><div class="stat-value">${s.possession.home}%</div><div class="stat-label">Possession</div></div>
+        <div class="stat-card"><div class="stat-value">${s.possession.away}%</div><div class="stat-label">Possession</div></div>
+        <div class="stat-card"><div class="stat-value">${s.shots.home}</div><div class="stat-label">Total Shots</div></div>
+        <div class="stat-card"><div class="stat-value">${s.shots.away}</div><div class="stat-label">Total Shots</div></div>
+    </div>
+    <div class="team-stats"><span>Shots on Target</span><span><strong>${s.shotsOnTarget.home}</strong> - <strong>${s.shotsOnTarget.away}</strong></span></div>
+    <div class="team-stats"><span>Corners</span><span><strong>${s.corners.home}</strong> - <strong>${s.corners.away}</strong></span></div>
+    <div class="team-stats"><span>Fouls</span><span><strong>${s.fouls.home}</strong> - <strong>${s.fouls.away}</strong></span></div>
+    <div class="team-stats"><span>Yellow Cards</span><span><strong>${s.yellowCards.home}</strong> - <strong>${s.yellowCards.away}</strong></span></div>
+    <div class="team-stats"><span>Pass Accuracy</span><span><strong>${s.passAccuracy.home}%</strong> - <strong>${s.passAccuracy.away}%</strong></span></div>
+    <div style="margin-top:20px;">
+        <h4 style="margin-bottom:10px;">Possession</h4>
+        <div style="display:flex;justify-content:space-between;margin-bottom:5px;">
+            <span>${matchData.homeTeam.name}</span><span>${matchData.awayTeam.name}</span>
+        </div>
+        <div class="possession-bar"><div class="possession-fill" style="width:${s.possession.home}%;"></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:0.9rem;color:#9ca3af;">
+            <span>${s.possession.home}%</span><span>${s.possession.away}%</span>
+        </div>
+    </div>`;
+}
+
+function updateLiveIndicator() {
+    const dot = document.querySelector('.live-dot');
+    if(dot) dot.style.opacity = dot.style.opacity==='0.5'?'1':'0.5';
+}
+
+document.addEventListener('DOMContentLoaded', loadData);
