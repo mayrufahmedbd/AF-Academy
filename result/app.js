@@ -10,10 +10,10 @@ async function loadData() {
     document.getElementById("score1").textContent = data.score1;
     document.getElementById("score2").textContent = data.score2;
 
-    // Update Match Timer from JSON (fully manual)
+    // Match Timer
     document.getElementById("matchTimer").textContent = `⏱️ Match Time: ${data.matchTime}`;
 
-    // Lineups
+    // Lineups with positions
     document.getElementById("team1Name").textContent = data.team1;
     document.getElementById("team2Name").textContent = data.team2;
 
@@ -24,13 +24,15 @@ async function loadData() {
 
     data.lineup1.forEach(player => {
       let li = document.createElement("li");
-      li.textContent = player;
+      li.className = "player";
+      li.innerHTML = `${player.name}<span class="position">${player.pos}</span>`;
       lineup1.appendChild(li);
     });
 
     data.lineup2.forEach(player => {
       let li = document.createElement("li");
-      li.textContent = player;
+      li.className = "player";
+      li.innerHTML = `${player.name}<span class="position">${player.pos}</span>`;
       lineup2.appendChild(li);
     });
 
@@ -44,26 +46,48 @@ async function loadData() {
       timelineDiv.appendChild(div);
     });
 
-  } catch(err) {
+    // Stats
+    document.getElementById("statsTeam1").textContent = data.team1;
+    document.getElementById("statsTeam2").textContent = data.team2;
+
+    let stats1 = document.getElementById("stats1");
+    let stats2 = document.getElementById("stats2");
+    stats1.innerHTML = "";
+    stats2.innerHTML = "";
+
+    Object.entries(data.stats.team1).forEach(([key, val]) => {
+      let li = document.createElement("li");
+      li.textContent = `${key}: ${val}`;
+      stats1.appendChild(li);
+    });
+    Object.entries(data.stats.team2).forEach(([key, val]) => {
+      let li = document.createElement("li");
+      li.textContent = `${key}: ${val}`;
+      stats2.appendChild(li);
+    });
+
+  } catch (err) {
     console.error("Error loading data:", err);
   }
 }
 
 // Toggle Views
-document.getElementById("btnTimeline").addEventListener("click", function() {
-  document.getElementById("timelineCard").classList.remove("hidden");
-  document.getElementById("lineupsCard").classList.add("hidden");
-  this.classList.add("active");
-  document.getElementById("btnLineups").classList.remove("active");
-});
+function showCard(showId, btnId) {
+  ["timelineCard", "lineupsCard", "statsCard"].forEach(id =>
+    document.getElementById(id).classList.add("hidden")
+  );
+  document.getElementById(showId).classList.remove("hidden");
 
-document.getElementById("btnLineups").addEventListener("click", function() {
-  document.getElementById("lineupsCard").classList.remove("hidden");
-  document.getElementById("timelineCard").classList.add("hidden");
-  this.classList.add("active");
-  document.getElementById("btnTimeline").classList.remove("active");
-});
+  ["btnTimeline", "btnLineups", "btnStats"].forEach(id =>
+    document.getElementById(id).classList.remove("active")
+  );
+  document.getElementById(btnId).classList.add("active");
+}
+
+document.getElementById("btnTimeline").addEventListener("click", () => showCard("timelineCard", "btnTimeline"));
+document.getElementById("btnLineups").addEventListener("click", () => showCard("lineupsCard", "btnLineups"));
+document.getElementById("btnStats").addEventListener("click", () => showCard("statsCard", "btnStats"));
 
 // Initial Load
 loadData();
-setInterval(loadData, 5000); // reload every 5 sec
+setInterval(loadData, 5000);

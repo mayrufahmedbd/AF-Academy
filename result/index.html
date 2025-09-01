@@ -2,63 +2,79 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assailant Fighters - Live Score</title>
-    <link rel="icon" type="image/x-icon" href="../img/club logo.png">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assailant Fighters - Live Score</title>
+  <link rel="icon" type="image/x-icon" href="../img/club logo.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>⚽ Football Live Score</h1>
-    </header>
+  <header>
+    <h1>⚽ Football Live Score</h1>
+  </header>
 
-    <div class="scoreboard">
-        <div class="team-box">
-            <div class="team" id="team1">Team A</div>
-            <div class="score" id="score1">0</div>
-        </div>
-
-        <div class="score-dash">-</div>
-
-        <div class="team-box">
-            <div class="team" id="team2">Team B</div>
-            <div class="score" id="score2">0</div>
-        </div>
+  <div class="scoreboard">
+    <div class="team-box">
+      <div class="team" id="team1">Team A</div>
+      <div class="score" id="score1">0</div>
     </div>
 
-    <!-- Match Timer -->
-    <div id="matchTimer">Time in minutes</div>
+    <div class="score-dash">-</div>
 
-    <!-- Toggle Buttons -->
-    <div class="buttons">
-        <button id="btnTimeline" class="active">Timeline</button>
-        <button id="btnLineups">Lineups</button>
+    <div class="team-box">
+      <div class="team" id="team2">Team B</div>
+      <div class="score" id="score2">0</div>
+    </div>
+  </div>
+
+  <!-- Match Timer -->
+  <div id="matchTimer">Time in minutes</div>
+
+  <!-- Toggle Buttons -->
+  <div class="buttons">
+    <button id="btnTimeline" class="active">Timeline</button>
+    <button id="btnLineups">Lineups</button>
+    <button id="btnStats">Stats</button>
+  </div>
+
+  <div class="container">
+    <!-- Lineups -->
+    <div class="card lineups hidden" id="lineupsCard">
+      <h2>Lineups</h2>
+      <strong id="team1Name"></strong>
+      <ul id="lineup1"></ul>
+      <strong id="team2Name"></strong>
+      <ul id="lineup2"></ul>
     </div>
 
-    <div class="container">
-        <!-- Lineups -->
-        <div class="card lineups hidden" id="lineupsCard">
-            <h2>Lineups</h2>
-            <strong id="team1Name"></strong>
-            <ul id="lineup1"></ul>
-            <strong id="team2Name"></strong>
-            <ul id="lineup2"></ul>
-        </div>
-
-        <!-- Timeline -->
-        <div class="card timeline" id="timelineCard">
-            <h2>Timeline</h2>
-            <div id="timeline"></div>
-        </div>
+    <!-- Timeline -->
+    <div class="card timeline" id="timelineCard">
+      <h2>Timeline</h2>
+      <div id="timeline"></div>
     </div>
 
-    <footer>
-        Live Score for Assailant Fighters | Powered by <a href="mayruf">Mayruf Ahmed</a>
-    </footer>
+    <!-- Stats -->
+    <div class="card stats hidden" id="statsCard">
+      <h2>Match Stats</h2>
+      <div class="stats-grid">
+        <div class="stats-team">
+          <h3 id="statsTeam1"></h3>
+          <ul id="stats1"></ul>
+        </div>
+        <div class="stats-team">
+          <h3 id="statsTeam2"></h3>
+          <ul id="stats2"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script src="app.js"></script>
+  <footer>
+    Live Score for Assailant Fighters | Powered by <a href="../mayruf.html">Mayruf Ahmed</a>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 
 </html>

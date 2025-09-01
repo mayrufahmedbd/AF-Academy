@@ -132,3 +132,38 @@ footer {
 .hidden {
   display: none;
 }
+
+
+/* Player position under name */
+.player {
+  display: flex;
+  flex-direction: column;
+}
+.player span.position {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 2px;
+}
+
+/* Stats Layout */
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+}
+.stats-team h3 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+.stats-team ul {
+  list-style: none;
+  padding: 0;
+}
+.stats-team li {
+  padding: 6px;
+  background: #21262d;
+  margin: 5px 0;
+  border-radius: 6px;
+  font-size: 14px;
+}
