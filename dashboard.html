@@ -1,112 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Dashboard Demo</title>
-        <style>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Dashboard - Assailant Fighters Academy</title>
+      <style>
             body {
                   font-family: Arial, sans-serif;
-                        margin: 0; padding: 0;
-                              background: #f4f6f8;
-                                  }
-                                      .login-box, .dashboard {
-                                            width: 300px;
-                                                  margin: 100px auto;
-                                                        padding: 20px;
-                                                              background: #fff;
-                                                                    border-radius: 10px;
-                                                                          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-                                                                              }
-                                                                                  h2 { text-align: center; }
-                                                                                      input, button {
-                                                                                            width: 100%; padding: 10px;
-                                                                                                  margin: 8px 0;
-                                                                                                        border: 1px solid #ddd;
-                                                                                                              border-radius: 5px;
-                                                                                                                  }
-                                                                                                                      button {
-                                                                                                                            background: #007bff;
-                                                                                                                                  color: #fff;
-                                                                                                                                        border: none;
-                                                                                                                                              cursor: pointer;
-                                                                                                                                                  }
-                                                                                                                                                      button:hover { background: #0056b3; }
-                                                                                                                                                          .hidden { display: none; }
-                                                                                                                                                              .edit-btn {
-                                                                                                                                                                    background: #28a745;
-                                                                                                                                                                        }
-                                                                                                                                                                          </style>
-                                                                                                                                                                          </head>
-                                                                                                                                                                          <body>
+                  margin: 0;
+                  padding: 0;
+                  background: #f4f6f8;
+            }
 
-                                                                                                                                                                            <!-- Login Page -->
-                                                                                                                                                                              <div class="login-box" id="loginBox">
-                                                                                                                                                                                  <h2>Login</h2>
-                                                                                                                                                                                      <input type="text" id="username" placeholder="Username">
-                                                                                                                                                                                          <input type="password" id="password" placeholder="Password">
-                                                                                                                                                                                              <button onclick="login()">Login</button>
-                                                                                                                                                                                                  <p id="error" style="color:red; text-align:center;"></p>
-                                                                                                                                                                                                    </div>
+            .login-box,
+            .dashboard {
+                  width: 300px;
+                  margin: 100px auto;
+                  padding: 20px;
+                  background: #fff;
+                  border-radius: 10px;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
 
-                                                                                                                                                                                                      <!-- Dashboard Page -->
-                                                                                                                                                                                                        <div class="dashboard hidden" id="dashboard">
-                                                                                                                                                                                                            <h2>Welcome <span id="userRole"></span></h2>
-                                                                                                                                                                                                                <p>📊 Here is your dashboard data...</p>
-                                                                                                                                                                                                                    <p id="dataDisplay">Data: Initial Info</p>
+            h2 {
+                  text-align: center;
+            }
 
-                                                                                                                                                                                                                        <button class="edit-btn hidden" id="editBtn" onclick="editData()">Edit Data</button>
-                                                                                                                                                                                                                            <button onclick="logout()">Logout</button>
-                                                                                                                                                                                                                              </div>
+            input,
+            button {
+                  width: 100%;
+                  padding: 10px;
+                  margin: 8px 0;
+                  border: 1px solid #ddd;
+                  border-radius: 5px;
+            }
 
-                                                                                                                                                                                                                                <script>
-                                                                                                                                                                                                                                    // Demo users (username, password, role)
-                                                                                                                                                                                                                                        const users = [
-                                                                                                                                                                                                                                              { username: "user", password: "123", role: "Viewer" },
-                                                                                                                                                                                                                                                    { username: "admin", password: "123", role: "Admin" }
-                                                                                                                                                                                                                                                        ];
+            button {
+                  background: #007bff;
+                  color: #fff;
+                  border: none;
+                  cursor: pointer;
+            }
 
-                                                                                                                                                                                                                                                            function login() {
-                                                                                                                                                                                                                                                                  const uname = document.getElementById("username").value;
-                                                                                                                                                                                                                                                                        const pass = document.getElementById("password").value;
-                                                                                                                                                                                                                                                                              const user = users.find(u => u.username === uname && u.password === pass);
+            button:hover {
+                  background: #0056b3;
+            }
 
-                                                                                                                                                                                                                                                                                    if (user) {
-                                                                                                                                                                                                                                                                                            localStorage.setItem("loggedInUser", JSON.stringify(user));
-                                                                                                                                                                                                                                                                                                    loadDashboard();
-                                                                                                                                                                                                                                                                                                          } else {
-                                                                                                                                                                                                                                                                                                                  document.getElementById("error").innerText = "Invalid login!";
-                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                                            }
+            .hidden {
+                  display: none;
+            }
 
-                                                                                                                                                                                                                                                                                                                                function loadDashboard() {
-                                                                                                                                                                                                                                                                                                                                      const user = JSON.parse(localStorage.getItem("loggedInUser"));
-                                                                                                                                                                                                                                                                                                                                            if (!user) return;
+            .edit-btn {
+                  background: #28a745;
+            }
+      </style>
+</head>
 
-                                                                                                                                                                                                                                                                                                                                                  document.getElementById("loginBox").classList.add("hidden");
-                                                                                                                                                                                                                                                                                                                                                        document.getElementById("dashboard").classList.remove("hidden");
-                                                                                                                                                                                                                                                                                                                                                              document.getElementById("userRole").innerText = user.role;
+<body>
 
-                                                                                                                                                                                                                                                                                                                                                                    if (user.role === "Admin") {
-                                                                                                                                                                                                                                                                                                                                                                            document.getElementById("editBtn").classList.remove("hidden");
-                                                                                                                                                                                                                                                                                                                                                                                  }
-                                                                                                                                                                                                                                                                                                                                                                                      }
+      <!-- Login Page -->
+      <div class="login-box" id="loginBox">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p id="error" style="color:red; text-align:center;"></p>
+      </div>
 
-                                                                                                                                                                                                                                                                                                                                                                                          function editData() {
-                                                                                                                                                                                                                                                                                                                                                                                                const newData = prompt("Enter new data:");
-                                                                                                                                                                                                                                                                                                                                                                                                      if (newData) {
-                                                                                                                                                                                                                                                                                                                                                                                                              document.getElementById("dataDisplay").innerText = "Data: " + newData;
-                                                                                                                                                                                                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                                                                                                                                                                                                                        }
+      <!-- Dashboard Page -->
+      <div class="dashboard hidden" id="dashboard">
+            <h2>Welcome <span id="userRole"></span></h2>
+            <p>📊 Here is your dashboard data...</p>
+            <p id="dataDisplay">Data: Initial Info</p>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                            function logout() {
-                                                                                                                                                                                                                                                                                                                                                                                                                                  localStorage.removeItem("loggedInUser");
-                                                                                                                                                                                                                                                                                                                                                                                                                                        document.getElementById("loginBox").classList.remove("hidden");
-                                                                                                                                                                                                                                                                                                                                                                                                                                              document.getElementById("dashboard").classList.add("hidden");
-                                                                                                                                                                                                                                                                                                                                                                                                                                                  }
+            <button class="edit-btn hidden" id="editBtn" onclick="editData()">Edit Data</button>
+            <button onclick="logout()">Logout</button>
+      </div>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                      // Auto login check
-                                                                                                                                                                                                                                                                                                                                                                                                                                                          window.onload = loadDashboard;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            </script>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            </body>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            </html>
+      <script>
+            // Demo users (username, password, role)
+            const users = [
+                  { username: "user", password: "123", role: "Viewer" },
+                  { username: "admin", password: "123", role: "Admin" }
+            ];
+
+            function login() {
+                  const uname = document.getElementById("username").value;
+                  const pass = document.getElementById("password").value;
+                  const user = users.find(u => u.username === uname && u.password === pass);
+
+                  if (user) {
+                        localStorage.setItem("loggedInUser", JSON.stringify(user));
+                        loadDashboard();
+                  } else {
+                        document.getElementById("error").innerText = "Invalid login!";
+                  }
+            }
+
+            function loadDashboard() {
+                  const user = JSON.parse(localStorage.getItem("loggedInUser"));
+                  if (!user) return;
+
+                  document.getElementById("loginBox").classList.add("hidden");
+                  document.getElementById("dashboard").classList.remove("hidden");
+                  document.getElementById("userRole").innerText = user.role;
+
+                  if (user.role === "Admin") {
+                        document.getElementById("editBtn").classList.remove("hidden");
+                  }
+            }
+
+            function editData() {
+                  const newData = prompt("Enter new data:");
+                  if (newData) {
+                        document.getElementById("dataDisplay").innerText = "Data: " + newData;
+                  }
+            }
+
+            function logout() {
+                  localStorage.removeItem("loggedInUser");
+                  document.getElementById("loginBox").classList.remove("hidden");
+                  document.getElementById("dashboard").classList.add("hidden");
+            }
+
+            // Auto login check
+            window.onload = loadDashboard;
+      </script>
+</body>
+
+</html>
