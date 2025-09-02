@@ -9,7 +9,7 @@ async function loadData() {
 
     document.getElementById("header").innerHTML = `
         <div class="container header-container">
-            <div class="logo"><a href="index.html">${data.site.name}</a></div>
+            <div class="logo"><a href="../index.html">${data.site.name}</a></div>
             <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
             <ul class="nav-menu" id="navMenu">${nav}</ul>
         </div>

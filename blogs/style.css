@@ -60,6 +60,10 @@
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
+#blogTitle{
+  padding: 20px;
+}
+
 .blog-detail .meta {
   font-size: 14px;
   color: #666;
@@ -67,10 +71,10 @@
 }
 
 .back-btn {
-  font-size: 20px;
+  font-size: 30px;
   color: #000000;
   display: inline-block;
-  margin: 10px 0;
+  margin: 20px;
 }
 
 .back-btn:hover {
