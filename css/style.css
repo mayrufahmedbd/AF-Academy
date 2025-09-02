@@ -399,7 +399,7 @@ header {
 }
 
 .menagers-image {
-    height: 350px;
+    height: 450px;
     overflow: hidden;
 }
 
@@ -795,7 +795,7 @@ footer {
     
     .players-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 
     .nav-menu.active {

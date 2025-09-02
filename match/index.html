@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assailant Fighters Academy - Matches</title>
+    <link rel="icon" href="../img/club logo.png">
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #1a5276;
+            --secondary: #e67e22;
+            --accent: #2ecc71;
+            --light: #f5f5f5;
+            --dark: #333;
+        }
+
+        body {
+            background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+            color: white;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-container .logo {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 20px;
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a.active,
+        .nav-menu a:hover {
+            color: var(--secondary);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Page Header Section (Club info + buttons) */
+        .page-header {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-section .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .club-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-btn {
+            background: transparent;
+            border: 2px solid #666;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn.active,
+        .nav-btn:hover {
+            border-color: var(--secondary);
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        /* Sections */
+        .section {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        /* Matches / Squad / Injuries */
+        .upcoming-section,
+        .games-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .upcoming-match,
+        .game-row {
+            background: rgba(45, 45, 45, 0.9);
+            border-radius: 8px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.3s;
+            flex-wrap: wrap;
+        }
+
+        .upcoming-match:hover,
+        .game-row:hover {
+            background: rgba(70, 70, 70, 0.5);
+        }
+
+        .team-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .team-logo {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .real-madrid {
+            background: radial-gradient(circle, #ffd700, #ffed4e);
+            color: black;
+        }
+
+        .mallorca {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .score {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 20px;
+        }
+
+        .match-datetime {
+            text-align: right;
+            color: #ccc;
+            font-size: 12px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 40px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+
+
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 191, 191, 0.589);
+    border-radius: 50%;
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    background: var(--secondary);
+    transform: translateY(-3px);
+}
+
+        .copyright {
+            text-align: center;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                flex-direction: column;
+                background: var(--primary);
+                width: 100%;
+                height: calc(100vh - 70px);
+                padding: 40px 0;
+                transition: all 0.3s;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu li {
+                margin: 15px 0;
+                text-align: center;
+            }
+
+            .page-header {
+                margin-top: 120px;
+            }
+
+            .team-logo {
+                width: 20px;
+                height: 20px;
+            }
+
+            .nav-btn {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .club-name {
+                font-size: 18px;
+            }
+
+            .logo-section img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo"><a href="index.html">Assailant Fighters Academy</a></div>
+            <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../programs.html">Programs</a></li>
+                <li><a href="../management.html">Management</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../blogs/">Blog</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="logo-section">
+            <div class="logo"><img src="../img/club logo.png" alt="Assailant Fighters"></div>
+            <div>
+                <div class="club-name">Assailant Fighters</div>
+                <div class="subtitle">Sylheti Club</div>
+            </div>
+        </div>
+        <div class="nav-buttons">
+            <button class="nav-btn active" data-target="next-match">Next Match</button>
+            <button class="nav-btn" data-target="squad">Squad</button>
+            <button class="nav-btn" data-target="transfers">Injuries</button>
+        </div>
+    </div>
+
+    <div class="container main-section">
+
+        <!-- Next Match -->
+        <div class="section active" id="next-match">
+            <div class="upcoming-section">
+                <div class="upcoming-match">
+                    <div class="team-section">
+                        <div class="team-logo la-rioja">SL</div>
+                        <span>Sylhet Club</span>
+                        <span class="vs">vs</span>
+                        <div class="team-logo real-madrid">AF</div>
+                        <span>Assailant Fighters</span>
+                    </div>
+                    <div class="match-datetime">
+                        09 Sep 25<br>04:30 PM
+                    </div>
+                </div>
+                <div class="upcoming-match">
+                    <div class="team-section">
+                        <div class="team-logo real-madrid">AF</div>
+                        <span>Assailant Fighters</span>
+                        <span class="vs">vs</span>
+                        <div class="team-logo om">OM</div>
+                        <span>Opponent</span>
+                    </div>
+                    <div class="match-datetime">
+                        17 Sep 25<br>01:00 AM
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Squad -->
+        <div class="section" id="squad">
+            <div class="games-container">
+                <div class="game-row">
+                    <div class="team-section">
+                        <div class="team-logo real-madrid">1</div>
+                        <span>.. (GK)</span>
+                    </div>
+                </div>
+                <div class="game-row">
+                    <div class="team-section">
+                        <div class="team-logo real-madrid">4</div>
+                        <span>Alamin (DF)</span>
+                    </div>
+                </div>
+                <div class="game-row">
+                    <div class="team-section">
+                        <div class="team-logo real-madrid">7</div>
+                        <span>Shahjan (LW)</span>
+                    </div>
+                </div>
+                <div class="game-row">
+                    <div class="team-section">
+                        <div class="team-logo real-madrid">11</div>
+                        <span>Rahul (RW)</span>
+                    </div>
+                </div>
+                <div class="game-row">
+                    <div class="team-section">
+                        <div class="team-logo real-madrid">10</div>
+                        <span>Limoon (AMF)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Injuries -->
+        <div class="section" id="transfers">
+            <div class="games-container">
+                <div class="game-row">
+                    <div class="team-section">
+                        <div class="team-logo real-madrid">M</div>
+                        <span>Mayruf Ahmed</span>
+                    </div>
+                    <div class="match-datetime">Return date: Unknown</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3><a href="/">Assailant Fighters Academy</a></h3>
+                    <p>Developing the next generation of football talent through professional coaching and state-of-the-art facilities.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../programs.html">Programs</a></li>
+                        <li><a href="../management.html">Management</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                        <li><a href="../blogs/">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Programs</h3>
+                    <ul class="footer-links">
+                        <li><a href="programs.html#youth">Youth Development</a></li>
+                        <li><a href="programs.html#advanced">Advanced Training</a></li>
+                        <li><a href="programs.html#goalkeeper">Goalkeeper Training</a></li>
+                        <li><a href="/match/">Matches</a></li>
+                        <li><a href="/UI/component/tournament.html">Tournament Teams</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/Assailantsfighters" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/channel/UC9HLaIB7cfo-8elhwTmKH0g" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Assailant Fighters Academy. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Section switching
+        const navBtns = document.querySelectorAll(".nav-btn");
+        const sections = document.querySelectorAll(".section");
+        navBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                navBtns.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                const target = btn.getAttribute("data-target");
+                sections.forEach(sec => sec.classList.remove("active"));
+                document.getElementById(target).classList.add("active");
+            });
+        });
+
+        // Row click effect
+        document.querySelectorAll(".game-row").forEach(row => {
+            row.addEventListener("click", () => {
+                row.style.background = "rgba(255, 215, 0, 0.1)";
+                setTimeout(() => { row.style.background = ""; }, 200);
+            });
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+        menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        });
+    </script>
+../
+../</body>
+../
+../</html>
+../
