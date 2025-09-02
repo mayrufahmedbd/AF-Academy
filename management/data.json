@@ -1,0 +1,299 @@
+{
+    "site": {
+        "title": "Management - Assailant Fighters Academy",
+        "logo": "img/club logo.png",
+        "name": "Assailant Fighters Academy"
+    },
+    "navigation": [
+        {
+            "id": "nav-home",
+            "name": "Home",
+            "link": "../index.html"
+        },
+        {
+            "id": "nav-about",
+            "name": "About",
+            "link": "../about.html"
+        },
+        {
+            "id": "nav-programs",
+            "name": "Programs",
+            "link": "../programs.html"
+        },
+        {
+            "id": "nav-management",
+            "name": "Management",
+            "link": "management",
+            "active": true
+        },
+        {
+            "id": "nav-contact",
+            "name": "Contact",
+            "link": "../contact.html"
+        },
+        {
+            "id": "nav-blogs",
+            "name": "Blogs",
+            "link": "../blogs/"
+        }
+    ],
+    "management": [
+        {
+            "id": "m1",
+            "name": "Al Amin",
+            "role": "Managing Director",
+            "image": "img/al amin.jpg",
+            "bio": "15 years of football management experience. Former professional player with extensive coaching credentials. Al Amin holds a UEFA A license and has developed numerous players who have gone on to professional careers.",
+            "social": {
+                "linkedin": "#",
+                "twitter": "#",
+                "email": "#"
+            }
+        },
+        {
+            "id": "m2",
+            "name": "Shakirul Goush",
+            "role": "Chairman",
+            "image": "img/gous.jpg",
+            "bio": "As chairman, Shakirul provides strategic direction and oversight for the academy. With a background in sports management and business administration, he ensures the academy operates at the highest standards.",
+            "social": {
+                "linkedin": "#",
+                "twitter": "#",
+                "email": "#"
+            }
+        },
+        {
+            "id": "m3",
+            "name": "Imran Bin Ahad",
+            "role": "General Secretary",
+            "image": "img/imran.jpg",
+            "bio": "Imran oversees the day-to-day operations of the academy. With a degree in Sports Science and 10 years of experience in football administration, he ensures smooth functioning of all programs and facilities.",
+            "social": {
+                "linkedin": "#",
+                "twitter": "#",
+                "email": "#"
+            }
+        },
+        {
+            "id": "m4",
+            "name": "Limon Ahmed",
+            "role": "Sports Secretary and Team Manager",
+            "image": "img/limon.jpg",
+            "bio": "Sports and team leader",
+            "social": {
+                "linkedin": "#",
+                "twitter": "#",
+                "email": "#"
+            }
+        },
+        {
+            "id": "m5",
+            "name": "Nurul Amin",
+            "role": "Head Coach",
+            "image": "img/nurul.jpg",
+            "bio": "Our Official coach",
+            "social": {
+                "linkedin": "#",
+                "twitter": "#",
+                "email": "#"
+            }
+        }
+    ],
+    "players": [
+        {
+            "id": "p1",
+            "name": "Mayruf Ahmed",
+            "position": "Left Back",
+            "image": "img/mayruf c.jpg",
+            "social": {
+                "facebook": "https://www.facebook.com/promayruf/",
+                "instagram": "https://instagram.com/promayruf",
+                "whatsapp": "https://whatsapp.com/channel/0029Vb0VnocKbYMJz2fGwi1V"
+            }
+        },
+        {
+            "id": "p2",
+            "name": "Rahul Dash",
+            "position": "Attacking Midfielder",
+            "image": "img/raahul das.png",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p3",
+            "name": "Sayid Ahmed",
+            "position": "Midfielder",
+            "image": "img/sayed.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p4",
+            "name": "Kawser Ahmed",
+            "position": "Center Midfielder",
+            "image": "img/kawser.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p5",
+            "name": "Suhan Ahmed",
+            "position": "Unknown",
+            "image": "/img/suhan.png",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p6",
+            "name": "Salman Sakib",
+            "position": "Right Back",
+            "image": "img/sakib.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p7",
+            "name": "Ahsan Mahmud",
+            "position": "Right Back",
+            "image": "img/ahsan.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p8",
+            "name": "Shuvo",
+            "position": "Defending Midfielder",
+            "image": "img/shuvo.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p9",
+            "name": "Mahid",
+            "position": "Left Midfielder",
+            "image": "img/mahid.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p10",
+            "name": "Nahid",
+            "position": "Left Back",
+            "image": "img/nahid.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p11",
+            "name": "Nasir Ahmed",
+            "position": "Center Midfielder",
+            "image": "img/naisr.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p12",
+            "name": "Mamun Miya",
+            "position": "Midfielder",
+            "image": "img/mamun.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p13",
+            "name": "Jubayer",
+            "position": "Left Wing Forward",
+            "image": "img/jubayer.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id":"p14",
+            "name": "Mohammad Sazzad Hossain",
+            "position":"Right Back",
+            "image":"img/sazzad.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        }
+    ],
+    "footer": {
+        "about": "Developing the next generation of football talent through professional coaching and state-of-the-art facilities.",
+        "quickLinks": [
+            {
+                "id": "f1",
+                "name": "Home",
+                "link": "index.html"
+            },
+            {
+                "id": "f2",
+                "name": "About",
+                "link": "../about.html"
+            },
+            {
+                "id": "f3",
+                "name": "Programs",
+                "link": "../programs.html"
+            },
+            {
+                "id": "f4",
+                "name": "Management",
+                "link": "management"
+            },
+            {
+                "id": "f5",
+                "name": "Contact",
+                "link": "../contact.html"
+            },
+            {
+                "id": "f6",
+                "name": "Blog",
+                "link": "../blogs/"
+            }
+        ],
+        "programs": [
+            {
+                "id": "pr1",
+                "name": "Youth Development",
+                "link": "../programs.html#youth"
+            },
+            {
+                "id": "pr2",
+                "name": "Advanced Training",
+                "link": "../programs.html#advanced"
+            },
+            {
+                "id": "pr3",
+                "name": "Goalkeeper Training",
+                "link": "../programs.html#goalkeeper"
+            },
+            {
+                "id": "pr4",
+                "name": "Summer Camps",
+                "link": "../programs.html"
+            },
+            {
+                "id": "pr5",
+                "name": "Tournament Teams",
+                "link": "../UI/component/tournament.html"
+            }
+        ],
+        "social": {
+            "facebook": "https://www.facebook.com/Assailantsfighters",
+            "youtube": "https://www.youtube.com/channel/UC9HLaIB7cfo-8elhwTmKH0g"
+        },
+        "copyright": "© 2025 Assailant Fighters Academy. All rights reserved."
+    }
+}
