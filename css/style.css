@@ -389,6 +389,18 @@ header {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
+.menagers-card:hover {
+        transition: all .3s ease;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
 
 .players-card{
     text-align: center;
@@ -396,6 +408,18 @@ header {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+.players-card:hover{
+    transition: all .3s ease;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
 }
 
 .menagers-image {
@@ -471,12 +495,7 @@ header {
 
 .menagers-info h3:hover {
         color: black;
-        margin-bottom: 5px;
-        transform: scale(2.0);
-        -webkit-transform: scale(2.0);
-        -moz-transform: scale(2.0);
-        -ms-transform: scale(2.0);
-        -o-transform: scale(2.0);
+
 }
 
 .menagers-role {
@@ -497,12 +516,7 @@ header {
 
 .players-info h3:hover {
     color: black;
-    transform: scale(2.0);
-    margin-bottom: 5px;
-    -webkit-transform: scale(2.0);
-    -moz-transform: scale(2.0);
-    -ms-transform: scale(2.0);
-    -o-transform: scale(2.0);
+
 }
 
 .players-role {

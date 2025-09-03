@@ -2,19 +2,6 @@ async function loadData() {
     const response = await fetch("data.json");
     const data = await response.json();
 
-    // Header
-    const nav = data.navigation.map(item =>
-        `<li id="${item.id}"><a href="${item.link}" ${item.active ? 'class="active"' : ''}>${item.name}</a></li>`
-    ).join("");
-
-    document.getElementById("header").innerHTML = `
-        <div class="container header-container">
-            <div class="logo"><a href="../index.html">${data.site.name}</a></div>
-            <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
-            <ul class="nav-menu" id="navMenu">${nav}</ul>
-        </div>
-    `;
-
     // Management
     document.getElementById("management").innerHTML = `
         <div class="container">
@@ -59,38 +46,6 @@ async function loadData() {
                         </div>
                     </div>`).join("")}
             </div>
-        </div>
-    `;
-
-    // Footer
-    document.getElementById("footer").innerHTML = `
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3><a href="/">${data.site.name}</a></h3>
-                    <p>${data.footer.about}</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        ${data.footer.quickLinks.map(q => `<li id="${q.id}"><a href="${q.link}">${q.name}</a></li>`).join("")}
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Programs</h3>
-                    <ul class="footer-links">
-                        ${data.footer.programs.map(p => `<li id="${p.id}"><a href="${p.link}">${p.name}</a></li>`).join("")}
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Connect With Us</h3>
-                    <div class="social-links">
-                        <a href="${data.footer.social.facebook}" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="${data.footer.social.youtube}" target="_blank"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright"><p>${data.footer.copyright}</p></div>
         </div>
     `;
 }
