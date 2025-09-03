@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assailant Fighters Academy - Matches</title>
     <link rel="icon" href="../img/club logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Font Awesome for icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -263,28 +265,28 @@
 
 
 
-.social-links {
-    display: flex;
-    gap: 15px;
-}
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
 
-.social-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 191, 191, 0.589);
-    border-radius: 50%;
-    color: rgb(0, 0, 0);
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 191, 191, 0.589);
+            border-radius: 50%;
+            color: rgb(0, 0, 0);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
 
-.social-links a:hover {
-    background: var(--secondary);
-    transform: translateY(-3px);
-}
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
 
         .copyright {
             text-align: center;
@@ -352,7 +354,7 @@
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <div class="logo"><a href="index.html">Assailant Fighters Academy</a></div>
+            <div class="logo"><a href="../index.html">Assailant Fighters Academy</a></div>
             <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="../index.html">Home</a></li>
@@ -365,104 +367,20 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <div class="page-header">
-        <div class="logo-section">
-            <div class="logo"><img src="../img/club logo.png" alt="Assailant Fighters"></div>
-            <div>
-                <div class="club-name">Assailant Fighters</div>
-                <div class="subtitle">Sylheti Club</div>
-            </div>
-        </div>
-        <div class="nav-buttons">
-            <button class="nav-btn active" data-target="next-match">Next Match</button>
-            <button class="nav-btn" data-target="squad">Squad</button>
-            <button class="nav-btn" data-target="transfers">Injuries</button>
-        </div>
-    </div>
+
+    <!-- Page Header (Dynamic from data.json) -->
+    <div class="page-header"></div>
 
     <div class="container main-section">
-
-        <!-- Next Match -->
-        <div class="section active" id="next-match">
-            <div class="upcoming-section">
-                <div class="upcoming-match">
-                    <div class="team-section">
-                        <div class="team-logo la-rioja">SL</div>
-                        <span>Sylhet Club</span>
-                        <span class="vs">vs</span>
-                        <div class="team-logo real-madrid">AF</div>
-                        <span>Assailant Fighters</span>
-                    </div>
-                    <div class="match-datetime">
-                        09 Sep 25<br>04:30 PM
-                    </div>
-                </div>
-                <div class="upcoming-match">
-                    <div class="team-section">
-                        <div class="team-logo real-madrid">AF</div>
-                        <span>Assailant Fighters</span>
-                        <span class="vs">vs</span>
-                        <div class="team-logo om">OM</div>
-                        <span>Opponent</span>
-                    </div>
-                    <div class="match-datetime">
-                        17 Sep 25<br>01:00 AM
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Squad -->
-        <div class="section" id="squad">
-            <div class="games-container">
-                <div class="game-row">
-                    <div class="team-section">
-                        <div class="team-logo real-madrid">1</div>
-                        <span>.. (GK)</span>
-                    </div>
-                </div>
-                <div class="game-row">
-                    <div class="team-section">
-                        <div class="team-logo real-madrid">4</div>
-                        <span>Alamin (DF)</span>
-                    </div>
-                </div>
-                <div class="game-row">
-                    <div class="team-section">
-                        <div class="team-logo real-madrid">7</div>
-                        <span>Shahjan (LW)</span>
-                    </div>
-                </div>
-                <div class="game-row">
-                    <div class="team-section">
-                        <div class="team-logo real-madrid">11</div>
-                        <span>Rahul (RW)</span>
-                    </div>
-                </div>
-                <div class="game-row">
-                    <div class="team-section">
-                        <div class="team-logo real-madrid">10</div>
-                        <span>Limoon (AMF)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Injuries -->
-        <div class="section" id="transfers">
-            <div class="games-container">
-                <div class="game-row">
-                    <div class="team-section">
-                        <div class="team-logo real-madrid">M</div>
-                        <span>Mayruf Ahmed</span>
-                    </div>
-                    <div class="match-datetime">Return date: Unknown</div>
-                </div>
-            </div>
-        </div>
-
+        <!-- Sections (Dynamic content will be inserted here) -->
+        <div class="section active" id="next-match"></div>
+        <div class="section" id="squad"></div>
+        <div class="section" id="transfers"></div>
     </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+    <script src="../js/script.js"></script>
 
     <!-- Footer -->
     <footer>
@@ -470,7 +388,8 @@
             <div class="footer-container">
                 <div class="footer-section">
                     <h3><a href="/">Assailant Fighters Academy</a></h3>
-                    <p>Developing the next generation of football talent through professional coaching and state-of-the-art facilities.</p>
+                    <p>Developing the next generation of football talent through professional coaching and
+                        state-of-the-art facilities.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -490,14 +409,16 @@
                         <li><a href="programs.html#advanced">Advanced Training</a></li>
                         <li><a href="programs.html#goalkeeper">Goalkeeper Training</a></li>
                         <li><a href="/match/">Matches</a></li>
-                        <li><a href="/UI/component/tournament.html">Tournament Teams</a></li>
+                        <li><a href="/tournament">Tournament Teams</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Connect With Us</h3>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/Assailantsfighters" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.youtube.com/channel/UC9HLaIB7cfo-8elhwTmKH0g" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/Assailantsfighters" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/channel/UC9HLaIB7cfo-8elhwTmKH0g" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -507,38 +428,6 @@
         </div>
     </footer>
 
-    <script>
-        // Section switching
-        const navBtns = document.querySelectorAll(".nav-btn");
-        const sections = document.querySelectorAll(".section");
-        navBtns.forEach(btn => {
-            btn.addEventListener("click", () => {
-                navBtns.forEach(b => b.classList.remove("active"));
-                btn.classList.add("active");
+</body>
 
-                const target = btn.getAttribute("data-target");
-                sections.forEach(sec => sec.classList.remove("active"));
-                document.getElementById(target).classList.add("active");
-            });
-        });
-
-        // Row click effect
-        document.querySelectorAll(".game-row").forEach(row => {
-            row.addEventListener("click", () => {
-                row.style.background = "rgba(255, 215, 0, 0.1)";
-                setTimeout(() => { row.style.background = ""; }, 200);
-            });
-        });
-
-        // Mobile menu toggle
-        const menuToggle = document.getElementById("menuToggle");
-        const navMenu = document.getElementById("navMenu");
-        menuToggle.addEventListener("click", () => {
-            navMenu.classList.toggle("active");
-        });
-    </script>
-../
-../</body>
-../
-../</html>
-../
+</html>

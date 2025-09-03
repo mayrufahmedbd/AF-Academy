@@ -1,37 +1,9 @@
 [
     {
         "id": 1,
-        "title": "Assailant fighters Secures a Last-Minute Win",
+        "title": "The match result publish after the match",
         "date": "2025-09-09",
-        "match": "Assailant Fighters vs Sylhet Strikers",
-        "content": "In a thrilling encounter, Assailant Fighters managed to secure a 2-1 victory with a dramatic last-minute goal. The match was packed with intensity and showcased brilliant teamwork from both sides."
-    },
-    {
-        "id": 2,
-        "title": "Real Madrid Dominates the Derby",
-        "date": "2025-08-28",
-        "match": "Real Madrid vs Atletico Madrid",
-        "content": "Real Madrid showcased their dominance in the Madrid derby with a convincing 3-0 win. Vinícius Jr. and Bellingham were the stars of the night."
-    },
-    {
-        "id": 3,
-        "title": "Liverpool’s Stunning Comeback",
-        "date": "2025-08-25",
-        "match": "Liverpool vs Chelsea",
-        "content": "Liverpool staged a spectacular second-half comeback, overturning a 0-2 deficit to win 3-2. The Anfield crowd erupted in joy as Salah netted the winner in the 89th minute."
-    },
-    {
-        "id": 4,
-        "title": "Juventus Holds Strong Against Milan",
-        "date": "2025-08-20",
-        "match": "Juventus vs AC Milan",
-        "content": "Juventus held their defensive line with resilience, securing a hard-fought 1-1 draw against AC Milan in Turin. Both sides had chances but goalkeepers stood tall."
-    },
-    {
-        "id": 5,
-        "title": "PSG Shines Without Mbappé",
-        "date": "2025-08-15",
-        "match": "PSG vs Lyon",
-        "content": "Despite missing star forward Mbappé, PSG put on a dominant display, beating Lyon 4-1 at Parc des Princes. Neymar led the attack with two goals and an assist."
+        "match": "Assailant Fighters vs Palli Mangal Samity Football XI",
+        "content": "Wait until the match plyed"
     }
 ]

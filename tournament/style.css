@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  background-color: #004d00;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #003300;
+  padding: 50px 20px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 999;
+  }
+  .sidebar.hidden {
+    transform: translateX(-100%);
+  }
+}
+
+.sidebar h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.substitute {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.substitute img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid #fff;
+  object-fit: cover;
+}
+
+.substitute-name {
+  font-size: 12px;
+}
+
+.substitute-position {
+  font-size: 10px;
+  color: #ccc;
+}
+
+/* Field */
+.field {
+  flex: 1;
+  position: relative;
+  background: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.pitch {
+  width: 80%;
+  height: 95%;
+  background: url('../../img/pitch.jpg') no-repeat center center;
+  background-size: cover;
+  background-color: #006600;
+  border: 3px solid #fff;
+  border-radius: 15px;
+  position: relative;
+}
+
+/* Goalposts */
+.goal {
+  position: absolute;
+  width: 15%;
+  height: 5%;
+  border: 3px solid #fff;
+  background: transparent;
+  z-index: 1;
+}
+
+.goal.top { top: 0; left: 42.5%; }
+.goal.bottom { bottom: 0; left: 42.5%; }
+
+/* Player styles */
+.player {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.player img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  object-fit: cover;
+}
+
+.player-name { font-size: 12px; margin-top: 3px; }
+.player-position { font-size: 10px; color: #ccc; }
+
+/* Player positions (4-4-2) */
+#gk { top: 85%; left: 50%; transform: translate(-50%, -50%); }
+#lb { top: 70%; left: 15%; transform: translate(-50%, -50%); }
+#cb1 { top: 70%; left: 40%; transform: translate(-50%, -50%); }
+#cb2 { top: 70%; left: 60%; transform: translate(-50%, -50%); }
+#rb { top: 70%; left: 85%; transform: translate(-50%, -50%); }
+#lmf { top: 55%; left: 35%; transform: translate(-50%, -50%); }
+#cmf1 { top: 55%; left: 65%; transform: translate(-50%, -50%); }
+#cmf2 { top: 40%; left: 50%; transform: translate(-50%, -50%); }
+#rmf { top: 20%; left: 25%; transform: translate(-50%, -50%); }
+#cf1 { top: 15%; left: 50%; transform: translate(-50%, -50%); }
+#cf2 { top: 20%; left: 75%; transform: translate(-50%, -50%); }
+
+/* Toggle Button */
+.toggle-btn {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: #fff;
+  color: #003300;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1000;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .toggle-btn { display: block; }
+  body { flex-direction: column; }
+  .field { width: 100%; height: 100vh; }
+  .pitch { width: 95%; height: 90%; }
+}

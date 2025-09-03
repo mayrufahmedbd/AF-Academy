@@ -1,0 +1,30 @@
+{
+  "club": {
+    "name": "Assailant Fighters",
+    "subtitle": "Sylheti Club",
+    "logo": "../img/club logo.png"
+  },
+  "navigation": [
+    { "id": "nav-next", "label": "Next Match", "target": "next-match", "active": true },
+    { "id": "nav-squad", "label": "Squad", "target": "squad" },
+    { "id": "nav-injuries", "label": "Injuries", "target": "transfers" }
+  ],
+  "matches": [
+    {
+      "homeTeam": {"name": "Assailant Fighters" },
+      "awayTeam": {"name": "Palli Mangal Samity Football XI" },
+      "datetime": "09 Sep 25<br>04:30 PM",
+      "resultPage": "/blogs/blog-detail.html?id=1"
+    }
+  ],
+  "squad": [
+    { "number": "1", "name": "..", "position": "GK" },
+    { "number": "4", "name": "Alamin", "position": "DF" },
+    { "number": "7", "name": "Shahjan", "position": "LW" },
+    { "number": "11", "name": "Rahul", "position": "RW" },
+    { "number": "10", "name": "Limoon", "position": "AMF" }
+  ],
+  "injuries": [
+    { "short": "M", "name": "Mayruf Ahmed", "returnDate": "Unknown" }
+  ]
+}
