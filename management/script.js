@@ -39,9 +39,9 @@ async function loadData() {
                             <h3>${p.name}</h3>
                             <p>Position: ${p.position}</p>
                             <div class="social-links">
-                                ${p.social.facebook ? `<a href="${p.social.facebook}"><i class="fa-brands fa-square-facebook"></i></a>` : ""}
-                                ${p.social.instagram ? `<a href="${p.social.instagram}"><i class="fa-brands fa-instagram"></i></a>` : ""}
-                                ${p.social.whatsapp ? `<a href="${p.social.whatsapp}"><i class="fa-brands fa-whatsapp"></i></a>` : ""}
+                                ${p.social.facebook ? `<a href="${p.social.facebook}" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>` : ""}
+                                ${p.social.instagram ? `<a href="${p.social.instagram}" target="_blank"><i class="fa-brands fa-instagram"></i></a>` : ""}
+                                ${p.social.whatsapp ? `<a href="${p.social.whatsapp}" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>` : ""}
                             </div>
                         </div>
                     </div>`).join("")}

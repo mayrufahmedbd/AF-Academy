@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -81,6 +82,7 @@
                 transform: translateY(-100%);
                 opacity: 0;
             }
+
             to {
                 transform: translateY(0);
                 opacity: 1;
@@ -164,6 +166,7 @@
             from {
                 width: 0;
             }
+
             to {
                 width: 100%;
             }
@@ -183,6 +186,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -208,7 +212,7 @@
             margin-bottom: 15px;
         }
 
-                .header-input a {
+        .header-input a {
             display: block;
             text-decoration: none;
             font-size: 20px;
@@ -237,7 +241,8 @@
             color: #1a2a6c;
         }
 
-        .input-group input, .input-group select {
+        .input-group input,
+        .input-group select {
             width: 100%;
             padding: 12px 15px;
             border: 2px solid #ddd;
@@ -246,7 +251,8 @@
             transition: all 0.3s ease;
         }
 
-        .input-group input:focus, .input-group select:focus {
+        .input-group input:focus,
+        .input-group select:focus {
             border-color: #1a2a6c;
             box-shadow: 0 0 0 3px rgba(26, 42, 108, 0.2);
             outline: none;
@@ -333,31 +339,44 @@
 
         @media (max-width: 768px) {
             .main-header {
-                flex-direction: column;
+                flex-direction: row;
                 text-align: center;
+                justify-content: center;
+                padding: 8px;
             }
             
-            .header-img {
-                margin-bottom: 15px;
+            .header-text {
+
+                padding: 0;
             }
-            
+
+            .header-img img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .header-input a {
+                font-size: 10px;
+                padding: 5px 10px;
+            }
+
             .header-text h1:first-child {
-                font-size: 1.5rem;
+                font-size: 15px;
             }
-            
+
             .header-text h1:last-child {
                 font-size: 1.2rem;
             }
-            
+
             .header-input {
                 margin-top: 15px;
             }
 
-            
+
 
             .aggree {
                 margin-left: 6%;
-            }   
+            }
 
             .form-grid {
                 grid-template-columns: 1fr;
@@ -378,6 +397,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="language-switcher">
@@ -395,40 +415,46 @@
             </div>
 
             <div class="header-input">
-                <a href="https://wa.me/8801634973374" target="_blank" title="Click Here to contact us on WhatsApp">Contact</a>
+                <a href="https://wa.me/8801634973374" target="_blank"
+                    title="Click Here to contact us on WhatsApp">Contact</a>
             </div>
         </div>
 
         <div class="line"></div>
 
-<form name="registration-form" action="https://api.web3forms.com/submit" method="POST">
-    <input type="hidden" name="access_key" value="88e95964-1808-473e-bf1f-262ded6f8d8e">
+        <form name="registration-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="88e95964-1808-473e-bf1f-262ded6f8d8e">
             <div class="form-section">
                 <h2 class="section-title" id="personal-info" name="personal-info">Personal Information</h2>
                 <div class="form-grid">
                     <div class="input-group">
                         <label for="name-bangla" id="label-name-bangla" name="label-name-bangla">Name in Bangla</label>
-                        <input type="text" id="name-bangla" name="name-bangla" required placeholder="Enter Your Name In Bangla">
+                        <input type="text" id="name-bangla" name="name-bangla" required
+                            placeholder="Enter Your Name In Bangla">
                     </div>
-                    
+
                     <div class="input-group">
-                        <label for="name-english" id="label-name-english" name="label-name-english">Name in English</label>
-                        <input type="text" id="name-english" name="name-english" required placeholder="Enter Your Name In English">
+                        <label for="name-english" id="label-name-english" name="label-name-english">Name in
+                            English</label>
+                        <input type="text" id="name-english" name="name-english" required
+                            placeholder="Enter Your Name In English">
                     </div>
-                    
+
                     <div class="input-group">
                         <label for="date" id="label-dob" name="label-dob">Date of Birth</label>
                         <input type="date" id="date" name="birthday" required>
                     </div>
-                    
+
                     <div class="input-group">
                         <label for="father-name" id="label-father" name="label-father">Father's Name</label>
-                        <input type="text" id="father-name" name="father-name" required placeholder="Enter Your Father's Name">
+                        <input type="text" id="father-name" name="father-name" required
+                            placeholder="Enter Your Father's Name">
                     </div>
-                    
+
                     <div class="input-group">
                         <label for="mother-name" id="label-mother" name="label-mother">Mother's Name</label>
-                        <input type="text" id="mother-name" name="mother-name" required placeholder="Enter Your Mother's Name">
+                        <input type="text" id="mother-name" name="mother-name" required
+                            placeholder="Enter Your Mother's Name">
                     </div>
                 </div>
             </div>
@@ -438,22 +464,24 @@
                 <div class="form-grid">
                     <div class="input-group">
                         <label for="current-village" id="label-village" name="label-village">Village Name</label>
-                        <input type="text"  id="current-village" name="current-village" required placeholder="Village name">
+                        <input type="text" id="current-village" name="current-village" required
+                            placeholder="Village name">
                     </div>
-                    
+
                     <div class="input-group">
                         <label for="current-post" id="label-post" name="label-post">Post Office</label>
-                        <input type="text"  id="current-post"name="current-post" required placeholder="Post Office">
+                        <input type="text" id="current-post" name="current-post" required placeholder="Post Office">
                     </div>
-                    
+
                     <div class="input-group">
-                        <label for="current-thana"  id="label-thana" name="label-thana">Thana</label>
+                        <label for="current-thana" id="label-thana" name="label-thana">Thana</label>
                         <input type="text" id="current-thana" name="current-thana" required placeholder="Thana">
                     </div>
-                    
+
                     <div class="input-group">
                         <label for="current-district" id="label-district" name="label-district">District</label>
-                        <input type="text" id="current-district" name="current-district" required placeholder="District">
+                        <input type="text" id="current-district" name="current-district" required
+                            placeholder="District">
                     </div>
                 </div>
             </div>
@@ -462,23 +490,27 @@
                 <p class="address section-title" id="permanent-address" name="permanent-address">Permanent Address</p>
                 <div class="form-grid">
                     <div class="input-group">
-                        <label for="permanent-village" id="label-village-perm" name="label-village-perm">Village Name</label>
-                        <input type="text" id="permanent-village" name="permanent-village" required placeholder="Village name">
+                        <label for="permanent-village" id="label-village-perm" name="label-village-perm">Village
+                            Name</label>
+                        <input type="text" id="permanent-village" name="permanent-village" required
+                            placeholder="Village name">
                     </div>
-                    
+
                     <div class="input-group">
                         <label for="permanent-post" id="label-post-perm" name="label-post-perm">Post Office</label>
                         <input type="text" id="permanent-post" name="permanent-post" required placeholder="Post Office">
                     </div>
-                    
+
                     <div class="input-group">
                         <label for="permanent-thana" id="label-thana-perm" name="label-thana-perm">Thana</label>
                         <input type="text" id="permanent-thana" name="permanent-thana" required placeholder="Thana">
                     </div>
-                    
+
                     <div class="input-group">
-                        <label for="permanent-district" id="label-district-perm" name="label-district-perm">District</label>
-                        <input type="text" id="permanent-district" name="permanent-district" required placeholder="District">
+                        <label for="permanent-district" id="label-district-perm"
+                            name="label-district-perm">District</label>
+                        <input type="text" id="permanent-district" name="permanent-district" required
+                            placeholder="District">
                     </div>
                 </div>
             </div>
@@ -488,44 +520,46 @@
                 <div class="form-grid">
                     <div class="input-group">
                         <label for="nationality" id="label-nationality" name="label-nationality">Nationality</label>
-                        <input type="text" id="nationality" name="nationality" required placeholder="Enter Your Nationality">
+                        <input type="text" id="nationality" name="nationality" required
+                            placeholder="Enter Your Nationality">
                     </div>
-                    
+
                     <div class="input-group">
                         <label for="religion" id="label-religion" name="label-religion">Religion</label>
                         <input type="text" id="religion" name="religion" required placeholder="Enter Your Religion">
                     </div>
-                    
+
                     <div class="input-group">
                         <label for="college" id="label-college" name="label-college">College Name</label>
                         <input type="text" id="college" name="college" required placeholder="Enter Your College Name">
                     </div>
-                    
+
                     <div class="input-group">
                         <label for="class" id="label-class" name="label-class">Class</label>
                         <input type="text" id="class" name="class" required placeholder="Enter Your Class">
                     </div>
-                    
+
                     <div class="input-group">
                         <label for="profession" id="label-profession" name="label-profession">Profession</label>
-                        <input type="text" id="profession" name="profession" required placeholder="Enter Your Profession">
+                        <input type="text" id="profession" name="profession" required
+                            placeholder="Enter Your Profession">
                     </div>
-                    
+
                     <div class="input-group">
                         <label for="mobile" id="label-mobile" name="label-mobile">Mobile Number</label>
                         <input type="tel" id="mobile" name="mobile" required placeholder="Enter Your Mobile Number">
                     </div>
-                    
+
                     <div class="input-group">
                         <label for="email" id="label-email" name="label-email">Email</label>
                         <input type="email" id="email" name="email" required placeholder="Enter Your Email">
                     </div>
-                    
+
                     <div class="input-group">
                         <label for="nid" id="label-nid" name="label-nid">NID Number</label>
                         <input type="text" id="nid" name="nid" required placeholder="Enter Your NID">
                     </div>
-                    
+
                     <div class="input-group">
                         <label for="blood" id="label-blood" name="label-blood">Blood Group</label>
                         <input type="text" id="blood" name="blood" required placeholder="Enter Your Blood Group">
@@ -546,16 +580,20 @@
                 </ol>
 
 
-                <p id="terms-english">I hereby declare that, as a member of Assailant Fighters Football Academy, I will behave responsibly. I will abide by all the rules and regulations of the academy and refrain from any kind of unethical activities. I will remain loyal to the academy and always strive to uphold its reputation. If I engage in any unethical activities, I will not have the right to make any complaint against the academy or its legal actions.</p>
+                <p id="terms-english">I hereby declare that, as a member of Assailant Fighters Football Academy, I will
+                    behave responsibly. I will abide by all the rules and regulations of the academy and refrain from
+                    any kind of unethical activities. I will remain loyal to the academy and always strive to uphold its
+                    reputation. If I engage in any unethical activities, I will not have the right to make any complaint
+                    against the academy or its legal actions.</p>
 
                 <div class="input-group aggree" style="margin-top: 20px;">
                     <label for="agree" id="agree-label">
                         <input type="checkbox" name="agree" required>
-                        <span id ="agree-text">I agree to the terms and conditions</span>
+                        <span id="agree-text">I agree to the terms and conditions</span>
                     </label>
                 </div>
             </div>
-                <input type="hidden" name="redirect" value="/UI/thanks.html">
+            <input type="hidden" name="redirect" value="/UI/thanks.html">
             <button type="submit" class="submit-btn" name="submit-btn">Submit Registration</button>
         </form>
     </div>
@@ -567,7 +605,7 @@
                 // Header
                 "header-english": "Assailant Fighters Football Academy",
                 "upload-text": "Upload Photo",
-                
+
                 // Form sections
                 "personal-info": "Personal Information",
                 "current-address": "Current Address",
@@ -575,7 +613,7 @@
                 "additional-info": "Additional Information",
                 "terms-title": "Terms & Conditions",
                 "conditions-title": "Conditions",
-                
+
                 // Labels
                 "label-name-bangla": "Name in Bangla",
                 "label-name-english": "Name in English",
@@ -599,7 +637,7 @@
                 "label-email": "Email",
                 "label-nid": "NID Number",
                 "label-blood": "Blood Group",
-                
+
                 // Placeholders
                 "name-bangla-placeholder": "Enter Your Name In Bangla",
                 "name-english-placeholder": "Enter Your Name In English",
@@ -618,7 +656,7 @@
                 "email-placeholder": "Enter Your Email",
                 "nid-placeholder": "Enter Your NID",
                 "blood-placeholder": "Enter Your Blood Group",
-                
+
                 // Conditions list
                 "conditions-list": `
                     <li>Must Strictly follow the discipline of the academy.</li>
@@ -628,13 +666,13 @@
                     <li>You can't play anywhere without the academy's permission.</li>
                     <li>Must be attentive towards performing prayers.</li>
                 `,
-                
+
                 // Terms
-                "terms-english": "I hereby declare that, as a member of Assailant Fighters Football Academy, I will behave responsibly. I will abide by all the rules and regulations of the academy and refrain from any kind of unethical activities. I will remain loyal to the academy and always strive to uphold its reputation. If I engage in any unethical activities, I will not have the right to make any complaint against the academy or its legal actions.",               
-             
+                "terms-english": "I hereby declare that, as a member of Assailant Fighters Football Academy, I will behave responsibly. I will abide by all the rules and regulations of the academy and refrain from any kind of unethical activities. I will remain loyal to the academy and always strive to uphold its reputation. If I engage in any unethical activities, I will not have the right to make any complaint against the academy or its legal actions.",
+
                 // Agreement
                 "agree-text": "I agree to the terms and conditions",
-                
+
                 // Submit button
                 "submit-btn": "Submit Registration"
             },
@@ -643,7 +681,7 @@
                 "header-bangla": "এসাইলেন্ট ফাইটার্স ফুটবল একাডেমি",
                 "header-english": "এসাইলেন্ট ফাইটার্স ফুটবল একাডেমি",
                 "upload-text": "ছবি আপলোড",
-                
+
                 // Form sections
                 "personal-info": "ব্যক্তিগত তথ্য",
                 "current-address": "বর্তমান ঠিকানা",
@@ -651,7 +689,7 @@
                 "additional-info": "অতিরিক্ত তথ্য",
                 "terms-title": "শর্তাবলী",
                 "conditions-title": "শর্তসমূহ",
-                
+
                 // Labels
                 "label-name-bangla": "বাংলায় নাম",
                 "label-name-english": "ইংরেজিতে নাম",
@@ -675,7 +713,7 @@
                 "label-email": "ইমেইল",
                 "label-nid": "এনআইডি নম্বর",
                 "label-blood": "রক্তের গ্রুপ",
-                
+
                 // Placeholders
                 "name-bangla-placeholder": "বাংলায় আপনার নাম লিখুন",
                 "name-english-placeholder": "ইংরেজিতে আপনার নাম লিখুন",
@@ -694,7 +732,7 @@
                 "email-placeholder": "আপনার ইমেইল লিখুন",
                 "nid-placeholder": "আপনার এনআইডি লিখুন",
                 "blood-placeholder": "আপনার রক্তের গ্রুপ লিখুন",
-                
+
                 // Conditions list
                 "conditions-list": `
                     <li>অবশ্যই একাডেমির শৃঙ্খলা কঠোরভাবে অনুসরণ করতে হবে।</li>
@@ -704,12 +742,12 @@
                     <li>একাডেমির অনুমতি ছাড়া অন্য কোথাও খেলতে পারবেন না।</li>
                     <li>নামাজ পড়ার দিকে মনোযোগী হতে হবে।</li>
                 `,
-                
+
                 // Terms
                 "terms-english": "আমি এই মর্মে অঙ্গীকার করিতেছি যে, আমি এই একাডেমির ফাইটার্স ফুটবল একাডেমি একাডেমির সদস্য হিসেবে দায়িত্বশীল আচরণ করিবো। আমি একাডেমির সমস্ত নিয়মকানুন মানিয়া চলিব এবং যেকোনো প্রকার অনৈতিক কর্মকান্ড হইতে বিরত থাকিবো। আমি একাডেমির প্রতি বিশ্বস্ত থাকিবো এবং একাডেমির ভাবমূর্তি অক্ষুণ্ণ রাখিবার জন্য সর্বদা চেষ্টা করিবো। আমি যদি অনৈতিক কর্মকান্ড করি তবে আমি একাডেমি এবং আইনগত শাস্তি স্বরূপ কোনো প্রকার কমপ্লেইন করিতে পারিব না।",
                 // Agreement
                 "agree-text": "আমি শর্তাবলীতে সম্মত হই",
-                
+
                 // Submit button
                 "submit-btn": "নিবন্ধন জমা দিন"
             }
@@ -722,7 +760,7 @@
                 btn.classList.remove('active');
             });
             document.querySelector(`.lang-btn[onclick="setLanguage('${lang}')"]`).classList.add('active');
-            
+
             // Update all text elements
             for (const [id, text] of Object.entries(translations[lang])) {
                 const element = document.getElementById(id);
@@ -734,7 +772,7 @@
                     }
                 }
             }
-            
+
             // Update placeholders
             document.getElementById('name-bangla').placeholder = translations[lang]['name-bangla-placeholder'];
             document.getElementById('name-english').placeholder = translations[lang]['name-english-placeholder'];
@@ -757,23 +795,23 @@
             document.getElementById('email').placeholder = translations[lang]['email-placeholder'];
             document.getElementById('nid').placeholder = translations[lang]['nid-placeholder'];
             document.getElementById('blood').placeholder = translations[lang]['blood-placeholder'];
-        
+
 
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Set initial language to English
             setLanguage('en');
-            
+
             const form = document.getElementById('registration-form');
-            
-            form.addEventListener('submit', function(e) {
+
+            form.addEventListener('submit', function (e) {
                 e.preventDefault();
-                
+
                 // Basic validation
                 let isValid = true;
                 const requiredFields = form.querySelectorAll('input[required]');
-                
+
                 requiredFields.forEach(field => {
                     if (!field.value.trim()) {
                         isValid = false;
@@ -782,25 +820,25 @@
                         field.style.borderColor = '#ddd';
                     }
                 });
-                
+
                 const agreeCheckbox = document.getElementById('agree');
                 if (!agreeCheckbox.checked) {
                     isValid = false;
                     alert('You must agree to the terms and conditions');
                 }
-                
+
                 if (isValid) {
                     // Animation for successful submission
                     const submitBtn = document.querySelector('.submit-btn');
                     const originalText = submitBtn.textContent;
                     submitBtn.textContent = 'Submitting...';
                     submitBtn.style.opacity = '0.8';
-                    
+
                     // Simulate form submission
                     setTimeout(() => {
                         submitBtn.textContent = 'Registration Successful!';
                         submitBtn.style.background = 'linear-gradient(to right, #00b09b, #96c93d)';
-                        
+
                         // Reset form after success
                         setTimeout(() => {
                             form.reset();
@@ -812,14 +850,14 @@
                     }, 2000);
                 }
             });
-            
+
             // Add animation to form elements on scroll
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
                 threshold: 0.1
             };
-            
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -828,7 +866,7 @@
                     }
                 });
             }, observerOptions);
-            
+
             document.querySelectorAll('.form-section, .terms-section').forEach(section => {
                 section.style.opacity = '0';
                 observer.observe(section);
@@ -836,4 +874,5 @@
         });
     </script>
 </body>
+
 </html>
