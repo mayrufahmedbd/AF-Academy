@@ -1,78 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Match Lineups</title>
-        <link rel="stylesheet" href="style.css">
-        </head>
-        <body>
-          <div class="wrap">
-              <!-- Header -->
-                  <div class="hdr">
-                        <div class="search">
-                                <span>🔎</span>
-                                        <span id="searchText">real madrid cf vs rcd mallorca</span>
-                                                <span class="dots">⋮</span>
-                                                      </div>
-                                                            <div class="meta" id="matchMeta"></div>
-                                                                  <div class="row">
-                                                                          <div class="team">
-                                                                                    <span class="badge">R</span>
-                                                                                              <div class="name" id="homeName"></div>
-                                                                                                      </div>
-                                                                                                              <div class="score" id="score"></div>
-                                                                                                                      <div class="team">
-                                                                                                                                <div class="name" id="awayName"></div>
-                                                                                                                                          <span class="badge">M</span>
-                                                                                                                                                  </div>
-                                                                                                                                                        </div>
-                                                                                                                                                              <div class="status" id="goals"></div>
-                                                                                                                                                                  </div>
+    <title>Match Lineups</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-                                                                                                                                                                      <!-- Tabs -->
-                                                                                                                                                                          <div class="tabs">
-                                                                                                                                                                                <div class="tab">Overview</div>
-                                                                                                                                                                                      <div class="tab">Timeline</div>
-                                                                                                                                                                                            <div class="tab active">Lineups</div>
-                                                                                                                                                                                                  <div class="tab">Stats</div>
-                                                                                                                                                                                                        <div class="tab">Players</div>
-                                                                                                                                                                                                              <div class="tab">Table</div>
-                                                                                                                                                                                                                  </div>
+<body>
+    <div class="wrap">
+        <!-- Header -->
+        <div class="hdr">
+            <div class="search">
+                <span>🔎</span>
+                <span id="searchText">real madrid cf vs rcd mallorca</span>
+                <span class="dots">⋮</span>
+            </div>
+            <div class="meta" id="matchMeta"></div>
+            <div class="row">
+                <div class="team">
+                    <span class="badge">R</span>
+                    <div class="name" id="homeName"></div>
+                </div>
+                <div class="score" id="score"></div>
+                <div class="team">
+                    <div class="name" id="awayName"></div>
+                    <span class="badge">M</span>
+                </div>
+            </div>
+            <div class="status" id="goals"></div>
+        </div>
 
-                                                                                                                                                                                                                      <!-- Lineups -->
-                                                                                                                                                                                                                          <div class="card">
-                                                                                                                                                                                                                                <div class="card-h">
-                                                                                                                                                                                                                                        <h3>Lineups</h3>
-                                                                                                                                                                                                                                                <div class="note" id="formationLabel"></div>
-                                                                                                                                                                                                                                                      </div>
+        <!-- Tabs -->
+        <div class="tabs">
+            <div class="tab">Overview</div>
+            <div class="tab">Timeline</div>
+            <div class="tab active">Lineups</div>
+            <div class="tab">Stats</div>
+            <div class="tab">Players</div>
+            <div class="tab">Table</div>
+        </div>
 
-                                                                                                                                                                                                                                                            <div class="pitch" id="pitch">
-                                                                                                                                                                                                                                                                    <div class="box home"></div>
-                                                                                                                                                                                                                                                                            <div class="box away"></div>
-                                                                                                                                                                                                                                                                                    <div class="gkbox home"></div>
-                                                                                                                                                                                                                                                                                            <div class="gkbox away"></div>
-                                                                                                                                                                                                                                                                                                    <div class="circle"></div>
-                                                                                                                                                                                                                                                                                                          </div>
+        <!-- Lineups -->
+        <div class="card">
+            <div class="card-h">
+                <h3>Lineups</h3>
+                <div class="note" id="formationLabel"></div>
+            </div>
 
-                                                                                                                                                                                                                                                                                                                <!-- Subs -->
-                                                                                                                                                                                                                                                                                                                      <div class="subs">
-                                                                                                                                                                                                                                                                                                                              <div class="subcol" id="subsHome">
-                                                                                                                                                                                                                                                                                                                                        <h4>Substitutes — Home</h4>
-                                                                                                                                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                                                                                                                                                        <div class="subcol" id="subsAway">
-                                                                                                                                                                                                                                                                                                                                                                  <h4>Substitutes — Away</h4>
-                                                                                                                                                                                                                                                                                                                                                                          </div>
-                                                                                                                                                                                                                                                                                                                                                                                </div>
+            <div class="pitch" id="pitch">
+                <div class="box home"></div>
+                <div class="box away"></div>
+                <div class="gkbox home"></div>
+                <div class="gkbox away"></div>
+                <div class="circle"></div>
+            </div>
 
-                                                                                                                                                                                                                                                                                                                                                                                      <!-- Managers -->
-                                                                                                                                                                                                                                                                                                                                                                                            <div class="mgr">
-                                                                                                                                                                                                                                                                                                                                                                                                    <div class="col"><span class="badge">R</span><span>Manager: <strong id="mgrHome"></strong></span></div>
-                                                                                                                                                                                                                                                                                                                                                                                                            <div class="col"><span>Manager: <strong id="mgrAway"></strong></span><span class="badge">M</span></div>
-                                                                                                                                                                                                                                                                                                                                                                                                                  </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                      </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+            <!-- Subs -->
+            <div class="subs">
+                <div class="subcol" id="subsHome">
+                    <h4>Substitutes — Home</h4>
+                </div>
+                <div class="subcol" id="subsAway">
+                    <h4>Substitutes — Away</h4>
+                </div>
+            </div>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                          <script src="script.js"></script>
-                                                                                                                                                                                                                                                                                                                                                                                                                          </body>
-                                                                                                                                                                                                                                                                                                                                                                                                                          </html>
+            <!-- Managers -->
+            <div class="mgr">
+                <div class="col"><span class="badge">R</span><span>Manager: <strong id="mgrHome"></strong></span></div>
+                <div class="col"><span>Manager: <strong id="mgrAway"></strong></span><span class="badge">M</span></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
