@@ -1,0 +1,124 @@
+{
+    "match": {
+        "home": "Real Madrid",
+        "away": "Mallorca",
+        "score": "2–1",
+        "date": "Sun, Aug 31",
+        "competition": "La Liga",
+        "homeFormation": "4-2-3-1",
+        "awayFormation": "5-3-2",
+        "managers": {
+            "home": "X. Alonso",
+            "away": "J. Arrasate"
+        },
+        "goals": "A. Güler 37' • V. Junior 38' — V. Muriqi 18'"
+    },
+    "starters": {
+        "home": [
+            {
+                "name": "T. Courtois",
+                "rating": 4.2
+            },
+            {
+                "name": "F. Alexander-Arnold",
+                "rating": 4.2
+            },
+            {
+                "name": "E. Militão",
+                "rating": 4.1
+            },
+            {
+                "name": "D. Højbjerg",
+                "rating": 4.1
+            },
+            {
+                "name": "Á. Carreras",
+                "rating": 4.3
+            },
+            {
+                "name": "F. Valverde",
+                "rating": 4.4
+            },
+            {
+                "name": "A. Tchouaméni",
+                "rating": 4.1
+            },
+            {
+                "name": "A. Güler",
+                "rating": 4.8
+            },
+            {
+                "name": "V. Junior",
+                "rating": 4.7
+            },
+            {
+                "name": "K. Mbappé",
+                "rating": 4.4
+            }
+        ],
+        "away": [
+            {
+                "name": "R. Romain",
+                "rating": 2.0
+            },
+            {
+                "name": "T. Lato",
+                "rating": 2.1
+            },
+            {
+                "name": "M. Kumubuła",
+                "rating": 2.3
+            },
+            {
+                "name": "A. Raíllo",
+                "rating": 2.3
+            },
+            {
+                "name": "M. Valjent",
+                "rating": 2.3
+            },
+            {
+                "name": "M. Morey",
+                "rating": 2.1
+            },
+            {
+                "name": "P. Torre",
+                "rating": 2.8
+            },
+            {
+                "name": "M. Morlanes",
+                "rating": 2.2
+            },
+            {
+                "name": "S. Darder",
+                "rating": 2.3
+            },
+            {
+                "name": "V. Muriqi",
+                "rating": 3.2
+            }
+        ]
+    },
+    "subs": {
+        "home": [
+            {
+                "name": "D. Carvajal",
+                "info": "#2 (4.0)"
+            },
+            {
+                "name": "Rodrygo",
+                "info": "#11 (4.2)"
+            }
+        ],
+        "away": [
+            {
+                "name": "A. Sánchez",
+                "info": "#6 (2.0)"
+            },
+            {
+                "name": "S. Costa",
+                "info": "#12 (2.2)"
+            }
+        ]
+    }
+}
