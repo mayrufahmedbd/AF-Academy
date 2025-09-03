@@ -43,7 +43,6 @@ async function loadData() {
             ${data.squad.map(player => `
                 <div class="game-row">
                     <div class="team-section">
-                        <div class="team-logo">${player.number}</div>
                         <span>${player.name} (${player.position})</span>
                     </div>
                 </div>

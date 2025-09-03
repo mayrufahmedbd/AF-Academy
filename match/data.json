@@ -18,11 +18,17 @@
     }
   ],
   "squad": [
-    { "number": "1", "name": "..", "position": "GK" },
-    { "number": "4", "name": "Alamin", "position": "DF" },
-    { "number": "7", "name": "Shahjan", "position": "LW" },
-    { "number": "11", "name": "Rahul", "position": "RW" },
-    { "number": "10", "name": "Limoon", "position": "AMF" }
+    {"id": "gk", "name": "Goalkeeper", "position": "GK"},
+    {"id": "lb", "name": "Mayruf", "position": "LB"},
+    {"id": "cb1", "name": "Al Amin", "position": "CB"},
+    {"id": "cb2", "name": "Nurol Amin", "position": "CB"},
+    {"id": "rb", "name": "Ahsan", "position": "RB"},
+    {"id": "lmf", "name": "Mahid", "position": "LMF"},
+    {"id": "cmf1", "name": "Nasir", "position": "CMF"},
+    {"id": "cmf2", "name": "Limon", "position": "AMF"},
+    {"id": "rmf", "name": "Shahjan", "position": "RWF"},
+    {"id": "cf1", "name": "Saud", "position": "CF"},
+    {"id": "cf2", "name": "Rahul", "position": "LWF"}
   ],
   "injuries": [
     { "short": "M", "name": "Mayruf Ahmed", "returnDate": "Unknown" }
