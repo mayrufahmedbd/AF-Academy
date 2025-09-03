@@ -1,9 +1,4 @@
 {
-    "site": {
-        "title": "Management - Assailant Fighters Academy",
-        "logo": "img/club logo.png",
-        "name": "Assailant Fighters Academy"
-    },
     "navigation": [
         {
             "id": "nav-home",
