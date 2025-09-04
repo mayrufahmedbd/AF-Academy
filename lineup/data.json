@@ -1,124 +1,80 @@
 {
-    "match": {
-        "home": "Real Madrid",
-        "away": "Mallorca",
-        "score": "2–1",
-        "date": "Sun, Aug 31",
-        "competition": "La Liga",
-        "homeFormation": "4-2-3-1",
-        "awayFormation": "5-3-2",
-        "managers": {
-            "home": "X. Alonso",
-            "away": "J. Arrasate"
+  "match": {
+    "teams": {
+      "home": {
+        "name": "Assailant Fighters",
+        "short": "AF",
+        "color": "white",
+        "formation": "4-2-3-1",
+        "score": 2,
+        "players": {
+          "goalkeeper": [{ "num": 1, "name": "Courtois" }],
+          "defense": [
+            { "num": 2, "name": "Carvajal" },
+            { "num": 3, "name": "Militão" },
+            { "num": 22, "name": "Rüdiger" },
+            { "num": 23, "name": "Mendy" }
+          ],
+          "midfieldDef": [
+            { "num": 18, "name": "Tchouaméni" },
+            { "num": 12, "name": "Camavinga" }
+          ],
+          "midfieldAtt": [
+            { "num": 15, "name": "Valverde" },
+            { "num": 5, "name": "Bellingham" },
+            { "num": 7, "name": "Vinícius Jr." }
+          ],
+          "forward": [{ "num": 9, "name": "Mbappé" }]
         },
-        "goals": "A. Güler 37' • V. Junior 38' — V. Muriqi 18'"
-    },
-    "starters": {
-        "home": [
-            {
-                "name": "T. Courtois",
-                "rating": 4.2
-            },
-            {
-                "name": "F. Alexander-Arnold",
-                "rating": 4.2
-            },
-            {
-                "name": "E. Militão",
-                "rating": 4.1
-            },
-            {
-                "name": "D. Højbjerg",
-                "rating": 4.1
-            },
-            {
-                "name": "Á. Carreras",
-                "rating": 4.3
-            },
-            {
-                "name": "F. Valverde",
-                "rating": 4.4
-            },
-            {
-                "name": "A. Tchouaméni",
-                "rating": 4.1
-            },
-            {
-                "name": "A. Güler",
-                "rating": 4.8
-            },
-            {
-                "name": "V. Junior",
-                "rating": 4.7
-            },
-            {
-                "name": "K. Mbappé",
-                "rating": 4.4
-            }
+        "subs": [
+          { "num": 13, "name": "Lunin (GK)" },
+          { "num": 6, "name": "Nacho" },
+          { "num": 17, "name": "Lucas Vázquez" },
+          { "num": 8, "name": "Kroos" },
+          { "num": 10, "name": "Modrić" },
+          { "num": 21, "name": "Díaz" },
+          { "num": 11, "name": "Rodrygo" }
         ],
-        "away": [
-            {
-                "name": "R. Romain",
-                "rating": 2.0
-            },
-            {
-                "name": "T. Lato",
-                "rating": 2.1
-            },
-            {
-                "name": "M. Kumubuła",
-                "rating": 2.3
-            },
-            {
-                "name": "A. Raíllo",
-                "rating": 2.3
-            },
-            {
-                "name": "M. Valjent",
-                "rating": 2.3
-            },
-            {
-                "name": "M. Morey",
-                "rating": 2.1
-            },
-            {
-                "name": "P. Torre",
-                "rating": 2.8
-            },
-            {
-                "name": "M. Morlanes",
-                "rating": 2.2
-            },
-            {
-                "name": "S. Darder",
-                "rating": 2.3
-            },
-            {
-                "name": "V. Muriqi",
-                "rating": 3.2
-            }
-        ]
-    },
-    "subs": {
-        "home": [
-            {
-                "name": "D. Carvajal",
-                "info": "#2 (4.0)"
-            },
-            {
-                "name": "Rodrygo",
-                "info": "#11 (4.2)"
-            }
+        "manager": "Carlo Ancelotti"
+      },
+      "away": {
+        "name": "Mallorca",
+        "short": "MAL",
+        "color": "#ff6b35",
+        "formation": "5-3-2",
+        "score": 1,
+        "players": {
+          "goalkeeper": [{ "num": 1, "name": "Román" }],
+          "defense": [
+            { "num": 23, "name": "Maffeo" },
+            { "num": 24, "name": "Valjent" },
+            { "num": 21, "name": "Raíllo" },
+            { "num": 6, "name": "Copete" },
+            { "num": 22, "name": "Mojica" }
+          ],
+          "midfield": [
+            { "num": 10, "name": "Darder" },
+            { "num": 5, "name": "Mascarell" },
+            { "num": 12, "name": "Samú Costa" }
+          ],
+          "forward": [
+            { "num": 7, "name": "Muriqi" },
+            { "num": 17, "name": "Larin" }
+          ]
+        },
+        "subs": [
+          { "num": 13, "name": "Greif (GK)" },
+          { "num": 15, "name": "Sánchez" },
+          { "num": 3, "name": "González" },
+          { "num": 18, "name": "Asano" },
+          { "num": 8, "name": "Navarro" },
+          { "num": 14, "name": "Dani Rodríguez" },
+          { "num": 11, "name": "Abdón Prats" }
         ],
-        "away": [
-            {
-                "name": "A. Sánchez",
-                "info": "#6 (2.0)"
-            },
-            {
-                "name": "S. Costa",
-                "info": "#12 (2.2)"
-            }
-        ]
-    }
+        "manager": "Jagoba Arrasate"
+      }
+    },
+    "date": "Tue, Sep 09",
+    "status": "Full-time"
+  }
 }
