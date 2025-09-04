@@ -112,7 +112,8 @@ body {
 
 .pitch {
     position: relative;
-    aspect-ratio: 9/14;
+    aspect-ratio: 14/9;
+    /* wider pitch */
     margin: 10px;
     border: 3px solid #177c35;
     background: var(--pitch);
@@ -128,35 +129,35 @@ body {
 }
 
 .box.home {
-    top: 10%;
-    bottom: 10%;
-    left: 6px;
-    right: 52%;
+    top: 6px;
+    bottom: 52%;
+    left: 10%;
+    right: 10%;
 }
 
 .box.away {
-    top: 10%;
-    bottom: 10%;
-    right: 6px;
-    left: 52%;
+    top: 52%;
+    bottom: 6px;
+    left: 10%;
+    right: 10%;
 }
 
 .gkbox.home {
-    top: 40%;
-    bottom: 40%;
-    left: 6px;
-    right: 76%;
+    top: 6px;
+    bottom: 76%;
+    left: 35%;
+    right: 35%;
 }
 
 .gkbox.away {
-    top: 40%;
-    bottom: 40%;
-    right: 6px;
-    left: 76%;
+    top: 76%;
+    bottom: 6px;
+    left: 35%;
+    right: 35%;
 }
 
 .circle {
-    width: 24%;
+    width: 18%;
     aspect-ratio: 1;
     border-radius: 50%;
     left: 50%;
@@ -169,6 +170,7 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
 }
+
 
 .av {
     width: 40px;
