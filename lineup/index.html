@@ -3,11 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Match Page</title>
+  <title>Match Page with Timeline</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="app"></div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="showTab('lineups')">Line-ups</button>
+    <button class="tab-btn" onclick="showTab('timeline')">Timeline</button>
+  </div>
+
+  <!-- Lineups Section -->
+  <div id="lineups" class="tab-content margin active">
+    <div id="app"></div>
+  </div>
+
+  <!-- Timeline Section -->
+  <div id="timeline" class="tab-content">
+    <div id="timeline-container"></div>
+  </div>
 
   <script src="script.js"></script>
 </body>

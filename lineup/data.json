@@ -1,5 +1,7 @@
 {
   "match": {
+    "date": "Tue, Sep 09",
+    "status": "Full-time",
     "teams": {
       "home": {
         "name": "Assailant Fighters",
@@ -29,11 +31,8 @@
         "subs": [
           { "num": 13, "name": "Lunin (GK)" },
           { "num": 6, "name": "Nacho" },
-          { "num": 17, "name": "Lucas Vázquez" },
           { "num": 8, "name": "Kroos" },
-          { "num": 10, "name": "Modrić" },
-          { "num": 21, "name": "Díaz" },
-          { "num": 11, "name": "Rodrygo" }
+          { "num": 10, "name": "Modrić" }
         ],
         "manager": "Carlo Ancelotti"
       },
@@ -65,16 +64,38 @@
         "subs": [
           { "num": 13, "name": "Greif (GK)" },
           { "num": 15, "name": "Sánchez" },
-          { "num": 3, "name": "González" },
-          { "num": 18, "name": "Asano" },
-          { "num": 8, "name": "Navarro" },
-          { "num": 14, "name": "Dani Rodríguez" },
-          { "num": 11, "name": "Abdón Prats" }
+          { "num": 3, "name": "González" }
         ],
         "manager": "Jagoba Arrasate"
       }
     },
-    "date": "Tue, Sep 09",
-    "status": "Full-time"
+    "events": [
+      {
+        "minute": "75'",
+        "type": "red-card",
+        "player": "A. Rajkovic",
+        "team": "Mallorca",
+        "details": "Goalkeeper #1",
+        "description": "RED CARD! Rajkovic is sent off for a dangerous challenge."
+      },
+      {
+        "minute": "89'",
+        "type": "yellow-card",
+        "player": "É. Militão",
+        "team": "Assailant Fighters",
+        "details": "Defender #3",
+        "description": "YELLOW! Militao lunges in on Virgili on the left flank."
+      },
+      {
+        "minute": "90+5'",
+        "type": "substitution",
+        "in": "G. Garcia",
+        "inDetails": "Striker #16",
+        "out": "K. Mbappé",
+        "outDetails": "Striker #9",
+        "team": "Assailant Fighters",
+        "description": "Mbappe replaced by Garcia after two disallowed goals."
+      }
+    ]
   }
 }
