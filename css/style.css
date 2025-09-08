@@ -192,7 +192,7 @@ header {
     color: #666;
 }
 
-.featured-card p:hover{
+.featured-card p:hover {
     color: red;
     transition: all 0.5s ease;
 }
@@ -276,10 +276,10 @@ header {
     background: white;
     color: var(--primary);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.637),
-    0 0 0 2px rgb(255, 255, 255);
+        0 0 0 2px rgb(255, 255, 255);
 }
 
-.btn-sss{
+.btn-sss {
     background-color: #fff;
     color: black;
 }
@@ -376,7 +376,7 @@ header {
     gap: 30px;
 }
 
-.players-grid{
+.players-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
@@ -388,38 +388,32 @@ header {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all .3s ease;
 }
+
 .menagers-card:hover {
-        transition: all .3s ease;
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
 }
 
-.players-card{
+.players-card {
     text-align: center;
     background: white;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-.players-card:hover{
     transition: all .3s ease;
+}
+
+.players-card:hover {
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
 }
 
 .menagers-image {
@@ -427,7 +421,7 @@ header {
     overflow: hidden;
 }
 
-.players-image{
+.players-image {
     height: 300px;
     overflow: hidden;
     border-radius: 50%;
@@ -441,29 +435,22 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all 0.5s ease;
 }
 
-.players-image img{
-        width: 100%;
+.players-image img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all 0.5s ease;
 }
 
-.menagers-image img:hover{
+.menagers-image img:hover {
     transform: scale(1.1);
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
 }
-.players-image img:hover{
+
+.players-image img:hover {
     transform: scale(1.1);
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
 }
 
 
@@ -474,7 +461,7 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    
+
 }
 
 .players-info {
@@ -483,7 +470,7 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    
+
 }
 
 .menagers-info h3 {
@@ -494,7 +481,7 @@ header {
 }
 
 .menagers-info h3:hover {
-        color: black;
+    color: black;
 
 }
 
@@ -778,7 +765,7 @@ footer {
     .hero-content h1 {
         font-size: 2.8rem;
     }
-    
+
     .cta-buttons {
         flex-direction: column;
         align-items: center;
@@ -803,13 +790,13 @@ footer {
     }
 
     .players-image {
-    height: 170px;
+        height: 170px;
     }
 
-    
+
     .players-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 
     .nav-menu.active {
@@ -828,6 +815,9 @@ footer {
     .section-title {
         font-size: 2rem;
     }
+    .players-grid {
+    gap: 20px;
+}
 }
 
 @media (max-width: 480px) {

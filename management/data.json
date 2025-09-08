@@ -189,6 +189,15 @@
             "social": {
                 "facebook": "#"
             }
+        },
+        {
+            "id":"p14",
+            "name": "Soud",
+            "position":"Center Forward",
+            "image":"../img/soud.jpg",
+            "social": {
+                "facebook": "#"
+            }
         }
     ]
 }

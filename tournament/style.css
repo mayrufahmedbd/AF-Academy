@@ -74,7 +74,7 @@ body {
 .pitch {
   width: 80%;
   height: 95%;
-  background: url('../../img/pitch.jpg') no-repeat center center;
+  /* background: url('../../img/pitch.jpg') no-repeat center center; */
   background-size: cover;
   background-color: #006600;
   border: 3px solid #fff;
@@ -109,17 +109,33 @@ body {
   border-radius: 50%;
   border: 2px solid #fff;
   object-fit: cover;
+  transition: all .3s ease;
+}
+.player img:hover {
+    width: 65px;
+    height: 65px;
+    transform: scale(1.2);
+    border-radius: 40%;
+    border: 2px solid #fff;
+    -webkit-border-radius: 40%;
+    -moz-border-radius: 40%;
+    -ms-border-radius: 40%;
+    -o-border-radius: 40%;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
 }
 
 .player-name { font-size: 12px; margin-top: 3px; }
 .player-position { font-size: 10px; color: #ccc; }
 
 /* Player positions (4-4-2) */
-#gk { top: 85%; left: 50%; transform: translate(-50%, -50%); }
-#lb { top: 70%; left: 15%; transform: translate(-50%, -50%); }
-#cb1 { top: 70%; left: 40%; transform: translate(-50%, -50%); }
-#cb2 { top: 70%; left: 60%; transform: translate(-50%, -50%); }
-#rb { top: 70%; left: 85%; transform: translate(-50%, -50%); }
+#gk { top: 93%; left: 50%; transform: translate(-50%, -50%); }
+#lb { top: 75%; left: 15%; transform: translate(-50%, -50%); }
+#cb1 { top: 75%; left: 40%; transform: translate(-50%, -50%); }
+#cb2 { top: 75%; left: 60%; transform: translate(-50%, -50%); }
+#rb { top: 75%; left: 85%; transform: translate(-50%, -50%); }
 #lmf { top: 55%; left: 35%; transform: translate(-50%, -50%); }
 #cmf1 { top: 55%; left: 65%; transform: translate(-50%, -50%); }
 #cmf2 { top: 40%; left: 50%; transform: translate(-50%, -50%); }

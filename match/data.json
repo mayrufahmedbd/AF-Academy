@@ -5,32 +5,98 @@
     "logo": "../img/club logo.png"
   },
   "navigation": [
-    { "id": "nav-next", "label": "Next Match", "target": "next-match", "active": true },
-    { "id": "nav-squad", "label": "Squad", "target": "squad" },
-    { "id": "nav-injuries", "label": "Injuries", "target": "transfers" }
+    {
+      "id": "nav-next",
+      "label": "Next Match",
+      "target": "next-match",
+      "active": true
+    },
+    {
+      "id": "nav-squad",
+      "label": "Squad",
+      "target": "squad"
+    },
+    {
+      "id": "nav-injuries",
+      "label": "Injuries",
+      "target": "transfers"
+    }
   ],
   "matches": [
     {
-      "homeTeam": {"name": "Assailant Fighters" },
-      "awayTeam": {"name": "Palli Mangal Samity Football XI" },
+      "homeTeam": {
+        "name": "Assailant Fighters"
+      },
+      "awayTeam": {
+        "name": "Palli Mangal Samity Football XI"
+      },
       "datetime": "09 Sep 25<br>04:30 PM",
       "resultPage": "/blogs/blog-detail.html?id=1"
     }
   ],
   "squad": [
-    {"id": "gk", "name": "Goalkeeper", "position": "GK"},
-    {"id": "lb", "name": "Mayruf", "position": "LB"},
-    {"id": "cb1", "name": "Al Amin", "position": "CB"},
-    {"id": "cb2", "name": "Nurol Amin", "position": "CB"},
-    {"id": "rb", "name": "Ahsan", "position": "RB"},
-    {"id": "lmf", "name": "Mahid", "position": "LMF"},
-    {"id": "cmf1", "name": "Nasir", "position": "CMF"},
-    {"id": "cmf2", "name": "Limon", "position": "AMF"},
-    {"id": "rmf", "name": "Shahjan", "position": "RWF"},
-    {"id": "cf1", "name": "Saud", "position": "CF"},
-    {"id": "cf2", "name": "Rahul", "position": "LWF"}
+    {
+      "id": "gk",
+      "name": "Goalkeeper",
+      "position": "GK"
+    },
+    {
+      "id": "lb",
+      "name": "Mayruf",
+      "position": "LB"
+    },
+    {
+      "id": "cb1",
+      "name": "Al Amin",
+      "position": "CB"
+    },
+    {
+      "id": "cb2",
+      "name": "Nurol Amin",
+      "position": "CB"
+    },
+    {
+      "id": "rb",
+      "name": "Ahsan",
+      "position": "RB"
+    },
+    {
+      "id": "lmf",
+      "name": "Mahid",
+      "position": "LMF"
+    },
+    {
+      "id": "cmf1",
+      "name": "Nasir",
+      "position": "CMF"
+    },
+    {
+      "id": "cmf2",
+      "name": "Limon",
+      "position": "AMF"
+    },
+    {
+      "id": "rmf",
+      "name": "Shahjan",
+      "position": "RWF"
+    },
+    {
+      "id": "cf1",
+      "name": "Saud",
+      "position": "CF"
+    },
+    {
+      "id": "cf2",
+      "name": "Rahul",
+      "position": "LWF"
+      
+    }
   ],
   "injuries": [
-    { "short": "M", "name": "Mayruf Ahmed", "returnDate": "Unknown" }
+    {
+      "short": "S",
+      "name": "Sayid Shah",
+      "returnDate": "13 Nov 2025"
+    }
   ]
 }
