@@ -28,69 +28,36 @@
         "name": "Assailant Fighters"
       },
       "awayTeam": {
-        "name": "Palli Mangal Samity Football XI"
+        "name": "#"
       },
-      "datetime": "09 Sep 25<br>04:30 PM",
-      "resultPage": "/blogs/blog-detail.html?id=1"
+      "datetime": "#",
+      "resultPage": "#"
     }
   ],
   "squad": [
-    {
-      "id": "gk",
-      "name": "Goalkeeper",
-      "position": "GK"
-    },
-    {
-      "id": "lb",
-      "name": "Mayruf",
-      "position": "LB"
-    },
-    {
-      "id": "cb1",
-      "name": "Al Amin",
-      "position": "CB"
-    },
-    {
-      "id": "cb2",
-      "name": "Nurol Amin",
-      "position": "CB"
-    },
-    {
-      "id": "rb",
-      "name": "Ahsan",
-      "position": "RB"
-    },
-    {
-      "id": "lmf",
-      "name": "Mahid",
-      "position": "LMF"
-    },
-    {
-      "id": "cmf1",
-      "name": "Nasir",
-      "position": "CMF"
-    },
-    {
-      "id": "cmf2",
-      "name": "Limon",
-      "position": "AMF"
-    },
-    {
-      "id": "rmf",
-      "name": "Shahjan",
-      "position": "RWF"
-    },
-    {
-      "id": "cf1",
-      "name": "Saud",
-      "position": "CF"
-    },
-    {
-      "id": "cf2",
-      "name": "Rahul",
-      "position": "LWF"
-      
-    }
+    {"name": "Goalkeeper", "position": "GK"},
+    {"name": "Mayruf", "position": "LB"},
+    {"name": "Al Amin", "position": "CB"},
+    {"name": "Nurol Amin", "position": "CB"},
+    {"name": "Ahsan", "position": "RB"},
+    {"name": "Mahid", "position": "LMF"},
+    {"name": "Nasir", "position": "CMF"},
+    {"name": "Limon", "position": "AMF"},
+    {"name": "Shahjan", "position": "RWF"},
+    {"name": "Saud", "position": "CF"},
+    {"name": "Rahul", "position": "LWF"},
+    {"name": "Fahim", "position": "LB"},
+    {"name": "Lalon", "position": "CMF"},
+    {"name": "Saikat", "position": "RB"},
+    {"name": "Zakaria", "position": "CB"},
+    {"name": "Shamim", "position": "CB"},
+    {"name": "Mohammad Sazzad", "position": "RB"},
+    {"name": "Jubayer", "position": "RMF"},
+    {"name": "Sanar", "position": "DMF"},
+    {"name": "Tanvir", "position": "LB"},
+    {"name": "Fahad", "position": "N/A"},
+    {"name": "Tasrif", "position": "N/A"},
+    {"name": "Redwan", "position": "N/A"}
   ],
   "injuries": [
     {
