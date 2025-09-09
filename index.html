@@ -13,6 +13,16 @@
     <link rel="icon" href="img/club logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SR338R66CG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-SR338R66CG');
+    </script>
 </head>
 
 <div id="loader" class="div-loader">
@@ -20,176 +30,180 @@
 </div>
 <div id="content" style="display:none;">
 
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <a href="/">Assailant Fighters Academy</a>
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="container header-container">
+                <div class="logo">
+                    <a href="/">Assailant Fighters Academy</a>
+                </div>
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="management">Management</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/blogs/">Blogs</a></li>
+                </ul>
             </div>
-            <div class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="management">Management</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="/blogs/">Blogs</a></li>
-            </ul>
-        </div>
-    </header>
+        </header>
 
         <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container hero-content">
-            <h1>Welcome to Assailant Fighters Football Academy In Sylhet</h1>
-            <p>Join our academy to receive top-tier training from experienced coaches and take your game to the next
-                level.</p>
-            <a href="UI/form.html" class="btn btn-pulse">Online Form</a>
-            <a href="img/AFFA FORM.pdf" download class="btn btn-pulse">Download Form</a>
-        </div>
-    </section>
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <h1>Welcome to Assailant Fighters Football Academy In Sylhet</h1>
+                <p>Join our academy to receive top-tier training from experienced coaches and take your game to the next
+                    level.</p>
+                <a href="UI/form.html" class="btn btn-pulse">Online Form</a>
+                <a href="img/AFFA FORM.pdf" download class="btn btn-pulse">Download Form</a>
+            </div>
+        </section>
 
-    <!-- Featured Sections (Preview) -->
-    <section class="featured-sections">
-        <div class="container">
-            <div class="featured-grid">
-                <div class="featured-card">
-                    <div class="featured-icon">
-                        <i class="fas fa-users"></i>
+        <!-- Featured Sections (Preview) -->
+        <section class="featured-sections">
+            <div class="container">
+                <div class="featured-grid">
+                    <div class="featured-card">
+                        <div class="featured-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>About Our Academy</h3>
+                        <p>Learn about our mission, facilities, and approach to player development.</p>
+                        <a href="about.html" class="btn">Learn More</a>
                     </div>
-                    <h3>About Our Academy</h3>
-                    <p>Learn about our mission, facilities, and approach to player development.</p>
-                    <a href="about.html" class="btn">Learn More</a>
-                </div>
 
-                <div class="featured-card">
-                    <div class="featured-icon">
-                        <i class="fas fa-futbol"></i>
+                    <div class="featured-card">
+                        <div class="featured-icon">
+                            <i class="fas fa-futbol"></i>
+                        </div>
+                        <h3>Our Programs</h3>
+                        <p>Discover our training programs for all age groups and skill levels.</p>
+                        <a href="programs.html" class="btn">View Programs</a>
                     </div>
-                    <h3>Our Programs</h3>
-                    <p>Discover our training programs for all age groups and skill levels.</p>
-                    <a href="programs.html" class="btn">View Programs</a>
-                </div>
 
-                <div class="featured-card">
-                    <div class="featured-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
+                    <div class="featured-card">
+                        <div class="featured-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3>Our Management</h3>
+                        <p>Meet our experienced coaching staff and management team.</p>
+                        <a href="/management/" class="btn">Meet The Team</a>
                     </div>
-                    <h3>Our Management</h3>
-                    <p>Meet our experienced coaching staff and management team.</p>
-                    <a href="/management/" class="btn">Meet The Team</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Testimonials Preview -->
-    <section class="testimonials-preview">
-        <div class="container">
-            <h2 class="section-title">What Our Players Say</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"The coaching at Assailant Fighters Academy transformed my game. I've
-                        improved technically and tactically more in 6 months than I did in 3 years at my previous club."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="/img/Mayruf.jpg" alt="Mayruf Ahmed">
-                        </div>
-                        <div>
-                            <h4>Mayruf Ahmed</h4>
-                            <p>Defensive Player</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"The professional environment and quality of training sessions are
-                        outstanding. I've developed not just as a player but also as a person since joining the
-                        academy."</p>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="/img/raahul das.png" alt="Rahul Das">
-                        </div>
-                        <div>
-                            <h4>Rahul Das</h4>
-                            <p>Midfielder</p>
+        <!-- Testimonials Preview -->
+        <section class="testimonials-preview">
+            <div class="container">
+                <h2 class="section-title">What Our Players Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"The coaching at Assailant Fighters Academy transformed my game.
+                            I've
+                            improved technically and tactically more in 6 months than I did in 3 years at my previous
+                            club."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="/img/Mayruf.jpg" alt="Mayruf Ahmed">
+                            </div>
+                            <div>
+                                <h4>Mayruf Ahmed</h4>
+                                <p>Defensive Player</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Call to Action -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Start Your Football Journey?</h2>
-                <p>Join Assailant Fighters Academy today and take the first step toward reaching your full potential as
-                    a football player.</p>
-                <div class="cta-buttons">
-                    <a href="programs.html" class="btn btn-sss">Explore Programs</a>
-                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3><a href="/">Assailant Fighters Academy</a></h3>
-                    <p>Developing the next generation of football talent through professional coaching and
-                        state-of-the-art facilities.</p>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="programs.html">Programs</a></li>
-                        <li><a href="management.html">Management</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="blogs/">Blog</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Programs</h3>
-                    <ul class="footer-links">
-                        <li><a href="programs.html#youth">Youth Development</a></li>
-                        <li><a href="programs.html#advanced">Advanced Training</a></li>
-                        <li><a href="programs.html#goalkeeper">Goalkeeper Training</a></li>
-                        <li><a href="/match/">Matches</a></li>
-                        <li><a href="/tournament">Tournament Teams</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Connect With Us</h3>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/Assailantsfighters" target="_blank"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.youtube.com/channel/UC9HLaIB7cfo-8elhwTmKH0g" target="_blank"><i
-                                class="fab fa-youtube"></i></a>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"The professional environment and quality of training sessions are
+                            outstanding. I've developed not just as a player but also as a person since joining the
+                            academy."</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="/img/raahul das.png" alt="Rahul Das">
+                            </div>
+                            <div>
+                                <h4>Rahul Das</h4>
+                                <p>Midfielder</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="copyright">
-                <p>&copy; 2025 Assailant Fighters Academy. All rights reserved.</p>
+        <!-- Call to Action -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Start Your Football Journey?</h2>
+                    <p>Join Assailant Fighters Academy today and take the first step toward reaching your full potential
+                        as
+                        a football player.</p>
+                    <div class="cta-buttons">
+                        <a href="programs.html" class="btn btn-sss">Explore Programs</a>
+                        <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </footer>
+        </section>
 
-    <script src="js/script.js"></script>
-</body>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-section">
+                        <h3><a href="/">Assailant Fighters Academy</a></h3>
+                        <p>Developing the next generation of football talent through professional coaching and
+                            state-of-the-art facilities.</p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="programs.html">Programs</a></li>
+                            <li><a href="management.html">Management</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="blogs/">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Programs</h3>
+                        <ul class="footer-links">
+                            <li><a href="programs.html#youth">Youth Development</a></li>
+                            <li><a href="programs.html#advanced">Advanced Training</a></li>
+                            <li><a href="programs.html#goalkeeper">Goalkeeper Training</a></li>
+                            <li><a href="/match/">Matches</a></li>
+                            <li><a href="/tournament">Tournament Teams</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Connect With Us</h3>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/Assailantsfighters" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.youtube.com/channel/UC9HLaIB7cfo-8elhwTmKH0g" target="_blank"><i
+                                    class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    <p>&copy; 2025 Assailant Fighters Academy. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/script.js"></script>
+    </body>
 </div>
+
 </html>
