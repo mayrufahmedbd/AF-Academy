@@ -3,23 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Match Page with Timeline</title>
+  <title>Football Match - Live Details</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Tabs -->
   <div class="tabs">
-    <button class="tab-btn active" onclick="showTab('lineups')">Line-ups</button>
-    <button class="tab-btn" onclick="showTab('timeline')">Timeline</button>
+    <button class="tab-btn active" onclick="showTab('lineups', event)">Line-ups</button>
+    <button class="tab-btn" onclick="showTab('timeline', event)">Timeline</button>
   </div>
 
   <!-- Lineups Section -->
-  <div id="lineups" class="tab-content margin active">
-    <div id="app"></div>
+  <div id="lineups" class="tab-content active">
+    <div id="app" class="card"></div>
   </div>
 
   <!-- Timeline Section -->
   <div id="timeline" class="tab-content">
-    <div id="timeline-container"></div>
+    <div class="phone-container">
+      <div class="timeline" id="timeline-events"></div>
+
+      <!-- End -->
+      <div class="end-match">
+        <div class="end-icon">⏱️</div>
+        <div class="end-text">END OF MATCH</div>
+        <div class="final-time">90+7'</div>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
