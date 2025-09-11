@@ -28,10 +28,10 @@
         "name": "Assailant Fighters"
       },
       "awayTeam": {
-        "name": "#"
+        "name": "rewrite here"
       },
-      "datetime": "#",
-      "resultPage": "#"
+      "datetime": "no fixed",
+      "resultPage": "/match/result/"
     }
   ],
   "squad": [
