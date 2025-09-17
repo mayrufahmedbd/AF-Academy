@@ -1,0 +1,141 @@
+{
+    "players": [
+        {
+            "id": "p1",
+            "name": "Mayruf Ahmed",
+            "position": "Left Back",
+            "image": "../img/mayruf c.jpg",
+            "social": {
+                "facebook": "https://www.facebook.com/promayruf/",
+                "instagram": "https://instagram.com/promayruf",
+                "whatsapp": "https://whatsapp.com/channel/0029Vb0VnocKbYMJz2fGwi1V"
+            }
+        },
+        {
+            "id": "p2",
+            "name": "Rahul Dash",
+            "position": "Attacking Midfielder",
+            "image": "../img/raahul das.png",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p3",
+            "name": "Sayid Ahmed",
+            "position": "Midfielder",
+            "image": "../img/sayed.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p4",
+            "name": "Kawser Ahmed",
+            "position": "Center Midfielder",
+            "image": "../img/kawser.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p5",
+            "name": "Suhan Ahmed",
+            "position": "Unknown",
+            "image": "/../img/suhan.png",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p6",
+            "name": "Salman Sakib",
+            "position": "Right Back",
+            "image": "../img/sakib.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p7",
+            "name": "Ahsan Mahmud",
+            "position": "Right Back",
+            "image": "../img/ahsan.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p8",
+            "name": "Shuvo",
+            "position": "Defending Midfielder",
+            "image": "../img/shuvo.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p9",
+            "name": "Mahid",
+            "position": "Left Midfielder",
+            "image": "../img/mahid.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p10",
+            "name": "Nahid",
+            "position": "Left Back",
+            "image": "../img/nahid.png",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p11",
+            "name": "Nasir Ahmed",
+            "position": "Center Midfielder",
+            "image": "../img/naisr.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p12",
+            "name": "Mamun Miya",
+            "position": "Midfielder",
+            "image": "../img/mamun.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p13",
+            "name": "Jubayer",
+            "position": "Left Wing Forward",
+            "image": "../img/jubayer.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id":"p14",
+            "name": "Mohammad Sazzad Hossain",
+            "position":"Right Back",
+            "image":"../img/sazzad.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id":"p14",
+            "name": "Soud",
+            "position":"Center Forward",
+            "image":"../img/soud.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        }
+    ]
+}

@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs - Assailant Fighters Football Academy</title>
-    <link rel="icon" href="../img/club logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Our Players - Assailant Fighters Football Academy</title>
+    <link rel="icon" href="../img/club logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
+
     <meta name="description"
-        content="Read the latest football blogs from Assailant Fighters Academy. Stay updated with news, match reports, training tips, player stories, and insights into youth football development in Bangladesh.">
+        content="Meet the professional coaching and management team of Assailant Fighters Academy. Learn about our directors, coaches, and staff who develop young football talent with expertise and dedication.">
+
     <meta name="keywords"
-        content="football blogs, soccer academy news, Assailant Fighters Academy blog, youth football Bangladesh, football training tips, Sylhet football news, player development stories">
+        content="football academy management, coaching team Sylhet, Assailant Fighters Academy staff, football directors Bangladesh, football coaching team, soccer academy management">
 
 </head>
 <div id="loader" class="div-loader">
@@ -24,16 +26,15 @@
         <!-- Header -->
         <header>
             <div class="container header-container">
-                <div class="logo">
-                    <a href="/">Assailant Fighters Academy</a>
-                </div>
+                <div class="logo"><a href="/">Assailant Fighters Academy</a></div>
+                <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
                 <ul class="nav-menu nav-links" id="navMenu">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../about.html">About Us</a></li>
-                    <li><a href="../players/">Our Players</a></li>
-                    <li><a href="../management">Our Management Team</a></li>
+                    <li><a href="../players/" class="active">Our Players</a></li>
+                    <li><a href="../management">Management</a></li>
                     <li><a href="../contact.html">Contact Us</a></li>
-                    <li><a href="/blogs/" class="active">Blogs</a></li>
+                    <li><a href="../blogs/">Blog</a></li>
                 </ul>
                 <div class="burger">
                     <div class="line1"></div>
@@ -42,14 +43,17 @@
                 </div>
             </div>
         </header>
-        <!-- Blog content -->
-        <main>
-            <section class="container">
-                <div id="blogList" class="blog-list"></div>
-            </section>
-        </main>
 
-        <!-- Footer -->
+        <div class="page-content">
+            <section id="players"></section>
+        </div>
+
+        <h1 class="p-practice" style="text-align: center; color: rgb(0, 0, 0);">Players practice</h1>
+        <Div class="players-skill">
+            <video controls title="Rahul's Shooting Practice" src="/asset/videos/rahul shoot.mp4"></video>
+            <video controls title="Team Practice Session" src="/asset/videos/practice.mp4"></video>
+        </Div>
+
         <footer>
             <div class="container">
                 <div class="footer-container">
@@ -62,10 +66,10 @@
                         <h3>Quick Links</h3>
                         <ul class="footer-links">
                             <li><a href="../index.html">Home</a></li>
-                            <li><a href="../about.html">About Us</a></li>
-                            <li><a href="../players/">Our Players</a></li>
-                            <li><a href="../management/">Our Management Team</a></li>
-                            <li><a href="../contact.html">Contact Us</a></li>
+                            <li><a href="../about.html">About</a></li>
+                            <li><a href="../programs.html">Programs</a></li>
+                            <li><a href="../management">Management</a></li>
+                            <li><a href="../contact.html">Contact</a></li>
                             <li><a href="../blogs/">Blog</a></li>
                         </ul>
                     </div>
@@ -76,7 +80,7 @@
                             <li><a href="programs.html#advanced">Advanced Training</a></li>
                             <li><a href="programs.html#goalkeeper">Goalkeeper Training</a></li>
                             <li><a href="/match/">Matches</a></li>
-                            <li><a href="/tournament/">Tournament Teams</a></li>
+                            <li><a href="/tournament">Tournament Teams</a></li>
                         </ul>
                     </div>
                     <div class="footer-section">
@@ -95,8 +99,8 @@
             </div>
         </footer>
 
-        <!-- Scripts -->
-        <script src="blog.js"></script>
+        <script src="script.js"></script>
+        <script src="../js/script.js"></script>
     </body>
 </div>
 

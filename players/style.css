@@ -1,0 +1,41 @@
+.players-skill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+        width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.players-skill video{
+    margin: 10px;
+    border-radius: 10px;
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ccc;
+}
+
+.p-practice{
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: 'Arial Black', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .players-skill video {
+        width: 100%;
+        height: auto;
+    }
+}
