@@ -131,7 +131,7 @@
         {
             "id":"p14",
             "name": "Soud",
-            "position":"Center Forward",
+            "position":"CF",
             "image":"../img/soud.jpg",
             "social": {
                 "facebook": "#"
@@ -149,10 +149,10 @@
                 {
             "id":"p16",
             "name": "Tashrif Rahman",
-            "position":"CMF",
+            "position":"AMF",
             "image":"../img/tashrif.jpg",
             "social": {
-                "facebook": "#"
+                "facebook": "https://www.facebook.com/tashrif.rahman.tashu/"
             }
         }
     ]
