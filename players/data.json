@@ -145,6 +145,15 @@
             "social": {
                 "facebook": "#"
             }
+        },
+                {
+            "id":"p16",
+            "name": "Tashrif Rahman",
+            "position":"CMF",
+            "image":"../img/tashrif.jpg",
+            "social": {
+                "facebook": "#"
+            }
         }
     ]
 }
