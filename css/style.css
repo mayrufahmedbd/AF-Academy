@@ -806,12 +806,12 @@ footer {
 
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 65px;
         left: -100%;
         flex-direction: column;
         background: var(--primary);
         width: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 65px);
         transition: all 0.3s ease;
         padding: 40px 0;
     }
@@ -825,6 +825,8 @@ footer {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
+
+    
 
     .nav-menu.active {
         left: 0;
