@@ -494,6 +494,7 @@ header {
 .players-info h3 {
     color: var(--primary);
     margin-bottom: 5px;
+    font-size: 15px;
     transition: all .3s ease;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
@@ -826,7 +827,7 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 
-    
+
 
     .nav-menu.active {
         left: 0;
