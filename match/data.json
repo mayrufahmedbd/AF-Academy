@@ -28,14 +28,14 @@
         "name": "Assailant Fighters"
       },
       "awayTeam": {
-        "name": "rewrite here"
+        "name": "Ashraf FC"
       },
-      "datetime": "no fixed",
+      "datetime": "09/20/2025",
       "resultPage": "/match/result/"
     }
   ],
   "squad": [
-    {"name": "Goalkeeper", "position": "GK"},
+    {"name": "Ornob", "position": "GK"},
     {"name": "Mayruf Ahmed", "position": "LB"},
     {"name": "Al Amin", "position": "CB"},
     {"name": "Nurol Amin", "position": "CB"},
