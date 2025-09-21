@@ -227,7 +227,7 @@
 
         <div class="event-card right goal">
           <div class="event-type">⚽ GOAL</div>
-          <div class="player-name">.. (ACF)</div>
+          <div class="player-name">Coach (ACF)</div>
           <div class="event-description">Direct goal with a beautiful shots</div>
           <span class="time-badge">10'</span>
         </div>
@@ -238,10 +238,24 @@
         <div class="event-description">Same team played 2 month ago</div>
         <span class="time-badge">Pre-Match</span>
       </div>
+    </div>
+    </div>
+  </div>
   <div class="read-more--button">
     <a href="../../blogs/blog-detail.html?id=1">Read More<i class="fa-solid fa-arrow-right"></i></a>
   </div>
-  <script src="script.js"></script>
+  <script>
+        function showTab(tab, e) {
+      document.querySelectorAll('.tab-content').forEach(el => {
+        el.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-btn').forEach(el => {
+        el.classList.remove('active');
+      });
+      document.getElementById(tab).classList.add('active');
+      e.target.classList.add('active');
+    }
+  </script>
   <script src="../../js/script.js"></script>
 </body>
 

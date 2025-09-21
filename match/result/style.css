@@ -199,7 +199,7 @@
 
     .event-card {
       position: relative;
-      width: 50%;
+      width: 70%;
       background: #333;
       border-radius: 10px;
       padding: 12px;
@@ -212,7 +212,7 @@
     }
 
     .event-card.right {
-      left: 22%;
+      left: 10%;
     }
 
     .event-card .time-badge {
