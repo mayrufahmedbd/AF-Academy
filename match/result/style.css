@@ -199,7 +199,7 @@
 
     .event-card {
       position: relative;
-      width: 40%;
+      width: 50%;
       background: #333;
       border-radius: 10px;
       padding: 12px;
@@ -212,7 +212,7 @@
     }
 
     .event-card.right {
-      left: 54%;
+      left: 22%;
     }
 
     .event-card .time-badge {
@@ -334,8 +334,13 @@
 
       .card,
       .phone-container {
+        margin: 0 20px;
         border-radius: 15px;
-      }
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+}
 
       .player-circle {
         width: 40px;
@@ -358,7 +363,7 @@
       }
 
       .event-card.right {
-        left: -1%;
+        left: -6%;
         margin-left: auto;
         margin-right: 0;
       }

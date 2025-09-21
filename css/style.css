@@ -805,6 +805,10 @@ footer {
         display: block;
     }
 
+    .logo a{
+        font-size: 20px;
+    }
+
     .nav-menu {
         position: fixed;
         top: 65px;
