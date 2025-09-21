@@ -32,11 +32,21 @@
       },
       "datetime": "09/20/2025",
       "resultPage": "/match/results/af-vs-acf/"
+    },
+    {
+      "homeTeam": {
+        "name": "Assailant Fighters"
+      },
+      "awayTeam": {
+        "name": "Kalapator FC"
+      },
+      "datetime": "09/21/2025",
+      "resultPage": "/match/results/af-vs-kcf/"
     }
   ],
   "squad": [
     {"name": "Ornob", "position": "GK"},
-    {"name": "Mayruf Ahmed", "position": "LB"},
+    {"name": "Mayruf Ahmed", "position": "DMF"},
     {"name": "Al Amin", "position": "CB"},
     {"name": "Nurol Amin", "position": "CB"},
     {"name": "Ahsan Mahmud", "position": "RB"},
@@ -54,14 +64,14 @@
     {"name": "Sanar", "position": "DMF"},
     {"name": "Tanvir", "position": "LB"},
     {"name": "Fahad", "position": "N/A"},
-    {"name": "Tasrif", "position": "N/A"},
+    {"name": "Tasrif", "position": "CB"},
     {"name": "Redwan", "position": "N/A"}
   ],
   "injuries": [
     {
       "short": "S",
       "name": "Sayid Shah",
-      "returnDate": "13 Nov 2025"
+      "returnDate": "13 Sep 2025"
     }
   ]
 }
