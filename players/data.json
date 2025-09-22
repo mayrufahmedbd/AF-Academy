@@ -3,7 +3,7 @@
         {
             "id": "p1",
             "name": "Mayruf Ahmed",
-            "position": "LB",
+            "position": "DM",
             "image": "../img/mayruf c.jpg",
             "social": {
                 "facebook": "https://www.facebook.com/mayrufahmedbd",
@@ -149,7 +149,7 @@
                 {
             "id":"p16",
             "name": "Tashrif Rahman",
-            "position":"AMF",
+            "position":"CB",
             "image":"../img/tashrif.jpg",
             "social": {
                 "facebook": "https://www.facebook.com/tashrif.rahman.tashu/"
