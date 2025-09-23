@@ -48,6 +48,7 @@
 
 .read-more:hover {
   text-decoration: underline;
+  color: aqua;
 }
 
 /* Blog Detail */
