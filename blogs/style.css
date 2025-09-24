@@ -90,7 +90,15 @@
   margin: 0 auto;
 }
 
+#blogContent a{
+  text-decoration: none;
+  color: #0000FF;
+  transition: all 03s ease;
+}
 
+#blogContent a:hover{
+  text-decoration: underline;
+}
 
 /* Responsive Design */
 @media (max-width: 992px) {

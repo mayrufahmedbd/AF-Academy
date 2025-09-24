@@ -16,9 +16,13 @@ async function loadBlogDetail() {
     if (post) {
       document.getElementById("blogTitle").textContent = post.title;
       document.getElementById("blogMeta").textContent = `${post.date} | ${post.match}`;
-      document.getElementById("blogContent").textContent = post.content;
+
+      // 👇 change here
+      document.getElementById("blogContent").innerHTML = post.content;
+
     } else {
-      document.getElementById("blogContent").textContent = "Blog ID is invalid. Please check the id or URL";
+      document.getElementById("blogContent").textContent = 
+        "Blog ID is invalid. Please check the id or URL";
     }
   } catch (err) {
     console.error("Error loading blog:", err);
