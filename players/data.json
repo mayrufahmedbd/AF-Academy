@@ -150,7 +150,16 @@
             "id":"p16",
             "name": "Tashrif Rahman",
             "position":"CB",
-            "image":"../img/tashrif.jpg",
+            "image":"../img/tashrif.png",
+            "social": {
+                "facebook": "https://www.facebook.com/tashrif.rahman.tashu/"
+            }
+        },
+                {
+            "id":"p17",
+            "name": "Saikot Sorker",
+            "position":"CMF",
+            "image":"../img/saikot.png",
             "social": {
                 "facebook": "https://www.facebook.com/tashrif.rahman.tashu/"
             }
