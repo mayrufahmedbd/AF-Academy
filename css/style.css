@@ -811,12 +811,12 @@ footer {
 
     .nav-menu {
         position: fixed;
-        top: 65px;
+        top: 60px;
         left: -100%;
         flex-direction: column;
         background: var(--primary);
         width: 100%;
-        height: calc(100vh - 65px);
+        height: calc(100vh - 60px);
         transition: all 0.3s ease;
         padding: 40px 0;
     }
