@@ -42,6 +42,16 @@
       },
       "datetime": "09/21/2025",
       "resultPage": "/match/results/af-vs-kcf/"
+    },
+    {
+      "homeTeam": {
+        "name": "Assailant Fighters"
+      },
+      "awayTeam": {
+        "name": "babon gaw yang star"
+      },
+      "datetime": "10/04/2025",
+      "resultPage": "/match/results/af-vs-bg/"
     }
   ],
   "squad": [
