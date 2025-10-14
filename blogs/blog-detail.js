@@ -22,7 +22,7 @@ try {
     const blogImage = document.getElementById("blogImage");
     if (blogImage) {
       blogImage.src = post.image;
-      blogImage.alt = post.title;
+      blogImage.alt = post.title + " (Blog Image alt text)";
       blogImage.style.display = "block"; // show image if hidden
     }
 

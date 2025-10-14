@@ -45,11 +45,16 @@
   color: #0077cc;
   text-decoration: none;
   font-weight: bold;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 
 .read-more:hover {
   text-decoration: underline;
-  color: aqua;
+  color: #000000;
 }
 
 /* Blog Detail */
