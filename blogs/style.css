@@ -73,6 +73,26 @@
   margin-bottom: 15px;
 }
 
+    .body {
+      /* column-count: 2; */
+      column-gap: 3rem;
+      font-size: 1rem;
+      text-align: justify;
+      widows: 2;
+      orphans: 2;
+    }
+
+.body p:first-of-type::first-letter {
+      float: left;
+      font-size: 3.25rem;
+      line-height: 1;
+      padding-right: 0.12em;
+      padding-top: 0.05em;
+      font-weight: 700;
+      color: #222;
+      font-family: "Georgia", serif;
+    }
+
 .back-btn {
   font-size: 30px;
   color: #000000;
@@ -86,7 +106,7 @@
 
 
 .content{
-  width: 65%;
+  width: 80%;
   max-width: 800;
   margin: 0 auto;
 }

@@ -7,26 +7,37 @@ async function loadBlogDetail() {
     return;
   }
 
-  try {
-    let response = await fetch("blog.json?_=" + new Date().getTime());
-    let blogs = await response.json();
+try {
+  let response = await fetch("blog.json?_=" + new Date().getTime());
+  let blogs = await response.json();
 
-    let post = blogs.find(b => b.id == id);
+  let post = blogs.find(b => b.id == id);
 
-    if (post) {
-      document.getElementById("blogTitle").textContent = post.title;
-      document.getElementById("blogMeta").textContent = `${post.date} | ${post.match}`;
+  if (post) {
+    document.getElementById("blogTitle").textContent = post.title;
+    document.getElementById("blogMeta").textContent = `${post.date} | ${post.match}`;
+    document.getElementById("blogContent").innerHTML = post.content;
 
-      // 👇 change here
-      document.getElementById("blogContent").innerHTML = post.content;
-
-    } else {
-      document.getElementById("blogContent").textContent = 
-        "Blog ID is invalid. Please check the id or URL";
+    // 👇 New: Display blog image
+    const blogImage = document.getElementById("blogImage");
+    if (blogImage) {
+      blogImage.src = post.image;
+      blogImage.alt = post.title;
+      blogImage.style.display = "block"; // show image if hidden
     }
-  } catch (err) {
-    console.error("Error loading blog:", err);
+
+  } else {
+    document.getElementById("blogContent").textContent =
+      "Blog ID is invalid. Please check the id or URL";
+
+    // hide image if invalid
+    const blogImage = document.getElementById("blogImage");
+    if (blogImage) blogImage.style.display = "none";
   }
+} catch (err) {
+  console.error("Error loading blog:", err);
+}
+
 }
 
 loadBlogDetail();
