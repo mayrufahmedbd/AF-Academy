@@ -107,8 +107,18 @@
 
 .content{
   width: 80%;
-  max-width: 800;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.line {
+  border-bottom: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+#blogImage{
+  margin: 0 auto;
+  width: 100%;
 }
 
 #blogContent a{
