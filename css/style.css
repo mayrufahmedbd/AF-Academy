@@ -69,8 +69,8 @@ header {
     color: white;
     padding: 15px 0;
     position: sticky;
-    width: 100%;
     top: 0;
+    width: 100%;
     z-index: 10;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
@@ -128,7 +128,7 @@ header {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1575361204480-aadea25e6e68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/webBG.jpg") no-repeat center center/cover;
     color: white;
     display: flex;
     align-items: center;
@@ -787,6 +787,8 @@ footer {
     .contact-container {
         flex-direction: column;
     }
+
+
 
     .hero-content h1 {
         font-size: 2.8rem;
