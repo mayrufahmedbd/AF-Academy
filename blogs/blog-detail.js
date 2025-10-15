@@ -22,7 +22,7 @@ try {
     const blogImage = document.getElementById("blogImage");
     if (blogImage) {
       blogImage.src = post.image;
-      blogImage.alt = post.keywords ? post.keywords.join(", ") : "Blog Image";
+      blogImage.alt = post.keywords ? post.keywords.join(", ") : "Blog Image (failed to load the image)";
       blogImage.style.display = "block"; // show image if hidden
     }
 
