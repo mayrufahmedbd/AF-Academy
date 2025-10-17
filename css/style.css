@@ -912,6 +912,49 @@ footer {
     .navbar .menu-icon {
         font-size: 1.5rem;
     }
+
+    /* blog post adjustments */
+    .players-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+
+    .players-image {
+        height: 130px;
+    }
+
+    .players-info h3 {
+        font-size: 11px;
+    }
+
+    .players-info p{
+        font-size: 11px;
+
+    }
+
+    .social-links a {
+        width: 30px;
+        height: 30px;
+    }
+
+    .players-grid {
+    gap: 15px;
+    }
+
+    .social-links {
+        gap: 5px;
+        margin-top: 5px;
+    }
+
+    /* blog page adjustments */
+
+    .back-btn {
+        font-size: 20px;
+    }
+
+    .blog-list {
+        grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+    }
+
 }
 
 
