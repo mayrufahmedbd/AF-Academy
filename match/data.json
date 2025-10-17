@@ -65,17 +65,18 @@
     {"name": "Limon Ahmed", "position": "AMF"},
     {"name": "Shahjan Ahmed", "position": "RWF"},
     {"name": "Saud Ahmed", "position": "CF"},
+    {"name": "Redwan", "position": "CMF"},
     {"name": "Rahul Dash", "position": "LWF"},
     {"name": "Fahim", "position": "LB"},
     {"name": "Zakaria", "position": "CB"},
+    {"name": "Fahad", "position": "CMF"},
     {"name": "Shamim", "position": "CB"},
     {"name": "Mohammad Sazzad", "position": "RB"},
     {"name": "Jubayer", "position": "RMF"},
     {"name": "Sanar", "position": "DMF"},
     {"name": "Tanvir", "position": "LB"},
-    {"name": "Fahad", "position": "N/A"},
     {"name": "Tasrif", "position": "CB"},
-    {"name": "Redwan", "position": "N/A"}
+    {"name": "Sayid Shah", "position":"CMF"}
   ],
   "injuries": [
     {
