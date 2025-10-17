@@ -857,7 +857,7 @@ footer {
 
 @media (max-width: 480px) {
     .logo a {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .hero-content {
@@ -866,22 +866,22 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 1.5rem;
+        font-size: 1.0rem;
         /* Smaller so it fits on small screens */
         line-height: 1.3;
         margin-bottom: 10px;
     }
 
     .hero-content p {
-        font-size: 0.95rem;
+        font-size: 0.55rem;
         line-height: 1.5;
     }
 
     .btn {
-        padding: 10px 18px;
+        padding: 5px 5px;
         margin: 10px auto;
         display: inline-block;
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
 
     section {
@@ -896,7 +896,6 @@ footer {
     .coach-image {
         width: 100%;
         height: auto;
-        /* auto height to keep aspect ratio */
         object-fit: cover;
     }
 
