@@ -4,7 +4,7 @@
             "id": "p1",
             "name": "Mayruf Ahmed",
             "position": "DM",
-            "image": "../img/mayruf c.jpg",
+            "image": "../img/mayruf.jpeg",
             "social": {
                 "facebook": "https://www.facebook.com/mayrufahmedbd",
                 "instagram": "https://instagram.com/mayrufahmedbd",
@@ -96,7 +96,7 @@
             "id": "p11",
             "name": "Nasir Ahmed",
             "position": "CMF",
-            "image": "../img/naisr.jpg",
+            "image": "../img/nasir.JPG",
             "social": {
                 "facebook": "#"
             }
@@ -123,7 +123,7 @@
             "id":"p14",
             "name": "Mohammad Sazzad Hossain",
             "position":"RB",
-            "image":"../img/sazzad.jpg",
+            "image":"../img/sajjad.JPG",
             "social": {
                 "facebook": "#"
             }
@@ -150,7 +150,7 @@
             "id":"p16",
             "name": "Tashrif Rahman",
             "position":"CB",
-            "image":"../img/tashrif.png",
+            "image":"../img/tashrif.JPG",
             "social": {
                 "facebook": "https://www.facebook.com/tashrif.rahman.tashu/"
             }
@@ -160,6 +160,15 @@
             "name": "Saikot Sorker",
             "position":"CMF",
             "image":"../img/saikot.png",
+            "social": {
+                "facebook": "#"
+            }
+        },
+                {
+            "id":"p18",
+            "name": "Sanar Uddin",
+            "position":"CMF",
+            "image":"../img/sanar.JPG",
             "social": {
                 "facebook": "#"
             }
