@@ -1061,14 +1061,6 @@ footer {
 }
 
 /* Small Phones (iPhone 5/SE, etc.) */
-@media (max-width: 745px) {
-    .menagers-grid, .players-grid {
-        grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
-    }
-    .players-image {
-        height: 225px;
-    }
-}
 @media (max-width: 375px) {
     .hero-content h1 {
         font-size: 1.6rem;
