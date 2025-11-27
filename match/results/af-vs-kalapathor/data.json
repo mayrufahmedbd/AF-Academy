@@ -7,56 +7,56 @@
                 [
                     {
                         "number": 1,
-                        "name": "Ornob",
+                        "name": "Tuhinur",
                         "position": "Goalkeeper"
                     }
                 ],
                 [
                     {
                         "number": 2,
-                        "name": "Ahsan"
-                    },
-                    {
-                        "number": 3,
                         "name": "Tashrif"
                     },
-                    {
-                        "number": 22,
-                        "name": "Majharul"
-                    },
-                    {
-                        "number": 5,
-                        "name": "Nurul Amin"
-                    }
-                ],
-                [
                     {
                         "number": 4,
                         "name": "Mayruf"
                     },
                     {
-                        "number": 12,
+                        "number": 22,
+                        "name": "Nahid"
+                    }
+                ],
+                [
+                    {
+                        "number": 16,
+                        "name": "Shuvo"
+                    },
+                    {
+                        "number": 5,
+                        "name": "Al Amin"
+                    },
+                    {
+                        "number": 8,
                         "name": "Nasir"
                     }
                 ],
                 [
                     {
-                        "number": 10,
+                        "number": 5,
+                        "name": "Sanar"
+                    },
+                    {
+                        "number": 7,
                         "name": "Rahul"
                     },
                     {
                         "number": 11,
-                        "name": "Mahid" 
-                    },
-                    {
-                        "number": 7,
-                        "name": "Juned"
+                        "name": "Mahid"
                     }
                 ],
                 [
                     {
                         "number": 9,
-                        "name": "Sanar"
+                        "name": "Joy"
                     }
                 ]
             ]
@@ -131,8 +131,8 @@
             "type": "goal",
             "icon": "⚽",
             "side": "right",
-            "player": ".",
-            "description": "..",
+            "player": "joy",
+            "description": "Direct goal with a amazing shot by joy ",
             "time": "23'"
         },
         {
@@ -144,8 +144,8 @@
             "type": "goal",
             "icon": "⚽",
             "side": "right",
-            "player": "Al amin",
-            "description": "Direct goal with a beautiful shot by al Amin",
+            "player": "joy",
+            "description": "Direct assist with a beautiful shot by al Amin ",
             "time": "10'"
         },
         {
