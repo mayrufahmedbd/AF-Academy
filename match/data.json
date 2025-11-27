@@ -52,6 +52,16 @@
       },
       "datetime": "10/04/2025",
       "resultPage": "/match/results/af-vs-bg/"
+    },
+    {
+      "homeTeam": {
+        "name": "Assailant Fighters"
+      },
+      "awayTeam": {
+        "name": "Kalapator FC"
+      },
+      "datetime": "10/04/2025",
+      "resultPage": "/match/results/af-vs-kalapathor/"
     }
   ],
   "squad": [
@@ -80,9 +90,9 @@
   ],
   "injuries": [
     {
-      "short": "S",
-      "name": "Sayid Shah",
-      "returnDate": "13 Sep 2025"
+      "short": "M",
+      "name": "Mayruf",
+      "returnDate": "20 Sep 2026"
     }
   ]
 }
