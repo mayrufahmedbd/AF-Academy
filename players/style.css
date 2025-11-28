@@ -19,6 +19,12 @@
     border: 2px solid #ccc;
 }
 
+.player-number{
+    color: var(--secondary);
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
 .p-practice{
     font-size: 1.3rem;
     margin-bottom: 20px;

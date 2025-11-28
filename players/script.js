@@ -12,6 +12,7 @@ async function loadData() {
                         <div class="players-image"><img src="${p.image}" alt="${p.name}"></div>
                         <div class="players-info">
                             <h3>${p.name}</h3>
+                            <p class = "player-number">Number: ${p.number}</p>
                             <p>Position: ${p.position}</p>
                             <div class="social-links">
                                 ${p.social.facebook ? `<a href="${p.social.facebook}" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>` : ""}
