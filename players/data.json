@@ -65,7 +65,7 @@
         {
             "id": "p7",
             "name": "Ahsan Mahmud",
-            "number": "",
+            "number": "3",
             "position": "RB",
             "image": "../img/ahsan.jpeg",
             "social": {
@@ -135,7 +135,7 @@
         {
             "id": "p14",
             "name": "Mohammad Sazzad Hossain",
-            "number": "",
+            "number": "23",
             "position": "RB",
             "image": "../img/sajjad.JPG",
             "social": {
@@ -175,7 +175,7 @@
         {
             "id": "p18",
             "name": "Sanar Uddin",
-            "number": "",
+            "number": "5",
             "position": "CMF",
             "image": "../img/sanar.JPG",
             "social": {
