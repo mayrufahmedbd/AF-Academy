@@ -17,7 +17,7 @@
             "position": "AMF",
             "image": "../img/raahul das.png",
             "social": {
-                "facebook": "#"
+                "facebook": "https://www.facebook.com/rahul.das.882064"
             }
         },
         {
@@ -26,7 +26,7 @@
             "position": "CMF",
             "image": "../img/sayed.jpg",
             "social": {
-                "facebook": "#"
+                "facebook": "https://www.facebook.com/itz.sayidshah"
             }
         },
         {
@@ -35,7 +35,7 @@
             "position": "CMF",
             "image": "../img/kawser.jpg",
             "social": {
-                "facebook": "#"
+                "facebook": "https://www.facebook.com/kawserahmed.kawser.982"
             }
         },
         {
@@ -44,7 +44,7 @@
             "position": "Unknown",
             "image": "/../img/suhan.png",
             "social": {
-                "facebook": "#"
+                "facebook": "https://www.facebook.com/profile.php?id=61578393937751"
             }
         },
         {
@@ -53,7 +53,7 @@
             "position": "RB",
             "image": "../img/sakib.jpg",
             "social": {
-                "facebook": "#"
+                "facebook": "https://www.facebook.com/salman.sakib.837426"
             }
         },
         {
@@ -62,7 +62,7 @@
             "position": "RB",
             "image": "../img/ahsan.jpeg",
             "social": {
-                "facebook": "#"
+                "facebook": "https://www.facebook.com/ahsan.mahmud.69322"
             }
         },
         {
@@ -71,7 +71,7 @@
             "position": "DMF",
             "image": "../img/shuvo.jpg",
             "social": {
-                "facebook": "#"
+                "facebook": "https://www.facebook.com/expertshuvo"
             }
         },
         {
@@ -80,7 +80,7 @@
             "position": "CMF",
             "image": "../img/mahid.jpg",
             "social": {
-                "facebook": "#"
+                "facebook": "https://www.facebook.com/mdmahid.junior"
             }
         },
         {
@@ -89,7 +89,7 @@
             "position": "LB",
             "image": "../img/nahid.png",
             "social": {
-                "facebook": "#"
+                "facebook": "https://www.facebook.com/nafi.nahid.1"
             }
         },
         {
@@ -98,7 +98,7 @@
             "position": "CMF",
             "image": "../img/nasir.JPG",
             "social": {
-                "facebook": "#"
+                "facebook": "https://www.facebook.com/Ahmed.Nasir0007"
             }
         },
         {
@@ -107,7 +107,7 @@
             "position": "CMF",
             "image": "../img/mamun.jpg",
             "social": {
-                "facebook": "#"
+                "": ""
             }
         },
         {
@@ -116,7 +116,7 @@
             "position": "LWF",
             "image": "../img/jubayer.jpg",
             "social": {
-                "facebook": "#"
+                "": "#"
             }
         },
         {
@@ -125,7 +125,7 @@
             "position":"RB",
             "image":"../img/sajjad.JPG",
             "social": {
-                "facebook": "#"
+                "facebook": "https://www.facebook.com/profile.php?id=61576656365400"
             }
         },
         {
@@ -134,7 +134,7 @@
             "position":"CF",
             "image":"../img/soud.jpg",
             "social": {
-                "facebook": "#"
+                "": "#"
             }
         },
                 {
@@ -143,7 +143,7 @@
             "position":"CF",
             "image":"../img/arnob.jpg",
             "social": {
-                "facebook": "#"
+                "facebook": "https://www.facebook.com/arnob.das.79827"
             }
         },
                 {
@@ -157,20 +157,11 @@
         },
                 {
             "id":"p17",
-            "name": "Saikot Sorker",
-            "position":"CMF",
-            "image":"../img/saikot.png",
-            "social": {
-                "facebook": "#"
-            }
-        },
-                {
-            "id":"p18",
             "name": "Sanar Uddin",
             "position":"CMF",
             "image":"../img/sanar.JPG",
             "social": {
-                "facebook": "#"
+                "facebook": "https://www.facebook.com/md.sanar.uddin.781734"
             }
         }
     ]
