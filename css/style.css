@@ -521,8 +521,8 @@ header {
 }
 
 .players-image {
-    height: 300px;
     overflow: hidden;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
 }
 
@@ -889,10 +889,6 @@ footer {
         height: calc(100vh - 50px);
         transition: all 0.3s ease;
         padding: 40px 0;
-    }
-
-    .players-image {
-        height: 170px;
     }
 
     .players-grid {
