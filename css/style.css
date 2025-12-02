@@ -830,7 +830,11 @@ footer {
 }
 
 .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-2px, 6px);
+    -webkit-transform: rotate(-45deg) translate(-2px, 6px);
+    -moz-transform: rotate(-45deg) translate(-2px, 6px);
+    -ms-transform: rotate(-45deg) translate(-2px, 6px);
+    -o-transform: rotate(-45deg) translate(-2px, 6px);
 }
 
 .toggle .line2 {
@@ -838,7 +842,11 @@ footer {
 }
 
 .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-4px, -7px);
+    -webkit-transform: rotate(45deg) translate(-4px, -7px);
+    -moz-transform: rotate(45deg) translate(-4px, -7px);
+    -ms-transform: rotate(45deg) translate(-4px, -7px);
+    -o-transform: rotate(45deg) translate(-4px, -7px);
 }
 
 @keyframes pulse {

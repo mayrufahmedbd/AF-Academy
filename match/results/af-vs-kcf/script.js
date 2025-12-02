@@ -15,7 +15,9 @@ fetch("data.json")
   .then((data) => {
     renderLineups(data.teams);
     renderTimeline(data.timeline);
+    renderSubstitution(data.substitution);
   });
+
 
 function renderLineups(teams) {
   // Home team
@@ -75,3 +77,22 @@ function renderTimeline(events) {
     }
   });
 }
+function renderSubstitution(list) {
+  const box = document.getElementById("substitution");
+  box.innerHTML = `
+    <h2 class="section-title">Substitutions</h2>
+    ${list
+      .map(
+        (s) => `
+      <div class="sub-card">
+        <div class="sub-time">${s.time}</div>
+        <div class="sub-details">
+          <div><b>Out:</b> ${s.player_out}</div>
+          <div><b>In:</b> ${s.player_in}</div>
+        </div>
+      </div>`
+      )
+      .join("")}
+  `;
+}
+

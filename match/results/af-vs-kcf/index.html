@@ -38,10 +38,12 @@
 
   <!-- Tabs -->
   <div class="tabs">
+    <button class="tab-btn" onclick="showTab('substitution', event)">Substitution</button>
     <button class="tab-btn active" onclick="showTab('lineups', event)">Line-ups</button>
     <button class="tab-btn" onclick="showTab('timeline', event)">Timeline</button>
   </div>
-
+  
+  <div id="substitution" class="tab-content"></div>
   <!-- Lineups Section -->
   <div id="lineups" class="tab-content active">
     <div class="card">

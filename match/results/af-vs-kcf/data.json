@@ -1,168 +1,181 @@
 {
-    "teams": {
-        "home": {
-            "name": "Assailant Fighters",
-            "formation": "4-2-3-1",
-            "rows": [
-                [
-                    {
-                        "number": 1,
-                        "name": "Ornob",
-                        "position": "Goalkeeper"
-                    }
-                ],
-                [
-                    {
-                        "number": 2,
-                        "name": "Ahsan"
-                    },
-                    {
-                        "number": 3,
-                        "name": "Al Amin"
-                    },
-                    {
-                        "number": 22,
-                        "name": "Nahid"
-                    },
-                    {
-                        "number": 5,
-                        "name": "Nurul Amin"
-                    }
-                ],
-                [
-                    {
-                        "number": 4,
-                        "name": "Mayruf"
-                    },
-                    {
-                        "number": 12,
-                        "name": "Fahad"
-                    }
-                ],
-                [
-                    {
-                        "number": 10,
-                        "name": "Kawser"
-                    },
-                    {
-                        "number": 11,
-                        "name": "Rahul" 
-                    },
-                    {
-                        "number": 7,
-                        "name": "Mahid"
-                    }
-                ],
-                [
-                    {
-                        "number": 9,
-                        "name": "Shahjan"
-                    }
-                ]
-            ]
+        "teams": {
+                "home": {
+                        "name": "Assailant Fighters",
+                        "formation": "4-2-3-1",
+                        "rows": [
+                                [
+                                        {
+                                                "number": 1,
+                                                "name": "Ornob",
+                                                "position": "Goalkeeper"
+                                        }
+                                ],
+                                [
+                                        {
+                                                "number": 2,
+                                                "name": "Ahsan"
+                                        },
+                                        {
+                                                "number": 3,
+                                                "name": "Al Amin"
+                                        },
+                                        {
+                                                "number": 22,
+                                                "name": "Nahid"
+                                        },
+                                        {
+                                                "number": 5,
+                                                "name": "Nurul Amin"
+                                        }
+                                ],
+                                [
+                                        {
+                                                "number": 4,
+                                                "name": "Mayruf"
+                                        },
+                                        {
+                                                "number": 12,
+                                                "name": "Fahad"
+                                        }
+                                ],
+                                [
+                                        {
+                                                "number": 10,
+                                                "name": "Kawser"
+                                        },
+                                        {
+                                                "number": 11,
+                                                "name": "Rahul"
+                                        },
+                                        {
+                                                "number": 7,
+                                                "name": "Mahid"
+                                        }
+                                ],
+                                [
+                                        {
+                                                "number": 9,
+                                                "name": "Shahjan"
+                                        }
+                                ]
+                        ]
+                },
+                "away": {
+                        "name": "Kalapator FC",
+                        "formation": "4-4-2",
+                        "rows": [
+                                [
+                                        {
+                                                "number": 7,
+                                                "name": "Mamun"
+                                        },
+                                        {
+                                                "number": 17,
+                                                "name": "Robin"
+                                        }
+                                ],
+                                [
+                                        {
+                                                "number": 23,
+                                                "name": "Rashid"
+                                        },
+                                        {
+                                                "number": 24,
+                                                "name": "Rana"
+                                        },
+                                        {
+                                                "number": 21,
+                                                "name": "Shihab"
+                                        },
+                                        {
+                                                "number": 6,
+                                                "name": "Munin"
+                                        }
+                                ],
+                                [
+                                        {
+                                                "number": 22,
+                                                "name": "Arafat"
+                                        },
+                                        {
+                                                "number": 10,
+                                                "name": "Abbas"
+                                        },
+                                        {
+                                                "number": 5,
+                                                "name": "Murshed"
+                                        },
+                                        {
+                                                "number": 12,
+                                                "name": "Amin"
+                                        }
+                                ],
+                                [
+                                        {
+                                                "number": 1,
+                                                "name": "Kabir",
+                                                "position": "Goalkeeper"
+                                        }
+                                ]
+                        ]
+                }
         },
-        "away": {
-            "name": "Kalapator FC",
-            "formation": "4-4-2",
-            "rows": [
-                [
-                    {
-                        "number": 7,
-                        "name": "Mamun"
-                    },
-                    {
-                        "number": 17,
-                        "name": "Robin"
-                    }
-                ],
-                [
-                    {
-                        "number": 23,
-                        "name": "Rashid"
-                    },
-                    {
-                        "number": 24,
-                        "name": "Rana"
-                    },
-                    {
-                        "number": 21,
-                        "name": "Shihab"
-                    },
-                    {
-                        "number": 6,
-                        "name": "Munin"
-                    }
-                ],
-                [
-                    {
-                        "number": 22,
-                        "name": "Arafat"
-                    },
-                    {
-                        "number": 10,
-                        "name": "Abbas"
-                    },
-                    {
-                        "number": 5,
-                        "name": "Murshed"
-                    },
-                    {
-                        "number": 12,
-                        "name": "Amin"
-                    }
-                ],
-                [
-                    {
-                        "number": 1,
-                        "name": "Kabir",
-                        "position": "Goalkeeper"
-                    }
-                ]
-            ]
-        }
+        "timeline": [
+                {
+                        "type": "end",
+                        "text": "END OF MATCH",
+                        "time": "40+5'"
+                },
+                {
+                        "type": "goal",
+                        "icon": "⚽",
+                        "side": "right",
+                        "player": ". (RFC)",
+                        "description": "Direct goal with a beautiful shots",
+                        "time": "33'"
+                },
+                {
+                        "type": "goal",
+                        "icon": "⚽",
+                        "side": "right",
+                        "player": "Shahjan (AF)",
+                        "description": "Direct goal with a beautiful shots",
+                        "time": "27'"
+                },
+                {
+                        "type": "end",
+                        "text": "Half Time",
+                        "time": "20+2'"
+                },
+                {
+                        "type": "goal",
+                        "icon": "⚽",
+                        "side": "right",
+                        "player": "Shahjan (AF)",
+                        "description": "Direct goal with a beautiful shots",
+                        "time": "11'"
+                },
+                {
+                        "type": "commentary",
+                        "icon": "🎤",
+                        "side": "right",
+                        "description": "The match start with 0-0 goal",
+                        "time": "0'",
+                        "class": "commentary"
+                }
+        ],
+        "substitution": [
+    {
+        "time": "15'",
+        "player_out": "Rahul (AF)",
+        "player_in": "Rahim (AF)"
     },
-    "timeline": [
-        {
-            "type": "end",
-            "text": "END OF MATCH",
-            "time": "40+5'"
-        },
-        {
-            "type": "goal",
-            "icon": "⚽",
-            "side": "right",
-            "player": ". (RFC)",
-            "description": "Direct goal with a beautiful shots",
-            "time": "33'"
-        },
-        {
-            "type": "goal",
-            "icon": "⚽",
-            "side": "right",
-            "player": "Shahjan (AF)",
-            "description": "Direct goal with a beautiful shots",
-            "time": "27'"
-        },
-        {
-            "type": "end",
-            "text": "Half Time",
-            "time": "20+2'"
-        },
-        {
-            "type": "goal",
-            "icon": "⚽",
-            "side": "right",
-            "player": "Shahjan (AF)",
-            "description": "Direct goal with a beautiful shots",
-            "time": "11'"
-        },
-        {
-            "type": "commentary",
-            "icon": "🎤",
-            "side": "right",
-            "description": "The match start with 0-0 goal",
-            "time": "0'",
-            "class": "commentary"
-        }
-    ]
+    {
+        "time": "30'",
+        "player_out": "Arafat (RFC)",
+        "player_in": "Shakil (RFC)"
+    }
+]
+
 }
