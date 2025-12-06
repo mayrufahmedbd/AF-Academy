@@ -62,6 +62,16 @@
       },
       "datetime": "10/04/2025",
       "resultPage": "/match/results/af-vs-hb/"
+    },
+    {
+      "homeTeam": {
+        "name": "Assailant Fighters"
+      },
+      "awayTeam": {
+        "name": "Polli Mongol Sommite Football Team"
+      },
+      "datetime": "07/12/2025",
+      "resultPage": "/match/results/05_af-vs-pms/"
     }
   ],
   "squad": [
