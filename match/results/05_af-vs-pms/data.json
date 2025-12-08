@@ -62,7 +62,7 @@
             ]
         },
         "away": {
-            "name": "Ashraf FC",
+            "name": "Polli Mongol Sommite Football Team",
             "formation": "4-4-2",
             "rows": [
                 [
@@ -120,5 +120,18 @@
                 ]
             ]
         }
-    }
+        
+    },
+    "timeline": [
+        {
+            "type": "end",
+            "text": "END OF MATCH",
+            "time": "60+5'"
+        },
+        {
+            "type": "end",
+            "text": "Half Time",
+            "time": "30+3'"
+        }
+    ]
 }

@@ -2,6 +2,16 @@
     "players": [
         {
             "id": "p1",
+            "name": "Md Tuhinur Rahman",
+            "number": "1",
+            "position": "GK",
+            "image": "../img/tuhinur.jpg",
+            "social": {
+                "facebook": "https://www.facebook.com/mdtuhinur.rahman.750"
+            }
+        },
+        {
+            "id": "p2",
             "name": "Mayruf Ahmed",
             "number": 4,
             "position": "DM",
@@ -13,27 +23,27 @@
             }
         },
         {
-            "id": "p2",
+            "id": "p3",
             "name": "Rahul Dash",
-            "number": "",
+            "number": "7",
             "position": "AMF",
-            "image": "../img/raahul das.png",
+            "image": "../img/rahul.jpg",
             "social": {
                 "facebook": "https://www.facebook.com/rahul.das.882064"
             }
         },
         {
-            "id": "p3",
+            "id": "p4",
             "name": "Kawser Ahmed",
-            "number": "",
-            "position": "CMF",
-            "image": "../img/kawser.jpg",
+            "number": "14",
+            "position": "DMF",
+            "image": "../img/kawsar.jpg",
             "social": {
                 "facebook": "https://www.facebook.com/kawserahmed.kawser.982"
             }
         },
         {
-            "id": "p4",
+            "id": "p5",
             "name": "Suhan Ahmed",
             "number": "",
             "position": "CMF",
@@ -43,7 +53,7 @@
             }
         },
         {
-            "id": "p5",
+            "id": "p6",
             "name": "Salman Sakib",
             "number": "",
             "position": "RB",
@@ -53,17 +63,17 @@
             }
         },
         {
-            "id": "p6",
+            "id": "p7",
             "name": "Ahsan Mahmud",
             "number": "3",
             "position": "RB",
-            "image": "../img/ahsan.jpeg",
+            "image": "../img/ahsan.jpg",
             "social": {
                 "facebook": "https://www.facebook.com/ahsan.mahmud.69322"
             }
         },
         {
-            "id": "p7",
+            "id": "p8",
             "name": "Shuvo",
             "number": "16",
             "position": "DMF",
@@ -73,27 +83,27 @@
             }
         },
         {
-            "id": "p8",
+            "id": "p9",
             "name": "Mahid",
-            "number": "",
-            "position": "CMF",
+            "number": "17",
+            "position": "LMF",
             "image": "../img/mahid.jpg",
             "social": {
                 "facebook": "https://www.facebook.com/mdmahid.junior"
             }
         },
         {
-            "id": "p9",
+            "id": "p10",
             "name": "Nahid",
-            "number": "",
+            "number": "11",
             "position": "LB",
-            "image": "../img/nahid.png",
+            "image": "../img/nahid.jpg",
             "social": {
                 "facebook": "https://www.facebook.com/nafi.nahid.1"
             }
         },
         {
-            "id": "p10",
+            "id": "p11",
             "name": "Nasir Ahmed",
             "number": "8",
             "position": "CMF",
@@ -103,27 +113,27 @@
             }
         },
         {
-            "id": "p11",
-            "name": "Mamun Miya",
+            "id": "p12",
+            "name": "Mamun Islam",
             "number": "",
-            "position": "CMF",
+            "position": "CB",
             "image": "../img/mamun.jpg",
             "social": {
                 "": ""
             }
         },
         {
-            "id": "p12",
+            "id": "p13",
             "name": "Jubayer ",
             "number": "19",
-            "position": "LWF",
+            "position": "CMF",
             "image": "../img/jubayer.jpeg",
             "social": {
                 "": "#"
             }
         },
         {
-            "id": "p13",
+            "id": "p14",
             "name": "Mohammad Sazzad Hossain",
             "number": "23",
             "position": "RB",
@@ -133,7 +143,7 @@
             }
         },
         {
-            "id": "p14",
+            "id": "p15",
             "name": "Soud",
             "number": "",
             "position": "CF",
@@ -143,7 +153,7 @@
             }
         },
         {
-            "id": "p15",
+            "id": "p16",
             "name": "Arnob Das Swachchha",
             "number": "",
             "position": "CF",
@@ -153,21 +163,21 @@
             }
         },
         {
-            "id": "p16",
+            "id": "p17",
             "name": "Tashrif Rahman",
             "number": "2",
             "position": "CB",
-            "image": "../img/tashrif.JPG",
+            "image": "../img/tashrif.jpg",
             "social": {
                 "facebook": "https://www.facebook.com/tashrif.rahman.tashu/"
             }
         },
         {
-            "id": "p17",
+            "id": "p18",
             "name": "Sanar Uddin",
             "number": "5",
-            "position": "CMF",
-            "image": "../img/sanar.JPG",
+            "position": "LB",
+            "image": "../img/sanar.jpg",
             "social": {
                 "facebook": "https://www.facebook.com/md.sanar.uddin.781734"
             }
