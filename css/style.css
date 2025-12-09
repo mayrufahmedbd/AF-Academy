@@ -974,3 +974,81 @@ footer {
         font-size: 1rem;
     }
 }
+
+
+/* Privacy Policy Page Style */
+.policy-section {
+    padding: 60px 20px;
+    background: #f7f8fa;
+    font-family: "Poppins", sans-serif;
+}
+
+.policy-section .container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.08);
+}
+
+.policy-section h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: #0048ff;
+    border-bottom: 3px solid #0048ff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.policy-section h2 {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    color: #111;
+}
+
+.policy-section h3 {
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.policy-section p {
+    line-height: 1.8;
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.policy-section ul {
+    margin: 15px 0;
+    padding-left: 25px;
+}
+
+.policy-section ul li {
+    margin-bottom: 6px;
+    line-height: 1.6;
+    list-style: square;
+}
+
+.policy-section a {
+    color: #0048ff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.policy-section a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 15px 0;
+}
+
+footer p {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
