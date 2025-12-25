@@ -27,7 +27,7 @@ async function loadData() {
     /* ================= NEXT MATCH ================= */
     document.getElementById("next-match").innerHTML = `
         <div class="upcoming-section">
-            ${data.matches.map((match, index) => `
+            ${data.matches.map(match => `
                 <a href="${match.resultPage}" class="game-row">
                     <div class="team-section">
                         <div>
@@ -48,7 +48,7 @@ async function loadData() {
     document.getElementById("squad").innerHTML = `
         <div class="games-container">
             ${data.squad.map(player => `
-                <div class="game-row">
+                <div class="game-row player-row">
                     <div class="team-section">
                         <span>
                             ${player.name} 
@@ -95,22 +95,29 @@ async function loadData() {
         });
     }
 
-    // Click → change URL + activate tab
+    // Click → change URL + activate tab OR redirect
     document.querySelectorAll(".nav-btn").forEach(btn => {
         btn.addEventListener("click", () => {
             const target = btn.getAttribute("data-target");
+
+            // 🔥 Redirect if player/squad tab clicked
+            if (target === "squad") {
+                window.location.href = "/players/";
+                return;
+            }
+
             history.pushState(null, "", `#${target}`);
             activateTab(target);
         });
     });
 
-    // 🔥 Load correct tab on reload
+    // Load correct tab on reload
     const hash = window.location.hash.replace("#", "");
 
     if (hash && document.getElementById(hash)) {
         activateTab(hash);
     } else {
-        activateTab("next-match"); // default tab
+        activateTab("next-match");
     }
 
     // Browser back / forward
