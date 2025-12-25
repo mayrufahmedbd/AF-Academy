@@ -2,10 +2,12 @@ async function loadData() {
     const response = await fetch("data.json");
     const data = await response.json();
 
-    // Page Header
+    /* ================= PAGE HEADER ================= */
     document.querySelector(".page-header").innerHTML = `
         <div class="logo-section">
-            <div class="logo"><img src="${data.club.logo}" alt="${data.club.name}"></div>
+            <div class="logo">
+                <img src="${data.club.logo}" alt="${data.club.name}">
+            </div>
             <div>
                 <div class="club-name">${data.club.name}</div>
                 <div class="subtitle">${data.club.subtitle}</div>
@@ -13,50 +15,52 @@ async function loadData() {
         </div>
         <div class="nav-buttons">
             ${data.navigation.map(nav => `
-                <button class="nav-btn ${nav.active ? "active" : ""}" data-target="${nav.target}">
+                <button 
+                    class="nav-btn ${nav.active ? "active" : ""}" 
+                    data-target="${nav.target}">
                     ${nav.label}
                 </button>
             `).join("")}
         </div>
     `;
 
-    // Next Matches
+    /* ================= NEXT MATCH ================= */
     document.getElementById("next-match").innerHTML = `
         <div class="upcoming-section">
             ${data.matches.map((match, index) => `
                 <a href="${match.resultPage}" class="game-row">
-                                <div class="upcoming-match" id="match-${index}">
                     <div class="team-section">
-                    <div>
-                    <span>${match.homeTeam.name}</span>
-                    <span class="match-result">${match.homeTeam.matchResult}</span>
-                    </div>
-                    <br>
-                    <span>${match.awayTeam.name}</span>
-                    <span class="match-result">${match.awayTeam.matchResult}</span>
+                        <div>
+                            <span>${match.homeTeam.name}</span>
+                            <span class="match-result">${match.homeTeam.matchResult}</span>
+                        </div>
+                        <br>
+                        <span>${match.awayTeam.name}</span>
+                        <span class="match-result">${match.awayTeam.matchResult}</span>
                     </div>
                     <div class="match-datetime">${match.datetime}</div>
-                </div>
                 </a>
             `).join("")}
         </div>
     `;
 
-    // Players
+    /* ================= SQUAD ================= */
     document.getElementById("squad").innerHTML = `
         <div class="games-container">
             ${data.squad.map(player => `
                 <div class="game-row">
                     <div class="team-section">
-                    
-                        <span>${player.name} <span class="player-position">${player.position}</span></span>
+                        <span>
+                            ${player.name} 
+                            <span class="player-position">${player.position}</span>
+                        </span>
                     </div>
                 </div>
             `).join("")}
         </div>
     `;
 
-    // Injuries
+    /* ================= INJURIES ================= */
     document.getElementById("transfers").innerHTML = `
         <div class="games-container">
             ${data.injuries.map(injury => `
@@ -65,32 +69,58 @@ async function loadData() {
                         <div class="team-logo">${injury.short}</div>
                         <span>${injury.name}</span>
                     </div>
-                    <div class="match-datetime">Return date: ${injury.returnDate}</div>
+                    <div class="match-datetime">
+                        Return date: ${injury.returnDate}
+                    </div>
                 </div>
             `).join("")}
         </div>
     `;
 
-    // Navigation switching
-    const navBtns = document.querySelectorAll(".nav-btn");
-    const sections = document.querySelectorAll(".section");
-    navBtns.forEach(btn => {
+    /* ================= TAB SYSTEM (URL SYNC) ================= */
+
+    function activateTab(targetId) {
+        const navBtns = document.querySelectorAll(".nav-btn");
+        const sections = document.querySelectorAll(".section");
+
+        navBtns.forEach(btn => {
+            btn.classList.toggle(
+                "active",
+                btn.getAttribute("data-target") === targetId
+            );
+        });
+
+        sections.forEach(sec => {
+            sec.classList.toggle("active", sec.id === targetId);
+        });
+    }
+
+    // Click → change URL + activate tab
+    document.querySelectorAll(".nav-btn").forEach(btn => {
         btn.addEventListener("click", () => {
-            navBtns.forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
             const target = btn.getAttribute("data-target");
-            sections.forEach(sec => sec.classList.remove("active"));
-            document.getElementById(target).classList.add("active");
+            history.pushState(null, "", `#${target}`);
+            activateTab(target);
         });
     });
 
-    // Row click effect
-    document.querySelectorAll(".game-row").forEach(row => {
-        row.addEventListener("click", () => {
-            row.style.background = "rgba(255, 215, 0, 0.1)";
-            setTimeout(() => { row.style.background = ""; }, 200);
-        });
+    // 🔥 Load correct tab on reload
+    const hash = window.location.hash.replace("#", "");
+
+    if (hash && document.getElementById(hash)) {
+        activateTab(hash);
+    } else {
+        activateTab("next-match"); // default tab
+    }
+
+    // Browser back / forward
+    window.addEventListener("popstate", () => {
+        const hash = window.location.hash.replace("#", "");
+        if (hash && document.getElementById(hash)) {
+            activateTab(hash);
+        }
     });
 }
 
+/* ================= INIT ================= */
 loadData();
