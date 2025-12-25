@@ -13,7 +13,7 @@
     },
     {
       "id": "nav-squad",
-      "label": "Squad",
+      "label": "Players",
       "target": "squad"
     },
     {
@@ -25,78 +25,156 @@
   "matches": [
     {
       "homeTeam": {
-        "name": "Assailant Fighters"
+        "name": "Assailant Fighters",
+        "matchResult": 0
       },
       "awayTeam": {
-        "name": "Ashraf FC"
+        "name": "Ashraf FC",
+        "matchResult": 1
       },
-      "datetime": "09/20/2025",
+      "datetime": "Sep 09",
       "resultPage": "/match/results/af-vs-acf/"
     },
     {
       "homeTeam": {
-        "name": "Assailant Fighters"
+        "name": "Assailant Fighters",
+        "matchResult": 2
       },
       "awayTeam": {
-        "name": "Kalapator FC"
+        "name": "Kalapator FC",
+        "matchResult": 1
       },
-      "datetime": "09/21/2025",
+      "datetime": "Sep 21",
       "resultPage": "/match/results/af-vs-kcf/"
     },
     {
       "homeTeam": {
-        "name": "Assailant Fighters"
+        "name": "Assailant Fighters",
+        "matchResult": 1
       },
       "awayTeam": {
-        "name": "babon gaw yang star"
+        "name": "babon gaw yang star",
+        "matchResult": 0
       },
-      "datetime": "10/04/2025",
+      "datetime": "Oct 04",
       "resultPage": "/match/results/af-vs-bg/"
     },
     {
       "homeTeam": {
-        "name": "Assailant Fighters"
+        "name": "Assailant Fighters",
+        "matchResult": 2
       },
       "awayTeam": {
-        "name": "Husna bad FC"
+        "name": "Husna bad FC",
+        "matchResult": 0
       },
-      "datetime": "10/04/2025",
+      "datetime": "Oct 04",
       "resultPage": "/match/results/af-vs-hb/"
     },
     {
       "homeTeam": {
-        "name": "Assailant Fighters"
+        "name": "Assailant Fighters",
+        "matchResult": 1
       },
       "awayTeam": {
-        "name": "Polli Mongol Sommite Football Team"
+        "name": "Polli Mongol Sommite Football Team",
+        "matchResult": 3
       },
-      "datetime": "07/12/2025",
+      "datetime": "Dec 07",
       "resultPage": "/match/results/05_af-vs-pms/"
     }
   ],
   "squad": [
-    {"name": "Ornob", "position": "GK"},
-    {"name": "Mayruf Ahmed", "position": "DMF"},
-    {"name": "Al Amin", "position": "CB"},
-    {"name": "Nurol Amin", "position": "CB"},
-    {"name": "Ahsan Mahmud", "position": "RB"},
-    {"name": "Mahid Ahmed", "position": "LMF"},
-    {"name": "Nasir Ahmed", "position": "CMF"},
-    {"name": "Limon Ahmed", "position": "AMF"},
-    {"name": "Shahjan Ahmed", "position": "RWF"},
-    {"name": "Saud Ahmed", "position": "CF"},
-    {"name": "Redwan", "position": "CMF"},
-    {"name": "Rahul Dash", "position": "LWF"},
-    {"name": "Fahim", "position": "LB"},
-    {"name": "Zakaria", "position": "CB"},
-    {"name": "Fahad", "position": "CMF"},
-    {"name": "Shamim", "position": "CB"},
-    {"name": "Mohammad Sazzad", "position": "RB"},
-    {"name": "Jubayer", "position": "RMF"},
-    {"name": "Sanar", "position": "DMF"},
-    {"name": "Tanvir", "position": "LB"},
-    {"name": "Tasrif", "position": "CB"},
-    {"name": "Sayid Shah", "position":"CMF"}
+    {
+      "name": "Ornob",
+      "position": "GK",
+      "img": "../img/arnob.jpg"
+    },
+    {
+      "name": "Mayruf Ahmed",
+      "position": "DMF",
+      "img": "../img/players/mayruf.png"
+    },
+    {
+      "name": "Al Amin",
+      "position": "CB"
+    },
+    {
+      "name": "Nurol Amin",
+      "position": "CB"
+    },
+    {
+      "name": "Ahsan Mahmud",
+      "position": "RB"
+    },
+    {
+      "name": "Mahid Ahmed",
+      "position": "LMF"
+    },
+    {
+      "name": "Nasir Ahmed",
+      "position": "CMF"
+    },
+    {
+      "name": "Limon Ahmed",
+      "position": "AMF"
+    },
+    {
+      "name": "Shahjan Ahmed",
+      "position": "RWF"
+    },
+    {
+      "name": "Saud Ahmed",
+      "position": "CF"
+    },
+    {
+      "name": "Redwan",
+      "position": "CMF"
+    },
+    {
+      "name": "Rahul Dash",
+      "position": "LWF"
+    },
+    {
+      "name": "Fahim",
+      "position": "LB"
+    },
+    {
+      "name": "Zakaria",
+      "position": "CB"
+    },
+    {
+      "name": "Fahad",
+      "position": "CMF"
+    },
+    {
+      "name": "Shamim",
+      "position": "CB"
+    },
+    {
+      "name": "Mohammad Sazzad",
+      "position": "RB"
+    },
+    {
+      "name": "Jubayer",
+      "position": "RMF"
+    },
+    {
+      "name": "Sanar",
+      "position": "DMF"
+    },
+    {
+      "name": "Tanvir",
+      "position": "LB"
+    },
+    {
+      "name": "Tasrif",
+      "position": "CB"
+    },
+    {
+      "name": "Sayid Shah",
+      "position": "CMF"
+    }
   ],
   "injuries": [
     {

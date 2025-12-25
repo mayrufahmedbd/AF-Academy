@@ -103,14 +103,19 @@
         /* Page Header Section (Club info + buttons) */
         .page-header {
             margin-top: 100px;
-            display: flex;
             flex-direction: column;
             gap: 15px;
             align-items: center;
             text-align: center;
+
+
+            width: 90%;
+            max-width: 1200px;
+            margin: 100px auto;
         }
 
         .logo-section {
+            float: left;
             display: flex;
             align-items: center;
             gap: 15px;
@@ -136,7 +141,7 @@
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
-            justify-content: center;
+            padding-left: 20px;
         }
 
         .nav-btn {
@@ -169,11 +174,11 @@
         /* Matches / Squad / Injuries */
         .upcoming-section,
         .games-container {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 10px;
         }
-        
+
 
         .upcoming-match,
         .game-row {
@@ -185,18 +190,40 @@
             justify-content: space-between;
             transition: background 0.3s;
             flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .upcoming-match, .game-row {
+            text-decoration: none;
         }
 
         .upcoming-match:hover,
         .game-row:hover {
             background: rgba(70, 70, 70, 0.5);
+            color: var(--secondary);
         }
 
         .team-section {
-            display: flex;
+            /* display: flex; */
             align-items: center;
+                max-width: 80%;
             gap: 10px;
             flex-wrap: wrap;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-section img{
+            width: 50px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            margin-right: 10px;
+
+        }
+
+        .team-section span{
+            color: #ccc;            
+            text-decoration: none;
         }
 
         .team-logo {
@@ -229,12 +256,29 @@
         .match-datetime {
             text-align: right;
             color: #ccc;
+            max-width: 30%;
             font-size: 12px;
+        }
+
+        .match-datetime::after {
+            content: "";
+            display: block;
+            margin-top: 5px;
+            width: 100%;
+            height: 1px;
+            background: #555;
+            /* border: 2px solid #ffffff; */
         }
 
         .player-position {
             font-size: 10px;
             color: #949494;
+        }
+
+        .match-result{
+            margin-left: 20px;
+            font-weight: bold;
+            float: right;
         }
 
         /* Footer */
@@ -359,83 +403,88 @@
         }
     </style>
 </head>
+
 <body>
-<div id="loader" class="div-loader">
-    <div class="loader"></div>
-</div>
-<div id="content" style="display:none;">
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo"><a href="/">Assailant Fighters Academy</a></div>
-            <ul class="nav-menu nav-links" id="navMenu">
-                <li><a href="/">Home</a></li>
-                <li><a href="../about.html">About Us</a></li>
-                <li><a href="../players/">Our Players</a></li>
-                <li><a href="../management">Our Management Team</a></li>
-                <li><a href="../contact.html">Contact Us</a></li>
-                <li><a href="../blogs/">Blog</a></li>
-            </ul>
-                            <div class="burger">
+    <div id="loader" class="div-loader">
+        <div class="loader"></div>
+    </div>
+    <div id="content" style="display:none;">
+        <!-- Header -->
+        <header>
+            <div class="container header-container">
+                <div class="logo"><a href="/">Assailant Fighters Academy</a></div>
+                <ul class="nav-menu nav-links" id="navMenu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../players/">Our Players</a></li>
+                    <li><a href="../management">Our Management Team</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                    <li><a href="../blogs/">Blog</a></li>
+                </ul>
+                <div class="burger">
                     <div class="line1"></div>
                     <div class="line2"></div>
                     <div class="line3"></div>
                 </div>
+            </div>
+        </header>
+
+        <!-- Page Header (Dynamic from data.json) -->
+        <div class="page-header"></div>
+
+        <div class="container main-section">
+            <!-- Sections (Dynamic content will be inserted here) -->
+            <div class="section active" id="next-match"></div>
+            <div class="section" id="squad"></div>
+            <div class="section" id="transfers"></div>
         </div>
-    </header>
 
-    <!-- Page Header (Dynamic from data.json) -->
-    <div class="page-header"></div>
-
-    <div class="container main-section">
-        <!-- Sections (Dynamic content will be inserted here) -->
-        <div class="section active" id="next-match"></div>
-        <div class="section" id="squad"></div>
-        <div class="section" id="transfers"></div>
-    </div>
-
-    <!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Assailant Fighters Academy</h3>
-                <p>Professional football training academy in Sylhet, dedicated to developing young talents and taking their game to the next level.</p>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/Assailantsfighters" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.youtube.com/@affootballclub7429" target="_blank"><i class="fab fa-youtube"></i></a>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-section">
+                        <h3>Assailant Fighters Academy</h3>
+                        <p>Professional football training academy in Sylhet, dedicated to developing young talents and
+                            taking their game to the next level.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/Assailantsfighters" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.youtube.com/@affootballclub7429" target="_blank"><i
+                                    class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="../about.html">About Us</a></li>
+                            <li><a href="../players/index.html">Players</a></li>
+                            <li><a href="../management/index.html">Management</a></li>
+                            <li><a href="../contact.html">Contact</a></li>
+                            <li><a href="../blogs/index.html">Blogs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Important Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="../../#download">Registration Form</a></li>
+                            <li><a href="../UI/form.html">Online Registration</a></li>
+                            <li><a href="https://afacademy.netlify.app">Official Website</a></li>
+                            <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="../match/index.html">Matches</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2024 Assailant Fighters Academy. All rights reserved.</p>
                 </div>
             </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="../about.html">About Us</a></li>
-                    <li><a href="../players/index.html">Players</a></li>
-                    <li><a href="../management/index.html">Management</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                    <li><a href="../blogs/index.html">Blogs</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Important Links</h3>
-                <ul class="footer-links">
-                    <li><a href="../../#download">Registration Form</a></li>
-                    <li><a href="../UI/form.html">Online Registration</a></li>
-                    <li><a href="https://afacademy.netlify.app">Official Website</a></li>
-                    <li><a href="../privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="../match/index.html">Matches</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2024 Assailant Fighters Academy. All rights reserved.</p>
-        </div>
+        </footer>
+        <!-- Script -->
+        <script src="script.js"></script>
+        <script src="../js/script.js"></script>
     </div>
-</footer>
-    <!-- Script -->
-    <script src="script.js"></script>
-    <script src="../js/script.js"></script>
-</div>
 </body>
+
 </html>

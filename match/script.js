@@ -24,25 +24,31 @@ async function loadData() {
     document.getElementById("next-match").innerHTML = `
         <div class="upcoming-section">
             ${data.matches.map((match, index) => `
-                <div class="upcoming-match" id="match-${index}">
+                <a href="${match.resultPage}" class="game-row">
+                                <div class="upcoming-match" id="match-${index}">
                     <div class="team-section">
-                        <span>${match.homeTeam.name}</span>
-                        <span class="vs">vs</span>
-                        <span>${match.awayTeam.name}</span>
+                    <div>
+                    <span>${match.homeTeam.name}</span>
+                    <span class="match-result">${match.homeTeam.matchResult}</span>
+                    </div>
+                    <br>
+                    <span>${match.awayTeam.name}</span>
+                    <span class="match-result">${match.awayTeam.matchResult}</span>
                     </div>
                     <div class="match-datetime">${match.datetime}</div>
-                    <a href="${match.resultPage}" class="result-btn">Match Result</a>
                 </div>
+                </a>
             `).join("")}
         </div>
     `;
 
-    // Squad
+    // Players
     document.getElementById("squad").innerHTML = `
         <div class="games-container">
             ${data.squad.map(player => `
                 <div class="game-row">
                     <div class="team-section">
+                    
                         <span>${player.name} <span class="player-position">${player.position}</span></span>
                     </div>
                 </div>

@@ -936,15 +936,21 @@ footer {
         padding: 12px 25px;
         font-size: 1.1rem;
     }
+
     .social-links {
-    gap: 5px;
+        gap: 5px;
+    }
+
+    .page-header {
+        display: flex;
+        margin: 40px auto;
     }
 }
 
 @media (max-width: 305px) {
-        .players-grid {
+    .players-grid {
         grid-template-columns: repeat(2, minmax(125px, 1fr));
-        }
+    }
 }
 
 @media (max-width: 480px) {
@@ -952,7 +958,7 @@ footer {
         font-size: 2rem;
     }
 
-    .btn-pulse, 
+    .btn-pulse,
     btn-secondary {
         padding: 10px 20px;
         border: none;
@@ -989,7 +995,7 @@ footer {
     background: white;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.08);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
 }
 
 .policy-section h1 {
