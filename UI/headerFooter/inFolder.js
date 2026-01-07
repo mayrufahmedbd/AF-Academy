@@ -3,7 +3,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     // 1. Load Header
     loadComponent("header", "../UI/headerFooter/header.html", () => {
-        // Run navbar logic ONLY after header HTML is injected
+        // Run this ONLY after the header is successfully loaded
+        console.log("Header loaded, initializing navbar...");
         initializeNavbar(); 
     });
 
@@ -11,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loadComponent("footer", "../UI/headerFooter/footer.html");
 });
 
-// Generic function to fetch and insert HTML
+// Helper function to fetch HTML
 function loadComponent(elementId, filePath, callback) {
     fetch(filePath)
         .then(response => {
@@ -20,27 +21,27 @@ function loadComponent(elementId, filePath, callback) {
         })
         .then(html => {
             document.getElementById(elementId).innerHTML = html;
-            if (callback) callback(); 
+            if (callback) callback();
         })
-        .catch(error => console.error('Error:', error));
+        .catch(error => console.error('Error loading component:', error));
 }
 
-// 3. Merged Navbar Logic (Toggle + Animation)
+// 3. Burger Menu Logic (Unified)
 function initializeNavbar() {
-    // Select elements AFTER they are in the DOM
+    // We use the classes from your original main.js
     const burger = document.querySelector('.burger');
     const navLinks = document.querySelector('.nav-links'); 
     const navItems = document.querySelectorAll('.nav-links li');
 
     if (burger && navLinks) {
         burger.addEventListener('click', () => {
-            // Toggle Nav
-            navLinks.classList.toggle('nav-active');
+            // Toggle Nav (Check your CSS: it should style .nav-links.active)
+            navLinks.classList.toggle('active');
             
-            // Toggle Burger Animation
+            // Burger Animation
             burger.classList.toggle('toggle');
             
-            // Animate Links (From your main.js)
+            // Animate Links
             navItems.forEach((link, index) => {
                 if (link.style.animation) {
                     link.style.animation = '';
@@ -49,5 +50,8 @@ function initializeNavbar() {
                 }
             });
         });
+        console.log("Navbar initialized successfully.");
+    } else {
+        console.error("Burger or Nav Links not found in header.html!");
     }
 }

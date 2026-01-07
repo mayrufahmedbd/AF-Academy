@@ -1,24 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Navigation
-    const burger = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
-    const navItems = document.querySelectorAll('.nav-links li');
+// main.js
 
-    burger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        burger.classList.toggle('toggle');
-        
-        // Animate links
-        navItems.forEach((link, index) => {
-            if (link.style.animation) {
-                link.style.animation = '';
-            } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-            }
-        });
-    });
+document.addEventListener('DOMContentLoaded', function() {
     
-    // FAQ functionality
+    // FAQ Functionality
     const faqItems = document.querySelectorAll('.faq-item');
     if (faqItems.length > 0) {
         faqItems.forEach(item => {
@@ -29,45 +13,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Form submission
-    // const contactForm = document.getElementById('academyForm');
-    // if (contactForm) {
-    //     contactForm.addEventListener('submit', function(e) {
-    //         e.preventDefault();
-    //         // alert('Thank you for your message! We will get back to you soon.');
-    //         this.reset();
-    //     });
-    // }
-    
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+    // Smooth Scrolling (Updated for Dynamic Header)
+    // We listen to the Body to catch clicks on links that load later
+    document.body.addEventListener('click', function(e) {
+        const anchor = e.target.closest('a[href^="#"]');
+        
+        if (anchor) {
             e.preventDefault();
-            const targetId = this.getAttribute('href');
+            const targetId = anchor.getAttribute('href');
             if (targetId === '#') return;
             
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
+                // Adjust offset (80px) for fixed header if needed
                 window.scrollTo({
-                    top: targetElement.offsetTop - 80,
+                    top: targetElement.offsetTop - 80, 
                     behavior: 'smooth'
                 });
             }
-        });
+        }
     });
 });
 
-
-
-// Loader functionality
-        // Wait for the page to fully load
+// Loader Functionality
 window.addEventListener('load', function() {
     const loader = document.getElementById('loader');
     const content = document.getElementById('content');
 
-    // Hide the loader
-    loader.style.display = 'none';
-
-    // Show the content
-    content.style.display = 'block';
+    if(loader && content) {
+        loader.style.display = 'none';
+        content.style.display = 'block';
+    }
 });
