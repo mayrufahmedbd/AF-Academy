@@ -57,6 +57,18 @@
       ]
     }
   ],
+  "groupMatchtable": [
+    { "id": 1, "teamA": "Sylhet Strikers", "Win": 0, "loss": 0, "goal": 0 },
+    { "id": 2, "teamA": "Chittagong Vikings", "Win": 0, "loss": 0, "goal": 0},
+    { "id": 3, "teamA": "Sylhet Strikers", "Win": 0, "loss": 0, "goal": 0 },  
+    { "id": 4, "teamA": "Dhaka Dynamites", "Win": 0, "loss": 0, "goal": 0 }
+  ],
+  "groupMatches": [
+    { "id": 1, "teamA": "Sylhet Strikers", "scoreA": 2, "teamB": "Dhaka Dynamites", "scoreB": 2 },
+    { "id": 2, "teamA": "Chittagong Vikings", "scoreA": 1, "teamB": "Khulna Titans", "scoreB": 3 },
+    { "id": 3, "teamA": "Sylhet Strikers", "scoreA": 4, "teamB": "Khulna Titans", "scoreB": 0 },
+    { "id": 4, "teamA": "Dhaka Dynamites", "scoreA": 1, "teamB": "Chittagong Vikings", "scoreB": 1 }
+  ],
   "results": {
     "semiFinal1": { "teamA": "Sylhet Strikers", "scoreA": 3, "teamB": "Dhaka Dynamites", "scoreB": 1 },
     "semiFinal2": { "teamA": "Chittagong Vikings", "scoreA": 2, "teamB": "Khulna Titans", "scoreB": 0 },
