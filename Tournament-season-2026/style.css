@@ -1,0 +1,125 @@
+:root {
+    --bg-dark: #121212;
+    --card-bg: #1e1e1e;
+    --text-main: #ffffff;
+    --text-muted: #b0b3b8;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: sans-serif;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.page-title {
+    text-align: center;
+    margin: 40px 0 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- Team Cards --- */
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.team-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    border-top: 5px solid #555; /* Default color, JS changes this */
+}
+
+.team-name {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* The 8-player grid layout */
+.players-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 players per row */
+    gap: 10px;
+}
+
+.player-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.player-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #333;
+    margin-bottom: 5px;
+}
+
+.player-name {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* --- Results Section --- */
+.divider { margin: 60px 0; border-bottom: 1px solid #333; }
+
+.results-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.round-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.round-column h3 { text-align: center; color: var(--text-muted); }
+
+.match-card {
+    background: #2a2a2a;
+    width: 250px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+.team-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #333;
+}
+.team-row:last-child { border-bottom: none; }
+
+.score { font-weight: bold; color: #ffa502; }
+
+.final-match { 
+    border: 2px solid #ffd700; 
+    transform: scale(1.1);
+    position: relative;
+}
+
+.trophy-icon {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+}

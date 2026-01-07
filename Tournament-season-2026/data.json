@@ -1,0 +1,65 @@
+{
+  "teams": [
+    {
+      "name": "Sylhet Strikers",
+      "color": "#ff4757",
+      "players": [
+        { "name": "Player 1", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 2", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 3", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 4", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 5", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 6", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 7", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 8", "photo": "https://via.placeholder.com/60" }
+      ]
+    },
+    {
+      "name": "Dhaka Dynamites",
+      "color": "#2ed573",
+      "players": [
+        { "name": "Player 1", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 2", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 3", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 4", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 5", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 6", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 7", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 8", "photo": "https://via.placeholder.com/60" }
+      ]
+    },
+    {
+      "name": "Chittagong Vikings",
+      "color": "#ffa502",
+      "players": [
+        { "name": "Player 1", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 2", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 3", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 4", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 5", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 6", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 7", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 8", "photo": "https://via.placeholder.com/60" }
+      ]
+    },
+    {
+      "name": "Khulna Titans",
+      "color": "#1e90ff",
+      "players": [
+        { "name": "Player 1", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 2", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 3", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 4", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 5", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 6", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 7", "photo": "https://via.placeholder.com/60" },
+        { "name": "Player 8", "photo": "https://via.placeholder.com/60" }
+      ]
+    }
+  ],
+  "results": {
+    "semiFinal1": { "teamA": "Sylhet Strikers", "scoreA": 3, "teamB": "Dhaka Dynamites", "scoreB": 1 },
+    "semiFinal2": { "teamA": "Chittagong Vikings", "scoreA": 2, "teamB": "Khulna Titans", "scoreB": 0 },
+    "final": { "teamA": "Sylhet Strikers", "scoreA": 1, "teamB": "Chittagong Vikings", "scoreB": 0 }
+  }
+}

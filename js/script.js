@@ -57,6 +57,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+
 // Loader functionality
         // Wait for the page to fully load
 window.addEventListener('load', function() {
