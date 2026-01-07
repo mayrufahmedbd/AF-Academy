@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tournament Season 25-26 | AFAcademy</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="/img/club logo.png">
+    <link rel="icon" href="/img/club logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
+
 <body>
     <div id="loader" class="div-loader">
         <div class="loader"></div>
@@ -37,32 +39,50 @@
         </header>
 
         <div class="main-content">
-    
-    <h1 class="page-title">Tournament Teams</h1>
-    <div id="teams-container" class="teams-grid">
-        </div>
 
-    <div class="divider"></div>
-    <h1 class="page-title">Match Results</h1>
-    
-    <div class="results-wrapper">
-        <div class="round-column">
-            <h3>Semi-Finals</h3>
-            <div class="match-card" id="semi-1">
-                </div>
-            <div class="match-card" id="semi-2">
-                </div>
-        </div>
+            <h1 class="page-title">Tournament Teams</h1>
+            <div id="teams-container" class="teams-grid">
+            </div>
+            <h1 class="page-title">Group Stage Standings</h1>
 
-        <div class="round-column">
-            <h3>Grand Final</h3>
-            <div class="match-card final-match" id="grand-final">
-                <div class="trophy-icon">🏆</div>
-                </div>
-        </div>
-    </div>
+            <div class="table-wrapper">
+                <table class="standings-table">
+                    <thead>
+                        <tr>
+                            <th>Pos</th>
+                            <th class="team-col">Club</th>
+                            <th>MP</th>
+                            <th>W</th>
+                            <th>D</th>
+                            <th>L</th>
+                            <th>Pts</th>
+                        </tr>
+                    </thead>
+                    <tbody id="group-stage-body">
+                    </tbody>
+                </table>
+            </div>
+            <!-- <div class="divider"></div>
+            <h1 class="page-title">Match Results</h1>
 
-</div>
+            <div class="results-wrapper">
+                <div class="round-column">
+                    <h3>Semi-Finals</h3>
+                    <div class="match-card" id="semi-1">
+                    </div>
+                    <div class="match-card" id="semi-2">
+                    </div>
+                </div>
+
+                <div class="round-column">
+                    <h3>Grand Final</h3>
+                    <div class="match-card final-match" id="grand-final">
+                        <div class="trophy-icon">🏆</div>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
 
 
 
@@ -113,4 +133,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>

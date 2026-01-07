@@ -46,29 +46,57 @@ function loadTeams(teams) {
     });
 }
 
-// 2. Function to Load Group Stage Matches
+
+// 2. Function to Load Group Stage Standings (With Sorting Algorithm)
 function loadGroupMatches(matches) {
-    const container = document.getElementById('group-stage-container');
-    if(!container) return;
+    const tableBody = document.getElementById('group-stage-body');
+    if(!tableBody) return;
 
-    matches.forEach(match => {
-        const matchCard = document.createElement('div');
-        matchCard.className = 'match-card';
+    tableBody.innerHTML = ''; // Clear existing content
 
-        matchCard.innerHTML = `
-            <div class="match-label">Match #${match.id}</div>
-            <div class="team-row">
-                <span>${match.teamA}</span>
-                <span class="score">${match.scoreA}</span>
-            </div>
-            <div class="team-row">
-                <span>${match.teamB}</span>
-                <span class="score">${match.scoreB}</span>
-            </div>
+    // STEP A: Calculate Stats (Points & Matches Played)
+    const processedMatches = matches.map(team => {
+        return {
+            ...team,
+            mp: team.W + team.D + team.L,       // Matches Played
+            pts: (team.W * 3) + (team.D * 1)    // Points (Win=3, Draw=1)
+        };
+    });
+
+    // STEP B: The Sorting Algorithm
+    // Rule: Sort by Points first. If Points are tied, sort by Wins (W).
+    processedMatches.sort((a, b) => {
+        if (b.pts !== a.pts) {
+            return b.pts - a.pts; // Primary: Higher Points
+        } else {
+            return b.W - a.W;     // Secondary: Higher Wins
+        }
+    });
+
+    // STEP C: Generate Table Rows
+    processedMatches.forEach((team, index) => {
+        const row = document.createElement('tr');
+        
+        // Add a special class for the top 4 teams (Champions League style highlight)
+        const rowClass = index < 4 ? 'top-team' : ''; 
+
+        row.innerHTML = `
+            <td class="position-cell">${index + 1}</td>
+            <td class="team-col">
+                <div class="team-info">
+                    <span>${team.teamA}</span>
+                </div>
+            </td>
+            <td>${team.mp}</td>
+            <td>${team.W}</td>
+            <td>${team.D}</td>
+            <td>${team.L}</td>
+            <td class="points-cell">${team.pts}</td>
         `;
-        container.appendChild(matchCard);
+        tableBody.appendChild(row);
     });
 }
+
 
 // 3. Function to Load Final Results
 function loadResults(results) {

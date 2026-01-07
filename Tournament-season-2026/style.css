@@ -73,6 +73,94 @@ body {
     color: var(--text-muted);
 }
 
+
+/* --- STANDINGS TABLE STYLES --- */
+
+/* Wrapper for horizontal scrolling on mobile */
+.table-wrapper {
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* Forces scroll on very small screens */
+    font-size: 0.95rem;
+}
+
+/* Header Styling (Dark like the screenshot) */
+.standings-table thead {
+    background-color: #202124; /* Dark grey */
+    color: #fff;
+}
+
+.standings-table th {
+    padding: 12px 10px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+/* Specific alignment for Club column */
+.standings-table th.team-col,
+.standings-table td.team-col {
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* Row Styling */
+.standings-table td {
+    padding: 12px 10px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+}
+
+/* Alternating Row Colors */
+.standings-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Highlight the Points column */
+.standings-table td.points-cell {
+    font-weight: bold;
+    color: #000;
+    background-color: rgba(0,0,0,0.03);
+}
+
+/* Team Name & Logo alignment */
+.team-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.table-logo {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .standings-table th, 
+    .standings-table td {
+        padding: 10px 5px;
+        font-size: 0.85rem;
+    }
+    
+    .team-info {
+        font-size: 0.9rem;
+    }
+}
+
 /* --- Results Section --- */
 .divider { margin: 60px 0; border-bottom: 1px solid #333; }
 

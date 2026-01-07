@@ -1,77 +1,208 @@
 {
   "teams": [
     {
-      "name": "Sylhet Strikers",
-      "color": "#ff4757",
+      "name": "Revolution",
+      "color": "#d63031",
       "players": [
-        { "name": "Player 1", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 2", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 3", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 4", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 5", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 6", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 7", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 8", "photo": "https://via.placeholder.com/60" }
+        {
+          "name": "Alamin (c)",
+          "photo": "../img/al amin.jpg"
+        },
+        {
+          "name": "Mahid",
+          "photo": "../img/mahid.jpg"
+        },
+        {
+          "name": "Nahid",
+          "photo": "../img/nahid.jpg"
+        },
+        {
+          "name": "Ahsan",
+          "photo": "../img/ahsan.jpg"
+        },
+        {
+          "name": "Ujjol",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Mahdi",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Sunel",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Sajjad",
+          "photo": "../img/sajjad.JPG"
+        }
       ]
     },
     {
-      "name": "Dhaka Dynamites",
-      "color": "#2ed573",
+      "name": "Shahjalal Kings",
+      "color": "#e67e22",
       "players": [
-        { "name": "Player 1", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 2", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 3", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 4", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 5", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 6", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 7", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 8", "photo": "https://via.placeholder.com/60" }
+        {
+          "name": "Hujaifa (c)",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Rahul",
+          "photo": "../img/rahul.jpg"
+        },
+        {
+          "name": "Joy",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Shuvo",
+          "photo": "../img/shuvo.jpg"
+        },
+        {
+          "name": "Mayruf",
+          "photo": "../img/mayruf.jpeg"
+        },
+        {
+          "name": "Sayid",
+          "photo": "../img/sayed.jpg"
+        },
+        {
+          "name": "Kawshik",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Jobayer",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        }
       ]
     },
     {
-      "name": "Chittagong Vikings",
-      "color": "#ffa502",
+      "name": "Super King",
+      "color": "#0984e3",
       "players": [
-        { "name": "Player 1", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 2", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 3", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 4", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 5", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 6", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 7", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 8", "photo": "https://via.placeholder.com/60" }
+        {
+          "name": "Nurul Amin (c)",
+          "photo": "../img/nurul.jpg"
+        },
+        {
+          "name": "Sanar",
+          "photo": "../img/sanar.jpg"
+        },
+        {
+          "name": "Kawser",
+          "photo": "../img/kawsar.jpg"
+        },
+        {
+          "name": "Arnob",
+          "photo": "../img/arnob.jpg"
+        },
+        {
+          "name": "Sawon",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Sahadat",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Rifat",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Jubayer Jr",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        }
       ]
     },
     {
-      "name": "Khulna Titans",
-      "color": "#1e90ff",
+      "name": "Debox",
+      "color": "#00b894",
       "players": [
-        { "name": "Player 1", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 2", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 3", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 4", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 5", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 6", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 7", "photo": "https://via.placeholder.com/60" },
-        { "name": "Player 8", "photo": "https://via.placeholder.com/60" }
+        {
+          "name": "Shajan (c)",
+          "photo": "../img/shahjan.jpg"
+        },
+        {
+          "name": "Rohid",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Suhan",
+          "photo": "../img/suhan.png"
+        },
+        {
+          "name": "Tasrif",
+          "photo": "../img/tashrif.jpg"
+        },
+        {
+          "name": "Rohim",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Mamun",
+          "photo": "../img/mamun.jpg"
+        },
+        {
+          "name": "Tuhin",
+          "photo": "../img/tuhinur.jpg"
+        },
+        {
+          "name": "Shipu",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        }
       ]
     }
   ],
-  "groupMatchtable": [
-    { "id": 1, "teamA": "Sylhet Strikers", "Win": 0, "loss": 0, "goal": 0 },
-    { "id": 2, "teamA": "Chittagong Vikings", "Win": 0, "loss": 0, "goal": 0},
-    { "id": 3, "teamA": "Sylhet Strikers", "Win": 0, "loss": 0, "goal": 0 },  
-    { "id": 4, "teamA": "Dhaka Dynamites", "Win": 0, "loss": 0, "goal": 0 }
-  ],
+
   "groupMatches": [
-    { "id": 1, "teamA": "Sylhet Strikers", "scoreA": 2, "teamB": "Dhaka Dynamites", "scoreB": 2 },
-    { "id": 2, "teamA": "Chittagong Vikings", "scoreA": 1, "teamB": "Khulna Titans", "scoreB": 3 },
-    { "id": 3, "teamA": "Sylhet Strikers", "scoreA": 4, "teamB": "Khulna Titans", "scoreB": 0 },
-    { "id": 4, "teamA": "Dhaka Dynamites", "scoreA": 1, "teamB": "Chittagong Vikings", "scoreB": 1 }
+    {
+      "id": 1,
+      "teamA": "Revolution",
+      "W": 0,
+      "D": 0,
+      "L": 0,
+      "TG": 0
+    },
+    {
+      "id": 2,
+      "teamA": "Super King",
+      "W": 0,
+      "D": 0,
+      "L": 0
+    },
+    {
+      "id": 3,
+      "teamA": "Revolution",
+      "W": 0,
+      "D": 0,
+      "L": 0
+    },
+    {
+      "id": 4,
+      "teamA": "Shahjalal Kings",
+      "W": 0,
+      "D": 0,
+      "L": 0
+    }
   ],
   "results": {
-    "semiFinal1": { "teamA": "Sylhet Strikers", "scoreA": 3, "teamB": "Dhaka Dynamites", "scoreB": 1 },
-    "semiFinal2": { "teamA": "Chittagong Vikings", "scoreA": 2, "teamB": "Khulna Titans", "scoreB": 0 },
-    "final": { "teamA": "Sylhet Strikers", "scoreA": 1, "teamB": "Chittagong Vikings", "scoreB": 0 }
+    "semiFinal1": {
+      "teamA": "Revolution",
+      "scoreA": 0,
+      "teamB": "Shahjalal Kings",
+      "scoreB": 0
+    },
+    "semiFinal2": {
+      "teamA": "Super King",
+      "scoreA": 0,
+      "teamB": "Debox",
+      "scoreB": 0
+    },
+    "final": {
+      "teamA": "TBD",
+      "scoreA": 0,
+      "teamB": "TBD",
+      "scoreB": 0
+    }
   }
 }
