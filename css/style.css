@@ -1059,3 +1059,87 @@ footer p {
     color: white;
     font-size: 14px;
 }
+
+/* --- ABOUT MINI EVENT SECTION --- */
+.about-mini.event {
+    background: linear-gradient(135deg, #1e272e, #111); /* Dark professional background */
+    color: #fff;
+    padding: 60px 0;
+    margin-top: 40px;
+    border-radius: 8px; /* Optional: rounds the corners of the section */
+}
+
+.about-event-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.event-text {
+    flex: 2;
+}
+
+.event-text h2 {
+    color: #fff; /* White text for dark background */
+    text-align: left; /* Override center alignment */
+    margin-bottom: 15px;
+    font-size: 2rem;
+    border-left: 5px solid #e74c3c; /* Red accent line */
+    padding-left: 15px;
+}
+
+.event-text p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+/* Button Styling */
+.btn-primary {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Icon/Image Styling */
+.event-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trophy-icon-large {
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.1); /* Subtle transparent look */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .about-event-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .event-text h2 {
+        text-align: center;
+        border-left: none;
+        padding-left: 0;
+    }
+    
+    .event-image {
+        display: none; /* Hide large icon on small screens to save space */
+    }
+}
