@@ -182,6 +182,56 @@
             "social": {
                 "facebook": "https://www.facebook.com/md.sanar.uddin.781734"
             }
+        },
+        {
+            "id": "p19",
+            "name": "Jubayer",
+            "number": "32",
+            "position": "LWF",
+            "image": "../img/jubayer.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p20",
+            "name": "Ujjol Ahmad",
+            "number": "",
+            "position": "CB",
+            "image": "../img/ujjol.jpeg",
+            "social": {
+                "facebook": "https://www.facebook.com/people/Muhammad-Ujjol-Ahmad/61583294046763/"
+            }
+        },
+        {
+            "id": "p21",
+            "name": "Shahjan Ahmed",
+            "number": "17",
+            "position": "LWF",
+            "image": "../img/shahjan.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p22",
+            "name": "Kawshik Ray",
+            "number": "",
+            "position": "CF",
+            "image": "../img/kawshik.jpeg",
+            "social": {
+                "facebook": "https://www.facebook.com/itskawshik"
+            }
+        },
+        {
+            "id": "p23",
+            "name": "Mahdi",
+            "number": "",
+            "position": "CMF",
+            "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+            "social": {
+                "facebook": "#"
+            }
         }
     ]
 }
