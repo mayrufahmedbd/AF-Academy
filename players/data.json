@@ -57,7 +57,7 @@
             "name": "Salman Sakib",
             "number": "",
             "position": "RB",
-            "image": "../img/sakib.jpg",
+            "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
             "social": {
                 "facebook": "https://www.facebook.com/salman.sakib.837426"
             }
@@ -117,7 +117,7 @@
             "name": "Mamun Islam",
             "number": "",
             "position": "CB",
-            "image": "../img/mamun.jpg",
+            "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
             "social": {
                 "": ""
             }
@@ -148,7 +148,7 @@
             "name": "Soud",
             "number": "",
             "position": "CF",
-            "image": "../img/soud.jpg",
+            "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
             "social": {
                 "": "#"
             }
@@ -158,7 +158,7 @@
             "name": "Arnob Das Swachchha",
             "number": "",
             "position": "CF",
-            "image": "../img/arnob.jpg",
+            "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
             "social": {
                 "facebook": "https://www.facebook.com/arnob.das.79827"
             }
@@ -198,7 +198,7 @@
             "name": "Ujjol Ahmad",
             "number": "",
             "position": "CB",
-            "image": "../img/ujjol.jpeg",
+            "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
             "social": {
                 "facebook": "https://www.facebook.com/people/Muhammad-Ujjol-Ahmad/61583294046763/"
             }
@@ -218,7 +218,7 @@
             "name": "Kawshik Ray",
             "number": "",
             "position": "CF",
-            "image": "../img/kawshik.jpeg",
+            "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
             "social": {
                 "facebook": "https://www.facebook.com/itskawshik"
             }
@@ -278,7 +278,7 @@
             "name": "Mamun Islam",
             "number": "15",
             "position": "LB",
-            "image": "../img/mamunlb.jpg",
+            "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
             "social": {
                 "facebook": "#"
             }
