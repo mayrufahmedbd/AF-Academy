@@ -4,38 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Tournament | AFAcademy</title>
+    <title>Tournament Seasons | AFAcademy</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/img/club logo.png">
-    <meta name="description" content="Explore the thrilling Tournament Season 25 of Assailant Fighters Academy. Discover team line-ups, group stage standings, and match results as the competition unfolds. Stay updated with the latest highlights and outcomes from this exciting season.">
-    <meta name="keywords" content="Tournament Season 25, Assailant Fighters Academy, AFAcademy, Football Tournament, Team Line-ups, Group Stage Standings, Match Results, Football Highlights, Sports Competition">
-    <meta property="og:title" content="Tournament Season 25 | AFAcademy">
-    <meta property="og:description" content="Explore the thrilling Tournament Season 25 of Assailant Fighters Academy. Discover team line-ups, group stage standings, and match results as the competition unfolds. Stay updated with the latest highlights and outcomes from this exciting season.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 </head>
 
 <body>
     <div id="loader" class="div-loader">
         <div class="loader"></div>
     </div>
+
     <div id="content" style="display:none;">
-        <div id="header"></div>
-        <div style="margin-top: 50px;">
-        <h1>Mini Tournament</h1>
-        <a href="/mini-tournament/Tournament-season-2025/index.html">2025</a>
-        <a href="/mini-tournament/Tournament-season-2026/index.html">2026</a>
+        
+        <div id="header"></div> <div class="main-content">
+            <div class="bg-shape"></div>
+
+            <section class="hero-section">
+                <h1 class="glitch-title">Tournament History</h1>
+                <p>The Legacy of Assailant Fighters Academy</p>
+            </section>
+
+            <div class="container">
+                <div class="cards-wrapper">
+
+    <div class="season-card active-season">
+        <div class="card-bg-text">2</div>
+        <div class="card-content">
+            <div class="status-badge pulse">Live Season</div>
+            <h2>Season 2</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="s-label">Teams</span>
+                    <span class="s-value">04</span>
+                </div>
+                <div class="stat-box">
+                    <span class="s-label">Status</span>
+                    <span class="s-value tbd">Not Started</span>
+                </div>
+            </div>
+            <a href="/mini-tournament/Tournament-season-2026/index.html" class="action-btn">
+                View Stats <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="season-card archive-season">
+        <div class="card-bg-text">1</div>
+        <div class="card-content">
+            <div class="status-badge completed">Completed</div>
+            <h2>Season 1</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="s-label">Winner</span>
+                    <span class="s-value">Debox</span>
+                </div>
+                <div class="stat-box">
+                    <span class="s-label">Top Scorer</span>
+                    <span class="s-value">Shahjan (5)</span>
+                </div>
+            </div>
+            <a href="/mini-tournament/Tournament-season-2025/index.html" class="action-btn outline">
+                Archive <i class="fas fa-history"></i>
+            </a>
+        </div>
+    </div>
+
+</div>
+            </div>
         </div>
 
+        <div id="footer"></div> </div>
 
-
-        <div id="footer"></div>
-
-    </div>
     <script src="../js/script.js"></script>
     <script src="../../UI/headerFooter/tournament.js"></script>
-
 </body>
-
 </html>

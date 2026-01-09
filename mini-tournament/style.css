@@ -211,3 +211,226 @@ body {
     transform: translateX(-50%);
     font-size: 30px;
 }
+
+
+/* --- Global Variables & Reset --- */
+:root {
+    --primary-red: #d63031;
+    --dark-bg: #1e1e2f;
+    --card-bg: #27293d;
+    --text-white: #ffffff;
+    --text-gray: #9a9a9a;
+}
+
+body {
+    background-color: #1a1a1d; /* Dark Background */
+    color: var(--text-white);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- Layout --- */
+.main-content {
+    position: relative;
+    padding: 4rem 0;
+    min-height: 85vh;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Creative Background Shape --- */
+.bg-shape {
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(214, 48, 49, 0.15) 0%, rgba(0,0,0,0) 70%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.glitch-title {
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: var(--text-white);
+    text-shadow: 2px 2px 0px var(--primary-red);
+}
+
+.hero-section p {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+}
+
+/* --- Cards Grid --- */
+.cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+/* --- The Creative Card --- */
+.season-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.season-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(214, 48, 49, 0.2); /* Red Glow on Hover */
+    border-color: var(--primary-red);
+}
+
+/* Big Number in Background */
+.card-bg-text {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 10rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03);
+    z-index: 0;
+    transition: 0.4s;
+}
+
+.season-card:hover .card-bg-text {
+    color: rgba(214, 48, 49, 0.1);
+    transform: scale(1.1);
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+}
+
+/* --- Card Typography --- */
+.season-card h2 {
+    font-size: 2rem;
+    margin: 15px 0 25px;
+    font-weight: 700;
+}
+
+/* --- Stats Grid Inside Card --- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.s-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    text-transform: uppercase;
+}
+
+.s-value {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-white);
+    margin-top: 5px;
+}
+
+.s-value.tbd {
+    color: var(--primary-red);
+    font-style: italic;
+}
+
+/* --- Badges --- */
+.status-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.status-badge.pulse {
+    background: rgba(214, 48, 49, 0.2);
+    color: var(--primary-red);
+    border: 1px solid var(--primary-red);
+    animation: pulse-animation 2s infinite;
+}
+
+.status-badge.completed {
+    background: rgba(255, 255, 255, 0.1);
+    color: #aaa;
+}
+
+/* --- Buttons --- */
+.action-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 20px;
+    background: var(--primary-red);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.action-btn:hover {
+    background: #ff4757;
+    letter-spacing: 1px;
+}
+
+.action-btn.outline {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.action-btn.outline:hover {
+    border-color: white;
+    background: rgba(255,255,255,0.05);
+}
+
+/* --- Animations --- */
+@keyframes pulse-animation {
+    0% { box-shadow: 0 0 0 0 rgba(214, 48, 49, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(214, 48, 49, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(214, 48, 49, 0); }
+}
+
+/* --- Mobile Fixes --- */
+@media (max-width: 768px) {
+    .glitch-title { font-size: 2.2rem; }
+    .card-bg-text { font-size: 8rem; }
+}
