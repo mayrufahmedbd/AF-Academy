@@ -97,7 +97,6 @@ function loadGroupMatches(matches) {
     });
 }
 
-
 // 3. Function to Load Final Results
 function loadResults(results) {
     const createMatchHTML = (match) => `
@@ -119,3 +118,4 @@ function loadResults(results) {
     if(semi2) semi2.innerHTML = createMatchHTML(results.semiFinal2);
     if(grandFinal) grandFinal.innerHTML += createMatchHTML(results.final);
 }
+

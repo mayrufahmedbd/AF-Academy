@@ -6,23 +6,23 @@
       "players": [
         {
           "name": "©Alamin",
-          "photo": "../img/al amin.jpg"
+          "photo": "../../img/al amin.jpg"
         },
         {
           "name": "Mahid",
-          "photo": "../img/mahid.jpg"
+          "photo": "../../img/mahid.jpg"
         },
         {
           "name": "Nahid",
-          "photo": "../img/nahid.jpg"
+          "photo": "../../img/nahid.jpg"
         },
         {
           "name": "Ahsan",
-          "photo": "../img/ahsan.jpg"
+          "photo": "../../img/ahsan.jpg"
         },
         {
           "name": "Ujjol",
-          "photo": "../img/ujjol.jpeg"
+          "photo": "../../img/ujjol.jpeg"
         },
         {
           "name": "Mahdi",
@@ -34,7 +34,7 @@
         },
         {
           "name": "Sajjad",
-          "photo": "../img/sajjad.JPG"
+          "photo": "../../img/sajjad.JPG"
         }
       ]
     },
@@ -48,7 +48,7 @@
         },
         {
           "name": "Rahul",
-          "photo": "../img/rahul.jpg"
+          "photo": "../../img/rahul.jpg"
         },
         {
           "name": "Joy",
@@ -56,23 +56,23 @@
         },
         {
           "name": "Shuvo",
-          "photo": "../img/shuvo.jpg"
+          "photo": "../../img/shuvo.jpg"
         },
         {
           "name": "Mayruf",
-          "photo": "../img/mayruf.jpeg"
+          "photo": "../../img/mayruf.jpeg"
         },
         {
           "name": "Sayid",
-          "photo": "../img/sayed.jpg"
+          "photo": "../../img/sayed.jpg"
         },
         {
           "name": "Kawshik",
-          "photo": "../img/kawshik.jpeg"
+          "photo": "../../img/kawshik.jpeg"
         },
         {
           "name": "Jobayer",
-          "photo": "../img/jubayer.jpg"
+          "photo": "../../img/jubayer.jpg"
         }
       ]
     },
@@ -82,19 +82,19 @@
       "players": [
         {
           "name": "©Nurul Amin",
-          "photo": "../img/nurul.jpg"
+          "photo": "../../img/nurul.jpg"
         },
         {
           "name": "Sanar",
-          "photo": "../img/sanar.jpg"
+          "photo": "../../img/sanar.jpg"
         },
         {
           "name": "Kawser",
-          "photo": "../img/kawsar.jpg"
+          "photo": "../../img/kawsar.jpg"
         },
         {
           "name": "Arnob",
-          "photo": "../img/arnob.jpg"
+          "photo": "../../img/arnob.jpg"
         },
         {
           "name": "Sawon",
@@ -110,7 +110,7 @@
         },
         {
           "name": "Jubayer Jr",
-          "photo": "../img/jubayer.jpeg"
+          "photo": "../../img/jubayer.jpeg"
         }
       ]
     },
@@ -120,7 +120,7 @@
       "players": [
         {
           "name": "©Shajan",
-          "photo": "../img/shahjan.jpg"
+          "photo": "../../img/shahjan.jpg"
         },
         {
           "name": "Rohid",
@@ -128,11 +128,11 @@
         },
         {
           "name": "Suhan",
-          "photo": "../img/suhan.png"
+          "photo": "../../img/suhan.png"
         },
         {
           "name": "Tasrif",
-          "photo": "../img/tashrif.jpg"
+          "photo": "../../img/tashrif.jpg"
         },
         {
           "name": "Rohim",
@@ -140,11 +140,11 @@
         },
         {
           "name": "Mamun",
-          "photo": "../img/mamun.jpg"
+          "photo": "../../img/mamun.jpg"
         },
         {
           "name": "Tuhin",
-          "photo": "../img/tuhinur.jpg"
+          "photo": "../../img/tuhinur.jpg"
         },
         {
           "name": "Shipu",

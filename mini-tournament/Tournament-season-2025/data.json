@@ -1,0 +1,208 @@
+{
+  "teams": [
+    {
+      "name": "Revolution",
+      "color": "#d63031",
+      "players": [
+        {
+          "name": "©Alamin",
+          "photo": "../../img/al amin.jpg"
+        },
+        {
+          "name": "Mahid",
+          "photo": "../../img/mahid.jpg"
+        },
+        {
+          "name": "Nahid",
+          "photo": "../../img/nahid.jpg"
+        },
+        {
+          "name": "Ahsan",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Ujjol",
+          "photo": "../../img/ujjol.jpeg"
+        },
+        {
+          "name": "Mahdi",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Sunel",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Sajjad",
+          "photo": "../../img/sajjad.JPG"
+        }
+      ]
+    },
+    {
+      "name": "Shahjalal Kings",
+      "color": "#e67e22",
+      "players": [
+        {
+          "name": "©Hujaifa",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Rahul",
+          "photo": "../../img/rahul.jpg"
+        },
+        {
+          "name": "Joy",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Shuvo",
+          "photo": "../../img/shuvo.jpg"
+        },
+        {
+          "name": "Mayruf",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Sayid",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Kawshik",
+          "photo": "../../img/kawshik.jpeg"
+        },
+        {
+          "name": "Jobayer",
+          "photo": "../../img/jubayer.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Super King",
+      "color": "#0984e3",
+      "players": [
+        {
+          "name": "©Nurul Amin",
+          "photo": "../../img/nurul.jpg"
+        },
+        {
+          "name": "Mayruf",
+          "photo": "../../img/mayruf.jpeg"
+        },
+        {
+          "name": "Rahul",
+          "photo": "../../img/rahul.jpg"
+        },
+        {
+          "name": "Arnob",
+          "photo": "../../img/arnob.jpg"
+        },
+        {
+          "name": "Sawon",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Sahadat",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Rifat",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        },
+        {
+          "name": "Jubayer Jr",
+          "photo": "../../img/jubayer.jpeg"
+        }
+      ]
+    },
+    {
+      "name": "Debox",
+      "color": "#00b894",
+      "players": [
+        {
+          "name": "©Shajan",
+          "photo": "../../img/shahjan.jpg"
+        },
+        {
+          "name": "Ahsan",
+          "photo": "../../img/ahsan.jpg"
+        },
+        {
+          "name": "Suhan",
+          "photo": "../../img/suhan.png"
+        },
+        {
+          "name": "Tasrif",
+          "photo": "../../img/tashrif.jpg"
+        },
+        {
+          "name": "Sayid Shah",
+          "photo": "../../img/sayed.jpg"
+        },
+        {
+          "name": "Soud",
+          "photo": "../../img/soud.jpg"
+        },
+        {
+          "name": "Tuhin",
+          "photo": "../../img/tuhinur.jpg"
+        },
+        {
+          "name": "Shipu",
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        }
+      ]
+    }
+  ],
+
+  "groupMatches": [
+    {
+      "id": 1,
+      "teamA": "Debox",
+      "W": 5,
+      "D": 2,
+      "L": 1,
+      "TG": 0
+    },
+    {
+      "id": 2,
+      "teamA": "Super King",
+      "W": 0,
+      "D": 0,
+      "L": 0
+    },
+    {
+      "id": 3,
+      "teamA": "Revolution",
+      "W": 0,
+      "D": 0,
+      "L": 0
+    },
+    {
+      "id": 4,
+      "teamA": "Shahjalal Kings",
+      "W": 0,
+      "D": 0,
+      "L": 0
+    }
+  ],
+  "results": {
+    "semiFinal1": {
+      "teamA": "Debox",
+      "scoreA": 2,
+      "teamB": "Revolution",
+      "scoreB": 0
+    },
+    "semiFinal2": {
+      "teamA": "Super King",
+      "scoreA": 2,
+      "teamB": "Shahjalal Kings",
+      "scoreB": 1
+    },
+    "final": {
+      "teamA": "Super King",
+      "scoreA": 1,
+      "teamB": "Debox",
+      "scoreB": 0
+    }
+  } 
+}
