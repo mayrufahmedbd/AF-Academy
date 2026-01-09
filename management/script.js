@@ -6,7 +6,10 @@ async function loadManagement() {
     document.getElementById("management").innerHTML = `
         <div class="container">
             <h2 class="section-title">Our Management Team</h2>
-            <div class="menagers-grid">
+            <p style="max-width: 800px; margin: 0 auto; color: #555; line-height: 1.6;">
+            Behind every successful player is a dedicated support system. Our management team is the backbone of Assailant Fighters Academy, comprised of passionate leaders committed to the development of football in Sylhet. From strategic planning to on-field execution, this committee works tirelessly to provide the best opportunities for our future stars.
+        </p>
+            <div style="margin-top: 40px;" class="menagers-grid">
                 ${data.management.map(m => `
                     <div class="menagers-card"
                         data-name="${m.name}"

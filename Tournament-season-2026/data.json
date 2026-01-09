@@ -22,7 +22,7 @@
         },
         {
           "name": "Ujjol",
-          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+          "photo": "../img/ujjol.jpeg"
         },
         {
           "name": "Mahdi",
@@ -68,11 +68,11 @@
         },
         {
           "name": "Kawshik",
-          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+          "photo": "../img/kawshik.jpeg"
         },
         {
           "name": "Jobayer",
-          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+          "photo": "../img/jubayer.jpg"
         }
       ]
     },
@@ -110,7 +110,7 @@
         },
         {
           "name": "Jubayer Jr",
-          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+          "photo": "../img/jubayer.jpeg"
         }
       ]
     },
