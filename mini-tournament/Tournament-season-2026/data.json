@@ -98,7 +98,7 @@
         },
         {
           "name": "Sawon",
-          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+          "photo": "../../img/Shawn.jpeg"
         },
         {
           "name": "Sahadat",
@@ -124,11 +124,11 @@
         },
         {
           "name": "Rohid",
-          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+          "photo": "../../img/rohide.jpg"
         },
         {
           "name": "Suhan",
-          "photo": "../../img/suhan.png"
+          "photo": "../../img/suhan.jpg"
         },
         {
           "name": "Tasrif",
@@ -140,7 +140,7 @@
         },
         {
           "name": "Mamun",
-          "photo": "../../img/mamun.jpg"
+          "photo": "../../img/mamunlb.jpg"
         },
         {
           "name": "Tuhin",
@@ -153,7 +153,104 @@
       ]
     }
   ],
-
+  "schedule": [
+    {
+      "round": 1,
+      "date": "Jan 10, 2026",
+      "matches": [
+        {
+          "teamA": "Super King",
+          "teamB": "Shahjalal Kings",
+          "time": "4:00 PM"
+        },
+        {
+          "teamA": "Revolution",
+          "teamB": "Debox",
+          "time": "4:31 PM"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "date": "Jan 11, 2026",
+      "matches": [
+        {
+          "teamA": "Debox",
+          "teamB": "Super King",
+          "time": "4:00 PM"
+        },
+        {
+          "teamA": "Revolution",
+          "teamB": "Shahjalal Kings",
+          "time": "4:30 PM"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "date": "Jan 12, 2026",
+      "matches": [
+        {
+          "teamA": "Super King",
+          "teamB": "Revolution",
+          "time": "4:00 PM"
+        },
+        {
+          "teamA": "Debox",
+          "teamB": "Shahjalal Kings",
+          "time": "4:30 PM"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "date": "Jan 13, 2026",
+      "matches": [
+        {
+          "teamA": "Shahjalal Kings",
+          "teamB": "Super King",
+          "time": "4:00 PM"
+        },
+        {
+          "teamA": "Debox",
+          "teamB": "Revolution",
+          "time": "4:30 PM"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "date": "Jan 14, 2026",
+      "matches": [
+        {
+          "teamA": "Super King",
+          "teamB": "Debox",
+          "time": "4:00 PM"
+        },
+        {
+          "teamA": "Shahjalal Kings",
+          "teamB": "Revolution",
+          "time": "4:30 PM"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "date": "Jan 15, 2026",
+      "matches": [
+        {
+          "teamA": "Revolution",
+          "teamB": "Super King",
+          "time": "4:00 PM"
+        },
+        {
+          "teamA": "Shahjalal Kings",
+          "teamB": "Debox",
+          "time": "4:30 PM"
+        }
+      ]
+    }
+  ],
   "groupMatches": [
     {
       "id": 1,

@@ -20,6 +20,7 @@ body {
 .page-title {
     text-align: center;
     margin: 40px 0 20px 0;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -38,9 +39,13 @@ body {
     border-top: 5px solid #555; /* Default color, JS changes this */
 }
 
+.team-font-size{
+    font-size: 1.90rem!important;
+}
+
 .team-name {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 0.70rem;
     margin-bottom: 20px;
     font-weight: bold;
 }
@@ -89,7 +94,7 @@ body {
     width: 100%;
     border-collapse: collapse;
     min-width: 600px; /* Forces scroll on very small screens */
-    font-size: 0.95rem;
+    font-size: 0.60rem;
 }
 
 /* Header Styling (Dark like the screenshot) */
@@ -433,4 +438,163 @@ body {
 @media (max-width: 768px) {
     .glitch-title { font-size: 2.2rem; }
     .card-bg-text { font-size: 8rem; }
+}
+
+
+/* --- Creative Schedule Design --- */
+
+.match-card-creative {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px 10px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.match-card-creative:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* Team Names Sides */
+.team-side {
+    flex: 1; /* Takes up equal space */
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #2d3436;
+}
+
+.team-side.left {
+    text-align: right; /* Pushes Team A text towards center */
+    padding-right: 15px;
+}
+
+.team-side.right {
+    text-align: left; /* Pushes Team B text towards center */
+    padding-left: 15px;
+}
+
+/* Center Badge Area */
+.match-center {
+    flex: 0 0 100px; /* Fixed width for the center to prevent shifting */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for Time (Upcoming Match) */
+.match-time-badge {
+    background-color: #f1f2f6;
+    color: #636e72;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.60rem;
+    /* font-weight: 500; */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Style for Score (Finished Match) */
+.match-score-badge {
+    background-color: #2d3436; /* Dark background for score */
+    color: #fff;               /* White text */
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 2px;       /* Spacing between numbers */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* Mobile Tweak: Reduce font size slightly on small screens */
+@media (max-width: 480px) {
+    .team-side {
+        font-size: 0.85rem;
+    }
+    .match-center {
+        flex: 0 0 80px;
+    }
+    .match-time-badge, .match-score-badge {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}
+
+/* Schedule Grid */
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 0 10px;
+    margin-bottom: 2rem;
+}
+
+/* Round Section */
+.round-section {
+    background: #2b2b2b;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-left: 4px solid #333; /* Dark accent */
+}
+
+.round-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.round-header h3 {
+    margin: 0;
+    color: #d63031; /* Your theme red */
+    font-size: 1.2rem;
+}
+
+.round-date {
+    font-size: 0.9rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Match Card inside Schedule */
+.match-card-schedule {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+.match-time {
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9rem;
+    min-width: 70px;
+}
+
+.match-teams {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end; /* Aligns teams to right */
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.match-teams .vs {
+    font-size: 0.8rem;
+    color: #aaa;
+    font-weight: bold;
+}
+
+.team-name {
+    font-weight: 500;
 }

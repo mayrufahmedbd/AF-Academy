@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
             loadTeams(data.teams);
             loadGroupMatches(data.groupMatches);
             loadResults(data.results);
+            // NEW: Load the schedule
+            if(data.schedule) {
+                loadSchedule(data.schedule);
+            }
         })
         .catch(error => console.error('Error loading JSON:', error));
 
@@ -97,6 +101,7 @@ function loadGroupMatches(matches) {
     });
 }
 
+
 // 3. Function to Load Final Results
 function loadResults(results) {
     const createMatchHTML = (match) => `
@@ -119,4 +124,58 @@ function loadResults(results) {
     if(grandFinal) grandFinal.innerHTML += createMatchHTML(results.final);
 }
 
+// 4. Function to Load Match Schedule (CREATIVE & CENTERED)
+function loadSchedule(schedule) {
+    const container = document.getElementById('schedule-container');
+    if (!container) return; 
 
+    container.innerHTML = ''; 
+
+    schedule.forEach(round => {
+        const roundDiv = document.createElement('div');
+        roundDiv.className = 'round-section';
+        
+        roundDiv.innerHTML = `
+            <div class="round-header">
+                <h3>Round ${round.round}</h3>
+                <span class="round-date">${round.date}</span>
+            </div>
+        `;
+
+        round.matches.forEach(match => {
+            const matchCard = document.createElement('div');
+            matchCard.className = 'match-card-creative';
+
+            // LOGIC: Check if scores exist. 
+            // If scoreA and scoreB are present, show Score. Otherwise, show Time.
+            let centerContent;
+            let centerClass = 'match-time-badge'; // Default style for time
+
+            if (match.scoreA !== undefined && match.scoreB !== undefined) {
+                // Show Score
+                centerContent = `${match.scoreA} : ${match.scoreB}`;
+                centerClass = 'match-score-badge'; // Style for score (usually bolder)
+            } else {
+                // Show Time
+                centerContent = match.time;
+            }
+
+            matchCard.innerHTML = `
+                <div class="team-side left">
+                    <span class="team-name">${match.teamA}</span>
+                </div>
+                
+                <div class="match-center">
+                    <div class="${centerClass}">${centerContent}</div>
+                </div>
+                
+                <div class="team-side right">
+                    <span class="team-name">${match.teamB}</span>
+                </div>
+            `;
+            roundDiv.appendChild(matchCard);
+        });
+
+        container.appendChild(roundDiv);
+    });
+}
