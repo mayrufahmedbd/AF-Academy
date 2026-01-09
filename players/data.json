@@ -47,7 +47,7 @@
             "name": "Suhan Ahmed",
             "number": "",
             "position": "CMF",
-            "image": "/../img/suhan.png",
+            "image": "/../img/suhan.jpg",
             "social": {
                 "facebook": "https://www.facebook.com/profile.php?id=61578393937751"
             }
@@ -229,6 +229,56 @@
             "number": "",
             "position": "CMF",
             "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p24",
+            "name": "Rohide Ahmad",
+            "number": "19",
+            "position": "CF",
+            "image": "../img/rohide.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p25",
+            "name": "Rohim",
+            "number": "9",
+            "position": "CMF",
+            "image": "../img/rohim.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p26",
+            "name": "Shawon",
+            "number": "16",
+            "position": "RW",
+            "image": "../img/Shawn.jpeg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p27",
+            "name": "Junen",
+            "number": "10",
+            "position": "CF",
+            "image": "../img/juned.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p28",
+            "name": "Mamun Islam",
+            "number": "15",
+            "position": "LB",
+            "image": "../img/mamunlb.jpg",
             "social": {
                 "facebook": "#"
             }
