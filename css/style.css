@@ -363,7 +363,7 @@ header {
     }
 }
 
-@media (max-width: 287px) {
+@media (max-width: 250px) {
     .logo a {
         font-size: 12px;
     }
