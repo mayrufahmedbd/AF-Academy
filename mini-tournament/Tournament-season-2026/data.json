@@ -71,8 +71,8 @@
           "photo": "../../img/kawshik.jpeg"
         },
         {
-          "name": "Jobayer",
-          "photo": "../../img/jubayer.jpg"
+          "name": "Jubayer",
+          "photo": "../../img/jubayer.jpeg"
         }
       ]
     },
@@ -110,7 +110,7 @@
         },
         {
           "name": "Jubayer Jr",
-          "photo": "../../img/jubayer.jpeg"
+          "photo": "../../img/jubayer.jpg"
         }
       ]
     },
@@ -172,7 +172,7 @@
     },
     {
       "round": 2,
-      "date": "Jan 26, 2026",
+      "date": "Jan 16, 2026",
       "matches": [
         {
           "teamA": "Debox",

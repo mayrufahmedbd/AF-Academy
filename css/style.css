@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 :root {
@@ -58,7 +58,7 @@ section {
 }
 
 .section-title:after {
-    content: '';
+    content: "";
     display: block;
     width: 80px;
     height: 4px;
@@ -131,7 +131,8 @@ header {
 /* Hero Section - Updated */
 .hero {
     height: 100dvh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/webBG.jpg") no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("../img/webBG.jpg") no-repeat center center/cover;
     color: white;
     display: flex;
     align-items: center;
@@ -230,7 +231,8 @@ header {
 /* --- Home Players Section --- */
 .home-players-section {
     padding: 60px 0;
-    background-color: #f9f9f9; /* Light background to separate sections */
+    background-color: #f9f9f9;
+    /* Light background to separate sections */
     text-align: center;
 }
 
@@ -261,13 +263,13 @@ header {
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .player-preview-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .player-img-box {
@@ -280,7 +282,8 @@ header {
 .player-img-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures photos don't stretch */
+    object-fit: cover;
+    /* Ensures photos don't stretch */
     transition: transform 0.3s ease;
 }
 
@@ -301,7 +304,8 @@ header {
 
 .player-pos {
     display: inline-block;
-    background-color: #e67e22; /* Use your brand color here */
+    background-color: #e67e22;
+    /* Use your brand color here */
     color: #fff;
     padding: 4px 10px;
     border-radius: 20px;
@@ -340,27 +344,36 @@ header {
 }
 
 .main-btn:hover {
-    background-color: #e67e22; /* Hover color */
+    background-color: #e67e22;
+    /* Hover color */
 }
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
     .home-players-grid {
         /* Show 2 per row on tablets, 1 on small phones */
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
     .home-players-grid {
-        grid-template-columns: 1fr; /* 1 per row on mobile */
+        grid-template-columns: 1fr;
+        /* 1 per row on mobile */
+    }
+}
+
+@media (max-width: 287px) {
+    .logo a {
+        font-size: 12px;
     }
 }
 
 /* --- Home Management Section --- */
 .home-management-section {
     padding: 60px 0;
-    background-color: #fff; /* White background */
+    background-color: #fff;
+    /* White background */
     text-align: center;
 }
 
@@ -375,7 +388,8 @@ header {
 /* Manager Card Style */
 .manager-card {
     background: #fff;
-    border: 1px solid #eee; /* Subtle border */
+    border: 1px solid #eee;
+    /* Subtle border */
     border-radius: 8px;
     padding: 20px;
     transition: all 0.3s ease;
@@ -383,8 +397,9 @@ header {
 }
 
 .manager-card:hover {
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    border-color: #e67e22; /* Highlight border on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-color: #e67e22;
+    /* Highlight border on hover */
     transform: translateY(-5px);
 }
 
@@ -392,7 +407,8 @@ header {
 .manager-img-box {
     width: 120px;
     height: 120px;
-    margin: 0 auto 15px auto; /* Centers the image */
+    margin: 0 auto 15px auto;
+    /* Centers the image */
     border-radius: 50%;
     overflow: hidden;
     border: 3px solid #f1f1f1;
@@ -435,7 +451,7 @@ header {
 .cta-section {
     position: relative;
     /* You can replace this linear-gradient with a url('img/your-bg.jpg') if you want */
-    background: linear-gradient(135deg, #222, #333); 
+    background: linear-gradient(135deg, #222, #333);
     padding: 80px 0;
     text-align: center;
     color: #fff;
@@ -444,7 +460,8 @@ header {
 
 .cta-content {
     position: relative;
-    z-index: 2; /* Ensures text is above any background images */
+    z-index: 2;
+    /* Ensures text is above any background images */
 }
 
 .cta-title {
@@ -466,7 +483,8 @@ header {
 /* CTA Button Style */
 .cta-btn {
     display: inline-block;
-    background-color: #e67e22; /* Your brand orange color */
+    background-color: #e67e22;
+    /* Your brand orange color */
     color: #fff;
     padding: 15px 40px;
     font-size: 1.1rem;
@@ -478,8 +496,10 @@ header {
 }
 
 .cta-btn:hover {
-    background-color: #d35400; /* Darker orange on hover */
-    transform: translateY(-3px); /* Button lifts up slightly */
+    background-color: #d35400;
+    /* Darker orange on hover */
+    transform: translateY(-3px);
+    /* Button lifts up slightly */
     box-shadow: 0 8px 20px rgba(230, 126, 34, 0.6);
 }
 
@@ -492,9 +512,10 @@ header {
     .cta-title {
         font-size: 2rem;
     }
-    
+
     .cta-btn {
-        width: 100%; /* Full width button on mobile */
+        width: 100%;
+        /* Full width button on mobile */
         max-width: 300px;
     }
 }
@@ -502,7 +523,8 @@ header {
 /* --- Home Blog Section --- */
 .home-blog-section {
     padding: 60px 0;
-    background-color: #f4f4f4; /* Light grey background */
+    background-color: #f4f4f4;
+    /* Light grey background */
 }
 
 .blog-grid {
@@ -518,15 +540,16 @@ header {
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
     display: flex;
-    flex-direction: column; /* Ensures footer sticks to bottom if needed */
+    flex-direction: column;
+    /* Ensures footer sticks to bottom if needed */
 }
 
 .blog-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .blog-img-box {
@@ -544,7 +567,8 @@ header {
 }
 
 .blog-card:hover .blog-img-box img {
-    transform: scale(1.05); /* Zoom effect on hover */
+    transform: scale(1.05);
+    /* Zoom effect on hover */
 }
 
 /* Date Badge over Image */
@@ -552,13 +576,14 @@ header {
     position: absolute;
     bottom: 15px;
     left: 15px;
-    background-color: #e67e22; /* Brand Orange */
+    background-color: #e67e22;
+    /* Brand Orange */
     color: #fff;
     padding: 5px 12px;
     border-radius: 4px;
     font-size: 0.8rem;
     font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .blog-content {
@@ -615,13 +640,15 @@ header {
 }
 
 .read-more:hover i {
-    margin-left: 10px; /* Arrow moves on hover */
+    margin-left: 10px;
+    /* Arrow moves on hover */
 }
 
 /* --- Home Matches Preview Section --- */
 .home-matches {
     padding: 60px 0;
-    background-color: #f9f9f9; /* Light grey background to separate from other sections */
+    background-color: #f9f9f9;
+    /* Light grey background to separate from other sections */
     text-align: center;
 }
 
@@ -646,9 +673,10 @@ header {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    border-left: 5px solid #d63031; /* Your brand red color */
+    border-left: 5px solid #d63031;
+    /* Your brand red color */
 }
 
 .match-card-mini:hover {
@@ -677,7 +705,8 @@ header {
 .match-teams-mini .match-score {
     font-size: 1.5rem;
     font-weight: 800;
-    color: #d63031; /* Red color for score */
+    color: #d63031;
+    /* Red color for score */
     margin: 5px 0;
 }
 
@@ -707,6 +736,7 @@ header {
     .match-teams-mini .match-score {
         font-size: 1.2rem;
     }
+
     .match-card-mini {
         padding: 15px;
     }
@@ -869,8 +899,7 @@ header {
 .btn-secondary:hover {
     background: white;
     color: var(--primary);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.637),
-        0 0 0 2px rgb(255, 255, 255);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.637), 0 0 0 2px rgb(255, 255, 255);
 }
 
 .btn-sss {
@@ -981,7 +1010,7 @@ header {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
 .menagers-card:hover {
@@ -994,7 +1023,7 @@ header {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
 .players-card:hover {
@@ -1053,8 +1082,8 @@ header {
 .menagers-info h3 {
     color: var(--primary);
     margin-bottom: 5px;
-    transition: all .3s ease;
-    overflow: hidden
+    transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 .menagers-info h3:hover {
@@ -1071,7 +1100,7 @@ header {
     color: var(--primary);
     margin-bottom: 5px;
     font-size: 15px;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
 .players-info h3:hover {
@@ -1234,7 +1263,7 @@ footer {
 
 .footer-section h3 a:hover {
     color: rgb(255, 255, 255);
-    transition: all .2s ease;
+    transition: all 0.2s ease;
     text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.377);
 }
 
@@ -1467,7 +1496,6 @@ footer {
     }
 }
 
-
 /* Privacy Policy Page Style */
 .policy-section {
     padding: 60px 20px;
@@ -1547,7 +1575,10 @@ footer p {
 
 /* --- ABOUT MINI EVENT SECTION --- */
 .about-mini.event {
-    background: linear-gradient(135deg, #1e272e, #111); /* Dark professional background */
+    background: linear-gradient(135deg,
+            #1e272e,
+            #111);
+    /* Dark professional background */
     color: #fff;
     padding: 60px 0;
     margin-top: 40px;
@@ -1565,11 +1596,14 @@ footer p {
 }
 
 .event-text h2 {
-    color: #fff; /* White text for dark background */
-    text-align: left; /* Override center alignment */
+    color: #fff;
+    /* White text for dark background */
+    text-align: left;
+    /* Override center alignment */
     margin-bottom: 15px;
     font-size: 2rem;
-    border-left: 5px solid #e74c3c; /* Red accent line */
+    border-left: 5px solid #e74c3c;
+    /* Red accent line */
     padding-left: 15px;
 }
 
@@ -1607,7 +1641,8 @@ footer p {
 
 .trophy-icon-large {
     font-size: 8rem;
-    color: rgba(255, 255, 255, 0.1); /* Subtle transparent look */
+    color: rgba(255, 255, 255, 0.1);
+    /* Subtle transparent look */
 }
 
 /* Mobile Responsiveness */
@@ -1622,10 +1657,9 @@ footer p {
         border-left: none;
         padding-left: 0;
     }
-    
+
     .event-image {
-        display: none; /* Hide large icon on small screens to save space */
+        display: none;
+        /* Hide large icon on small screens to save space */
     }
 }
-
-
