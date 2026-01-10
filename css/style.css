@@ -363,11 +363,6 @@ header {
     }
 }
 
-@media (max-width: 250px) {
-    .logo a {
-        font-size: 12px;
-    }
-}
 
 /* --- Home Management Section --- */
 .home-management-section {
