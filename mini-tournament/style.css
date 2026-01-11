@@ -553,11 +553,11 @@ body {
 .round-header h3 {
     margin: 0;
     color: #d63031; /* Your theme red */
-    font-size: 1.2rem;
+    font-size: 0.70rem;
 }
 
 .round-date {
-    font-size: 0.9rem;
+    font-size: 0.70rem;
     color: #fff;
     font-weight: bold;
 }
