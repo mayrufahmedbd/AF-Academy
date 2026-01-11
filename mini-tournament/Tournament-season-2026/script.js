@@ -16,25 +16,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-// 1. Function to Load Teams and Players
 function loadTeams(teams) {
     const container = document.getElementById('teams-container');
     if(!container) return;
+
+    container.innerHTML = ''; 
 
     teams.forEach(team => {
         const card = document.createElement('div');
         card.className = 'team-card';
         card.style.borderTopColor = team.color;
 
+        // --- Header Section ---
         const header = document.createElement('div');
-        header.className = 'team-name';
-        header.innerText = team.name;
-        header.style.color = team.color;
+        header.className = 'team-header';
+
+        // 1. Create the Link
+        const link = document.createElement('a');
+        link.href = team.link ? team.link : '#'; 
+        link.className = 'team-link';
+        link.style.color = team.color; // Text and Border color will take this
+
+        // 2. Create the Wrapper DIV (The Circle)
+        const logoWrapper = document.createElement('div');
+        logoWrapper.className = 'team-logo-wrapper';
+        
+        // Optional: Add a border that matches the team color
+        logoWrapper.style.borderColor = team.color; 
+
+        // 3. Create the Image
+        const logoImg = document.createElement('img');
+        logoImg.src = team.logo ? team.logo : 'https://via.placeholder.com/50'; 
+        logoImg.alt = `${team.name} Logo`;
+        logoImg.className = 'team-logo-img';
+
+        // 4. Assemble them
+        logoWrapper.appendChild(logoImg); // Put Image inside Wrapper
+        link.appendChild(logoWrapper);    // Put Wrapper inside Link
+        
+        const nameSpan = document.createElement('span');
+        nameSpan.innerText = team.name;
+        link.appendChild(nameSpan);       // Put Name inside Link
+
+        header.appendChild(link);
         card.appendChild(header);
 
+        // --- Players Section (Unchanged) ---
         const playerGrid = document.createElement('div');
         playerGrid.className = 'players-list';
-
         team.players.forEach(player => {
             const pDiv = document.createElement('div');
             pDiv.className = 'player-item';
@@ -49,7 +78,6 @@ function loadTeams(teams) {
         container.appendChild(card);
     });
 }
-
 
 // 2. Function to Load Group Stage Standings (With Sorting Algorithm)
 function loadGroupMatches(matches) {

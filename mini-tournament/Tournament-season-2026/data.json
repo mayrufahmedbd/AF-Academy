@@ -3,6 +3,8 @@
     {
       "name": "Revolution",
       "color": "#d63031",
+      "logo": "../../img/revolution logo.jpg",
+      "link": "#",
       "players": [
         {
           "name": "©Alamin",
@@ -41,6 +43,8 @@
     {
       "name": "Shahjalal Kings",
       "color": "#e67e22",
+      "logo":"../../img/shahjalal kings.jpeg",
+      "link": "#",
       "players": [
         {
           "name": "©Hujaifa",
@@ -79,6 +83,8 @@
     {
       "name": "Super King",
       "color": "#0984e3",
+      "logo": "../../img/super kings.jpeg",
+      "link": "#",
       "players": [
         {
           "name": "©Nurul Amin",
@@ -117,6 +123,8 @@
     {
       "name": "Debox",
       "color": "#00b894",
+      "logo": "../../img/debox.jpeg",
+      "link": "#",
       "players": [
         {
           "name": "©Shajan",
