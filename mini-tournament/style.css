@@ -605,6 +605,260 @@ body {
     display: block;
 }
 
+/* 1. Make the player item the reference point */
+.player-item {
+    position: relative; /* Crucial for positioning the popup */
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+/* 2. Style the Popup Container */
+.player-popup {
+    position: absolute;
+    bottom: 120%; /* Position above the player */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px); /* Start slightly lower for animation */
+    
+    width: 160px; /* Width of the popup */
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Soft deep shadow */
+    
+    /* Hiding logic */
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100; /* Ensure it sits on top of everything */
+    
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Bouncy animation */
+}
+
+/* 3. The Little Arrow pointing down */
+.player-popup::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* At the bottom of popup */
+    left: 50%;
+    margin-left: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+/* 4. Hover Effect - Show the popup */
+.player-item:hover .player-popup {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0); /* Move up into place */
+}
+
+/* 5. Popup Text Styling */
+.popup-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.popup-team {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.popup-stats {
+    font-size: 0.9rem;
+    color: #555;
+    background: #f4f4f4;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* --- KEEP YOUR EXISTING .player-popup CSS --- */
+.player-popup {
+    /* ... ensure z-index is very high ... */
+    z-index: 99999; 
+}
+
+/* --- OPTION A: Show Below (For Desktop Top Rows) --- */
+.player-popup.show-below {
+    bottom: auto;       /* Stop pushing up */
+    top: 115%;          /* Push down below the image */
+    transform: translateX(-50%); /* Keep centered horizontally */
+}
+
+/* Flip the arrow to point UP */
+.player-popup.show-below::after {
+    top: auto;
+    bottom: 100%;       /* Move arrow to top of box */
+    border-color: transparent transparent white transparent;
+}
+
+/* --- OPTION B: Mobile Center (The Ultimate Fix for Mobile) --- */
+.player-popup.mobile-center {
+    position: fixed;    /* Ignore the player position, look at the SCREEN */
+    top: 50%;           /* Middle of screen */
+    left: 50%;          /* Middle of screen */
+    transform: translate(-50%, -50%); /* Perfect Center */
+    bottom: auto;
+    
+    /* Make it look like a nice card in the middle */
+    width: 280px;
+    box-shadow: 0 0 100px rgba(0,0,0,0.5); /* Darken background slightly */
+}
+
+/* Hide the arrow on mobile since it floats in the middle */
+.player-popup.mobile-center::after {
+    display: none;
+}
+
+/* Optional: Zoom player image slightly on hover */
+.player-item:hover .player-img {
+    transform: scale(1.1);
+    border-color: #ccc; 
+}
+.player-img {
+    transition: transform 0.3s ease;
+}
+
+/* Update Popup Container Size */
+.player-popup {
+    /* Previous settings... */
+    position: absolute;
+    bottom: 125%; 
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    width: 200px; /* Made slightly wider to fit stats */
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* 1. Popup Photo Styling */
+.popup-img-container {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px auto; /* Center horizontally */
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* --- EXISTING CSS (Keep this) --- */
+.player-popup {
+    /* ... your existing styles ... */
+    bottom: 125%; /* Default: Show Above */
+    z-index: 1000;
+    /* ... */
+}
+
+/* --- NEW CSS: The "Below" Modifier --- */
+.player-popup.show-below {
+    bottom: auto;     /* Reset the bottom positioning */
+    top: 120%;        /* Move it below the player */
+    transform: translateX(-50%) translateY(0); /* Adjust animation start point */
+}
+
+/* Fix the Arrow when showing below */
+.player-popup.show-below::after {
+    top: auto;          /* Reset top positioning */
+    bottom: 100%;       /* Move arrow to the top of the popup box */
+    border-color: transparent transparent white transparent; /* Point the arrow UP */
+}
+
+.popup-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures photo looks good in circle */
+}
+
+/* 2. Text Styling */
+.popup-name {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #2d3436;
+    margin-bottom: 2px;
+}
+.popup-team {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.popup-divider {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 10px 0;
+}
+
+/* 3. Stats Row Styling */
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    color: #888;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.stat-value {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* 4. Yellow and Red Cards Styling */
+.cards-container {
+    display: flex;
+    gap: 5px;
+}
+
+.card {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 24px; /* Rectangular shape like a card */
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.yellow-card {
+    background-color: #f1c40f; /* Yellow */
+    color: #2d3436;
+}
+
+.red-card {
+    background-color: #e74c3c; /* Red */
+    color: white;
+}
+
 /* Match Card inside Schedule */
 .match-card-schedule {
     display: flex;

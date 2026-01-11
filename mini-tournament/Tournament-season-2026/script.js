@@ -19,58 +19,105 @@ document.addEventListener("DOMContentLoaded", () => {
 function loadTeams(teams) {
     const container = document.getElementById('teams-container');
     if(!container) return;
-
     container.innerHTML = ''; 
 
     teams.forEach(team => {
+        // ... (Header/Logo creation code - SAME AS BEFORE) ...
         const card = document.createElement('div');
         card.className = 'team-card';
         card.style.borderTopColor = team.color;
 
-        // --- Header Section ---
         const header = document.createElement('div');
         header.className = 'team-header';
-
-        // 1. Create the Link
+        
         const link = document.createElement('a');
-        link.href = team.link ? team.link : '#'; 
         link.className = 'team-link';
-        link.style.color = team.color; // Text and Border color will take this
-
-        // 2. Create the Wrapper DIV (The Circle)
+        link.style.color = team.color;
+        link.href = team.link || '#';
+        
         const logoWrapper = document.createElement('div');
         logoWrapper.className = 'team-logo-wrapper';
+        logoWrapper.style.borderColor = team.color;
         
-        // Optional: Add a border that matches the team color
-        logoWrapper.style.borderColor = team.color; 
-
-        // 3. Create the Image
         const logoImg = document.createElement('img');
-        logoImg.src = team.logo ? team.logo : 'https://via.placeholder.com/50'; 
-        logoImg.alt = `${team.name} Logo`;
+        logoImg.src = team.logo || 'https://via.placeholder.com/50';
         logoImg.className = 'team-logo-img';
-
-        // 4. Assemble them
-        logoWrapper.appendChild(logoImg); // Put Image inside Wrapper
-        link.appendChild(logoWrapper);    // Put Wrapper inside Link
+        
+        logoWrapper.appendChild(logoImg);
+        link.appendChild(logoWrapper);
         
         const nameSpan = document.createElement('span');
         nameSpan.innerText = team.name;
-        link.appendChild(nameSpan);       // Put Name inside Link
-
+        link.appendChild(nameSpan);
         header.appendChild(link);
         card.appendChild(header);
+        // ... (End of Header Code) ...
 
-        // --- Players Section (Unchanged) ---
         const playerGrid = document.createElement('div');
         playerGrid.className = 'players-list';
+
         team.players.forEach(player => {
             const pDiv = document.createElement('div');
             pDiv.className = 'player-item';
+
+            // HTML Structure
             pDiv.innerHTML = `
-                <img src="${player.photo}" alt="${player.name}" class="player-img">
+                <div class="img-wrapper">
+                    <img src="${player.photo}" alt="${player.name}" class="player-img">
+                </div>
                 <span class="player-name">${player.name}</span>
+
+                <div class="player-popup">
+                    <div class="popup-img-container">
+                        <img src="${player.photo}" class="popup-photo">
+                    </div>
+                    <div class="popup-name">${player.name}</div>
+                    <div class="popup-team" style="color: ${team.color}">${team.name}</div>
+                    <hr class="popup-divider">
+                    <div class="stats-row">
+                        <div class="stat-box">
+                            <span class="stat-label">Goals</span>
+                            <span class="stat-value">⚽ ${player.goals || 0}</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">Cards</span>
+                            <div class="cards-container">
+                                <span class="card yellow-card">${player.yellowCards || 0}</span>
+                                <span class="card red-card">${player.redCards || 0}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             `;
+
+            // --- UPDATED SMART POSITIONING LOGIC ---
+            pDiv.addEventListener('mouseenter', function() {
+                const popup = this.querySelector('.player-popup');
+                const rect = this.getBoundingClientRect(); // Get position on screen
+                
+                // CHECK 1: Is this a Mobile Device? (Screen width < 768px)
+                if (window.innerWidth < 768) {
+                    popup.classList.add('mobile-center');
+                    popup.classList.remove('show-below');
+                } 
+                // CHECK 2: Desktop - Is it too close to the top? (Changed 220 -> 300)
+                else if (rect.top < 300) {
+                    popup.classList.add('show-below');
+                    popup.classList.remove('mobile-center');
+                } 
+                // DEFAULT: Desktop - Normal (Show Above)
+                else {
+                    popup.classList.remove('show-below');
+                    popup.classList.remove('mobile-center');
+                }
+            });
+
+            // Optional: Close popup on mouse leave (helps on mobile tap)
+            pDiv.addEventListener('mouseleave', function() {
+                const popup = this.querySelector('.player-popup');
+                popup.classList.remove('show-below', 'mobile-center');
+            });
+
             playerGrid.appendChild(pDiv);
         });
 

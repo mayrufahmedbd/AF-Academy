@@ -8,75 +8,123 @@
       "players": [
         {
           "name": "©Alamin",
-          "photo": "../../img/al amin.jpg"
+          "photo": "../../img/al amin.jpg",
+          "goals": 0,
+          "yellowCards": 0,
+          "redCards": 0
         },
         {
           "name": "Mahid",
-          "photo": "../../img/mahid.jpg"
+          "photo": "../../img/mahid.jpg",
+          "goals": 0,
+          "yellowCards": 0,
+          "redCards": 0
         },
         {
           "name": "Nahid",
-          "photo": "../../img/nahid.jpg"
+          "photo": "../../img/nahid.jpg",
+          "goals": 0,
+          "yellowCards": 0,
+          "redCards": 0
         },
         {
           "name": "Ahsan",
-          "photo": "../../img/ahsan.jpg"
+          "photo": "../../img/ahsan.jpg",
+          "goals": 0,
+          "yellowCards": 0,
+          "redCards": 0
         },
         {
           "name": "Ujjol",
-          "photo": "../../img/ujjol.jpeg"
+          "photo": "../../img/ujjol.jpeg",
+          "goals": 0,
+          "yellowCards": 0,
+          "redCards": 0
         },
         {
           "name": "Mahdi",
-          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+          "goals": 0,
+          "yellowCards": 0,
+          "redCards": 0
         },
         {
           "name": "Sunel",
-          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+          "goals": 0,
+          "yellowCards": 0,
+          "redCards": 0
         },
         {
           "name": "Sajjad",
-          "photo": "../../img/sajjad.JPG"
+          "photo": "../../img/sajjad.JPG",
+          "goals": 0,
+          "yellowCards": 0,
+          "redCards": 0
         }
       ]
     },
     {
       "name": "Shahjalal Kings",
       "color": "#e67e22",
-      "logo":"../../img/shahjalal kings.jpeg",
+      "logo": "../../img/shahjalal kings.jpeg",
       "link": "#",
       "players": [
         {
           "name": "©Hujaifa",
-          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+          "goals": 0,
+          "yellowCards": 0,
+          "redCards": 0
         },
         {
           "name": "Rahul",
-          "photo": "../../img/rahul.jpg"
+          "photo": "../../img/rahul.jpg",
+          "goals": 0,
+          "yellowCards": 0,
+          "redCards": 0
         },
         {
           "name": "Joy",
-          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+          "goals": 0,
+          "yellowCards": 0,
+          "redCards": 0
         },
         {
           "name": "Shuvo",
-          "photo": "../../img/shuvo.jpg"
+          "photo": "../../img/shuvo.jpg",
+          "goals": 0,
+          "yellowCards": 0,
+          "redCards": 0
         },
         {
           "name": "Mayruf",
-          "photo": "../../img/mayruf.jpeg"
+          "photo": "../../img/mayruf.jpeg",
+          "goals": 0,
+          "yellowCards": 0,
+          "redCards": 0
         },
         {
           "name": "Sayid",
-          "photo": "../../img/sayed.jpg"
+          "photo": "../../img/sayed.jpg",
+          "goals": 0,
+          "yellowCards": 0,
+          "redCards": 0
         },
         {
           "name": "Kawshik",
-          "photo": "../../img/kawshik.jpeg"
+          "photo": "../../img/kawshik.jpeg",
+          "goals": 0,
+          "yellowCards": 0,
+          "redCards": 0
         },
         {
           "name": "Jubayer",
-          "photo": "../../img/jubayer.jpeg"
+          "photo": "../../img/jubayer.jpeg",
+          "goals": 0,
+          "yellowCards": 0,
+          "redCards": 0
         }
       ]
     },
@@ -277,7 +325,7 @@
     },
     {
       "id": 3,
-      "teamA": "Revolution",
+      "teamA": "Debox",
       "W": 0,
       "D": 0,
       "L": 0
