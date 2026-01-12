@@ -44,14 +44,14 @@
         },
         {
           "name": "Mahdi",
-          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+          "photo": "../../img/mahdi.jpg",
           "goals": 0,
           "yellowCards": 0,
           "redCards": 0
         },
         {
-          "name": "Sunel",
-          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+          "name": "Sumel",
+          "photo": "../../img/sumel.jpg",
           "goals": 0,
           "yellowCards": 0,
           "redCards": 0

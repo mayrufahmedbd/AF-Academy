@@ -104,12 +104,12 @@
         },
         {
             "id": "p11",
-            "name": "Nasir Ahmed",
+            "name": "Sumel Ahmed",
             "number": "8",
             "position": "CMF",
-            "image": "../img/nasir.JPG",
+            "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
             "social": {
-                "facebook": "https://www.facebook.com/Ahmed.Nasir0007"
+                "facebook": "#"
             }
         },
         {
@@ -226,9 +226,9 @@
         {
             "id": "p23",
             "name": "Mahdi",
-            "number": "",
+            "number": "69",
             "position": "CMF",
-            "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+            "image": "../img/mahdi.jpg",
             "social": {
                 "facebook": "#"
             }
@@ -322,6 +322,14 @@
             "name": "Abdul Hamid",
             "image": "../img/abdul hamid.jpg",
             "country": "UK",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "name": "Sabbir",
+            "image": "../img/sabbir.jpg",
+            "country": "Bangladesh",
             "social": {
                 "facebook": "#"
             }
