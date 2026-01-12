@@ -272,18 +272,11 @@
             "social": {
                 "facebook": "#"
             }
-        },
-        {
-            "id": "p28",
-            "name": "Mamun Islam",
-            "number": "15",
-            "position": "LB",
-            "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
-            "social": {
-                "facebook": "#"
-            }
         }
     ],
+
+
+
     "oldPlayers": [
         {
             "id": "p11",
