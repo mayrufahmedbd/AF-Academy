@@ -283,5 +283,28 @@
                 "facebook": "#"
             }
         }
-    ]
+    ],
+    
+    "oldPlayers": [
+    {
+      "name": "Retired Legend",
+      "image": "images/old_player1.jpg",
+      "number": "10",
+      "position": "Striker",
+      "social": {
+        "facebook": "https://facebook.com",
+        "instagram": ""
+      }
+    },
+    {
+      "name": "Ex-Captain",
+      "image": "images/old_player2.jpg",
+      "number": "5",
+      "position": "Defender",
+      "social": {
+        "facebook": "",
+        "whatsapp": "https://wa.me/123456"
+      }
+    }
+  ]
 }
