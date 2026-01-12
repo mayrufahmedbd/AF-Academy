@@ -1,32 +1,47 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // Fetch the JSON file
+    // 1. Fetch the JSON file
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
-            loadTeams(data.teams);
-            loadGroupMatches(data.groupMatches);
-            loadResults(data.results);
-            // NEW: Load the schedule
-            if(data.schedule) {
-                loadSchedule(data.schedule);
-            }
+            // Load all sections
+            if(data.teams) loadTeams(data.teams);
+            if(data.groupMatches) loadGroupMatches(data.groupMatches);
+            if(data.results) loadResults(data.results);
+            if(data.schedule) loadSchedule(data.schedule);
         })
         .catch(error => console.error('Error loading JSON:', error));
 
+    // 2. Global Click Listener (Closes popups when clicking empty space)
+    document.addEventListener('click', function(event) {
+        
+        // A. Close Player Popups
+        document.querySelectorAll('.player-popup').forEach(popup => {
+            popup.classList.remove('active', 'mobile-center', 'show-below');
+            // Force hide to override any CSS hover effects
+            popup.style.display = ''; 
+        });
+
+        // B. Close Schedule/Pitch Popup
+        const pitchPopup = document.getElementById('match-hover-popup');
+        if (pitchPopup) {
+            pitchPopup.style.display = 'none';
+        }
+    });
 });
 
+// --- TEAMS & PLAYERS FUNCTION ---
 function loadTeams(teams) {
     const container = document.getElementById('teams-container');
     if(!container) return;
     container.innerHTML = ''; 
 
     teams.forEach(team => {
-        // ... (Header/Logo creation code - SAME AS BEFORE) ...
         const card = document.createElement('div');
         card.className = 'team-card';
         card.style.borderTopColor = team.color;
 
+        // --- Header Section ---
         const header = document.createElement('div');
         header.className = 'team-header';
         
@@ -51,8 +66,8 @@ function loadTeams(teams) {
         link.appendChild(nameSpan);
         header.appendChild(link);
         card.appendChild(header);
-        // ... (End of Header Code) ...
 
+        // --- Players Grid ---
         const playerGrid = document.createElement('div');
         playerGrid.className = 'players-list';
 
@@ -60,7 +75,6 @@ function loadTeams(teams) {
             const pDiv = document.createElement('div');
             pDiv.className = 'player-item';
 
-            // HTML Structure
             pDiv.innerHTML = `
                 <div class="img-wrapper">
                     <img src="${player.photo}"
@@ -93,32 +107,36 @@ function loadTeams(teams) {
                 </div>
             `;
 
-            // --- UPDATED SMART POSITIONING LOGIC ---
-            pDiv.addEventListener('mouseenter', function() {
-                const popup = this.querySelector('.player-popup');
-                const rect = this.getBoundingClientRect(); // Get position on screen
-                
-                // CHECK 1: Is this a Mobile Device? (Screen width < 768px)
-                if (window.innerWidth < 768) {
-                    popup.classList.add('mobile-center');
-                    popup.classList.remove('show-below');
-                } 
-                // CHECK 2: Desktop - Is it too close to the top? (Changed 220 -> 300)
-                else if (rect.top < 300) {
-                    popup.classList.add('show-below');
-                    popup.classList.remove('mobile-center');
-                } 
-                // DEFAULT: Desktop - Normal (Show Above)
-                else {
-                    popup.classList.remove('show-below');
-                    popup.classList.remove('mobile-center');
-                }
-            });
+            // --- CLICK LOGIC (FIXED) ---
+            pDiv.addEventListener('click', function(e) {
+                // STOP the click from reaching the document (prevents instant closing)
+                e.stopPropagation();
 
-            // Optional: Close popup on mouse leave (helps on mobile tap)
-            pDiv.addEventListener('mouseleave', function() {
                 const popup = this.querySelector('.player-popup');
-                popup.classList.remove('show-below', 'mobile-center');
+                const wasActive = popup.classList.contains('active');
+
+                // 1. Reset ALL other popups first
+                document.querySelectorAll('.player-popup').forEach(p => {
+                    p.classList.remove('active', 'mobile-center', 'show-below');
+                    p.style.display = ''; // Clear inline styles
+                });
+
+                // 2. If it wasn't active before, show it now
+                if (!wasActive) {
+                    popup.classList.add('active');
+                    popup.style.display = 'block'; // Force show
+
+                    const rect = this.getBoundingClientRect(); 
+                    
+                    // Smart Position Calculation
+                    if (window.innerWidth < 768) {
+                        popup.classList.add('mobile-center');
+                    } 
+                    else if (rect.top < 300) {
+                        popup.classList.add('show-below');
+                    } 
+                    // else: default shows above via CSS
+                }
             });
 
             playerGrid.appendChild(pDiv);
@@ -129,45 +147,40 @@ function loadTeams(teams) {
     });
 }
 
-// 2. Function to Load Group Stage Standings (With Sorting Algorithm)
+// --- STANDINGS FUNCTION (RESTORED) ---
 function loadGroupMatches(matches) {
     const tableBody = document.getElementById('group-stage-body');
-    if(!tableBody) return;
+    if(!tableBody) return; // Matches will fail if HTML ID is missing
 
-    tableBody.innerHTML = ''; // Clear existing content
+    tableBody.innerHTML = ''; 
 
-    // STEP A: Calculate Stats (Points & Matches Played)
+    // Calculate Points
     const processedMatches = matches.map(team => {
         return {
             ...team,
-            mp: team.W + team.D + team.L,       // Matches Played
-            pts: (team.W * 3) + (team.D * 1)    // Points (Win=3, Draw=1)
+            mp: team.W + team.D + team.L,
+            pts: (team.W * 3) + (team.D * 1)
         };
     });
 
-    // STEP B: The Sorting Algorithm
-    // Rule: Sort by Points first. If Points are tied, sort by Wins (W).
+    // Sort: Points first, then Wins
     processedMatches.sort((a, b) => {
         if (b.pts !== a.pts) {
-            return b.pts - a.pts; // Primary: Higher Points
+            return b.pts - a.pts; 
         } else {
-            return b.W - a.W;     // Secondary: Higher Wins
+            return b.W - a.W;
         }
     });
 
-    // STEP C: Generate Table Rows
+    // Create Rows
     processedMatches.forEach((team, index) => {
         const row = document.createElement('tr');
-        
-        // Add a special class for the top 4 teams (Champions League style highlight)
-        const rowClass = index < 4 ? 'top-team' : ''; 
+        if(index < 4) row.classList.add('top-team'); 
 
         row.innerHTML = `
             <td class="position-cell">${index + 1}</td>
             <td class="team-col">
-                <div class="team-info">
-                    <span>${team.teamA}</span>
-                </div>
+                <div class="team-info"><span>${team.teamA}</span></div>
             </td>
             <td>${team.mp}</td>
             <td>${team.W}</td>
@@ -179,8 +192,7 @@ function loadGroupMatches(matches) {
     });
 }
 
-
-// 3. Function to Load Final Results
+// --- RESULTS FUNCTION ---
 function loadResults(results) {
     const createMatchHTML = (match) => `
         <div class="team-row">
@@ -197,17 +209,28 @@ function loadResults(results) {
     const semi2 = document.getElementById('semi-2');
     const grandFinal = document.getElementById('grand-final');
 
-    if(semi1) semi1.innerHTML = createMatchHTML(results.semiFinal1);
-    if(semi2) semi2.innerHTML = createMatchHTML(results.semiFinal2);
-    if(grandFinal) grandFinal.innerHTML += createMatchHTML(results.final);
+    if(semi1 && results.semiFinal1) semi1.innerHTML = createMatchHTML(results.semiFinal1);
+    if(semi2 && results.semiFinal2) semi2.innerHTML = createMatchHTML(results.semiFinal2);
+    if(grandFinal && results.final) grandFinal.innerHTML += createMatchHTML(results.final);
 }
 
-// 4. Function to Load Match Schedule (CREATIVE & CENTERED)
+// --- SCHEDULE FUNCTION (FIXED CLICK) ---
 function loadSchedule(schedule) {
     const container = document.getElementById('schedule-container');
     if (!container) return; 
 
     container.innerHTML = ''; 
+
+    // Create popup if missing
+    let pitchPopup = document.getElementById('match-hover-popup');
+    if (!pitchPopup) {
+        pitchPopup = document.createElement('div');
+        pitchPopup.id = 'match-hover-popup';
+        pitchPopup.className = 'match-hover-popup';
+        // Prevent clicking inside the popup from closing it
+        pitchPopup.addEventListener('click', (e) => e.stopPropagation());
+        document.body.appendChild(pitchPopup);
+    }
 
     schedule.forEach(round => {
         const roundDiv = document.createElement('div');
@@ -224,17 +247,13 @@ function loadSchedule(schedule) {
             const matchCard = document.createElement('div');
             matchCard.className = 'match-card-creative';
 
-            // LOGIC: Check if scores exist. 
-            // If scoreA and scoreB are present, show Score. Otherwise, show Time.
             let centerContent;
-            let centerClass = 'match-time-badge'; // Default style for time
+            let centerClass = 'match-time-badge'; 
 
             if (match.scoreA !== undefined && match.scoreB !== undefined) {
-                // Show Score
                 centerContent = `${match.scoreA} : ${match.scoreB}`;
-                centerClass = 'match-score-badge'; // Style for score (usually bolder)
+                centerClass = 'match-score-badge'; 
             } else {
-                // Show Time
                 centerContent = match.time;
             }
 
@@ -251,6 +270,44 @@ function loadSchedule(schedule) {
                     <span class="team-name">${match.teamB}</span>
                 </div>
             `;
+
+            // --- CLICK LOGIC FOR MATCHES ---
+            matchCard.addEventListener('click', (e) => {
+                e.stopPropagation(); // Stop global closer
+
+                // 1. Content
+                let motmHTML = '';
+                if (match.motm) {
+                    motmHTML = `
+                        <div class="motm-badge">
+                            <span class="motm-icon">⭐</span>
+                            <span>${match.motm}</span>
+                        </div>
+                    `;
+                }
+
+                pitchPopup.innerHTML = `
+                    <div class="pitch-teams">
+                        <div class="pitch-team">${match.teamA || ""}<h6>⚽ ${match.goalByA|| ""}</h6> <h6>👟 ${match.assistA|| ""}</h6></div>
+                        <div class="pitch-vs">VS</div>
+                        <div class="pitch-team">${match.teamB || ""} <h6>⚽ ${match.goalByB|| ""}</h6> <h6>👟 ${match.assistB|| ""}</h6></div>
+                    </div>
+                    ${motmHTML}
+                `;
+
+                // 2. Position
+                const rect = matchCard.getBoundingClientRect();
+                let topPos = rect.top - 190; 
+                let leftPos = rect.left + (rect.width / 2) - 150; 
+
+                // Edge detection
+                if (topPos < 10) topPos = rect.bottom + 10;
+
+                pitchPopup.style.top = `${topPos}px`;
+                pitchPopup.style.left = `${leftPos}px`;
+                pitchPopup.style.display = 'flex';
+            });
+
             roundDiv.appendChild(matchCard);
         });
 

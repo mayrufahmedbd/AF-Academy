@@ -1,31 +1,53 @@
+/* --- Global Variables & Reset --- */
 :root {
+    --primary-red: #d63031;
     --bg-dark: #121212;
     --card-bg: #1e1e1e;
     --text-main: #ffffff;
     --text-muted: #b0b3b8;
+    --accent-gold: #ffd700;
+    --font-family: 'Poppins', sans-serif;
 }
 
 body {
     background-color: var(--bg-dark);
     color: var(--text-main);
-    font-family: sans-serif;
+    font-family: var(--font-family);
+    margin: 0;
+    overflow-x: hidden;
 }
 
+/* --- Layout --- */
 .main-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    position: relative;
+    min-height: 85vh;
 }
 
-.page-title {
+.bg-shape {
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(214, 48, 49, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* --- Typography --- */
+.page-title,
+.hero-section h1 {
     text-align: center;
-    margin: 40px 0 20px 0;
-    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    color: var(--text-main);
+    margin:55px 0 30px 0;
 }
 
-/* --- Team Cards --- */
+/* --- Team Cards Grid --- */
 .teams-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -36,24 +58,55 @@ body {
     background: var(--card-bg);
     border-radius: 12px;
     padding: 20px;
-    border-top: 5px solid #555; /* Default color, JS changes this */
+    border-top: 5px solid #555;
+    /* JS Overrides this */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.team-font-size{
-    font-size: 1.90rem!important;
-}
-
-.team-name {
-    text-align: center;
-    font-size: 0.70rem;
+.team-header {
     margin-bottom: 20px;
-    font-weight: bold;
+    text-align: center;
 }
 
-/* The 8-player grid layout */
+.team-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.team-link:hover {
+    opacity: 0.8;
+}
+
+.team-logo-wrapper {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid currentColor;
+    background-color: #f0f0f0;
+    flex-shrink: 0;
+}
+
+.team-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Players Grid --- */
 .players-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 players per row */
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
 
@@ -62,15 +115,29 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
+    /* Anchor for popup */
+    cursor: pointer;
+}
+
+.img-wrapper {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
 }
 
 .player-img {
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #333;
-    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+}
+
+.player-item:hover .player-img {
+    transform: scale(1.1);
+    border-color: #ccc;
 }
 
 .player-name {
@@ -78,48 +145,359 @@ body {
     color: var(--text-muted);
 }
 
+/* --- PLAYER POPUP SYSTEM (Consolidated) --- */
 
-/* --- STANDINGS TABLE STYLES --- */
+/* 1. Base Styles (Hidden by default) */
+.player-popup {
+    display: none;
+    /* JS toggles this via .active */
+    position: absolute;
+    bottom: 125%;
+    /* Default: Above */
+    left: 50%;
+    transform: translateX(-50%);
 
-/* Wrapper for horizontal scrolling on mobile */
+    width: 220px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    text-align: center;
+}
+
+/* 2. Active State (Shown via JS) */
+.player-popup.active {
+    display: block;
+    animation: fadeIn 0.2s ease-out;
+}
+
+/* 3. The Arrow (Default: Points Down) */
+.player-popup::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+/* 4. Modifier: Show Below (Desktop Top Rows) */
+.player-popup.show-below {
+    bottom: auto;
+    top: 120%;
+}
+
+.player-popup.show-below::after {
+    top: auto;
+    bottom: 100%;
+    border-color: transparent transparent white transparent;
+    /* Points Up */
+}
+
+/* 5. Modifier: Mobile Center (Fixed on Screen) */
+.player-popup.mobile-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: auto;
+    width: 280px;
+    box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.7);
+    /* Dim Background */
+    z-index: 10000;
+}
+
+.player-popup.mobile-center::after {
+    display: none;
+    /* No arrow needed */
+}
+
+/* 6. Popup Internal Content */
+.popup-img-container {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #f0f0f0;
+}
+
+.popup-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popup-name {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #333;
+    margin: 0;
+}
+
+.popup-team {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.popup-divider {
+    height: 1px;
+    background: #eee;
+    border: none;
+    margin: 10px 0;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-value {
+    color: #333;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.cards-container {
+    display: flex;
+    gap: 5px;
+}
+
+.card {
+    width: 16px;
+    height: 22px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: white;
+}
+
+.yellow-card {
+    background-color: #f1c40f;
+    color: #333;
+}
+
+.red-card {
+    background-color: #e74c3c;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* --- Schedule & Match Cards --- */
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.round-section {
+    background: #2b2b2b;
+    border-radius: 10px;
+    padding: 15px;
+    border-left: 4px solid #333;
+}
+
+.round-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.round-header h3 {
+    margin: 0;
+    color: var(--primary-red);
+    font-size: 0.70rem;
+}
+
+.round-date {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.match-card-creative {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px 10px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.match-card-creative:hover {
+    transform: translateY(-2px);
+}
+
+.team-side {
+    flex: 1;
+    font-weight: 600;
+    font-size: 0.70rem;
+    color: #2d3436;
+}
+
+.team-side.left {
+    text-align: right;
+    padding-right: 15px;
+}
+
+.team-side.right {
+    text-align: left;
+    padding-left: 15px;
+}
+
+.match-center {
+    flex: 0 0 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.match-time-badge {
+    background: #f1f2f6;
+    color: #636e72;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+}
+
+.match-score-badge {
+    background: #2d3436;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.70rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/* --- Schedule Pitch Popup --- */
+.match-hover-popup {
+    display: none;
+    /* Toggled by JS */
+    position: fixed;
+    width: 300px;
+    height: 180px;
+    background: linear-gradient(to bottom, #4caf50, #2e7d32);
+    border: 2px solid #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Pitch Markings */
+.match-hover-popup::before {
+    content: '';
+    position: absolute;
+    /* top: 0%; */
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.match-hover-popup::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+.pitch-teams {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 2;
+    margin-top: -10px;
+}
+
+.pitch-team {
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    text-align: center;
+    width: 45%;
+}
+
+.pitch-vs {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+}
+
+.motm-badge {
+    margin-top: 25px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* --- Standings Table --- */
 .table-wrapper {
     overflow-x: auto;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     margin-bottom: 40px;
 }
 
 .standings-table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 600px; /* Forces scroll on very small screens */
-    font-size: 0.60rem;
+    min-width: 600px;
+    font-size: 0.85rem;
 }
 
-/* Header Styling (Dark like the screenshot) */
 .standings-table thead {
-    background-color: #202124; /* Dark grey */
+    background-color: #202124;
     color: #fff;
 }
 
-.standings-table th {
-    padding: 12px 10px;
-    text-align: center;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
-}
-
-/* Specific alignment for Club column */
-.standings-table th.team-col,
-.standings-table td.team-col {
-    text-align: left;
-    padding-left: 20px;
-}
-
-/* Row Styling */
+.standings-table th,
 .standings-table td {
     padding: 12px 10px;
     text-align: center;
@@ -127,65 +505,46 @@ body {
     color: #333;
 }
 
-/* Alternating Row Colors */
-.standings-table tbody tr:nth-child(even) {
+.standings-table th {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.standings-table tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-/* Highlight the Points column */
 .standings-table td.points-cell {
     font-weight: bold;
-    color: #000;
-    background-color: rgba(0,0,0,0.03);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* Team Name & Logo alignment */
+.top-team {
+    background-color: rgba(214, 48, 49, 0.05) !important;
+    /* Slight red tint for top 4 */
+    border-left: 3px solid var(--primary-red);
+}
+
 .team-info {
     display: flex;
     align-items: center;
     gap: 10px;
     font-weight: 600;
-}
-
-.table-logo {
-    width: 25px;
-    height: 25px;
-    object-fit: contain;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 600px) {
-    .standings-table th, 
-    .standings-table td {
-        padding: 10px 5px;
-        font-size: 0.85rem;
-    }
-    
-    .team-info {
-        font-size: 0.9rem;
-    }
+    justify-content: flex-start;
+    padding-left: 10px;
 }
 
 /* --- Results Section --- */
-.divider { margin: 60px 0; border-bottom: 1px solid #333; }
-
 .results-wrapper {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 40px;
     flex-wrap: wrap;
+    margin-top: 40px;
 }
-
-.round-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 30px;
-}
-
-.round-column h3 { text-align: center; color: var(--text-muted); }
 
 .match-card {
+    /* Specifically for Results */
     background: #2a2a2a;
     width: 250px;
     padding: 15px;
@@ -198,701 +557,54 @@ body {
     justify-content: space-between;
     padding: 8px 0;
     border-bottom: 1px solid #333;
-}
-.team-row:last-child { border-bottom: none; }
-
-.score { font-weight: bold; color: #ffa502; }
-
-.final-match { 
-    border: 2px solid #ffd700; 
-    transform: scale(1.1);
-    position: relative;
-}
-
-.trophy-icon {
-    position: absolute;
-    top: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 30px;
-}
-
-
-/* --- Global Variables & Reset --- */
-:root {
-    --primary-red: #d63031;
-    --dark-bg: #1e1e2f;
-    --card-bg: #27293d;
-    --text-white: #ffffff;
-    --text-gray: #9a9a9a;
-}
-
-body {
-    background-color: #1a1a1d; /* Dark Background */
-    color: var(--text-white);
-    font-family: 'Poppins', sans-serif;
-}
-
-/* --- Layout --- */
-.main-content {
-    position: relative;
-    padding: 4rem 0;
-    min-height: 85vh;
-    overflow: hidden;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    position: relative;
-    z-index: 2;
-}
-
-/* --- Creative Background Shape --- */
-.bg-shape {
-    position: absolute;
-    top: -10%;
-    right: -10%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(214, 48, 49, 0.15) 0%, rgba(0,0,0,0) 70%);
-    z-index: 1;
-    pointer-events: none;
-}
-
-/* --- Hero Section --- */
-.hero-section {
-    text-align: center;
-    margin-bottom: 4rem;
-    position: relative;
-    z-index: 2;
-}
-
-.glitch-title {
-    font-size: 3rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    color: var(--text-white);
-    text-shadow: 2px 2px 0px var(--primary-red);
-}
-
-.hero-section p {
-    color: var(--text-gray);
-    font-size: 1.1rem;
-}
-
-/* --- Cards Grid --- */
-.cards-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    justify-content: center;
-}
-
-/* --- The Creative Card --- */
-.season-card {
-    background: var(--card-bg);
-    border-radius: 16px;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.season-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(214, 48, 49, 0.2); /* Red Glow on Hover */
-    border-color: var(--primary-red);
-}
-
-/* Big Number in Background */
-.card-bg-text {
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    font-size: 10rem;
-    font-weight: 900;
-    color: rgba(255, 255, 255, 0.03);
-    z-index: 0;
-    transition: 0.4s;
-}
-
-.season-card:hover .card-bg-text {
-    color: rgba(214, 48, 49, 0.1);
-    transform: scale(1.1);
-}
-
-.card-content {
-    position: relative;
-    z-index: 1;
-    padding: 2rem;
-}
-
-/* --- Card Typography --- */
-.season-card h2 {
-    font-size: 2rem;
-    margin: 15px 0 25px;
-    font-weight: 700;
-}
-
-/* --- Stats Grid Inside Card --- */
-.stats-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-bottom: 25px;
-}
-
-.stat-box {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 10px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.s-label {
-    display: block;
-    font-size: 0.8rem;
-    color: var(--text-gray);
-    text-transform: uppercase;
-}
-
-.s-value {
-    display: block;
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: var(--text-white);
-    margin-top: 5px;
-}
-
-.s-value.tbd {
-    color: var(--primary-red);
-    font-style: italic;
-}
-
-/* --- Badges --- */
-.status-badge {
-    display: inline-block;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.status-badge.pulse {
-    background: rgba(214, 48, 49, 0.2);
-    color: var(--primary-red);
-    border: 1px solid var(--primary-red);
-    animation: pulse-animation 2s infinite;
-}
-
-.status-badge.completed {
-    background: rgba(255, 255, 255, 0.1);
-    color: #aaa;
-}
-
-/* --- Buttons --- */
-.action-btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 15px 20px;
-    background: var(--primary-red);
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.action-btn:hover {
-    background: #ff4757;
-    letter-spacing: 1px;
-}
-
-.action-btn.outline {
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-.action-btn.outline:hover {
-    border-color: white;
-    background: rgba(255,255,255,0.05);
-}
-
-/* --- Animations --- */
-@keyframes pulse-animation {
-    0% { box-shadow: 0 0 0 0 rgba(214, 48, 49, 0.4); }
-    70% { box-shadow: 0 0 0 10px rgba(214, 48, 49, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(214, 48, 49, 0); }
-}
-
-/* --- Mobile Fixes --- */
-@media (max-width: 768px) {
-    .glitch-title { font-size: 2.2rem; }
-    .card-bg-text { font-size: 8rem; }
-}
-
-
-/* --- Creative Schedule Design --- */
-
-.match-card-creative {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #ffffff;
-    padding: 15px 10px;
-    margin-bottom: 12px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease;
-}
-
-.match-card-creative:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-}
-
-/* Team Names Sides */
-.team-side {
-    flex: 1; /* Takes up equal space */
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: #2d3436;
-}
-
-.team-side.left {
-    text-align: right; /* Pushes Team A text towards center */
-    padding-right: 15px;
-}
-
-.team-side.right {
-    text-align: left; /* Pushes Team B text towards center */
-    padding-left: 15px;
-}
-
-/* Center Badge Area */
-.match-center {
-    flex: 0 0 100px; /* Fixed width for the center to prevent shifting */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Style for Time (Upcoming Match) */
-.match-time-badge {
-    background-color: #f1f2f6;
-    color: #636e72;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.60rem;
-    /* font-weight: 500; */
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
-}
-
-/* Style for Score (Finished Match) */
-.match-score-badge {
-    background-color: #2d3436; /* Dark background for score */
-    color: #fff;               /* White text */
-    padding: 6px 18px;
-    border-radius: 20px;
-    font-size: 0.70rem;
-    font-weight: 800;
-    letter-spacing: 2px;       /* Spacing between numbers */
-    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-}
-
-/* Mobile Tweak: Reduce font size slightly on small screens */
-@media (max-width: 480px) {
-    .team-side {
-        font-size: 0.85rem;
-    }
-    .match-center {
-        flex: 0 0 80px;
-    }
-    .match-time-badge, .match-score-badge {
-        font-size: 0.8rem;
-        padding: 5px 10px;
-    }
-}
-
-/* Schedule Grid */
-.schedule-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    padding: 0 10px;
-    margin-bottom: 2rem;
-}
-
-/* Round Section */
-.round-section {
-    background: #2b2b2b;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border-left: 4px solid #333; /* Dark accent */
-}
-
-.round-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-}
-
-.round-header h3 {
-    margin: 0;
-    color: #d63031; /* Your theme red */
-    font-size: 0.70rem;
-}
-
-.round-date {
-    font-size: 0.70rem;
     color: #fff;
+}
+
+.team-row:last-child {
+    border-bottom: none;
+}
+
+.score {
     font-weight: bold;
+    color: var(--accent-gold);
 }
 
-/* Container for the Logo and Text */
-.team-link {
-    display: flex;
-    align-items: center;     /* Centers them vertically */
-    justify-content: center; /* Centers them horizontally */
-    gap: 12px;               /* Space between circle and text */
-    text-decoration: none;
-    font-size: 1.4rem;       /* Size of the Team Name */
-    font-weight: bold;
-    margin-bottom: 10px;
-    transition: opacity 0.3s ease;
+.final-match {
+    border: 2px solid var(--accent-gold);
+    transform: scale(1.05);
 }
 
-.team-link:hover {
-    opacity: 0.8;
+/* --- Mobile Queries --- */
+@media (max-width: 768px) {
+    .players-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Keep 4 cols */
+
+    .team-link {
+        font-size: 1.1rem;
+    }
+
+    .match-card-creative {
+        flex-direction: row;
+    }
+
+    .match-time-badge,
+    .match-score-badge {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
 }
 
-/* The Circle Wrapper (The Div) */
-.team-logo-wrapper {
-    width: 45px;             /* Controlled small size */
-    height: 45px;            /* Same height for perfect circle */
-    border-radius: 50%;      /* Makes it a circle */
-    overflow: hidden;        /* Cuts off anything outside the circle */
-    
-    /* Flexbox to center the image inside the circle perfectly */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    /* Optional: A thin border around the circle */
-    border: 2px solid currentColor; 
-    background-color: #f0f0f0; /* Fallback background */
-    flex-shrink: 0;          /* Prevents circle from getting squished on small screens */
-}
+@media (max-width: 480px) {
+    .players-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
 
-/* The Image inside the wrapper */
-.team-logo-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;       /* Key: Zooms image to fill circle without stretching */
-    display: block;
-}
-
-/* 1. Make the player item the reference point */
-.player-item {
-    position: relative; /* Crucial for positioning the popup */
-    cursor: pointer;
-    text-align: center;
-    transition: transform 0.2s;
-}
-
-/* 2. Style the Popup Container */
-/* .player-popup {
-    position: absolute;
-    bottom: 120%; 
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    
-    width: 160px; 
-    background: white;
-    padding: 12px;
-    border-radius: 8px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    opacity: 0;
-    visibility: hidden;
-    z-index: 100; 
-    
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); 
-} */
-
-/* 3. The Little Arrow pointing down */
-.player-popup::after {
-    content: '';
-    position: absolute;
-    top: 100%; /* At the bottom of popup */
-    left: 50%;
-    margin-left: -8px;
-    border-width: 8px;
-    border-style: solid;
-    border-color: white transparent transparent transparent;
-}
-
-/* 4. Hover Effect - Show the popup */
-.player-item:hover .player-popup {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0); /* Move up into place */
-}
-
-/* 5. Popup Text Styling */
-.popup-name {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 4px;
-}
-
-.popup-team {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
-}
-
-.popup-stats {
-    font-size: 0.9rem;
-    color: #555;
-    background: #f4f4f4;
-    padding: 4px 8px;
-    border-radius: 4px;
-    display: inline-block;
-}
-
-/* --- KEEP YOUR EXISTING .player-popup CSS --- */
-.player-popup {
-    /* ... ensure z-index is very high ... */
-    z-index: 99999; 
-}
-
-/* --- OPTION A: Show Below (For Desktop Top Rows) --- */
-.player-popup.show-below {
-    bottom: auto;       /* Stop pushing up */
-    top: 115%;          /* Push down below the image */
-    transform: translateX(-50%); /* Keep centered horizontally */
-}
-
-/* Flip the arrow to point UP */
-.player-popup.show-below::after {
-    top: auto;
-    bottom: 100%;       /* Move arrow to top of box */
-    border-color: transparent transparent white transparent;
-}
-
-/* --- OPTION B: Mobile Center (The Ultimate Fix for Mobile) --- */
-.player-popup.mobile-center {
-    position: fixed;    /* Ignore the player position, look at the SCREEN */
-    top: 50%;           /* Middle of screen */
-    left: 50%;          /* Middle of screen */
-    transform: translate(-50%, -50%); /* Perfect Center */
-    bottom: auto;
-    
-    /* Make it look like a nice card in the middle */
-    width: 280px;
-    box-shadow: 0 0 100px rgba(0,0,0,0.5); /* Darken background slightly */
-}
-
-/* Hide the arrow on mobile since it floats in the middle */
-.player-popup.mobile-center::after {
-    display: none;
-}
-
-/* Optional: Zoom player image slightly on hover */
-.player-item:hover .player-img {
-    transform: scale(1.1);
-    border-color: #ccc; 
-}
-.player-img {
-    transition: transform 0.3s ease;
-}
-
-/* Update Popup Container Size */
-.player-popup {
-    /* Previous settings... */
-    position: absolute;
-    bottom: 125%; 
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    width: 200px; /* Made slightly wider to fit stats */
-    background: white;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    opacity: 0;
-    visibility: hidden;
-    z-index: 100;
-    text-align: center;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-
-/* 1. Popup Photo Styling */
-.popup-img-container {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 10px auto; /* Center horizontally */
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid #f0f0f0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* --- EXISTING CSS (Keep this) --- */
-.player-popup {
-    /* ... your existing styles ... */
-    bottom: 125%; /* Default: Show Above */
-    z-index: 1000;
-    /* ... */
-}
-
-/* --- NEW CSS: The "Below" Modifier --- */
-.player-popup.show-below {
-    bottom: auto;     /* Reset the bottom positioning */
-    top: 120%;        /* Move it below the player */
-    transform: translateX(-50%) translateY(0); /* Adjust animation start point */
-}
-
-/* Fix the Arrow when showing below */
-.player-popup.show-below::after {
-    top: auto;          /* Reset top positioning */
-    bottom: 100%;       /* Move arrow to the top of the popup box */
-    border-color: transparent transparent white transparent; /* Point the arrow UP */
-}
-
-.popup-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures photo looks good in circle */
-}
-
-/* 2. Text Styling */
-.popup-name {
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: #2d3436;
-    margin-bottom: 2px;
-}
-.popup-team {
-    font-size: 0.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.popup-divider {
-    border: 0;
-    height: 1px;
-    background: #eee;
-    margin: 10px 0;
-}
-
-/* 3. Stats Row Styling */
-.stats-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-}
-
-.stat-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.stat-label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.7rem;
-    color: #888;
-    margin-bottom: 4px;
-    text-transform: uppercase;
-}
-
-.stat-value {
-    font-weight: bold;
-    font-size: 1rem;
-    color: #333;
-}
-
-/* 4. Yellow and Red Cards Styling */
-.cards-container {
-    display: flex;
-    gap: 5px;
-}
-
-.card {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 18px;
-    height: 24px; /* Rectangular shape like a card */
-    border-radius: 3px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.yellow-card {
-    background-color: #f1c40f; /* Yellow */
-    color: #2d3436;
-}
-
-.red-card {
-    background-color: #e74c3c; /* Red */
-    color: white;
-}
-
-/* Match Card inside Schedule */
-.match-card-schedule {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #f9f9f9;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 6px;
-}
-
-.match-time {
-    font-weight: bold;
-    color: #333;
-    font-size: 0.9rem;
-    min-width: 70px;
-}
-
-.match-teams {
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-end; /* Aligns teams to right */
-    align-items: center;
-    gap: 8px;
-    font-size: 0.95rem;
-}
-
-.match-teams .vs {
-    font-size: 0.8rem;
-    color: #aaa;
-    font-weight: bold;
-}
-
-.team-name {
-    font-weight: 500;
+    /* Drop to 3 on very small screens */
+    .player-img {
+        width: 40px;
+        height: 40px;
+    }
 }
