@@ -76,8 +76,9 @@ function loadTeams(teams) {
                     <hr class="popup-divider">
                     <div class="stats-row">
                         <div class="stat-box">
-                            <span class="stat-label">Goals</span>
+                            <span class="stat-label"></span>
                             <span class="stat-value">⚽ ${player.goals || 0}</span>
+                            <span class="stat-value">👟 ${player.assist || 0}</span>
                         </div>
                         <div class="stat-box">
                             <span class="stat-label">Cards</span>

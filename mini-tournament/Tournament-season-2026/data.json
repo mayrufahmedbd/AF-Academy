@@ -10,6 +10,7 @@
           "name": "©Alamin",
           "photo": "../../img/al amin.jpg",
           "goals": 0,
+          "assist": 0,
           "yellowCards": 0,
           "redCards": 0
         },
@@ -217,7 +218,9 @@
         {
           "teamA": "Super King",
           "teamB": "Shahjalal Kings",
-          "time": "4:00 PM"
+          "time": "4:00 PM",
+          "scoreA": 0,
+          "scoreB": 0
         },
         {
           "teamA": "Revolution",

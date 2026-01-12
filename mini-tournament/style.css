@@ -503,7 +503,7 @@ body {
     color: #fff;               /* White text */
     padding: 6px 18px;
     border-radius: 20px;
-    font-size: 1rem;
+    font-size: 0.70rem;
     font-weight: 800;
     letter-spacing: 2px;       /* Spacing between numbers */
     box-shadow: 0 3px 6px rgba(0,0,0,0.2);
@@ -614,25 +614,23 @@ body {
 }
 
 /* 2. Style the Popup Container */
-.player-popup {
+/* .player-popup {
     position: absolute;
-    bottom: 120%; /* Position above the player */
+    bottom: 120%; 
     left: 50%;
-    transform: translateX(-50%) translateY(10px); /* Start slightly lower for animation */
+    transform: translateX(-50%) translateY(10px);
     
-    width: 160px; /* Width of the popup */
+    width: 160px; 
     background: white;
     padding: 12px;
     border-radius: 8px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Soft deep shadow */
-    
-    /* Hiding logic */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     opacity: 0;
     visibility: hidden;
-    z-index: 100; /* Ensure it sits on top of everything */
+    z-index: 100; 
     
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Bouncy animation */
-}
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); 
+} */
 
 /* 3. The Little Arrow pointing down */
 .player-popup::after {
@@ -819,6 +817,9 @@ body {
 }
 
 .stat-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 0.7rem;
     color: #888;
     margin-bottom: 4px;
