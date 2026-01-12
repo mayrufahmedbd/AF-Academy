@@ -272,6 +272,36 @@
             "social": {
                 "facebook": "#"
             }
+        },
+        {
+            "id": "p28",
+            "name": "Fayem",
+            "number": "",
+            "position": "CMF",
+            "image": "../img/rafid.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p29",
+            "name": "Joy",
+            "number": "16",
+            "position": "RW",
+            "image": "../img/joy.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p30",
+            "name": "Sadikul",
+            "number": "",
+            "position": "CMF",
+            "image": "../img/fayem.jpg",
+            "social": {
+                "facebook": "#"
+            }
         }
     ],
 
@@ -323,6 +353,14 @@
             "name": "Sabbir",
             "image": "../img/sabbir.jpg",
             "country": "Bangladesh",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "name": "Sadik",
+            "image": "../img/sadik.jpg",
+            "country": "Qatar",
             "social": {
                 "facebook": "#"
             }

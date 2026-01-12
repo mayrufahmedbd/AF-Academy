@@ -87,7 +87,7 @@
         },
         {
           "name": "Joy",
-          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+          "photo": "../../img/joy.jpg",
           "goals": 0,
           "yellowCards": 0,
           "redCards": 0
@@ -108,7 +108,7 @@
         },
         {
           "name": "Sayid",
-          "photo": "../../img/sayed.jpg",
+          "photo": "../../img/sayedp.jpg",
           "goals": 0,
           "yellowCards": 0,
           "redCards": 0
@@ -137,7 +137,7 @@
       "players": [
         {
           "name": "©Nurul Amin",
-          "photo": "../../img/nurul.jpg"
+          "photo": "../../img/nurulp.jpg"
         },
         {
           "name": "Sanar",
@@ -193,7 +193,7 @@
         },
         {
           "name": "Rohim",
-          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+          "photo": "../../img/rohim.jpg"
         },
         {
           "name": "Mamun",
