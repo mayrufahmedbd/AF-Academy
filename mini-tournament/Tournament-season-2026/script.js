@@ -63,7 +63,9 @@ function loadTeams(teams) {
             // HTML Structure
             pDiv.innerHTML = `
                 <div class="img-wrapper">
-                    <img src="${player.photo}" alt="${player.name}" class="player-img">
+                    <img src="${player.photo}"
+                    onerror="this.src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'"
+                    alt="${player.name}" class="player-img">
                 </div>
                 <span class="player-name">${player.name}</span>
 

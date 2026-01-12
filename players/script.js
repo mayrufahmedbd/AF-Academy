@@ -50,7 +50,7 @@ function createCurrentPlayerCard(p) {
                 data-number="${p.number}"
                 data-position="${p.position}">
             <div class="players-image">
-                <img src="${p.image}" alt="${p.name}">
+                <img src="${p.image}" onerror="this.src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'" alt="${p.name}">
             </div>
             <div class="players-info">
                 <h3>${p.name}</h3>
@@ -71,7 +71,7 @@ function createOldPlayerCard(p) {
                 data-img="${p.image}"
                 data-country="${p.country}">
             <div class="players-image">
-                <img src="${p.image}" alt="${p.name}">
+                <img src="${p.image}" onerror="this.src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'" alt="${p.name}">
             </div>
             <div class="players-info">
                 <h3>${p.name}</h3>
