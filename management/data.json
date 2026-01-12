@@ -2,18 +2,6 @@
     "management": [
         {
             "id": "m1",
-            "name": "Al Amin",
-            "role": "Managing Director",
-            "image": "../img/al amin.jpg",
-            "bio": "15 years of football management experience. Former professional player with extensive coaching credentials. Al Amin holds a UEFA A license and has developed numerous players who have gone on to professional careers.",
-            "social": {
-                "linkedin": "#",
-                "twitter": "#",
-                "email": "#"
-            }
-        },
-        {
-            "id": "m2",
             "name": "Shakirul Goush",
             "role": "Chairman",
             "image": "../img/gous.jpg",
@@ -25,11 +13,23 @@
             }
         },
         {
-            "id": "m3",
+            "id": "m2",
             "name": "Imran Bin Ahad",
             "role": "General Secretary",
             "image": "../img/imran.jpg",
             "bio": "Imran oversees the day-to-day operations of the academy. With a degree in Sports Science and 10 years of experience in football administration, he ensures smooth functioning of all programs and facilities.",
+            "social": {
+                "linkedin": "#",
+                "twitter": "#",
+                "email": "#"
+            }
+        },
+                {
+            "id": "m3",
+            "name": "Al Amin",
+            "role": "Managing Director",
+            "image": "../img/al amin.jpg",
+            "bio": "15 years of football management experience. Former professional player with extensive coaching credentials. Al Amin holds a UEFA A license and has developed numerous players who have gone on to professional careers.",
             "social": {
                 "linkedin": "#",
                 "twitter": "#",
@@ -50,18 +50,6 @@
         },
         {
             "id": "m5",
-            "name": "Limon Ahmed",
-            "role": "Sports Secretary and Team Manager",
-            "image": "../img/limon.jpg",
-            "bio": "Sports and team leader",
-            "social": {
-                "linkedin": "#",
-                "twitter": "#",
-                "email": "#"
-            }
-        },
-        {
-            "id": "m6",
             "name": "Nurul Amin",
             "role": "Head Coach",
             "image": "../img/nurul.jpg",

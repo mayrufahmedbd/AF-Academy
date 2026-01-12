@@ -298,7 +298,17 @@
             "name": "Sadikul",
             "number": "",
             "position": "CMF",
-            "image": "../img/fayem.jpg",
+            "image": "../img/.jpg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p31",
+            "name": "Rifat",
+            "number": "",
+            "position": "CB",
+            "image": "../img/rifat.jpg",
             "social": {
                 "facebook": "#"
             }
