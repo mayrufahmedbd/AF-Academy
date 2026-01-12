@@ -284,27 +284,47 @@
             }
         }
     ],
-    
     "oldPlayers": [
-    {
-      "name": "Retired Legend",
-      "image": "images/old_player1.jpg",
-      "number": "10",
-      "position": "Striker",
-      "social": {
-        "facebook": "https://facebook.com",
-        "instagram": ""
-      }
-    },
-    {
-      "name": "Ex-Captain",
-      "image": "images/old_player2.jpg",
-      "number": "5",
-      "position": "Defender",
-      "social": {
-        "facebook": "",
-        "whatsapp": "https://wa.me/123456"
-      }
-    }
-  ]
+        {
+            "id": "p11",
+            "name": "Nasir Ahmed",
+            "country": "Qatar",
+            "image": "../img/nasir.JPG",
+            "social": {
+                "facebook": "https://www.facebook.com/Ahmed.Nasir0007"
+            }
+        },
+        {
+            "name": "Anwar",
+            "image": "../img/anwar.jpg",
+            "country": "Russia",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "name": "Abdullah",
+            "image": "../img/abdullah.jpg",
+            "country": "UK",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "name": "Abdus Salam",
+            "image": "../img/abdus salam.jpg",
+            "country": "UK",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "name": "Abdul Hamid",
+            "image": "../img/abdul hamid.jpg",
+            "country": "UK",
+            "social": {
+                "facebook": "#"
+            }
+        }
+    ]
 }
