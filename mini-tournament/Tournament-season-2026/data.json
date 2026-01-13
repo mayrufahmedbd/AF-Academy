@@ -66,9 +66,9 @@
       ]
     },
     {
-      "name": "Shahjalal Kings",
+      "name": "Golden Eagles",
       "color": "#e67e22",
-      "logo": "../../img/shahjalal kings.jpeg",
+      "logo": "../../img/Golden Eagles.jpg",
       "link": "#",
       "players": [
         {
@@ -217,7 +217,7 @@
       "matches": [
         {
           "teamA": "Super King",
-          "teamB": "Shahjalal Kings",
+          "teamB": "Golden Eagles",
           "time": "4:00 PM"
         },
         {
@@ -238,7 +238,7 @@
         },
         {
           "teamA": "Revolution",
-          "teamB": "Shahjalal Kings",
+          "teamB": "Golden Eagles",
           "time": "4:30 PM"
         }
       ]
@@ -254,7 +254,7 @@
         },
         {
           "teamA": "Debox",
-          "teamB": "Shahjalal Kings",
+          "teamB": "Golden Eagles",
           "time": "4:30 PM"
         }
       ]
@@ -264,7 +264,7 @@
       "date": "Jan 18, 2026",
       "matches": [
         {
-          "teamA": "Shahjalal Kings",
+          "teamA": "Golden Eagles",
           "teamB": "Super King",
           "time": "4:00 PM"
         },
@@ -285,7 +285,7 @@
           "time": "4:00 PM"
         },
         {
-          "teamA": "Shahjalal Kings",
+          "teamA": "Golden Eagles",
           "teamB": "Revolution",
           "time": "4:30 PM"
         }
@@ -301,7 +301,7 @@
           "time": "4:00 PM"
         },
         {
-          "teamA": "Shahjalal Kings",
+          "teamA": "Golden Eagles",
           "teamB": "Debox",
           "time": "4:30 PM"
         }
@@ -333,7 +333,7 @@
     },
     {
       "id": 4,
-      "teamA": "Shahjalal Kings",
+      "teamA": "Golden Eagles",
       "W": 0,
       "D": 0,
       "L": 0
@@ -343,7 +343,7 @@
     "semiFinal1": {
       "teamA": "Revolution",
       "scoreA": 0,
-      "teamB": "Shahjalal Kings",
+      "teamB": "Golden Eagles",
       "scoreB": 0
     },
     "semiFinal2": {
