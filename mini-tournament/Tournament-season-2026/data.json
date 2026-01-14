@@ -170,7 +170,7 @@
       ]
     },
     {
-      "name": "Debox",
+      "name": "D-Box",
       "color": "#00b894",
       "logo": "../../img/debox.jpeg",
       "link": "#",
@@ -222,7 +222,7 @@
         },
         {
           "teamA": "Revolution",
-          "teamB": "Debox",
+          "teamB": "D-Box",
           "time": "4:31 PM"
         }
       ]
@@ -232,7 +232,7 @@
       "date": "Jan 16, 2026",
       "matches": [
         {
-          "teamA": "Debox",
+          "teamA": "D-Box",
           "teamB": "Super King",
           "time": "4:00 PM"
         },
@@ -253,7 +253,7 @@
           "time": "4:00 PM"
         },
         {
-          "teamA": "Debox",
+          "teamA": "D-Box",
           "teamB": "Golden Eagles",
           "time": "4:30 PM"
         }
@@ -269,7 +269,7 @@
           "time": "4:00 PM"
         },
         {
-          "teamA": "Debox",
+          "teamA": "D-Box",
           "teamB": "Revolution",
           "time": "4:30 PM"
         }
@@ -281,7 +281,7 @@
       "matches": [
         {
           "teamA": "Super King",
-          "teamB": "Debox",
+          "teamB": "D-Box",
           "time": "4:00 PM"
         },
         {
@@ -302,7 +302,7 @@
         },
         {
           "teamA": "Golden Eagles",
-          "teamB": "Debox",
+          "teamB": "D-Box",
           "time": "4:30 PM"
         }
       ]
@@ -326,7 +326,7 @@
     },
     {
       "id": 3,
-      "teamA": "Debox",
+      "teamA": "D-Box",
       "W": 0,
       "D": 0,
       "L": 0
@@ -349,7 +349,7 @@
     "semiFinal2": {
       "teamA": "Super King",
       "scoreA": 0,
-      "teamB": "Debox",
+      "teamB": "D-Box",
       "scoreB": 0
     },
     "final": {

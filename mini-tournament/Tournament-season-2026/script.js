@@ -288,9 +288,9 @@ function loadSchedule(schedule) {
 
                 pitchPopup.innerHTML = `
                     <div class="pitch-teams">
-                        <div class="pitch-team">${match.teamA || ""}<h6>⚽ ${match.goalByA|| ""}</h6> <h6>👟 ${match.assistA|| ""}</h6></div>
+                        <div class="pitch-team">${match.teamA || ""}<h6>${match.goalByA|| ""}</h6> <h6>${match.assistA|| ""}</h6></div>
                         <div class="pitch-vs">VS</div>
-                        <div class="pitch-team">${match.teamB || ""} <h6>⚽ ${match.goalByB|| ""}</h6> <h6>👟 ${match.assistB|| ""}</h6></div>
+                        <div class="pitch-team">${match.teamB || ""} <h6>${match.goalByB|| ""}</h6> <h6>${match.assistB|| ""}</h6></div>
                     </div>
                     ${motmHTML}
                 `;
