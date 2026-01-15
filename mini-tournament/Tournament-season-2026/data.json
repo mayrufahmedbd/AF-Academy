@@ -1,362 +1,377 @@
 {
-  "teams": [
-    {
-      "name": "Revolution",
-      "color": "#d63031",
-      "logo": "../../img/revolution logo.jpg",
-      "link": "#",
-      "players": [
-        {
-          "name": "©Alamin",
-          "photo": "../../img/al aminp.jpg",
-          "goals": 0,
-          "assist": 0,
-          "yellowCards": 0,
-          "redCards": 0
-        },
-        {
-          "name": "Mahid",
-          "photo": "../../img/mahid.jpg",
-          "goals": 0,
-          "yellowCards": 0,
-          "redCards": 0
-        },
-        {
-          "name": "Nahid",
-          "photo": "../../img/nahid.jpg",
-          "goals": 0,
-          "yellowCards": 0,
-          "redCards": 0
-        },
-        {
-          "name": "Ahsan",
-          "photo": "../../img/ahsan.jpg",
-          "goals": 0,
-          "yellowCards": 0,
-          "redCards": 0
-        },
-        {
-          "name": "Ujjol",
-          "photo": "../../img/ujjol.jpeg",
-          "goals": 0,
-          "yellowCards": 0,
-          "redCards": 0
-        },
-        {
-          "name": "Mahdi",
-          "photo": "../../img/mahdi.jpg",
-          "goals": 0,
-          "yellowCards": 0,
-          "redCards": 0
-        },
-        {
-          "name": "Sumel",
-          "photo": "../../img/sumel.jpg",
-          "goals": 0,
-          "yellowCards": 0,
-          "redCards": 0
-        },
-        {
-          "name": "Sajjad",
-          "photo": "../../img/sajjad.JPG",
-          "goals": 0,
-          "yellowCards": 0,
-          "redCards": 0
-        }
-      ]
-    },
-    {
-      "name": "Golden Eagles",
-      "color": "#e67e22",
-      "logo": "../../img/Golden Eagles.jpg",
-      "link": "#",
-      "players": [
-        {
-          "name": "©Hujaifa",
-          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
-          "goals": 0,
-          "yellowCards": 0,
-          "redCards": 0
-        },
-        {
-          "name": "Rahul",
-          "photo": "../../img/rahul.jpg",
-          "goals": 0,
-          "yellowCards": 0,
-          "redCards": 0
-        },
-        {
-          "name": "Joy",
-          "photo": "../../img/joy.jpg",
-          "goals": 0,
-          "yellowCards": 0,
-          "redCards": 0
-        },
-        {
-          "name": "Shuvo",
-          "photo": "../../img/shuvo.jpg",
-          "goals": 0,
-          "yellowCards": 0,
-          "redCards": 0
-        },
-        {
-          "name": "Mayruf",
-          "photo": "../../img/mayruf.jpeg",
-          "goals": 0,
-          "yellowCards": 0,
-          "redCards": 0
-        },
-        {
-          "name": "Sayid",
-          "photo": "../../img/sayedp.jpg",
-          "goals": 0,
-          "yellowCards": 0,
-          "redCards": 0
-        },
-        {
-          "name": "Kawshik",
-          "photo": "../../img/kawshik.jpeg",
-          "goals": 0,
-          "yellowCards": 0,
-          "redCards": 0
-        },
-        {
-          "name": "Jubayer",
-          "photo": "../../img/jubayer.jpeg",
-          "goals": 0,
-          "yellowCards": 0,
-          "redCards": 0
-        }
-      ]
-    },
-    {
-      "name": "Super King",
-      "color": "#0984e3",
-      "logo": "../../img/super kings.jpeg",
-      "link": "#",
-      "players": [
-        {
-          "name": "©Nurul Amin",
-          "photo": "../../img/nurulp.jpg"
-        },
-        {
-          "name": "Sanar",
-          "photo": "../../img/sanar.jpg"
-        },
-        {
-          "name": "Kawser",
-          "photo": "../../img/kawsar.jpg"
-        },
-        {
-          "name": "Arnob",
-          "photo": "../../img/arnob.jpg"
-        },
-        {
-          "name": "Sawon",
-          "photo": "../../img/Shawn.jpeg"
-        },
-        {
-          "name": "Sahadat",
-          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-        },
-        {
-          "name": "Rifat",
-          "photo": "../../img/rifat.jpg"
-        },
-        {
-          "name": "Jubayer Jr",
-          "photo": "../../img/jubayer.jpg"
-        }
-      ]
-    },
-    {
-      "name": "D-Box",
-      "color": "#00b894",
-      "logo": "../../img/debox.jpeg",
-      "link": "#",
-      "players": [
-        {
-          "name": "©Shajan",
-          "photo": "../../img/shahjan.jpg"
-        },
-        {
-          "name": "Rohid",
-          "photo": "../../img/rohide.jpg"
-        },
-        {
-          "name": "Suhan",
-          "photo": "../../img/suhan.jpg"
-        },
-        {
-          "name": "Tasrif",
-          "photo": "../../img/tashrif.jpg"
-        },
-        {
-          "name": "Rohim",
-          "photo": "../../img/rohim.jpg"
-        },
-        {
-          "name": "Mamun",
-          "photo": "../../img/mamunlb.jpg"
-        },
-        {
-          "name": "Tuhin",
-          "photo": "../../img/tuhinur.jpg"
-        },
-        {
-          "name": "Shipu",
-          "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-        }
-      ]
-    }
-  ],
-  "schedule": [
-    {
-      "round": 1,
-      "date": "Jan 15, 2026",
-      "matches": [
-        {
-          "teamA": "Super King",
-          "teamB": "Golden Eagles",
-          "time": "4:00 PM"
-        },
-        {
-          "teamA": "Revolution",
-          "teamB": "D-Box",
-          "time": "4:31 PM"
-        }
-      ]
-    },
-    {
-      "round": 2,
-      "date": "Jan 16, 2026",
-      "matches": [
-        {
-          "teamA": "D-Box",
-          "teamB": "Super King",
-          "time": "4:00 PM"
-        },
-        {
-          "teamA": "Revolution",
-          "teamB": "Golden Eagles",
-          "time": "4:30 PM"
-        }
-      ]
-    },
-    {
-      "round": 3,
-      "date": "Jan 17, 2026",
-      "matches": [
-        {
-          "teamA": "Super King",
-          "teamB": "Revolution",
-          "time": "4:00 PM"
-        },
-        {
-          "teamA": "D-Box",
-          "teamB": "Golden Eagles",
-          "time": "4:30 PM"
-        }
-      ]
-    },
-    {
-      "round": 4,
-      "date": "Jan 18, 2026",
-      "matches": [
-        {
-          "teamA": "Golden Eagles",
-          "teamB": "Super King",
-          "time": "4:00 PM"
-        },
-        {
-          "teamA": "D-Box",
-          "teamB": "Revolution",
-          "time": "4:30 PM"
-        }
-      ]
-    },
-    {
-      "round": 5,
-      "date": "Jan 19, 2026",
-      "matches": [
-        {
-          "teamA": "Super King",
-          "teamB": "D-Box",
-          "time": "4:00 PM"
-        },
-        {
-          "teamA": "Golden Eagles",
-          "teamB": "Revolution",
-          "time": "4:30 PM"
-        }
-      ]
-    },
-    {
-      "round": 6,
-      "date": "Jan 20, 2026",
-      "matches": [
-        {
-          "teamA": "Revolution",
-          "teamB": "Super King",
-          "time": "4:00 PM"
-        },
-        {
-          "teamA": "Golden Eagles",
-          "teamB": "D-Box",
-          "time": "4:30 PM"
-        }
-      ]
-    }
-  ],
-  "groupMatches": [
-    {
-      "id": 1,
-      "teamA": "Revolution",
-      "W": 0,
-      "D": 0,
-      "L": 0,
-      "TG": 0
-    },
-    {
-      "id": 2,
-      "teamA": "Super King",
-      "W": 0,
-      "D": 0,
-      "L": 0
-    },
-    {
-      "id": 3,
-      "teamA": "D-Box",
-      "W": 0,
-      "D": 0,
-      "L": 0
-    },
-    {
-      "id": 4,
-      "teamA": "Golden Eagles",
-      "W": 0,
-      "D": 0,
-      "L": 0
-    }
-  ],
-  "results": {
-    "semiFinal1": {
-      "teamA": "Revolution",
-      "scoreA": 0,
-      "teamB": "Golden Eagles",
-      "scoreB": 0
-    },
-    "semiFinal2": {
-      "teamA": "Super King",
-      "scoreA": 0,
-      "teamB": "D-Box",
-      "scoreB": 0
-    },
-    "final": {
-      "teamA": "TBD",
-      "scoreA": 0,
-      "teamB": "TBD",
-      "scoreB": 0
-    }
-  }
+ "teams": [
+   {
+     "name": "Revolution",
+     "color": "#d63031",
+     "logo": "../../img/revolution logo.jpg",
+     "link": "#",
+     "players": [
+       {
+         "name": "©Alamin",
+         "photo": "../../img/al aminp.jpg",
+         "goals": 0,
+         "assist": 0,
+         "yellowCards": 0,
+         "redCards": 0
+       },
+       {
+         "name": "Mahid",
+         "photo": "../../img/mahid.jpg",
+         "goals": 0,
+         "yellowCards": 0,
+         "redCards": 0
+       },
+       {
+         "name": "Nahid",
+         "photo": "../../img/nahid.jpg",
+         "goals": 0,
+         "yellowCards": 0,
+         "redCards": 0
+       },
+       {
+         "name": "Ahsan",
+         "photo": "../../img/ahsan.jpg",
+         "goals": 0,
+         "yellowCards": 0,
+         "redCards": 0
+       },
+       {
+         "name": "Ujjol",
+         "photo": "../../img/ujjol.jpeg",
+         "goals": 0,
+         "yellowCards": 0,
+         "redCards": 0
+       },
+       {
+         "name": "Mahdi",
+         "photo": "../../img/mahdi.jpg",
+         "goals": 0,
+         "yellowCards": 0,
+         "redCards": 0
+       },
+       {
+         "name": "Sumel",
+         "photo": "../../img/sumel.jpg",
+         "goals": 0,
+         "yellowCards": 0,
+         "redCards": 0
+       },
+       {
+         "name": "Sajjad",
+         "photo": "../../img/sajjad.JPG",
+         "goals": 0,
+         "yellowCards": 0,
+         "redCards": 0
+       }
+     ]
+   },
+   {
+     "name": "Golden Eagles",
+     "color": "#e67e22",
+     "logo": "../../img/Golden Eagles.jpg",
+     "link": "#",
+     "players": [
+       {
+         "name": "©Hujaifa",
+         "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+         "goals": 0,
+         "yellowCards": 0,
+         "redCards": 0
+       },
+       {
+         "name": "Rahul",
+         "photo": "../../img/rahul.jpg",
+         "goals": 2,
+         "yellowCards": 0,
+         "redCards": 0
+       },
+       {
+         "name": "Joy",
+         "photo": "../../img/joy.jpg",
+         "goals": 0,
+         "assist": 1,
+         "yellowCards": 0,
+         "redCards": 0
+       },
+       {
+         "name": "Shuvo",
+         "photo": "../../img/shuvo.jpg",
+         "goals": 0,
+         "yellowCards": 0,
+         "redCards": 0
+       },
+       {
+         "name": "Mayruf",
+         "photo": "../../img/mayruf.jpeg",
+         "goals": 0,
+         "yellowCards": 1,
+         "redCards": 0
+       },
+       {
+         "name": "Sayid",
+         "photo": "../../img/sayedp.jpg",
+         "goals": 0,
+         "yellowCards": 0,
+         "redCards": 0
+       },
+       {
+         "name": "Kawshik",
+         "photo": "../../img/kawshik.jpeg",
+         "goals": 0,
+         "yellowCards": 0,
+         "redCards": 0
+       },
+       {
+         "name": "Jubayer",
+         "photo": "../../img/jubayer.jpeg",
+         "goals": 0,
+         "yellowCards": 0,
+         "redCards": 0
+       }
+     ]
+   },
+   {
+     "name": "Super King",
+     "color": "#0984e3",
+     "logo": "../../img/super kings.jpeg",
+     "link": "#",
+     "players": [
+       {
+         "name": "©Nurul Amin",
+         "photo": "../../img/nurulp.jpg"
+       },
+       {
+         "name": "Sanar",
+         "photo": "../../img/sanar.jpg",
+         "yellowCards": 1
+       },
+       {
+         "name": "Kawser",
+         "photo": "../../img/kawsar.jpg"
+       },
+       {
+         "name": "Arnob",
+         "photo": "../../img/arnob.jpg"
+       },
+       {
+         "name": "Sawon",
+         "photo": "../../img/Shawn.jpeg"
+       },
+       {
+         "name": "Sahadat",
+         "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+       },
+       {
+         "name": "Rifat",
+         "photo": "../../img/rifat.jpg"
+       },
+       {
+         "name": "Jubayer Jr",
+         "photo": "../../img/jubayer.jpg"
+       }
+     ]
+   },
+   {
+     "name": "D-Box",
+     "color": "#00b894",
+     "logo": "../../img/debox.jpeg",
+     "link": "#",
+     "players": [
+       {
+         "name": "©Shajan",
+         "photo": "../../img/shahjan.jpg"
+       },
+       {
+         "name": "Rohid",
+         "photo": "../../img/rohide.jpg"
+       },
+       {
+         "name": "Suhan",
+         "photo": "../../img/suhan.jpg"
+       },
+       {
+         "name": "Tasrif",
+         "photo": "../../img/tashrif.jpg"
+       },
+       {
+         "name": "Rohim",
+         "photo": "../../img/rohim.jpg"
+       },
+       {
+         "name": "Mamun",
+         "photo": "../../img/mamunlb.jpg"
+       },
+       {
+         "name": "Tuhin",
+         "photo": "../../img/tuhinur.jpg"
+       },
+       {
+         "name": "Shipu",
+         "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+       }
+     ]
+   }
+ ],
+ "schedule": [
+   {
+     "round": 1,
+     "date": "Jan 15, 2026",
+     "matches": [
+       {
+         "teamA": "Super King",
+         "teamB": "Golden Eagles",
+         "time": "4:00 PM",
+         "scoreA": 1,
+         "scoreB": 2,
+         "goalByB": ["2⚽ Rahul"],
+         "assistB": ["👟 Joy"],
+         "goalByA": ["⚽ ©Nurul"],
+         "yellowCardsA": ["🟨 Sanar"],
+         "yellowCardsB": ["🟨 Mayruf"]
+
+       },
+       {
+         "teamA": "Revolution",
+         "teamB": "D-Box",
+         "time": "4:31 PM",
+         "scoreA": 0,
+         "scoreB": 0
+       }
+     ]
+   },
+   {
+     "round": 2,
+     "date": "Jan 16, 2026",
+     "matches": [
+       {
+         "teamA": "D-Box",
+         "teamB": "Super King",
+         "time": "4:00 PM"
+       },
+       {
+         "teamA": "Revolution",
+         "teamB": "Golden Eagles",
+         "time": "4:30 PM"
+       }
+     ]
+   },
+   {
+     "round": 3,
+     "date": "Jan 17, 2026",
+     "matches": [
+       {
+         "teamA": "Super King",
+         "teamB": "Revolution",
+         "time": "4:00 PM"
+       },
+       {
+         "teamA": "D-Box",
+         "teamB": "Golden Eagles",
+         "time": "4:30 PM"
+       }
+     ]
+   },
+   {
+     "round": 4,
+     "date": "Jan 18, 2026",
+     "matches": [
+       {
+         "teamA": "Golden Eagles",
+         "teamB": "Super King",
+         "time": "4:00 PM"
+       },
+       {
+         "teamA": "D-Box",
+         "teamB": "Revolution",
+         "time": "4:30 PM"
+       }
+     ]
+   },
+   {
+     "round": 5,
+     "date": "Jan 19, 2026",
+     "matches": [
+       {
+         "teamA": "Super King",
+         "teamB": "D-Box",
+         "time": "4:00 PM"
+       },
+       {
+         "teamA": "Golden Eagles",
+         "teamB": "Revolution",
+         "time": "4:30 PM"
+       }
+     ]
+   },
+   {
+     "round": 6,
+     "date": "Jan 20, 2026",
+     "matches": [
+       {
+         "teamA": "Revolution",
+         "teamB": "Super King",
+         "time": "4:00 PM"
+       },
+       {
+         "teamA": "Golden Eagles",
+         "teamB": "D-Box",
+         "time": "4:30 PM"
+       }
+     ]
+   }
+ ],
+ "groupMatches": [
+   {
+     "id": 1,
+     "teamA": "Revolution",
+     "W": 0,
+     "D": 1,
+     "L": 0,
+     "TG": 0
+   },
+   {
+     "id": 2,
+     "teamA": "Super King",
+     "W": 0,
+     "D": 0,
+     "L": 1,
+     "TG": 1
+   },
+   {
+     "id": 3,
+     "teamA": "D-Box",
+     "W": 0,
+     "D": 1,
+     "L": 0,
+     "TG": 0
+   },
+   {
+     "id": 4,
+     "teamA": "Golden Eagles",
+     "W": 1,
+     "D": 0,
+     "L": 0,
+     "TG": 2
+   }
+ ],
+ "results": {
+   "semiFinal1": {
+     "teamA": "Revolution",
+     "scoreA": 0,
+     "teamB": "Golden Eagles",
+     "scoreB": 0
+   },
+   "semiFinal2": {
+     "teamA": "Super King",
+     "scoreA": 0,
+     "teamB": "D-Box",
+     "scoreB": 0
+   },
+   "final": {
+     "teamA": "TBD",
+     "scoreA": 0,
+     "teamB": "TBD",
+     "scoreB": 0
+   }
+ }
 }
