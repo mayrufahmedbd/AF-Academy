@@ -138,7 +138,8 @@
      "players": [
        {
          "name": "©Nurul Amin",
-         "photo": "../../img/nurulp.jpg"
+         "photo": "../../img/nurulp.jpg",
+         "goals": 1
        },
        {
          "name": "Sanar",
