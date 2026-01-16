@@ -18,7 +18,7 @@
          "name": "Mahid",
          "photo": "../../img/mahid.jpg",
          "goals": 1,
-         "assist": 1,
+         "assist": 0,
          "yellowCards": 0,
          "redCards": 0
        },
@@ -47,6 +47,7 @@
          "name": "Mahdi",
          "photo": "../../img/mahdi.jpg",
          "goals": 0,
+         "assist": 1,
          "yellowCards": 0,
          "redCards": 0
        },
@@ -259,7 +260,7 @@
          "scoreA":2,
          "scoreB": 0,
          "goalByA": ["⚽ Mahid", "⚽ Ahsan"],
-         "assistA": ["👟 ©Alamin", "👟 Mahid"]
+         "assistA": ["👟 ©Alamin", "👟 Mahdi"]
 
          
        }
