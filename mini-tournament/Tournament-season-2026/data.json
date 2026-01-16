@@ -10,14 +10,15 @@
          "name": "©Alamin",
          "photo": "../../img/al aminp.jpg",
          "goals": 0,
-         "assist": 0,
+         "assist": 2,
          "yellowCards": 0,
          "redCards": 0
        },
        {
          "name": "Mahid",
          "photo": "../../img/mahid.jpg",
-         "goals": 0,
+         "goals": 1,
+         "assist": 1,
          "yellowCards": 0,
          "redCards": 0
        },
@@ -31,7 +32,7 @@
        {
          "name": "Ahsan",
          "photo": "../../img/ahsan.jpg",
-         "goals": 0,
+         "goals": 1,
          "yellowCards": 0,
          "redCards": 0
        },
@@ -247,12 +248,20 @@
        {
          "teamA": "D-Box",
          "teamB": "Super King",
-         "time": "4:00 PM"
+         "time": "4:00 PM",
+         "scoreA":0,
+          "scoreB": 0
        },
        {
          "teamA": "Revolution",
          "teamB": "Golden Eagles",
-         "time": "4:30 PM"
+         "time": "4:30 PM",
+         "scoreA":2,
+         "scoreB": 0,
+         "goalByA": ["⚽ Mahid", "⚽ Ahsan"],
+         "assistA": ["👟 ©Alamin", "👟 Mahid"]
+
+         
        }
      ]
    },
