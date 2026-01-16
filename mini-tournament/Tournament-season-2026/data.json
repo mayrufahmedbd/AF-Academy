@@ -334,24 +334,24 @@
    {
      "id": 1,
      "teamA": "Revolution",
-     "W": 0,
+     "W": 1,
      "D": 1,
      "L": 0,
-     "TG": 0
+     "TG": "2:0"
    },
    {
      "id": 2,
      "teamA": "Super King",
      "W": 0,
-     "D": 0,
+     "D": 1,
      "L": 1,
-     "TG": 1
+     "TG": "1:2"
    },
    {
      "id": 3,
      "teamA": "D-Box",
      "W": 0,
-     "D": 1,
+     "D": 2,
      "L": 0,
      "TG": 0
    },
@@ -360,8 +360,9 @@
      "teamA": "Golden Eagles",
      "W": 1,
      "D": 0,
-     "L": 0,
-     "TG": 2
+     "L": 1,
+     "Dif": -1,
+     "TG": "2:3"
    }
  ],
  "results": {
