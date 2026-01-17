@@ -11,7 +11,7 @@
           "photo": "../../img/al aminp.jpg",
           "goals": 0,
           "assist": 1,
-          "yellowCards": 0,
+          "yellowCards": 1,
           "redCards": 0
         },
         {
@@ -77,14 +77,14 @@
           "name": "©Hujaifa",
           "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
           "goals": 0,
-          "yellowCards": 0,
+          "yellowCards": 1,
           "redCards": 0
         },
         {
           "name": "Rahul",
           "photo": "../../img/rahul.jpg",
           "goals": 2,
-          "yellowCards": 0,
+          "yellowCards": 1,
           "redCards": 0
         },
         {
@@ -92,7 +92,7 @@
           "photo": "../../img/joy.jpg",
           "goals": 0,
           "assist": 1,
-          "yellowCards": 0,
+          "yellowCards": 1,
           "redCards": 0
         },
         {
@@ -106,7 +106,7 @@
           "name": "Mayruf",
           "photo": "../../img/mayruf.jpeg",
           "goals": 0,
-          "yellowCards": 1,
+          "yellowCards": 2,
           "redCards": 0
         },
         {
@@ -150,7 +150,11 @@
         },
         {
           "name": "Kawser",
-          "photo": "../../img/kawsar.jpg"
+          "photo": "../../img/kawsar.jpg",
+          "goals": 2,
+          "assist": 1,
+          "yellowCards": 0,
+          "redCards": 0
         },
         {
           "name": "Arnob",
@@ -158,7 +162,9 @@
         },
         {
           "name": "Sawon",
-          "photo": "../../img/Shawn.jpeg"
+          "photo": "../../img/Shawn.jpeg",
+          "goals": 1,
+          "assist": 1
         },
         {
           "name": "Sahadat",
@@ -190,7 +196,10 @@
         },
         {
           "name": "Suhan",
-          "photo": "../../img/suhan.jpg"
+          "photo": "../../img/suhan.jpg",
+          "goals": 0,
+          "assist": 0,
+          "yellowCards": 1
         },
         {
           "name": "Tasrif",
@@ -198,11 +207,18 @@
         },
         {
           "name": "Rohim",
-          "photo": "../../img/rohim.jpg"
+          "photo": "../../img/rohim.jpg",
+          "goals": 0,
+          "assist": 0,
+          "yellowCards": 1,
+          "redCards": 0
+
         },
         {
           "name": "Mamun",
-          "photo": "../../img/mamunlb.jpg"
+          "photo": "../../img/mamunlb.jpg",
+
+          "yellowCards":1
         },
         {
           "name": "Tuhin",
@@ -312,18 +328,40 @@
         {
           "teamA": "Super King",
           "teamB": "Revolution",
-          "time": "4:00 PM"
+          "time": "4:00 PM",
+          "scoreA": 3,
+          "scoreB": 0,
+          "goalByA": [
+            "⚽⚽ Kawser",
+            "⚽ Sawon"
+          ],
+          "goalsByB": [],
+          "assistA": [
+            "👟 Kawser",
+            "👟👟 Sawon"
+          ],
+          "assistByB": [],
+          "yellowCardsA": [],
+          "yellowCardsB": ["🟨 Al Amin"]
         },
         {
           "teamA": "D-Box",
           "teamB": "Golden Eagles",
-          "time": "4:30 PM"
+          "time": "4:30 PM",
+          "scoreA": 0,
+          "scoreB": 0,
+          "yellowCardsA": [
+            "🟨 Rohim", "🟨 Suhan", "🟨 Mamun"
+          ],
+          "yellowCardsB": [
+            "🟨 Rahul", "🟨 Hujaifa", "🟨 Mayruf", "🟨 Joy"
+          ]
         }
       ]
     },
     {
       "round": 4,
-      "date": "Jan 18, 2026",
+      "date": "Jan 20, 2026",
       "matches": [
         {
           "teamA": "Golden Eagles",
@@ -339,7 +377,7 @@
     },
     {
       "round": 5,
-      "date": "Jan 19, 2026",
+      "date": "Jan 21, 2026",
       "matches": [
         {
           "teamA": "Super King",
@@ -355,7 +393,7 @@
     },
     {
       "round": 6,
-      "date": "Jan 20, 2026",
+      "date": "Jan 22, 2026",
       "matches": [
         {
           "teamA": "Revolution",
@@ -376,24 +414,24 @@
       "teamA": "Revolution",
       "W": 1,
       "D": 1,
-      "L": 0,
-      "dif": "+2",
-      "TG": "2:0"
+      "L": 1,
+      "dif": "-1",
+      "TG": "2:3"
     },
     {
       "id": 2,
       "teamA": "Super King",
-      "W": 0,
+      "W": 1,
       "D": 1,
       "L": 1,
-      "dif": "-1",
-      "TG": "1:2"
+      "dif": "+2",
+      "TG": "4:2"
     },
     {
       "id": 3,
       "teamA": "D-Box",
       "W": 0,
-      "D": 2,
+      "D": 3,
       "L": 0,
       "dif": "0",
       "TG": "0:0"
@@ -402,7 +440,7 @@
       "id": 4,
       "teamA": "Golden Eagles",
       "W": 1,
-      "D": 0,
+      "D": 1,
       "L": 1,
       "dif": -1,
       "TG": "2:3"
