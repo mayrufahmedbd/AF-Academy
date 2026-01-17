@@ -239,7 +239,7 @@ function loadSchedule(schedule) {
       
        roundDiv.innerHTML = `
            <div class="round-header">
-               <h3>Round ${round.round}</h3>
+               <h3>Day ${round.round}</h3>
                <span class="round-date">${round.date}</span>
            </div>
        `;
