@@ -8,16 +8,18 @@ document.addEventListener("DOMContentLoaded", () => {
       if (data.groupMatches) loadGroupMatches(data.groupMatches);
       if (data.results) loadResults(data.results);
       if (data.schedule) loadSchedule(data.schedule);
+      if (data.sponsors) loadSponsors(data.sponsors); // Load Sponsors
     })
     .catch((error) => console.error("Error loading JSON:", error));
 
   // 2. Global Click Listener (Closes popups when clicking empty space)
   document.addEventListener("click", function (event) {
-    // A. Close Player Popups
-    document.querySelectorAll(".player-popup").forEach((popup) => {
+
+    // A. Close Player AND Sponsor Popups
+    // We select both classes here
+    document.querySelectorAll(".player-popup, .sponsor-popup").forEach((popup) => {
       popup.classList.remove("active", "mobile-center", "show-below");
-      // Force hide to override any CSS hover effects
-      popup.style.display = "";
+      popup.style.display = ""; // Force hide/clear styles
     });
 
     // B. Close Schedule/Pitch Popup
@@ -39,10 +41,9 @@ function loadTeams(teams) {
     card.className = "team-card";
     card.style.borderTopColor = team.color;
 
-    // --- Header Section ---
+    // Header
     const header = document.createElement("div");
     header.className = "team-header";
-
     const link = document.createElement("a");
     link.className = "team-link";
     link.style.color = team.color;
@@ -51,21 +52,19 @@ function loadTeams(teams) {
     const logoWrapper = document.createElement("div");
     logoWrapper.className = "team-logo-wrapper";
     logoWrapper.style.borderColor = team.color;
-
     const logoImg = document.createElement("img");
     logoImg.src = team.logo || "https://via.placeholder.com/50";
     logoImg.className = "team-logo-img";
 
     logoWrapper.appendChild(logoImg);
     link.appendChild(logoWrapper);
-
     const nameSpan = document.createElement("span");
     nameSpan.innerText = team.name;
     link.appendChild(nameSpan);
     header.appendChild(link);
     card.appendChild(header);
 
-    // --- Players Grid ---
+    // Players Grid
     const playerGrid = document.createElement("div");
     playerGrid.className = "players-list";
 
@@ -83,67 +82,30 @@ function loadTeams(teams) {
 
                <div class="player-popup">
                    <div class="popup-img-container">
-                       <img src="${player.photo}" class="popup-photo">
+                      <a href="${player.photo}"><img src="${player.photo}" class="popup-photo"></a>
                    </div>
                    <div class="popup-name">${player.name}</div>
-                   <div class="popup-team" style="color: ${team.color}">${
-        team.name
-      }</div>
+                   <div class="popup-team" style="color: ${team.color}">${team.name}</div>
                    <hr class="popup-divider">
                    <div class="stats-row">
                        <div class="stat-box">
-                           <span class="stat-label"></span>
-                           <span class="stat-value">⚽ ${
-                             player.goals || 0
-                           }</span>
-                           <span class="stat-value">👟 ${
-                             player.assist || 0
-                           }</span>
+                           <span class="stat-value">⚽ ${player.goals || 0}</span>
+                           <span class="stat-value">👟 ${player.assist || 0}</span>
                        </div>
                        <div class="stat-box">
-                           <span class="stat-label">Cards</span>
                            <div class="cards-container">
-                               <span class="card yellow-card">${
-                                 player.yellowCards || 0
-                               }</span>
-                               <span class="card red-card">${
-                                 player.redCards || 0
-                               }</span>
+                               <span class="card yellow-card">${player.yellowCards || 0}</span>
+                               <span class="card red-card">${player.redCards || 0}</span>
                            </div>
                        </div>
                    </div>
                </div>
            `;
 
-      // --- CLICK LOGIC (FIXED) ---
+      // Click Logic
       pDiv.addEventListener("click", function (e) {
-        // STOP the click from reaching the document (prevents instant closing)
         e.stopPropagation();
-
-        const popup = this.querySelector(".player-popup");
-        const wasActive = popup.classList.contains("active");
-
-        // 1. Reset ALL other popups first
-        document.querySelectorAll(".player-popup").forEach((p) => {
-          p.classList.remove("active", "mobile-center", "show-below");
-          p.style.display = ""; // Clear inline styles
-        });
-
-        // 2. If it wasn't active before, show it now
-        if (!wasActive) {
-          popup.classList.add("active");
-          popup.style.display = "block"; // Force show
-
-          const rect = this.getBoundingClientRect();
-
-          // Smart Position Calculation
-          if (window.innerWidth < 768) {
-            popup.classList.add("mobile-center");
-          } else if (rect.top < 300) {
-            popup.classList.add("show-below");
-          }
-          // else: default shows above via CSS
-        }
+        handlePopupClick(this, ".player-popup");
       });
 
       playerGrid.appendChild(pDiv);
@@ -154,183 +116,178 @@ function loadTeams(teams) {
   });
 }
 
-// --- STANDINGS FUNCTION (RESTORED) ---
+// --- SPONSORS FUNCTION (UPDATED) ---
+function loadSponsors(sponsors) {
+  const sponsorsContainer = document.getElementById('sponsors-container');
+  if (!sponsorsContainer) return;
+
+  sponsorsContainer.innerHTML = '';
+
+  sponsors.forEach(sponsor => {
+    // 1. Create the Item Wrapper
+    const sDiv = document.createElement('div');
+    sDiv.className = 'sponsor-item';
+
+    // 2. Determine Tier Color Class
+    const tierClass = sponsor.tier ? `tier-${sponsor.tier.toLowerCase()}` : '';
+
+    // 3. Build HTML (Popup + Trigger)
+    sDiv.innerHTML = `
+          <div class="sponsor-img-wrapper" style="border-color: ${getTierColor(sponsor.tier)}">
+              <img src="${sponsor.logo}"
+                  class="sponsor-img" alt="${sponsor.name}">
+          </div>
+          <span class="sponsor-name">${sponsor.name}</span>
+          <span class="sponsor-country">Country: ${sponsor.country}</span>
+
+
+          <div class="sponsor-popup">
+              <div class="popup-img-container">
+                  <A href="${sponsor.logo}"><img src="${sponsor.logo}" class="popup-photo"></A>
+              </div>
+              <div class="popup-name">${sponsor.name}</div>
+              
+              <div style="color:red" class="popup-tier ${tierClass}">${sponsor.tier || 'Official Sponsor'}</div>
+              
+              <hr class="popup-divider">
+              
+              ${sponsor.website ? `<a href="${sponsor.website}" target="_blank" class="sponsor-website-btn">Visit Website</a>` : ''}
+          </div>
+      `;
+
+    // 4. Click Logic (Same as Players)
+    sDiv.addEventListener("click", function (e) {
+      e.stopPropagation();
+      handlePopupClick(this, ".sponsor-popup");
+    });
+
+    sponsorsContainer.appendChild(sDiv);
+  });
+}
+
+// --- SHARED HELPER FUNCTIONS ---
+
+// 1. Helper to return color code based on Tier Name
+function getTierColor(tier) {
+  if (!tier) return '#ddd';
+  switch (tier.toLowerCase()) {
+    case 'gold': return '#d4af37';
+    case 'silver': return '#a0a0a0';
+    case 'bronze': return '#cd7f32';
+    default: return '#ddd';
+  }
+}
+
+// 2. Helper to handle Popup Open/Close Logic (Used by both Players and Sponsors)
+function handlePopupClick(element, popupSelector) {
+  const popup = element.querySelector(popupSelector);
+  const wasActive = popup.classList.contains("active");
+
+  // Reset ALL popups first
+  document.querySelectorAll(".player-popup, .sponsor-popup").forEach((p) => {
+    p.classList.remove("active", "mobile-center", "show-below");
+    p.style.display = "";
+  });
+
+  // If it wasn't open, open it now
+  if (!wasActive) {
+    popup.classList.add("active");
+    popup.style.display = "block";
+
+    const rect = element.getBoundingClientRect();
+    if (window.innerWidth < 768) {
+      popup.classList.add("mobile-center");
+    } else if (rect.top < 300) {
+      popup.classList.add("show-below");
+    }
+  }
+}
+
+
+// --- OTHER EXISTING FUNCTIONS (Standard) ---
+
 function loadGroupMatches(matches) {
   const tableBody = document.getElementById("group-stage-body");
-  if (!tableBody) return; // Matches will fail if HTML ID is missing
-
+  if (!tableBody) return;
   tableBody.innerHTML = "";
-
-  // Calculate Points
   const processedMatches = matches.map((team) => {
-    return {
-      ...team,
-      mp: team.W + team.D + team.L,
-      pts: team.W * 3 + team.D * 1,
-    };
+    return { ...team, mp: team.W + team.D + team.L, pts: team.W * 3 + team.D * 1 };
   });
-
-  // Sort: Points first, then Wins
   processedMatches.sort((a, b) => {
-    if (b.pts !== a.pts) {
-      return b.pts - a.pts;
-    } else {
-      return b.W - a.W;
-    }
+    if (b.pts !== a.pts) return b.pts - a.pts;
+    else return b.W - a.W;
   });
-
-  // Create Rows
   processedMatches.forEach((team, index) => {
     const row = document.createElement("tr");
     if (index < 4) row.classList.add("top-team");
-
     row.innerHTML = `
            <td class="position-cell">${index + 1}</td>
-           <td class="team-col">
-               <div class="team-info"><span>${team.teamA}</span></div>
-           </td>
-           <td>${team.mp}</td>
-           <td>${team.W}</td>
-           <td>${team.D}</td>
-           <td>${team.L}</td>
-           <td>${team.TG}</td>
-            <td>${team.dif}</td>
-           <td class="points-cell">${team.pts}</td>
+           <td class="team-col"><div class="team-info"><span>${team.teamA}</span></div></td>
+           <td>${team.mp}</td><td>${team.W}</td><td>${team.D}</td><td>${team.L}</td>
+           <td>${team.TG}</td><td>${team.dif}</td><td class="points-cell">${team.pts}</td>
        `;
     tableBody.appendChild(row);
   });
 }
 
-// --- RESULTS FUNCTION ---
 function loadResults(results) {
   const createMatchHTML = (match) => `
-       <div class="team-row">
-           <span>${match.teamA}</span>
-           <span class="score">${match.scoreA}</span>
-       </div>
-       <div class="team-row">
-           <span>${match.teamB}</span>
-           <span class="score">${match.scoreB}</span>
-       </div>
+       <div class="team-row"><span>${match.teamA}</span><span class="score">${match.scoreA}</span></div>
+       <div class="team-row"><span>${match.teamB}</span><span class="score">${match.scoreB}</span></div>
    `;
-
   const semi1 = document.getElementById("semi-1");
   const semi2 = document.getElementById("semi-2");
   const grandFinal = document.getElementById("grand-final");
-
-  if (semi1 && results.semiFinal1)
-    semi1.innerHTML = createMatchHTML(results.semiFinal1);
-  if (semi2 && results.semiFinal2)
-    semi2.innerHTML = createMatchHTML(results.semiFinal2);
-  if (grandFinal && results.final)
-    grandFinal.innerHTML += createMatchHTML(results.final);
+  if (semi1 && results.semiFinal1) semi1.innerHTML = createMatchHTML(results.semiFinal1);
+  if (semi2 && results.semiFinal2) semi2.innerHTML = createMatchHTML(results.semiFinal2);
+  if (grandFinal && results.final) grandFinal.innerHTML += createMatchHTML(results.final);
 }
 
-// --- SCHEDULE FUNCTION (FIXED CLICK) ---
 function loadSchedule(schedule) {
   const container = document.getElementById("schedule-container");
   if (!container) return;
-
   container.innerHTML = "";
-
-  // Create popup if missing
   let pitchPopup = document.getElementById("match-hover-popup");
   if (!pitchPopup) {
     pitchPopup = document.createElement("div");
     pitchPopup.id = "match-hover-popup";
     pitchPopup.className = "match-hover-popup";
-    // Prevent clicking inside the popup from closing it
     pitchPopup.addEventListener("click", (e) => e.stopPropagation());
     document.body.appendChild(pitchPopup);
   }
-
   schedule.forEach((round) => {
     const roundDiv = document.createElement("div");
     roundDiv.className = "round-section";
-
-    roundDiv.innerHTML = `
-           <div class="round-header">
-               <h3>Day ${round.round}</h3>
-               <span class="round-date">${round.date}</span>
-           </div>
-       `;
-
+    roundDiv.innerHTML = `<div class="round-header"><h3>Day ${round.round}</h3><span class="round-date">${round.date}</span></div>`;
     round.matches.forEach((match) => {
       const matchCard = document.createElement("div");
       matchCard.className = "match-card-creative";
-
-      let centerContent;
-      let centerClass = "match-time-badge";
-
-      if (match.scoreA !== undefined && match.scoreB !== undefined) {
-        centerContent = `${match.scoreA} : ${match.scoreB}`;
-        centerClass = "match-score-badge";
-      } else {
-        centerContent = match.time;
-      }
-
+      let centerContent = (match.scoreA !== undefined) ? `${match.scoreA} : ${match.scoreB}` : match.time;
+      let centerClass = (match.scoreA !== undefined) ? "match-score-badge" : "match-time-badge";
       matchCard.innerHTML = `
-               <div class="team-side left">
-                   <span class="team-name">${match.teamA}</span>
-               </div>
-              
-               <div class="match-center">
-                   <div class="${centerClass}">${centerContent}</div>
-               </div>
-              
-               <div class="team-side right">
-                   <span class="team-name">${match.teamB}</span>
-               </div>
+               <div class="team-side left"><span class="team-name">${match.teamA}</span></div>
+               <div class="match-center"><div class="${centerClass}">${centerContent}</div></div>
+               <div class="team-side right"><span class="team-name">${match.teamB}</span></div>
            `;
-
-      // --- CLICK LOGIC FOR MATCHES ---
       matchCard.addEventListener("click", (e) => {
-        e.stopPropagation(); // Stop global closer
-
-        // 1. Content
-        let motmHTML = "";
-        if (match.motm) {
-          motmHTML = `
-                       <div class="motm-badge">
-                           <span class="motm-icon">⭐</span>
-                           <span>${match.motm}</span>
-                       </div>
-                   `;
-        }
-
+        e.stopPropagation();
+        let motmHTML = match.motm ? `<div class="motm-badge"><span class="motm-icon">⭐</span><span>${match.motm}</span></div>` : "";
         pitchPopup.innerHTML = `
                    <div class="pitch-teams">
-                       <div class="pitch-team">${match.teamA || ""}
-                           <h6>${match.goalByA || ""}</h6>
-                           <h6>${match.assistA || ""}</h6>
-                           <h6>${match.yellowCardsA || ""}</h6>
-                       </div>
-                           <div class="pitch-vs">VS</div>
-                       <div class="pitch-team">${match.teamB || ""}
-                           <h6>${match.goalByB || ""}</h6>
-                           <h6>${match.assistB || ""}</h6>
-                           <h6>${match.yellowCardsB || ""}</h6>
-                           </div>
-                   </div>
-                   ${motmHTML}
-               `;
-
-        // 2. Position
+                       <div class="pitch-team">${match.teamA || ""}<h6>${match.goalByA || ""}</h6><h6>${match.assistA || ""}</h6><h6>${match.yellowCardsA || ""}</h6></div>
+                       <div class="pitch-vs">VS</div>
+                       <div class="pitch-team">${match.teamB || ""}<h6>${match.goalByB || ""}</h6><h6>${match.assistB || ""}</h6><h6>${match.yellowCardsB || ""}</h6></div>
+                   </div>${motmHTML}`;
         const rect = matchCard.getBoundingClientRect();
         let topPos = rect.top - 190;
         let leftPos = rect.left + rect.width / 2 - 150;
-
-        // Edge detection
         if (topPos < 10) topPos = rect.bottom + 10;
-
         pitchPopup.style.top = `${topPos}px`;
         pitchPopup.style.left = `${leftPos}px`;
         pitchPopup.style.display = "flex";
       });
-
       roundDiv.appendChild(matchCard);
     });
-
     container.appendChild(roundDiv);
   });
 }

@@ -215,6 +215,29 @@
       ]
     }
   ],
+  "sponsors": [
+  {
+    "id": 1,
+    "name": "NazimUddin Ahmed",
+    "logo": "../../img/sponsore/nazim.jpg",
+    "country": "UK",
+    "tier": "Runner Up"
+  },
+  {
+    "id": 2,
+    "name": "Anwar",
+    "logo": "../../img/sponsore/anwar.jpg",
+    "country": "Russia",
+    "tier": ""
+  },
+  {
+    "id": 3,
+    "name": "Abdus Salam",
+    "logo": "../../img/sponsore/abdus salam.jpg",
+    "country": "UK",
+    "tier": ""
+  }
+],
   "schedule": [
     {
       "round": 1,

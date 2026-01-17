@@ -26,6 +26,7 @@ body {
    min-height: 85vh;
 }
 
+
 .bg-shape {
    position: absolute;
    top: -10%;
@@ -44,7 +45,8 @@ body {
    text-transform: uppercase;
    letter-spacing: 2px;
    color: var(--text-main);
-   margin:55px 0 30px 0;
+   margin:55px 0 20px 0;
+   font-size: 1.5rem;
 }
 
 /* --- Team Cards Grid --- */
@@ -610,6 +612,232 @@ body {
 }
 
 
-/* for the idex.html file */
+/* for the sponsors  section */
+
+/* --- SPONSOR GRID (Matches Player List) --- */
+.sponsors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.sponsor-bg {
+    background-color: var(--primary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sponsor-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    position: relative; /* Essential for popup positioning */
+    width: 100px;       /* Fixed width like players */
+}
+
+/* Circle Image Style */
+.sponsor-img-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Circle shape */
+    overflow: hidden;
+    border: 3px solid #ddd; /* Default border color */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sponsor-item:hover .sponsor-img-wrapper {
+    transform: scale(1.1);
+    border-color: #27ae60; /* Highlight color on hover */
+}
+
+.sponsor-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures logos don't get cut off inside the circle */
+}
+
+.sponsor-name {
+    margin-top: 10px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+}
+
+.sponsor-country{
+      font-size: 0.75rem;
+      color: #f0f0f0;
+      margin-top: 4px;
+}
+
+/* --- SPONSOR POPUP (Matches Player Popup) --- */
+.sponsor-popup {
+    display: none; /* Hidden by default */
+    position: absolute;
+    bottom: 120%; /* Shows above the item */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    z-index: 100;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+/* Mobile & Edge Positioning Classes (Handled by JS) */
+.sponsor-popup.active { display: block; animation: popIn 0.3s ease; }
+.sponsor-popup.mobile-center {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: auto;
+    width: 90%;
+    max-width: 300px;
+}
+.sponsor-popup.show-below { bottom: auto; top: 120%; }
+
+/* Popup Internals */
+.popup-tier {
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+/* Tier Colors */
+.tier-gold { color: #d4af37; }
+.tier-silver { color: #a0a0a0; }
+.tier-bronze { color: #cd7f32; }
+
+.sponsor-website-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    transition: background 0.3s;
+}
+.sponsor-website-btn:hover { background: #555; }
 
 
+
+
+
+
+
+
+/* Container: Fixed to Right Center */
+.side-nav {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) translateX(70%); /* Hides 70% of it initially */
+    background: rgba(255, 255, 255, 0.1); /* Transparent White */
+    backdrop-filter: blur(10px); /* Frosted Glass Effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px 0 0 12px; /* Round only left corners */
+    padding: 20px 10px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Bouncy smooth effect */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    overflow: hidden;
+    width: 60px; /* Small width initially */
+}
+
+/* Hover State: Slide Out & Expand */
+.side-nav:hover {
+    transform: translateY(-50%) translateX(0); /* Move fully onto screen */
+    width: 200px; /* Expand width */
+    background: rgba(0, 0, 0, 0.8); /* Darken background on hover */
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/* The Vertical "MENU" Text (Visible initially) */
+.nav-handle {
+    writing-mode: vertical-rl; /* Vertical Text */
+    text-orientation: mixed;
+    transform: rotate(180deg); /* Flip it to read bottom-up */
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #333;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+/* Change Handle Color on Hover */
+.side-nav:hover .nav-handle {
+    color: #fff;
+    border-right: 1px solid #555;
+    padding-right: 10px;
+}
+
+/* Links Container */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    opacity: 0; /* Hidden initially */
+    transform: translateX(20px);
+    transition: all 0.3s ease 0.1s; /* Slight delay */
+    width: 100%;
+}
+
+/* Show Links when Hovered */
+.side-nav:hover .nav-links {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Individual Links Styling */
+.nav-links a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    position: relative;
+    display: block;
+}
+
+/* Link Hover Effect (Neon Glow) */
+.nav-links a:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    padding-left: 15px; /* Slide effect */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* Optional: Active/Focus line */
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 60%;
+    background-color: #27ae60; /* Green accent */
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::before {
+    width: 3px;
+}
