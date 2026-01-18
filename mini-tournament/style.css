@@ -9,6 +9,10 @@
    --font-family: 'Poppins', sans-serif;
 }
 
+html {
+   scroll-behavior: smooth;
+}
+
 body {
    background-color: var(--bg-dark);
    color: var(--text-main);
@@ -45,7 +49,7 @@ body {
    text-transform: uppercase;
    letter-spacing: 2px;
    color: var(--text-main);
-   margin:55px 0 20px 0;
+   margin: 55px 0 20px 0;
    font-size: 1.5rem;
 }
 
@@ -301,13 +305,13 @@ body {
 
 @keyframes fadeIn {
    from {
-       opacity: 0;
-       transform: translateX(-50%) translateY(10px);
+      opacity: 0;
+      transform: translateX(-50%) translateY(10px);
    }
 
    to {
-       opacity: 1;
-       transform: translateX(-50%) translateY(0);
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
    }
 }
 
@@ -579,35 +583,35 @@ body {
 /* --- Mobile Queries --- */
 @media (max-width: 768px) {
    .players-list {
-       grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, 1fr);
    }
 
    /* Keep 4 cols */
 
    .team-link {
-       font-size: 1.1rem;
+      font-size: 1.1rem;
    }
 
    .match-card-creative {
-       flex-direction: row;
+      flex-direction: row;
    }
 
    .match-time-badge,
    .match-score-badge {
-       font-size: 0.7rem;
-       padding: 4px 8px;
+      font-size: 0.7rem;
+      padding: 4px 8px;
    }
 }
 
 @media (max-width: 480px) {
    .players-list {
-       grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, 1fr);
    }
 
    /* Drop to 3 on very small screens */
    .player-img {
-       width: 40px;
-       height: 40px;
+      width: 40px;
+      height: 40px;
    }
 }
 
@@ -616,119 +620,275 @@ body {
 
 /* --- SPONSOR GRID (Matches Player List) --- */
 .sponsors-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px;
+   padding: 20px;
 }
+
 .sponsor-bg {
-    background-color: var(--primary);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+   background-color: var(--primary);
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .sponsor-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    position: relative; /* Essential for popup positioning */
-    width: 100px;       /* Fixed width like players */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   cursor: pointer;
+   position: relative;
+   /* Essential for popup positioning */
+   width: 100px;
+   /* Fixed width like players */
 }
 
 /* Circle Image Style */
 .sponsor-img-wrapper {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%; /* Circle shape */
-    overflow: hidden;
-    border: 3px solid #ddd; /* Default border color */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+   /* Circle shape */
+   overflow: hidden;
+   border: 3px solid #ddd;
+   /* Default border color */
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   transition: transform 0.2s;
+   background: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .sponsor-item:hover .sponsor-img-wrapper {
-    transform: scale(1.1);
-    border-color: #27ae60; /* Highlight color on hover */
+   transform: scale(1.1);
+   border-color: #27ae60;
+   /* Highlight color on hover */
 }
 
 .sponsor-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Ensures logos don't get cut off inside the circle */
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+   /* Ensures logos don't get cut off inside the circle */
 }
 
 .sponsor-name {
-    margin-top: 10px;
-    font-size: 0.7rem;
-    font-weight: bold;
-    text-align: center;
-    color: #ffffff;
+   margin-top: 10px;
+   font-size: 0.7rem;
+   font-weight: bold;
+   text-align: center;
+   color: #ffffff;
 }
 
-.sponsor-country{
-      font-size: 0.75rem;
-      color: #f0f0f0;
-      margin-top: 4px;
+.sponsor-country {
+   font-size: 0.75rem;
+   color: #f0f0f0;
+   margin-top: 4px;
 }
 
 /* --- SPONSOR POPUP (Matches Player Popup) --- */
 .sponsor-popup {
-    display: none; /* Hidden by default */
-    position: absolute;
-    bottom: 120%; /* Shows above the item */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 260px;
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    z-index: 100;
-    text-align: center;
-    border: 1px solid #eee;
+   display: none;
+   /* Hidden by default */
+   position: absolute;
+   bottom: 120%;
+   /* Shows above the item */
+   left: 50%;
+   transform: translateX(-50%);
+   width: 260px;
+   background: white;
+   padding: 20px;
+   border-radius: 12px;
+   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+   z-index: 100;
+   text-align: center;
+   border: 1px solid #eee;
 }
 
 /* Mobile & Edge Positioning Classes (Handled by JS) */
-.sponsor-popup.active { display: block; animation: popIn 0.3s ease; }
-.sponsor-popup.mobile-center {
-    position: fixed;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    bottom: auto;
-    width: 90%;
-    max-width: 300px;
+.sponsor-popup.active {
+   display: block;
+   animation: popIn 0.3s ease;
 }
-.sponsor-popup.show-below { bottom: auto; top: 120%; }
+
+.sponsor-popup.mobile-center {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   bottom: auto;
+   width: 90%;
+   max-width: 300px;
+}
+
+.sponsor-popup.show-below {
+   bottom: auto;
+   top: 120%;
+}
 
 /* Popup Internals */
 .popup-tier {
-    font-size: 0.85rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+   font-size: 0.85rem;
+   font-weight: bold;
+   text-transform: uppercase;
+   margin-bottom: 10px;
 }
+
 /* Tier Colors */
-.tier-gold { color: #d4af37; }
-.tier-silver { color: #a0a0a0; }
-.tier-bronze { color: #cd7f32; }
+.tier-gold {
+   color: #d4af37;
+}
+
+.tier-silver {
+   color: #a0a0a0;
+}
+
+.tier-bronze {
+   color: #cd7f32;
+}
 
 .sponsor-website-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 8px 20px;
-    background: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    transition: background 0.3s;
+   display: inline-block;
+   margin-top: 15px;
+   padding: 8px 20px;
+   background: #333;
+   color: white;
+   text-decoration: none;
+   border-radius: 20px;
+   font-size: 0.8rem;
+   transition: background 0.3s;
 }
-.sponsor-website-btn:hover { background: #555; }
+
+.sponsor-website-btn:hover {
+   background: #555;
+}
 
 
 
+
+
+/* ... */
+
+/* --- 1. Positioning the Wrapper --- */
+.rb-wrapper {
+   position: fixed;
+   top: 50%;
+   right: 30px;
+   /* Distance from right edge */
+   transform: translateY(-50%);
+   z-index: 9999;
+   /* Ensure it stays on top */
+   display: flex;
+   flex-direction: row-reverse;
+   /* Button on right, menu expands left */
+   align-items: center;
+}
+
+/* --- 2. The Burger Button (Circle) --- */
+.rb-toggle {
+   width: 50px;
+   height: 50px;
+   background: #222;
+   /* Dark circle */
+   border-radius: 50%;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+   cursor: pointer;
+   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   /* Bouncy effect */
+   position: relative;
+   z-index: 2;
+   /* Keeps button above the menu strip */
+}
+
+/* The 3 Lines inside the Burger */
+.rb-line {
+   width: 25px;
+   height: 3px;
+   background-color: #fff;
+   border-radius: 2px;
+   transition: all 0.3s ease;
+}
+
+/* --- 3. Hover Effects on the Button --- */
+.rb-wrapper:hover .rb-toggle {
+   background: #fff;
+   /* Button turns white */
+   transform: scale(1.1);
+   /* Grows slightly */
+}
+
+.rb-wrapper:hover .rb-line {
+   background-color: #222;
+   /* Lines turn dark */
+}
+
+/* Optional: Turn lines into an X on hover */
+.rb-wrapper:hover .rb-line:nth-child(1) {
+   transform: translateY(8px) rotate(45deg);
+}
+
+.rb-wrapper:hover .rb-line:nth-child(2) {
+   opacity: 0;
+}
+
+.rb-wrapper:hover .rb-line:nth-child(3) {
+   transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* --- 4. The Menu Container (Hidden Strip) --- */
+.rb-menu {
+   position: absolute;
+   right: 25px;
+   /* Tucked behind the button */
+   top: 50%;
+   transform: translateY(-50%) translateX(20px);
+   /* Hidden to the right */
+   background: rgba(0, 0, 0, 0.9);
+   /* Dark semi-transparent */
+   padding: 10px 40px 10px 20px;
+   /* Extra padding right for the button overlap */
+   border-radius: 30px 0 0 30px;
+   /* Round left side */
+   display: flex;
+   gap: 20px;
+   opacity: 0;
+   /* Invisible */
+   pointer-events: none;
+   /* Cant click when hidden */
+   transition: all 0.4s ease;
+}
+
+/* --- 5. Reveal Menu on Hover --- */
+.rb-wrapper:hover .rb-menu {
+   opacity: 1;
+   pointer-events: auto;
+   transform: translateY(-50%) translateX(0);
+   /* Slides out to left */
+   right: 40px;
+   /* Moves away from button slightly */
+}
+
+/* --- 6. Link Styles --- */
+.rb-link {
+   color: #bbb;
+   text-decoration: none;
+   font-weight: bold;
+   font-size: 1rem;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   transition: color 0.3s;
+   white-space: nowrap;
+   /* Keeps text on one line */
+}
+
+.rb-link:hover {
+   color: #27ae60;
+   /* Green highlight color */
+}
