@@ -223,8 +223,13 @@ function loadGroupMatches(matches) {
     row.innerHTML = `
            <td class="position-cell">${index + 1}</td>
            <td class="team-col"><div class="team-info"><span>${team.teamA}</span></div></td>
-           <td>${team.mp}</td><td>${team.W}</td><td>${team.D}</td><td>${team.L}</td>
-           <td>${team.TG}</td><td>${team.dif}</td><td class="points-cell">${team.pts}</td>
+           <td>${team.mp}</td>
+           <td>${team.W}</td>
+           <td>${team.D}</td>
+           <td>${team.L}</td>
+           <td>${team.TG}</td>
+           <td>${team.dif}</td>
+           <td class="points-cell">${team.pts}</td>
        `;
     tableBody.appendChild(row);
   });
