@@ -106,6 +106,7 @@
           "name": "Mayruf",
           "photo": "../../img/mayruf.jpeg",
           "goals": 0,
+          "assist": 1,
           "yellowCards": 2,
           "redCards": 0
         },
@@ -113,7 +114,7 @@
           "name": "Sayid",
           "photo": "../../img/sayedp.jpg",
           "goals": 0,
-          "yellowCards": 0,
+          "yellowCards": 1,
           "redCards": 0
         },
         {
@@ -126,7 +127,7 @@
         {
           "name": "Jubayer",
           "photo": "../../img/jubayer.jpeg",
-          "goals": 0,
+          "goals": 1,
           "yellowCards": 0,
           "redCards": 0
         }
@@ -151,7 +152,7 @@
         {
           "name": "Kawser",
           "photo": "../../img/kawsar.jpg",
-          "goals": 2,
+          "goals": 3,
           "assist": 1,
           "yellowCards": 0,
           "redCards": 0
@@ -164,7 +165,7 @@
           "name": "Sawon",
           "photo": "../../img/Shawn.jpeg",
           "goals": 1,
-          "assist": 1
+          "assist": 2
         },
         {
           "name": "Sahadat",
@@ -192,7 +193,8 @@
         },
         {
           "name": "Rohid",
-          "photo": "../../img/rohide.jpg"
+          "photo": "../../img/rohide.jpg",
+          "assist": 1
         },
         {
           "name": "Suhan",
@@ -208,7 +210,7 @@
         {
           "name": "Rohim",
           "photo": "../../img/rohim.jpg",
-          "goals": 0,
+          "goals": 1,
           "assist": 0,
           "yellowCards": 1,
           "redCards": 0
@@ -366,12 +368,23 @@
         {
           "teamA": "Golden Eagles",
           "teamB": "Super King",
-          "time": "4:00 PM"
+          "time": "4:00 PM",
+          "scoreA": 1,
+          "scoreB": 1,
+          "goalByA": ["⚽ Jubayer"],
+          "assistA": ["👟 Mayruf"],
+          "goalByB": ["⚽ Kawser"],
+          "assistB": ["👟 Sawon"],
+          "yellowCardsA": ["🟨 Sayid"]
         },
         {
           "teamA": "D-Box",
           "teamB": "Revolution",
-          "time": "4:30 PM"
+          "time": "4:30 PM",
+          "scoreA": 1,
+          "scoreB": 0,
+          "goalByA": ["⚽ Rohim"],
+          "assistA": ["👟 Rohid"]
         }
       ]
     },
@@ -414,36 +427,36 @@
       "teamA": "Revolution",
       "W": 1,
       "D": 1,
-      "L": 1,
-      "dif": "-1",
-      "TG": "2:3"
+      "L": 2,
+      "dif": "-2",
+      "TG": "2:4"
     },
     {
       "id": 2,
       "teamA": "Super King",
       "W": 1,
-      "D": 1,
+      "D": 2,
       "L": 1,
       "dif": "+2",
-      "TG": "4:2"
+      "TG": "5:3"
     },
     {
       "id": 3,
       "teamA": "D-Box",
-      "W": 0,
+      "W": 1,
       "D": 3,
       "L": 0,
-      "dif": "0",
-      "TG": "0:0"
+      "dif": "+1",
+      "TG": "2:1"
     },
     {
       "id": 4,
       "teamA": "Golden Eagles",
       "W": 1,
-      "D": 1,
+      "D": 2,
       "L": 1,
       "dif": -1,
-      "TG": "2:3"
+      "TG": "4:5"
     }
   ],
   "results": {
