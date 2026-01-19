@@ -45,7 +45,7 @@
         {
             "id": "p5",
             "name": "Suhan Ahmed",
-            "number": "",
+            "number": "29",
             "position": "CMF",
             "image": "/../img/suhan.jpg",
             "social": {
@@ -115,9 +115,9 @@
         {
             "id": "p12",
             "name": "Mamun Islam",
-            "number": "",
+            "number": "20",
             "position": "CB",
-            "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+            "image": "../../img/mamunlb.jpg",
             "social": {
                 "": ""
             }
