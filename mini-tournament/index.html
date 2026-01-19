@@ -9,6 +9,291 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/img/club logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- Root Variables & Base --- */
+:root {
+    --primary-color: #00ff88;      /* Neon Green for active */
+    --secondary-color: #ff3333;    /* Red for intensity */
+    --dark-bg: #0f172a;            /* Deep dark blue/black */
+    --card-bg: #1e293b;            /* Lighter dark for cards */
+    --text-light: #f8fafc;
+    --text-muted: #94a3b8;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* --- Layout & Background --- */
+.main-content {
+    position: relative;
+    min-height: 80vh;
+    padding-bottom: 50px;
+    z-index: 1;
+}
+
+.bg-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 10%, rgba(0, 255, 136, 0.1), transparent 40%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.hero-section p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/* --- Glitch Title Effect --- */
+.glitch-title {
+    color: var(--text-light);
+    text-shadow: 2px 2px var(--secondary-color);
+}
+
+/* --- Cards Grid --- */
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* --- Season Card Common Styles --- */
+.season-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    width: 350px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.season-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Large Background Number */
+.card-bg-text {
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    font-size: 10rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03);
+    z-index: 0;
+    line-height: 1;
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.season-card h2 {
+    font-size: 2rem;
+    margin: 15px 0 20px;
+}
+
+/* --- Status Badges --- */
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+/* Active Season Specifics */
+.active-season {
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.1);
+}
+
+.active-season .status-badge {
+    background: rgba(0, 255, 136, 0.2);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+/* Archive Season Specifics */
+.archive-season .status-badge {
+    background: rgba(148, 163, 184, 0.2);
+    color: var(--text-muted);
+}
+
+.archive-season .status-badge.completed {
+    color: #cbd5e1;
+    border: 1px solid #475569;
+}
+
+/* Pulse Animation for Active Badge */
+.pulse {
+    animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+    0% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 255, 136, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
+}
+
+/* --- Stats Grid --- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.s-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.s-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.s-value.tbd {
+    color: #fbbf24; /* Amber for pending */
+    font-style: italic;
+}
+
+/* --- Action Buttons --- */
+.action-btn {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+/* Primary Button (Active) */
+.active-season .action-btn {
+    background: var(--primary-color);
+    color: #000;
+}
+
+.active-season .action-btn:hover {
+    background: #00cc6a;
+    transform: scale(1.02);
+}
+
+/* Outline Button (Archive) */
+.action-btn.outline {
+    background: transparent;
+    border: 1px solid var(--text-muted);
+    color: var(--text-muted);
+}
+
+.action-btn.outline:hover {
+    border-color: var(--text-light);
+    color: var(--text-light);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* --- Loader (Basic Styles) --- */
+.div-loader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: var(--dark-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* Often controlled by JS to fade out */
+}
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .season-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+}
+    </style>
 </head>
 
 <body>
@@ -41,7 +326,7 @@
                 </div>
                 <div class="stat-box">
                     <span class="s-label">Status</span>
-                    <span class="s-value tbd">Not Started</span>
+                    <span class="s-value tbd">Running</span>
                 </div>
             </div>
             <a href="/mini-tournament/Tournament-season-2026/index.html" class="action-btn">
