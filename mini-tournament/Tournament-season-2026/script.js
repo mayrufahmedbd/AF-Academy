@@ -240,11 +240,7 @@ function loadResults(results) {
        <div class="team-row"><span>${match.teamA}</span><span class="score">${match.scoreA}</span></div>
        <div class="team-row"><span>${match.teamB}</span><span class="score">${match.scoreB}</span></div>
    `;
-  const semi1 = document.getElementById("semi-1");
-  const semi2 = document.getElementById("semi-2");
   const grandFinal = document.getElementById("grand-final");
-  if (semi1 && results.semiFinal1) semi1.innerHTML = createMatchHTML(results.semiFinal1);
-  if (semi2 && results.semiFinal2) semi2.innerHTML = createMatchHTML(results.semiFinal2);
   if (grandFinal && results.final) grandFinal.innerHTML += createMatchHTML(results.final);
 }
 

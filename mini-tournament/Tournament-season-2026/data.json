@@ -153,7 +153,7 @@
         {
           "name": "Kawser",
           "photo": "../../img/kawsar.jpg",
-          "goals": 5,
+          "goals": 4,
           "assist": 1,
           "yellowCards": 0,
           "redCards": 0
@@ -466,8 +466,8 @@
       "W": 2,
       "D": 2,
       "L": 1,
-      "dif": "+1",
-      "TG": "5:5"
+      "dif": 0,
+      "TG": "4:4"
     }
   ],
   "results": {
