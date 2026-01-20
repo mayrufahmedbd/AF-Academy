@@ -83,7 +83,7 @@
         {
           "name": "Rahul",
           "photo": "../../img/rahul.jpg",
-          "goals": 2,
+          "goals": 3,
           "yellowCards": 1,
           "redCards": 0
         },
@@ -142,7 +142,8 @@
         {
           "name": "©Nurul Amin",
           "photo": "../../img/nurulp.jpg",
-          "goals": 1
+          "goals": 1,
+          "yellowCards": 1
         },
         {
           "name": "Sanar",
@@ -152,7 +153,7 @@
         {
           "name": "Kawser",
           "photo": "../../img/kawsar.jpg",
-          "goals": 3,
+          "goals": 5,
           "assist": 1,
           "yellowCards": 0,
           "redCards": 0
@@ -165,7 +166,7 @@
           "name": "Sawon",
           "photo": "../../img/Shawn.jpeg",
           "goals": 1,
-          "assist": 2
+          "assist": 3
         },
         {
           "name": "Sahadat",
@@ -201,7 +202,7 @@
           "photo": "../../img/suhan.jpg",
           "goals": 0,
           "assist": 0,
-          "yellowCards": 1
+          "yellowCards": 2
         },
         {
           "name": "Tasrif",
@@ -395,12 +396,22 @@
         {
           "teamA": "Super King",
           "teamB": "D-Box",
-          "time": "4:00 PM"
+          "time": "4:00 PM",
+          "scoreA": 1,
+          "scoreB": 0,
+          "goalByA": ["⚽ Kawser"],
+          "assistA": ["👟 Sawon"],
+          "yellowCardsA": ["🟨 Nurul"],
+          "yellowCardsB": ["🟨 Suhan"]
         },
         {
           "teamA": "Golden Eagles",
           "teamB": "Revolution",
-          "time": "4:30 PM"
+          "time": "4:30 PM",
+          "scoreA": 1,
+          "scoreB": 0,
+          "goalByA": ["⚽ Rahul"]
+          
         }
       ]
     },
@@ -427,55 +438,43 @@
       "teamA": "Revolution",
       "W": 1,
       "D": 1,
-      "L": 2,
-      "dif": "-2",
-      "TG": "2:4"
+      "L": 3,
+      "dif": "-3",
+      "TG": "2:5"
     },
     {
       "id": 2,
       "teamA": "Super King",
-      "W": 1,
+      "W": 2,
       "D": 2,
       "L": 1,
-      "dif": "+2",
-      "TG": "5:3"
+      "dif": "+3",
+      "TG": "6:3"
     },
     {
       "id": 3,
       "teamA": "D-Box",
       "W": 1,
       "D": 3,
-      "L": 0,
-      "dif": "+1",
-      "TG": "2:1"
+      "L": 1,
+      "dif": "0",
+      "TG": "2:2"
     },
     {
       "id": 4,
       "teamA": "Golden Eagles",
-      "W": 1,
+      "W": 2,
       "D": 2,
       "L": 1,
-      "dif": -1,
-      "TG": "4:5"
+      "dif": "+1",
+      "TG": "5:5"
     }
   ],
   "results": {
-    "semiFinal1": {
-      "teamA": "Revolution",
-      "scoreA": 0,
-      "teamB": "Golden Eagles",
-      "scoreB": 0
-    },
-    "semiFinal2": {
-      "teamA": "Super King",
-      "scoreA": 0,
-      "teamB": "D-Box",
-      "scoreB": 0
-    },
     "final": {
-      "teamA": "TBD",
+      "teamA": "",
       "scoreA": 0,
-      "teamB": "TBD",
+      "teamB": "",
       "scoreB": 0
     }
   }
