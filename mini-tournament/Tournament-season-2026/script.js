@@ -6,17 +6,16 @@ document.addEventListener("DOMContentLoaded", () => {
       // Load all sections
       if (data.teams) loadTeams(data.teams);
       if (data.groupMatches) loadGroupMatches(data.groupMatches);
+      // We load results after, in case there is a specific final score to overwrite the placeholder
       if (data.results) loadResults(data.results);
       if (data.schedule) loadSchedule(data.schedule);
-      if (data.sponsors) loadSponsors(data.sponsors); // Load Sponsors
+      if (data.sponsors) loadSponsors(data.sponsors);
     })
     .catch((error) => console.error("Error loading JSON:", error));
 
   // 2. Global Click Listener (Closes popups when clicking empty space)
   document.addEventListener("click", function (event) {
-
     // A. Close Player AND Sponsor Popups
-    // We select both classes here
     document.querySelectorAll(".player-popup, .sponsor-popup").forEach((popup) => {
       popup.classList.remove("active", "mobile-center", "show-below");
       popup.style.display = ""; // Force hide/clear styles
@@ -116,7 +115,7 @@ function loadTeams(teams) {
   });
 }
 
-// --- SPONSORS FUNCTION (UPDATED) ---
+// --- SPONSORS FUNCTION ---
 function loadSponsors(sponsors) {
   const sponsorsContainer = document.getElementById('sponsors-container');
   if (!sponsorsContainer) return;
@@ -124,38 +123,28 @@ function loadSponsors(sponsors) {
   sponsorsContainer.innerHTML = '';
 
   sponsors.forEach(sponsor => {
-    // 1. Create the Item Wrapper
     const sDiv = document.createElement('div');
     sDiv.className = 'sponsor-item';
-
-    // 2. Determine Tier Color Class
     const tierClass = sponsor.tier ? `tier-${sponsor.tier.toLowerCase()}` : '';
 
-    // 3. Build HTML (Popup + Trigger)
     sDiv.innerHTML = `
           <div class="sponsor-img-wrapper" style="border-color: ${getTierColor(sponsor.tier)}">
-              <img src="${sponsor.logo}"
-                  class="sponsor-img" alt="${sponsor.name}">
+              <img src="${sponsor.logo}" class="sponsor-img" alt="${sponsor.name}">
           </div>
           <span class="sponsor-name">${sponsor.name}</span>
           <span class="sponsor-country">Country: ${sponsor.country}</span>
 
-
           <div class="sponsor-popup">
               <div class="popup-img-container">
-                  <A href="${sponsor.logo}"><img src="${sponsor.logo}" class="popup-photo"></A>
+                  <a href="${sponsor.logo}"><img src="${sponsor.logo}" class="popup-photo"></a>
               </div>
               <div class="popup-name">${sponsor.name}</div>
-              
               <div style="color:red" class="popup-tier ${tierClass}">${sponsor.tier || 'Official Sponsor'}</div>
-              
               <hr class="popup-divider">
-              
               ${sponsor.website ? `<a href="${sponsor.website}" target="_blank" class="sponsor-website-btn">Visit Website</a>` : ''}
           </div>
       `;
 
-    // 4. Click Logic (Same as Players)
     sDiv.addEventListener("click", function (e) {
       e.stopPropagation();
       handlePopupClick(this, ".sponsor-popup");
@@ -167,7 +156,6 @@ function loadSponsors(sponsors) {
 
 // --- SHARED HELPER FUNCTIONS ---
 
-// 1. Helper to return color code based on Tier Name
 function getTierColor(tier) {
   if (!tier) return '#ddd';
   switch (tier.toLowerCase()) {
@@ -178,18 +166,15 @@ function getTierColor(tier) {
   }
 }
 
-// 2. Helper to handle Popup Open/Close Logic (Used by both Players and Sponsors)
 function handlePopupClick(element, popupSelector) {
   const popup = element.querySelector(popupSelector);
   const wasActive = popup.classList.contains("active");
 
-  // Reset ALL popups first
   document.querySelectorAll(".player-popup, .sponsor-popup").forEach((p) => {
     p.classList.remove("active", "mobile-center", "show-below");
     p.style.display = "";
   });
 
-  // If it wasn't open, open it now
   if (!wasActive) {
     popup.classList.add("active");
     popup.style.display = "block";
@@ -203,20 +188,25 @@ function handlePopupClick(element, popupSelector) {
   }
 }
 
-
-// --- OTHER EXISTING FUNCTIONS (Standard) ---
+// --- GROUP MATCHES & AUTO FINAL ---
 
 function loadGroupMatches(matches) {
   const tableBody = document.getElementById("group-stage-body");
   if (!tableBody) return;
   tableBody.innerHTML = "";
+
+  // 1. Calculate Points
   const processedMatches = matches.map((team) => {
     return { ...team, mp: team.W + team.D + team.L, pts: team.W * 3 + team.D * 1 };
   });
+
+  // 2. Sort (Highest Points first, then Wins)
   processedMatches.sort((a, b) => {
     if (b.pts !== a.pts) return b.pts - a.pts;
     else return b.W - a.W;
   });
+
+  // 3. Render Table
   processedMatches.forEach((team, index) => {
     const row = document.createElement("tr");
     if (index < 4) row.classList.add("top-team");
@@ -233,15 +223,39 @@ function loadGroupMatches(matches) {
        `;
     tableBody.appendChild(row);
   });
+
+  // 4. AUTO-POPULATE FINAL WITH TOP 2 TEAMS
+  if (processedMatches.length >= 2) {
+    const grandFinal = document.getElementById("grand-final");
+    if (grandFinal) {
+      const top1 = processedMatches[0].teamA;
+      const top2 = processedMatches[1].teamA;
+
+      // We overwrite content to ensure we display the table leaders
+      // Note: If you want to show a specific score from JSON later, 
+      // loadResults() will handle that if data.results.final exists.
+      grandFinal.innerHTML = `
+         <div class="team-row"><span>${top1}</span><span class="score">-</span></div>
+         <div class="team-row"><span>${top2}</span><span class="score">-</span></div>
+      `;
+    }
+  }
 }
 
 function loadResults(results) {
+  // If specific final results exist in JSON, this will append/update them
+  // If you only want the table to determine the final, ensure your JSON "results.final" is empty or null.
+  if (!results || !results.final) return;
+
   const createMatchHTML = (match) => `
        <div class="team-row"><span>${match.teamA}</span><span class="score">${match.scoreA}</span></div>
        <div class="team-row"><span>${match.teamB}</span><span class="score">${match.scoreB}</span></div>
    `;
   const grandFinal = document.getElementById("grand-final");
-  if (grandFinal && results.final) grandFinal.innerHTML += createMatchHTML(results.final);
+  // Only overwrite if we actually have data in results.final
+  if (grandFinal && results.final && results.final.teamA) {
+      grandFinal.innerHTML = createMatchHTML(results.final);
+  }
 }
 
 function loadSchedule(schedule) {
@@ -292,9 +306,3 @@ function loadSchedule(schedule) {
     container.appendChild(roundDiv);
   });
 }
-
-
-
-
-
-
