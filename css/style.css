@@ -1658,3 +1658,44 @@ footer p {
         /* Hide large icon on small screens to save space */
     }
 }
+
+
+
+
+/* loader */
+
+.div-loader {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #000;
+        }
+
+.loader {
+  width: 40px;
+  aspect-ratio: 1;
+  position: relative;
+}
+.loader:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  --c:#0000, #f03355 1deg 120deg,#0000 121deg;
+  background:
+    conic-gradient(from 0deg,  var(--c)) top right,
+    conic-gradient(from 120deg,var(--c)) bottom,
+    conic-gradient(from 240deg,var(--c)) top left;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  animation: l25 2s infinite cubic-bezier(0.3,1,0,1);
+}
+@keyframes l25 {
+   33%  {inset:-8px;transform: rotate(0deg)}
+   66%  {inset:-8px;transform: rotate(180deg)}
+   100% {inset:0   ;transform: rotate(180deg)}
+}

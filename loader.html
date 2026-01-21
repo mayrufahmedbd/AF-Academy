@@ -16,97 +16,40 @@
             height: 100vh;
             background: #000;
         }
-        .loader {
-            transform: rotateZ(45deg);
-            perspective: 1000px;
-            border-radius: 50%;
-            width: 48px;
-            height: 48px;
-            color: #fff;
-        }
 
-        .loader:before,
-        .loader:after {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: inherit;
-            height: inherit;
-            border-radius: 50%;
-            transform: rotateX(70deg);
-            animation: 1s spin linear infinite;
-        }
-
-        .loader:after {
-            color: #FF3D00;
-            transform: rotateY(70deg);
-            animation-delay: .4s;
-        }
-
-        @keyframes rotate {
-            0% {
-                transform: translate(-50%, -50%) rotateZ(0deg);
-            }
-
-            100% {
-                transform: translate(-50%, -50%) rotateZ(360deg);
-            }
-        }
-
-        @keyframes rotateccw {
-            0% {
-                transform: translate(-50%, -50%) rotate(0deg);
-            }
-
-            100% {
-                transform: translate(-50%, -50%) rotate(-360deg);
-            }
-        }
-
-        @keyframes spin {
-
-            0%,
-            100% {
-                box-shadow: .2em 0px 0 0px currentcolor;
-            }
-
-            12% {
-                box-shadow: .2em .2em 0 0 currentcolor;
-            }
-
-            25% {
-                box-shadow: 0 .2em 0 0px currentcolor;
-            }
-
-            37% {
-                box-shadow: -.2em .2em 0 0 currentcolor;
-            }
-
-            50% {
-                box-shadow: -.2em 0 0 0 currentcolor;
-            }
-
-            62% {
-                box-shadow: -.2em -.2em 0 0 currentcolor;
-            }
-
-            75% {
-                box-shadow: 0px -.2em 0 0 currentcolor;
-            }
-
-            87% {
-                box-shadow: .2em -.2em 0 0 currentcolor;
-            }
-        }
+        /* .................... */
+        /* HTML: <div class="loader"></div> */
+.loader {
+  width: 40px;
+  aspect-ratio: 1;
+  position: relative;
+}
+.loader:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  --c:#0000, #f03355 1deg 120deg,#0000 121deg;
+  background:
+    conic-gradient(from 0deg,  var(--c)) top right,
+    conic-gradient(from 120deg,var(--c)) bottom,
+    conic-gradient(from 240deg,var(--c)) top left;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  animation: l25 2s infinite cubic-bezier(0.3,1,0,1);
+}
+@keyframes l25 {
+   33%  {inset:-8px;transform: rotate(0deg)}
+   66%  {inset:-8px;transform: rotate(180deg)}
+   100% {inset:0   ;transform: rotate(180deg)}
+}
     </style>
 </head>
 
 <body>
     <span id="loader" class="loader"></span>
 
-    <script>
+    <!-- <script>
         // Wait for the page to fully load
 window.addEventListener('load', function() {
     const loader = document.getElementById('loader');
@@ -119,7 +62,7 @@ window.addEventListener('load', function() {
     content.style.display = 'block';
 });
 
-    </script>
+    </script> -->
 </body>
 
 </html>
