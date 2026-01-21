@@ -254,7 +254,7 @@ function loadResults(results) {
   const grandFinal = document.getElementById("grand-final");
   // Only overwrite if we actually have data in results.final
   if (grandFinal && results.final && results.final.teamA) {
-      grandFinal.innerHTML = createMatchHTML(results.final);
+    grandFinal.innerHTML = createMatchHTML(results.final);
   }
 }
 
