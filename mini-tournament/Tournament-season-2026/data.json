@@ -17,7 +17,7 @@
         {
           "name": "Mahid",
           "photo": "../../img/mahid.jpg",
-          "goals": 1,
+          "goals": 2,
           "assist": 0,
           "yellowCards": 1,
           "redCards": 0
@@ -153,8 +153,8 @@
         {
           "name": "Kawser",
           "photo": "../../img/kawsar.jpg",
-          "goals": 3,
-          "assist": 1,
+          "goals": 4,
+          "assist": 2,
           "yellowCards": 0,
           "redCards": 0
         },
@@ -165,7 +165,7 @@
         {
           "name": "Sawon",
           "photo": "../../img/Shawn.jpeg",
-          "goals": 1,
+          "goals": 3,
           "assist": 2
         },
         {
@@ -455,7 +455,13 @@
         {
           "teamA": "Revolution",
           "teamB": "Super King",
-          "time": "4:00 PM"
+          "time": "4:00 PM",
+          "scoreA": 1,
+          "scoreB": 3,
+          "score": "1:3",
+          "goalByA": ["⚽ Mahid"],
+          "goalByB": ["⚽ Kawser", "⚽⚽ Sawon"],
+          "assistB": ["👟 Kawser"]
         },
         {
           "teamA": "Golden Eagles",
@@ -474,18 +480,18 @@
       "teamA": "Revolution",
       "W": 1,
       "D": 1,
-      "L": 3,
-      "dif": "-3",
-      "TG": "2:5"
+      "L": 4,
+      "dif": "-5",
+      "TG": "3:8"
     },
     {
       "id": 2,
       "teamA": "Super King",
-      "W": 1,
+      "W": 2,
       "D": 2,
       "L": 2,
-      "dif": "+3",
-      "TG": "6:3"
+      "dif": "+5",
+      "TG": "9:4"
     },
     {
       "id": 3,
