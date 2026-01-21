@@ -196,7 +196,7 @@
           "name": "Rohid",
           "photo": "../../img/rohide.jpg",
           "assist": 1,
-"goals": 1
+          "goals": 1
         },
         {
           "name": "Suhan",
@@ -216,13 +216,11 @@
           "assist": 1,
           "yellowCards": 1,
           "redCards": 0
-
         },
         {
           "name": "Mamun",
           "photo": "../../img/mamunlb.jpg",
-
-          "yellowCards":1
+          "yellowCards": 1
         },
         {
           "name": "Tuhin",
@@ -236,28 +234,28 @@
     }
   ],
   "sponsors": [
-  {
-    "id": 1,
-    "name": "NazimUddin Ahmed",
-    "logo": "../../img/sponsore/nazim.jpg",
-    "country": "UK",
-    "tier": "Runner Up"
-  },
-  {
-    "id": 2,
-    "name": "Anwar",
-    "logo": "../../img/sponsore/anwar.jpg",
-    "country": "Russia",
-    "tier": ""
-  },
-  {
-    "id": 3,
-    "name": "Abdus Salam",
-    "logo": "../../img/sponsore/abdus salam.jpg",
-    "country": "UK",
-    "tier": ""
-  }
-],
+    {
+      "id": 1,
+      "name": "NazimUddin Ahmed",
+      "logo": "../../img/sponsore/nazim.jpg",
+      "country": "UK",
+      "tier": "Runner Up"
+    },
+    {
+      "id": 2,
+      "name": "Anwar",
+      "logo": "../../img/sponsore/anwar.jpg",
+      "country": "Russia",
+      "tier": ""
+    },
+    {
+      "id": 3,
+      "name": "Abdus Salam",
+      "logo": "../../img/sponsore/abdus salam.jpg",
+      "country": "UK",
+      "tier": ""
+    }
+  ],
   "schedule": [
     {
       "round": 1,
@@ -269,6 +267,7 @@
           "time": "4:00 PM",
           "scoreA": 1,
           "scoreB": 2,
+          "score": "1:2",
           "goalByB": [
             "⚽⚽ Rahul"
           ],
@@ -290,7 +289,8 @@
           "teamB": "D-Box",
           "time": "4:31 PM",
           "scoreA": 0,
-          "scoreB": 0
+          "scoreB": 0,
+          "score": "0:0"
         }
       ]
     },
@@ -303,7 +303,8 @@
           "teamB": "Super King",
           "time": "4:00 PM",
           "scoreA": 0,
-          "scoreB": 0
+          "scoreB": 0,
+          "score": "0:0"
         },
         {
           "teamA": "Revolution",
@@ -311,6 +312,7 @@
           "time": "4:30 PM",
           "scoreA": 2,
           "scoreB": 0,
+          "score": "2:0",
           "goalByA": [
             "⚽ Mahid",
             "⚽ Ahsan"
@@ -335,6 +337,7 @@
           "time": "4:00 PM",
           "scoreA": 3,
           "scoreB": 0,
+          "score": "3:0",
           "goalByA": [
             "⚽⚽ Kawser",
             "⚽ Sawon"
@@ -346,7 +349,9 @@
           ],
           "assistByB": [],
           "yellowCardsA": [],
-          "yellowCardsB": ["🟨 Al Amin"]
+          "yellowCardsB": [
+            "🟨 Al Amin"
+          ]
         },
         {
           "teamA": "D-Box",
@@ -354,11 +359,17 @@
           "time": "4:30 PM",
           "scoreA": 0,
           "scoreB": 0,
+          "score": "0:0",
           "yellowCardsA": [
-            "🟨 Rohim ", "🟨 Suhan ", "🟨 Mamun "
+            "🟨 Rohim ",
+            "🟨 Suhan ",
+            "🟨 Mamun "
           ],
           "yellowCardsB": [
-            "🟨 Rahul ", "🟨 Hujaifa ", "🟨 Mayruf ", "🟨 Joy "
+            "🟨 Rahul ",
+            "🟨 Hujaifa ",
+            "🟨 Mayruf ",
+            "🟨 Joy "
           ]
         }
       ]
@@ -373,11 +384,22 @@
           "time": "4:00 PM",
           "scoreA": 1,
           "scoreB": 1,
-          "goalByA": ["⚽ Jubayer"],
-          "assistA": ["👟 Mayruf"],
-          "goalByB": ["⚽ Kawser"],
-          "assistB": ["👟 Sawon"],
-          "yellowCardsA": ["🟨 Sayid"]
+          "score": "1:1",
+          "goalByA": [
+            "⚽ Jubayer"
+          ],
+          "assistA": [
+            "👟 Mayruf"
+          ],
+          "goalByB": [
+            "⚽ Kawser"
+          ],
+          "assistB": [
+            "👟 Sawon"
+          ],
+          "yellowCardsA": [
+            "🟨 Sayid"
+          ]
         },
         {
           "teamA": "D-Box",
@@ -385,8 +407,13 @@
           "time": "4:30 PM",
           "scoreA": 1,
           "scoreB": 0,
-          "goalByA": ["⚽ Rohim"],
-          "assistA": ["👟 Rohid"]
+          "score": "1:0",
+          "goalByA": [
+            "⚽ Rohim"
+          ],
+          "assistA": [
+            "👟 Rohid"
+          ]
         }
       ]
     },
@@ -400,8 +427,13 @@
           "time": "4:00 PM",
           "scoreA": 0,
           "scoreB": 1,
-          "goalByB": ["⚽ Ruhid"],
-          "assistB": ["👟 Rohim"]
+          "score": "0:1",
+          "goalByB": [
+            "⚽ Ruhid"
+          ],
+          "assistB": [
+            "👟 Rohim"
+          ]
         },
         {
           "teamA": "Golden Eagles",
@@ -409,8 +441,10 @@
           "time": "4:30 PM",
           "scoreA": 1,
           "scoreB": 0,
-          "goalByA": ["⚽ Rahul"]
-          
+          "score": "1:0",
+          "goalByA": [
+            "⚽ Rahul"
+          ]
         }
       ]
     },
@@ -428,7 +462,8 @@
           "teamB": "D-Box",
           "time": "4:30 PM",
           "scoreA": 0,
-          "scoreB": 0
+          "scoreB": 0,
+          "score": "0:0"
         }
       ]
     }
