@@ -398,10 +398,10 @@
           "teamA": "Super King",
           "teamB": "D-Box",
           "time": "4:00 PM",
-          "scoreA": 1,
-          "scoreB": 0,
+          "scoreA": 0,
+          "scoreB": 1,
           "goalByB": ["⚽ Ruhid"],
-          "assistB": ["👟 Rohim"],
+          "assistB": ["👟 Rohim"]
         },
         {
           "teamA": "Golden Eagles",
@@ -426,7 +426,9 @@
         {
           "teamA": "Golden Eagles",
           "teamB": "D-Box",
-          "time": "4:30 PM"
+          "time": "4:30 PM",
+          "scoreA": 0,
+          "scoreB": 0
         }
       ]
     }
@@ -447,14 +449,14 @@
       "W": 1,
       "D": 2,
       "L": 2,
-      "dif": "+2",
+      "dif": "+3",
       "TG": "6:3"
     },
     {
       "id": 3,
       "teamA": "D-Box",
       "W": 2,
-      "D": 3,
+      "D": 4,
       "L": 0,
       "dif": "+1",
       "TG": "3:2"
@@ -463,7 +465,7 @@
       "id": 4,
       "teamA": "Golden Eagles",
       "W": 2,
-      "D": 2,
+      "D": 3,
       "L": 1,
       "dif": 0,
       "TG": "4:4"
