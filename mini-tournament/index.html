@@ -252,30 +252,6 @@ body {
     background: rgba(255, 255, 255, 0.05);
 }
 
-/* --- Loader (Basic Styles) --- */
-.div-loader {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: var(--dark-bg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    /* Often controlled by JS to fade out */
-}
-.loader {
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid var(--primary-color);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-}
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
@@ -303,8 +279,7 @@ body {
 
     <div id="content" style="display:none;">
         
-        <div id="header"></div> <div class="main-content">
-            <div class="bg-shape"></div>
+        <div id="header"></div>
 
             <section class="hero-section">
                 <h1 class="glitch-title">Tournament History</h1>
@@ -343,7 +318,7 @@ body {
             <div class="stats-grid">
                 <div class="stat-box">
                     <span class="s-label">Winner</span>
-                    <span class="s-value">Debox</span>
+                    <span class="s-value">D-box</span>
                 </div>
                 <div class="stat-box">
                     <span class="s-label">Top Scorer</span>
