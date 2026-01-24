@@ -235,11 +235,18 @@
   ],
   "sponsors": [
     {
+      "id": 0,
+      "name": "Jkariya Ahmed",
+      "logo": "../../img/sponsore/Jkariya.jpg",
+      "country": "",
+      "tier": "Champion prize money"
+    },
+    {
       "id": 1,
       "name": "NazimUddin Ahmed",
       "logo": "../../img/sponsore/nazim.jpg",
       "country": "UK",
-      "tier": "Runner Up"
+      "tier": "Runner Up prize money"
     },
     {
       "id": 2,
