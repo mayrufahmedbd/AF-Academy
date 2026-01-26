@@ -521,10 +521,10 @@
   ],
   "results": {
     "final": {
-      "teamA": "",
-      "scoreA": 1,
-      "teamB": "",
-      "scoreB": 3
+      "teamA": "Golden Eagles",
+      "scoreA": 3,
+      "teamB": "D-Box",
+      "scoreB": 1
     }
   }
 }
