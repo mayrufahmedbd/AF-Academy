@@ -522,9 +522,9 @@
   "results": {
     "final": {
       "teamA": "",
-      "scoreA": 0,
+      "scoreA": 1,
       "teamB": "",
-      "scoreB": 0
+      "scoreB": 3
     }
   }
 }
