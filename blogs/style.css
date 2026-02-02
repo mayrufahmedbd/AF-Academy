@@ -128,19 +128,47 @@
   margin: 20px 0;
 }
 
-#blogImage{
-  margin: 0 auto;
-  width: 50%;
-}
+
 
 #blogContent a{
   text-decoration: none;
   color: #0000FF;
-  transition: all 03s ease;
+  transition: all 0.3s ease;
 }
 
 #blogContent a:hover{
   text-decoration: underline;
+}
+
+/* Image styling */
+#blogImage {
+    width: 30%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 12px;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* The line between content and image */
+.line {
+    height: 1px;
+    background: #eee;
+    margin: 30px 0;
+    width: 100%;
+}
+
+/* Metadata styling */
+.meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.meta i {
+    margin-right: 5px;
+    color: #d63031; /* Matches Revolution team color */
 }
 
 /* Responsive Design */
