@@ -83,14 +83,14 @@
         {
           "name": "Rahul",
           "photo": "../../img/rahul.jpg",
-          "goals": 3,
+          "goals": 5,
           "yellowCards": 1,
           "redCards": 0
         },
         {
           "name": "Joy",
           "photo": "../../img/joy.jpg",
-          "goals": 0,
+          "goals": 1,
           "assist": 1,
           "yellowCards": 1,
           "redCards": 0
@@ -196,7 +196,7 @@
           "name": "Rohid",
           "photo": "../../img/rohide.jpg",
           "assist": 1,
-          "goals": 1
+          "goals": 2
         },
         {
           "name": "Suhan",
@@ -436,7 +436,7 @@
           "scoreB": 1,
           "score": "0:1",
           "goalByB": [
-            "⚽ Ruhid"
+            "⚽ Rohid"
           ],
           "assistB": [
             "👟 Rohim"
