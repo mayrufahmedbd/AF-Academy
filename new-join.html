@@ -1,281 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Join Assailant Fighters Academy</title>
-    <meta name="description"
-        content="Join Assailant Fighters Academy – elite fight training, events, and community. Discipline. Strength. Honor.">
-    <meta name="keywords"
-        content="Assailant Fighters Academy, fight training, martial arts, combat sports, join academy, WhatsApp groups, fighter community">
-
-    <link rel="icon" href="/img/club logo.png">
+    <title>Join Academy - Assailant Fighters Academy</title>
+    <link rel="icon"  href="/img/club logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <style>
+        /* MATCHING THE IMAGE UI COLORS */
         :root {
-            --red: #e63946;
-            --dark: #0f0f0f;
-            --dark-2: #1a1a1a;
-            --glass: rgba(255, 255, 255, 0.08);
-            --text: #f1f1f1;
-            --muted: #bdbdbd;
+            --bg-dark: #121212;      /* Deep black background */
+            --card-gray: #222222;    /* The dark gray container */
+            --white-card: #ffffff;   /* The bright white match cards */
+            --accent-red: #e63946;   /* The 'Day' label red */
+            --header-blue: #1a3a5a;  /* The top bar blue */
+            --text-gray: #9e9e9e;    /* Muted text */
             --whatsapp: #25D366;
         }
 
-        /* RESET */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            font-family: 'Segoe UI', sans-serif;
         }
 
         body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            background: radial-gradient(circle at top, #1f1f1f, #000);
-            color: var(--text);
-            line-height: 1.7;
+            background-color: var(--bg-dark);
+            color: white;
+            padding-bottom: 50px;
         }
 
-        /* HERO */
-        .hero {
-            min-height: 100vh;
+        /* TOP NAV BAR - Styled like the image */
+        header {
+            background-color: var(--header-blue);
+            padding: 15px 20px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        /* MAIN TITLE */
+        .page-title {
             text-align: center;
-            padding: 100px 20px;
-            background:
-                linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, .9)),
-                url("https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&w=1600&q=80");
-            background-size: cover;
-            background-position: center;
-        }
-
-        .hero-content {
-            max-width: 850px;
-            animation: fadeUp 1s ease forwards;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.2rem, 5vw, 3.5rem);
-            text-transform: uppercase;
+            font-size: 1.8rem;
             letter-spacing: 3px;
-        }
-
-        .hero p {
-            color: var(--muted);
-            margin: 25px auto 40px;
-            font-size: 1.1rem;
-        }
-
-        .hero a {
-            display: inline-block;
-            padding: 14px 40px;
-            border-radius: 50px;
-            border: 2px solid var(--red);
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: .3s;
-        }
-
-        .hero a:hover {
-            background: var(--red);
-            box-shadow: 0 0 20px var(--red);
-        }
-
-        /* FEATURES */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
-            padding: 80px 10%;
-        }
-
-        .feature-card {
-            background: var(--glass);
-            backdrop-filter: blur(12px);
-            border-radius: 20px;
-            padding: 35px;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, .1);
-            transition: .3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--red);
-        }
-
-        .feature-card i {
-            font-size: 2.5rem;
-            color: var(--red);
-            margin-bottom: 20px;
-        }
-
-        /* JOIN SECTION */
-        .join-section {
-            background: linear-gradient(to top, #000, #111);
-            padding: 90px 20px;
-            text-align: center;
-        }
-
-        .join-section h2 {
-            font-size: 2.6rem;
-            margin-bottom: 50px;
+            margin: 80px 0 0 0;
             text-transform: uppercase;
-        }
-
-        .wa-cards-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 35px;
-        }
-
-        /* WA CARD */
-        .wa-card {
-            width: 330px;
-            border-radius: 20px;
-            overflow: hidden;
-            text-decoration: none;
-            color: #000;
-            background: white;
-            transition: .35s;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
-        }
-
-        .wa-card:hover {
-            transform: scale(1.06);
-        }
-
-        .wa-img {
-            height: 170px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .img-1 {
-            background-image: url("https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=800&q=80");
-        }
-
-        .img-2 {
-            background-image: url("https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=800&q=80");
-        }
-
-        .wa-content {
-            padding: 25px;
-        }
-
-        .wa-content h3 {
-            margin-bottom: 10px;
-        }
-
-        .wa-content p {
-            font-size: .9rem;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .join-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--whatsapp);
-            color: white;
-            padding: 12px 25px;
-            border-radius: 50px;
             font-weight: bold;
         }
 
-        /* ANIMATION */
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* THE DARK CONTAINER (Like the Day 1 / Day 2 boxes) */
+        .group-container {
+            background-color: var(--card-gray);
+            margin: 0 auto 30px;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 15px;
+            padding: 25px 20px;
         }
 
-        /* MOBILE */
-        @media(max-width: 768px) {
-            .features {
-                padding: 60px 20px;
-            }
+        .group-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .category-label {
+            color: var(--accent-red);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .status-label {
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        /* THE WHITE CARDS - Styled like the match rows */
+        .join-card {
+            background-color: var(--white-card);
+            color: #000;
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+        }
+
+        .join-card:active {
+            transform: scale(0.98);
+        }
+
+        .join-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .join-card p {
+            font-size: 0.85rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* THE BUTTON (Replacing the score bubble) */
+        .wa-btn {
+            background-color: #121212; /* Dark like the score bubble */
+            color: white;
+            padding: 8px 25px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .wa-btn i {
+            color: var(--whatsapp);
+        }
+
+        /* MOBILE BOTTOM NAV SIMULATION */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: black;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            opacity: 0.8;
         }
     </style>
 </head>
-
 <body>
-
+    
     <div id="header"></div>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Assailant Fighters Academy</h1>
-            <p>Discipline. Strength. Honor. Become part of an elite fighting brotherhood.</p>
-            <a href="#join">Join the Academy</a>
-        </div>
-    </section>
+    <h2 class="page-title">JOIN COMMUNITY</h2>
 
-    <section class="features">
-        <div class="feature-card">
-            <i class="fa-solid fa-dumbbell"></i>
-            <h3>Elite Training</h3>
-            <p>Daily fight conditioning, drills, and pro-level guidance.</p>
+    <div class="group-container">
+        <div class="group-header">
+            <span class="category-label">Youth Division</span>
+            <span class="status-label">Open Now</span>
         </div>
 
-        <div class="feature-card">
-            <i class="fa-solid fa-calendar-check"></i>
-            <h3>Events & Matches</h3>
-            <p>Tournaments, sparring days, and official academy events.</p>
+        <a href="https://whatsapp.com/channel/0029Vb0VnocKbYMJz2fGwi1V" class="join-card">
+            <h3>Under 18 Group</h3>
+            <p>Chat, techniques, clips, and motivation.</p>
+            <div class="wa-btn">
+                <i class="fa-brands fa-whatsapp"></i> JOIN
+            </div>
+        </a>
+    </div>
+
+    <div class="group-container">
+        <div class="group-header">
+            <span class="category-label">Pro Division</span>
+            <span class="status-label">Open Now</span>
         </div>
 
-        <div class="feature-card">
-            <i class="fa-solid fa-users"></i>
-            <h3>Brotherhood</h3>
-            <p>Train, grow, and push limits with real fighters.</p>
-        </div>
-    </section>
-
-    <section id="join" class="join-section">
-        <h2>Join Our WhatsApp Groups</h2>
-
-        <div class="wa-cards-container">
-            <a href="https://whatsapp.com/channel/0029Vb0VnocKbYMJz2fGwi1V" target="_blank" class="wa-card">
-                <div class="wa-img img-1"></div>
-                <div class="wa-content">
-                    <h3>Under 18 Group</h3>
-                    <p>Chat, techniques, clips, and motivation.</p>
-                    <div class="join-btn">
-                        <i class="fa-brands fa-whatsapp"></i> Join Now
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://8801342497160" target="_blank" class="wa-card">
-                <div class="wa-img img-2"></div>
-                <div class="wa-content">
-                    <h3>Adult Fighter Group</h3>
-                    <p>Chat, techniques, clips, and motivation.</p>
-                    <div class="join-btn">
-                        <i class="fa-brands fa-whatsapp"></i> Join Now
-                    </div>
-                </div>
-            </a>
-        </div>
-    </section>
+        <a href="https://wa.me/8801342497160" class="join-card">
+            <h3>Adult Fighter Group</h3>
+            <p>Chat, techniques, clips, and motivation.</p>
+            <div class="wa-btn">
+                <i class="fa-brands fa-whatsapp"></i> JOIN
+            </div>
+        </a>
+    </div>
 
     <div id="footer"></div>
 
+
+    <script src="/js/script.js"></script>
     <script src="/UI/headerFooter/openDirectory.js"></script>
 </body>
-
 </html>
