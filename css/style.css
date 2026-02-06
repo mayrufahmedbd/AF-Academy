@@ -354,12 +354,18 @@ header {
         /* Show 2 per row on tablets, 1 on small phones */
         grid-template-columns: repeat(2, 1fr);
     }
+    #blogImage {
+        width: 80%;
+    }
 }
 
 @media (max-width: 480px) {
     .home-players-grid {
         grid-template-columns: 1fr;
         /* 1 per row on mobile */
+    }
+    #blogImage{
+        width: 100%;
     }
 }
 
@@ -512,6 +518,9 @@ header {
         width: 100%;
         /* Full width button on mobile */
         max-width: 300px;
+    }
+        #blogImage{
+        width: 100%;
     }
 }
 
@@ -1410,6 +1419,9 @@ footer {
         height: calc(100vh - 50px);
         transition: all 0.3s ease;
         padding: 40px 0;
+    }
+        #blogImage{
+        width: 100%;
     }
 
     .players-grid {

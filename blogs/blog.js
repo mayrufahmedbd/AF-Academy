@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 card.className = "blog-post";
                 card.innerHTML = `
                     <h3>${post.title}</h3>
-                    <div class="meta">${post.date} | ${post.match}</div>
+                    <div class="meta"><i class="fa-regular fa-calendar"></i> ${post.date} | <i class="fa-solid fa-ranking-star"></i> ${post.match}</div>
                     <p>${post.content.substring(0, 120)}...</p>
                     <a href="blog-detail.html?id=${post.id}" class="read-more">Read More →</a>
                 `;
