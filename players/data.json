@@ -312,7 +312,168 @@
             "social": {
                 "facebook": "#"
             }
+        },
+        {
+            "id": "p32",
+            "name": "Adil",
+            "number": "",
+            "position": "CMF",
+            "image": "../img/Adil-cm.jpeg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p33",
+            "name": "Azizul",
+            "number": "",
+            "position": "RW",
+            "image": "../img/Azizul-rw.jpeg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p34",
+            "name": "Chowdhury Ohi",
+            "number": "",
+            "position": "LWF",
+            "image": "../img/CHOWDHURY OHI-lw.jpeg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p35",
+            "name": "Didar",
+            "number": "",
+            "position": "",
+            "image": "../img/Didar.jpeg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p36",
+            "name": "Jabed",
+            "number": "",
+            "position": "DMF",
+            "image": "../img/Jabed-dm.jpeg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p37",
+            "name": "Nahid",
+            "number": "",
+            "position": "GK",
+            "image": "../img/Nahid-gk.jpeg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p38",
+            "name": "Naseem",
+            "number": "",
+            "position": "AMF",
+            "image": "../img/Naseem-amf.jpeg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p39",
+            "name": "Noor Alom",
+            "number": "",
+            "position": "",
+            "image": "../img/Noor Alom.jpeg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p40",
+            "name": "Numan",
+            "number": "",
+            "position": "CF",
+            "image": "../img/NUMANI-cf.jpeg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p41",
+            "name": "Rafi",
+            "number": "",
+            "position": "CF",
+            "image": "../img/Rafi.jpeg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p42",
+            "name": "Ramim",
+            "number": "",
+            "position": "AMF",
+            "image": "../img/Ramim-am.jpeg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p43",
+            "name": "Sarkar",
+            "number": "",
+            "position": "CMF",
+            "image": "../img/Sarkar-cm.jpeg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p44",
+            "name": "Shajan",
+            "number": "",
+            "position": "",
+            "image": "../img/Shajan.jpeg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p45",
+            "name": "Shanto",
+            "number": "",
+            "position": "LWF",
+            "image": "../img/Shanto-lw.jpeg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p46",
+            "name": "Soumik",
+            "number": "",
+            "position": "GK",
+            "image": "../img/Soumik-gk.jpeg",
+            "social": {
+                "facebook": "#"
+            }
+        },
+        {
+            "id": "p47",
+            "name": "Thanvir",
+            "number": "",
+            "position": "RW",
+            "image": "../img/Thanvir-rw.jpeg",
+            "social": {
+                "facebook": "#"
+            }
         }
+
     ],
 
 
