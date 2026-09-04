@@ -472,6 +472,16 @@
             "social": {
                 "facebook": "#"
             }
+        },
+        {            
+            "id": "p48",
+            "name": "Sony",
+            "number": "",
+            "position": "",
+            "image": "../img/Sony.png",
+            "social": {
+                "facebook": "#"
+            }
         }
 
 
